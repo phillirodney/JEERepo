@@ -1,31 +1,34 @@
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 @Entity
-@Table(name = "Products")
+@Table(name = "products")
 public class Product {
 
-	@productId
-	@GeneratedValue
-	@Column(name = "ProductId")
+	@productId @GeneratedValue
+	@Column(name = "product_id")
 	private int productId;
 
-	@Column(name = "Name")
+	@Column(name = "name")
 	private String name;
 
-	@Column(name = "Quantity")
+	@Column(name = "quantity")
 	private int quantity;
 	
-	@Column(name = "StockID")
-	private long stockID;
+	@Column(name = "stock_id")
+	private long stockId;
 	
-	@Column(name = "Stock Required")
+	@Column(name = "stock_required")
 	private String stockRequired;
 
-	@Column(name = "Stock Reserved")
+	@Column(name = "stock_reserved")
 	private String stockReserved;
 	
-	@Column(name = "Current Stock")
+	@Column(name = "current_stock")
 	private String currentStock;
 	
-	@Column(name = "Porousware")
+	@Column(name = "porousware")
 	private Boolean porousware;
 
 	ArrayList<String> images = new ArrayList<String>();
