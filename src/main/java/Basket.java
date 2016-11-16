@@ -9,8 +9,6 @@ public class Basket {
 		this.product_id = product_id; 
 		this.quantity = quantity; 
 		this.price = price; 
-
-		
 	}
 
 	public int getProduct_id() {
