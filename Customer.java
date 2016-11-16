@@ -1,13 +1,47 @@
-
+@Entity
+@Table(name = "customers")
 public class Customer {
 
+	@Id
+	@Column(name = "id", nullable = false, unique = true)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
+	@Column(name = "first_name", nullable = false, length = 225)
+	@Size(max = 225)
+	@NotNull
 	private String firstName;
+
+	@Column(name = "last_name", nullable = false, length = 225)
+	@Size(max = 225)
+	@NotNull
 	private String lastName;
+
+	@Column(name = "email", nullable = false, length = 225)
+	@Size(max = 225)
+	@NotNull
 	private String email;
+
+	
+	@Column(name = "password", nullable = false, length = 225)
+	@Size(max = 225)
+	@NotNull
 	private String password;
+
+	@Column(name = "date_of_birth", nullable = false)
+	@Type(type = "date")
+	@NotNull
 	private Date dateOfBirth;
+
+	@ManyToMany
+	@JoinTable(name = "has_address", joinColumns = @JoinColumn(name = "customers_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "address_id", referencedColumnName = "id"))
 	private List<Address> addresses;
+	
+	
+	@ManyToMany
+	@JoinTable(name = "basket_had_product", joinColumns = @joinColumn(name = "customer_id", referenceColumnName = "id"), inverseJoinColumns = @joinColumn(name = "product_id", referencedColumnName = "product_id"))
+	private List<Basket> baskets;
+	
 
 	public Customer() {
 
@@ -66,11 +100,11 @@ public class Customer {
 	public String setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
-	public Address getAddresses(){
+
+	public Address getAddresses() {
 		return addresses;
 	}
-	
+
 	public void setAddresses(String addresses){
 		this.addresses = addresses
 	}

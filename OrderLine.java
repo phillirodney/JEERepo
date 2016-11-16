@@ -1,31 +1,40 @@
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table (name = "order_lines")
 public class OrderLine {
+	
+	@lineId @GeneratedValue
+	@Column (name = "line_id")
+	private int lineId;
+	
+	@Column (name = "product_id")
+	private int productId;
 
-	private int lineID;
-	private int productID;
-
-	public OrderLine() {
+	public OrderLine() { 
 	}
 
-	public OrderLine( int lineID, int productID){
-		this.lineID = lineID;
-		this.productID = productID;
+	public OrderLine( int lineId, int productId){
+		this.lineId = lineId;
+		this.productId = productId;
 	}
 
-	public int getLineID() {
-		return lineID;
+	public int getLineId() {
+		return lineId;
 }
 
-	public void setLineID(int lineID){
-		this.lineID = lineID;
+	public void setLineId(int lineId){
+		this.lineId = lineId;
 }
 
-	public int getProductID(){
-		return productID;
+	public int getProductId(){
+		return productId;
 }
 
-	public int setProductID(int productID) {
-		this.productID = productID;
+	public int setProductId(int productId) {
+		this.productId = productId;
 	}
 
 }
