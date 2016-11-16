@@ -1,45 +1,7 @@
-public class Stock {
+
+public class Product {
+
 	
-	private int productId;
-	private int present;
-	private int required;
-	private int reserved;
-	
-	public Stock(){
-		
-	}
-	
-	public int getProductId(){
-		return this.productId;
-	}
-	
-	public int getPresent(){
-		return this.present;
-	}
-	
-	public int getRequired(){
-		return this.required
-	}
-	
-	public int getReserverd(){
-		return this.reserved
-	}
-	
-	public void setProductId(){
-		
-	}
-	
-	public void setpresent(){
-		
-	}
-	
-	public void setRequired(){
-		
-	}
-	
-	public void setReserverd(){
-		
-	}
 
 	private String name;
 
@@ -127,4 +89,6 @@ public class Stock {
 	}
 	
 	
+}
+
 }
