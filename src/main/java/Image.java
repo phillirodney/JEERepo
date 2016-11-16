@@ -1,15 +1,15 @@
 import javax.persistence.*;
 
 @Entity
-@Table(name="Images")
+@Table(name="images")
 public class Image {
 	
 	@Id
-	@Column(name="Product ID", nullable=false, unique=true)
+	@Column(name="product_id", nullable=false, unique=true)
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int productID;
 	
-	@Column(name="Path")
+	@Column(name="path")
 	private String path;
 
 	public Image(String path)

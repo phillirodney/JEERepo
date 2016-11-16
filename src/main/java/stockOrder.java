@@ -2,14 +2,14 @@ import java.util.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Stock Orders")
+@Table(name="stock_orders")
 public class stockOrder {
 
 	@Id
-	@Column(name="Stock Order ID", nullable=false, unique=true)
+	@Column(name="stock_order_id", nullable=false, unique=true)
 	private int sOrderID;
 	
-	@Column(name="Path")
+	@Column(name="path")	
 	private Date dateOrdered;
 	
 	public stockOrder(int orderID)
