@@ -2,17 +2,28 @@
 Public class Supplier {
 
 
-Private int id;
-Private String name;
+private int SupplierID;
+private String SupplierName;
 
 public Supplier(){
-
 }
 
-public Supplier( int id, String name){
-	this.id = id;
-	this.name =name;
+public Supplier( int SupplierID, String SupplierName){
+	this.SupplierID = SupplierID;
+	this.SupplierName =SupplierName;
 }
 
+public int getSupplierID() {
+	return SupplierID;
+}
+public void setSupplierID(){
+	this.SupplierID = SupplierID;
+}
+public getSupplierName() {
+	return SupplierName;
+}
+public void setSupplierName(){
+	this.SupplierName = SupplierName;
+}
 
 }

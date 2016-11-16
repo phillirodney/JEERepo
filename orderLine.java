@@ -1,17 +1,29 @@
 
-Public class orderLine{
+Public class OrderLine {
 
 
-Private int id;
-Private int productID;
+private int LineID;
+private int ProductID;
 
-public orderLine(){
-	
-}
-
-public orderLine( int id, int productID){
-	this.id = id;
-	this.productID = productID;
+public OrderLine(){
 	}
+
+public orderLine( int LineID, int ProductID){
+	this.LineID = LineID;
+	this.ProductID = ProductID;
+	}
+
+public getLineID() {
+	return LineID;
+}
+public void setLineID(){
+	this.LineID = LineID;
+}
+public getProductID(){
+	return ProductID;
+}
+public setProductID(){
+	this.ProductID = ProductID;
+}
 
 }
