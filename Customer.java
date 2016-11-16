@@ -7,6 +7,7 @@ public class Customer {
 	private String email;
 	private String password;
 	private Date dateOfBirth;
+	private List<Address> addresses;
 
 	public Customer() {
 
@@ -64,5 +65,13 @@ public class Customer {
 
 	public String setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+	
+	public Address getAddresses(){
+		return addresses;
+	}
+	
+	public void setAddresses(String addresses){
+		this.addresses = addresses
 	}
 }
