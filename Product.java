@@ -1,4 +1,7 @@
-public class Stock {
+
+public class Product {
+
+	
 
 	private String name;
 
@@ -86,4 +89,6 @@ public class Stock {
 	}
 	
 	
+}
+
 }
