@@ -1,5 +1,7 @@
 import java.util.*;
 import javax.annotation.*;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
 
 @Startup
 @Singleton
