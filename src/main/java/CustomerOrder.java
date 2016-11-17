@@ -1,6 +1,8 @@
+
 import java.util.*;
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
 import org.hibernate.annotations.Type;
 
 @Entity
@@ -32,7 +34,9 @@ public class CustomerOrder {
 	private String paymentStatus;
 
 	@OneToMany
-	@InverseJoinColumns(name = "customer_order_id", referencedColumnName = "id", nullable = false)
+
+	@JoinColumn(name = "customer_order_id", referencedColumnName = "id", nullable = false)
+	
 	@NotNull
 	private List<OrderLine> orderLines;
 
@@ -58,7 +62,7 @@ public class CustomerOrder {
 		return total;
 	}
 
-	public Double setTotal(Double total) {
+	public void setTotal(Double total) {
 		this.total = total;
 	}
 
@@ -66,15 +70,15 @@ public class CustomerOrder {
 		return dateOfOrder;
 	}
 
-	public Double setDateOfOrder(Date dateOfOrder) {
-		this.dateOfOrder = dateOfOrder;
+	public void setDateOfOrder(Date dateOfOrder) {
+		this.dateOfOrder = dateOfOrder; 
 	}
 
 	public String getDispatchStatus() {
 		return dispatchStatus;
 	}
 
-	public String setDispatchStatus(String dispatchStatus) {
+	public void setDispatchStatus(String dispatchStatus) {
 		this.dispatchStatus = dispatchStatus;
 	}
 
@@ -82,7 +86,7 @@ public class CustomerOrder {
 		return paymentStatus;
 	}
 
-	public String setPaymentStatus(String paymentStatus) {
+	public void setPaymentStatus(String paymentStatus) {
 		this.paymentStatus = paymentStatus;
 	}
 
