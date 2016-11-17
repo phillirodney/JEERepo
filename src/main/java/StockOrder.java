@@ -3,7 +3,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="stock_orders")
-public class stockOrder {
+public class StockOrder {
 
 	@Id
 	@Column(name="stock_order_id", nullable=false, unique=true)
@@ -12,7 +12,7 @@ public class stockOrder {
 	@Column(name="path")	
 	private Date dateOrdered;
 	
-	public stockOrder(int orderID)
+	public StockOrder(int orderID)
 	{
 		this.sOrderID = orderID; // change to implement unique order ID
 		this.dateOrdered = new Date();	//date object created/current date

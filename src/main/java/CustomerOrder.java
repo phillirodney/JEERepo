@@ -1,6 +1,17 @@
+import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "customer_orders")
@@ -13,14 +24,13 @@ public class CustomerOrder {
 
 	@Column(name = "total", nullable = false)
 	@NotNull
-	private int total;
+	private Double total;
 
 	@Column(name = "date", nullable = false)
 	@Type(type = "date")
 	@NotNull
 	private Date dateOfOrder;
 
-	
 	@Column(name = "dispatch_status", nullable = false, length = 225)
 	@Size(max = 225)
 	@NotNull
@@ -49,7 +59,7 @@ public class CustomerOrder {
 
 	}
 
-	public long getId(){
+	public long getId() {
 		return id;
 
 	}
@@ -86,11 +96,11 @@ public class CustomerOrder {
 		this.paymentStatus = paymentStatus;
 	}
 
-	public OrderLine getOrderLines() {
+	public List<OrderLine> getOrderLines() {
 		return orderLines;
 	}
 
-	public void setOrderLines(String orderLines){
-		this.orderLines = orderLines
+	public void setOrderLines(List<OrderLine> orderLines){
+		this.orderLines = orderLines;
 	}
 }

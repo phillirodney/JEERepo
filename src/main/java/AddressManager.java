@@ -1,5 +1,5 @@
 
-public interface AddressManager extends Customer{
+public interface AddressManager {
 
 	public Address findByAddressId(String addressId);
 	// find by address
@@ -13,9 +13,9 @@ public interface AddressManager extends Customer{
 	public Address createNewAddress(Address address);
 	// create new address
 	
-	public void Address updateAddress(Address address);
+	public void updateAddress(Address address);
 	//update address
 	
-	public void Address deleteAddress(Address address);
+	public void deleteAddress(Address address);
 	//delete address
 }

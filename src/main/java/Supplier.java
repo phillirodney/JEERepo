@@ -1,12 +1,14 @@
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table (name = "suppliers")
 public class Supplier {
 
-	@supplierId @GeneratedValue
+	@Id @GeneratedValue
 	@Column (name = "supplier_id")
 	private int supplierID;
 	

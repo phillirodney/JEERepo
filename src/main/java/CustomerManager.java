@@ -10,8 +10,8 @@ public interface CustomerManager {
 	public Customer findById(long id);
 
 	// update customer
-	public void Customer updateCustomer(Customer customer);
+	public void  updateCustomer(Customer customer);
 
 	// delete customer
-	public void Customer deleteCustomer(Customer customer);
+	public void  deleteCustomer(Customer customer);
 }

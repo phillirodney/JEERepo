@@ -1,5 +1,5 @@
 
-public interface BasketManager extends Customer{
+public interface BasketManager{
 	
 	//List<Products> basket = new ArrayList<Products>();
 

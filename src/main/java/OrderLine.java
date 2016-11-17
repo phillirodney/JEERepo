@@ -1,12 +1,14 @@
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table (name = "order_lines")
 public class OrderLine {
 	
-	@lineId @GeneratedValue
+	@Id @GeneratedValue
 	@Column (name = "line_id")
 	private int lineId;
 	
@@ -33,8 +35,8 @@ public class OrderLine {
 		return productId;
 }
 
-	public int setProductId(int productId) {
-		this.productId = productId;
+	public void setProductId(int productId) {
+		 this.productId = productId;
 	}
 
 }

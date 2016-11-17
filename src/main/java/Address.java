@@ -7,27 +7,27 @@ import javax.validation.constraints.Size;
 
 public class Address {
 
-	@addressId
+	@Id
 	@GeneratedValue
 	@Column (name = "address_id")
 	
 	private String addressId;
 	
-	@Column(name = house_number, nullable=false)
+	@Column(name = "house_number", nullable=false)
 	@NotNull
 	private int houseNumber;
 	
-	@Column(name = street, nullable=false, length=225)
+	@Column(name = "street", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
 	private String street;
 	
-	@Column(name = city, nullable=false, length=225)
+	@Column(name = "city", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
 	private String city;
 	
-	@Column(name = postcode, nullable=false, length=225)
+	@Column(name = "postcode", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
 	private String postcode;
