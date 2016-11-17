@@ -30,4 +30,3 @@ public class CustomerManagerOffline implements CustomerManager{
 	public void deleteCustomer(Customer customer) {
 	}
 	
-}
