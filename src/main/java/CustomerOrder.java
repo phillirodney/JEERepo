@@ -42,7 +42,7 @@ public class CustomerOrder {
 	private String paymentStatus;
 
 	@OneToMany
-	@InverseJoinColumn(name = "customer_order_id", referencedColumnName = "id", nullable = false)
+	@JoinColumn(name = "customer_order_id", referencedColumnName = "id", nullable = false)
 	@NotNull
 	private List<OrderLine> orderLines;
 
