@@ -19,9 +19,3 @@ public interface AddressManager extends Customer{
 	public void Address deleteAddress(Address address);
 	//delete address
 }
-
-
-	
-	
-	
-}

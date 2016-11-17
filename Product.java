@@ -1,12 +1,11 @@
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
 public class Product {
 
-	@productId @GeneratedValue
+	@Id 
+	@GeneratedValue
 	@Column(name = "product_id")
 	private int productId;
 
@@ -110,9 +109,5 @@ public class Product {
 	public void setporousware(Boolean porousware) {
 		this.porousware = porousware;
 	}
-
-}}}}}}}
-
-}
 
 }
