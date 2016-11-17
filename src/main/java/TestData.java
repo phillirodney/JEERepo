@@ -1,7 +1,11 @@
 import java.util.*;
 import javax.annotation.*;
+<<<<<<< HEAD
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
+=======
+import javax.ejb.*;
+>>>>>>> 9e3228b54393e1cc2a8ab83fa9744f5c88db9455
 
 @Startup
 @Singleton
@@ -20,11 +24,14 @@ public class TestData {
 		stock = new ArrayList<Stock>();
 
 		// AddData
-
-		// Product product1 = new Product(1, "Gnome1", 10, 1, null, null, null,
-		// null);
+		//Address address1 = new Address(null, 0, null, null, null);
+		//Product product1 = new Product(1, "Gnome1", 10, 1, null, null, null, null);
 		Stock stock1 = new Stock();
 		Customer customer1 = new Customer();
+		
+		//addresses.add(address1);
+		stock.add(stock1);
+		customers.add(customer1);
 
 	}
 
