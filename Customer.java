@@ -22,7 +22,6 @@ public class Customer {
 	@NotNull
 	private String email;
 
-	
 	@Column(name = "password", nullable = false, length = 225)
 	@Size(max = 225)
 	@NotNull
@@ -36,12 +35,10 @@ public class Customer {
 	@ManyToMany
 	@JoinTable(name = "has_address", joinColumns = @JoinColumn(name = "customers_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "address_id", referencedColumnName = "id"))
 	private List<Address> addresses;
-	
-	
-	@ManyToMany
-	@JoinTable(name = "basket_had_product", joinColumns = @joinColumn(name = "customer_id", referenceColumnName = "id"), inverseJoinColumns = @joinColumn(name = "product_id", referencedColumnName = "product_id"))
+
+	@OneToMany
+	@InverseJoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
 	private List<Basket> baskets;
-	
 
 	public Customer() {
 
