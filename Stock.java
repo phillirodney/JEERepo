@@ -17,12 +17,12 @@ public class Stock {
 		return this.present;
 	}
 	
-	public int getRequired(){
-		return this.required
+	public int getrequired(){
+		return this.required;
 	}
 	
-	public int getReserverd(){
-		return this.reserved
+	public int getreserved(){
+		return this.reserved;
 	}
 	
 	public void setProductId(){
