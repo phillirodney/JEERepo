@@ -4,9 +4,13 @@ public interface PaymentsManager {
 	public PaymentsManager createNewPayment(PaymentsManager payment);
 
 	// update a payment method
-	public PaymentsManager updatePayment(PaymentsManager payment);
+	public void PaymentsManager
+
+	updatePayment(PaymentsManager payment);
 
 	// delete a payment method
-	public PaymentsManager deletePayment(PaymentsManager payment);
+	public void PaymentsManager
+
+	deletePayment(PaymentsManager payment);
 
 }
