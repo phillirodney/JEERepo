@@ -1,5 +1,5 @@
 
-public interface AddressManager {
+public interface AddressManager extends Customer{
 
 	public Address findByAddressId(String addressId);
 	// find by address

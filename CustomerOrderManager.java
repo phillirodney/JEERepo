@@ -7,8 +7,6 @@ public interface CustomerOrderManager {
 	public CustomerOrder findById(long id);
 
 	// update a customer order
-	public void CustomerOrder
-
-	updateCustomerOrder(CustomerOrder customerOrder);
+	public void CustomerOrder updateCustomerOrder(CustomerOrder customerOrder);
 
 }

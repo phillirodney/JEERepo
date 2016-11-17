@@ -46,7 +46,8 @@ public class CustomerOrder {
 	}
 
 	public long getId(){
-		return id
+		return id;
+
 	}
 
 	public Double getTotal() {
@@ -58,7 +59,7 @@ public class CustomerOrder {
 	}
 
 	public Date getDateOfOrder() {
-		return date;
+		return dateOfOrder;
 	}
 
 	public Double setDateOfOrder(Date dateOfOrder) {

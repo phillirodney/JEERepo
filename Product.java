@@ -11,7 +11,7 @@ public class Product {
 	private int productId;
 
 	@Column(name = "name")
-	private String proudctName;
+	private String name;
 
 	@Column(name = "quantity")
 	private int quantity;
@@ -33,13 +33,13 @@ public class Product {
 
 	ArrayList<String> images = new ArrayList<String>();
 
-	public Stock(int productId, String proudctName, int quantity, long stockID, String stockRequired,
+	public Product(int productId, String name, int quantity, long stockId, String stockRequired,
 			String stockReserved, String currentStock, Boolean porousware) {
 
 		this.productId = productId;
-		this.proudctName = proudctName;
+		this.name = name;
 		this.quantity = quantity;
-		this.stockID = stockID;
+		this.stockId = stockId;
 		this.stockRequired = stockRequired;
 		this.stockReserved = stockReserved;
 		this.currentStock = currentStock;
@@ -55,12 +55,12 @@ public class Product {
 		this.productId = productId;
 	}
 
-	public String getproudctName() {
-		return proudctName;
+	public String getname() {
+		return name;
 	}
 
-	public void setproudctName(String proudctName) {
-		this.proudctName = proudctName;
+	public void setname(String name) {
+		this.name = name;
 	}
 
 	public int getquantity() {
@@ -71,16 +71,17 @@ public class Product {
 		this.quantity = quantity;
 	}
 
-	public long getstockID() {
-		return stockID;
+	public long getstockId() {
+		return stockId;
 	}
 
-	public void setstockID(long stockID) {
-		this.stockID = stockID;
+	public void setstockID(long stockId) {
+		this.stockId = stockId;
 	}
 
-	public String getstockRequired (){
-								return stockRequired;
+	public String getstockRequired() {
+		return stockRequired;
+	}
 
 	public void setstockRequired(String stockRequired) {
 		this.stockRequired = stockRequired;
@@ -90,23 +91,21 @@ public class Product {
 		return stockReserved;
 	}
 
-	public void set
-
-	stockReserved (String stockReserved){
-										this.stockReserved = stockReserved;
+	public void setstockReserved (String stockReserved){
+		this.stockReserved = stockReserved;
 									}
 
-	public String getcurrentStock () {
-										return.currentStock;
-									}
-
+	public String getcurrentStock() {
+		return currentStock;
+	}
+	
 	public void setcurrentStock(String currentStock) {
 		this.currentStock = currentStock;
 	}
 
-	public Boolean getporousware (){
-										return porousware;
-										{
+	public Boolean getporousware() {
+	return porousware;
+	}
 
 	public void setporousware(Boolean porousware) {
 		this.porousware = porousware;

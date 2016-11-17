@@ -8,19 +8,19 @@ public class Payment {
 
 	}
 
-	public Payment(String CardNumber, Address address) {
+	public Payment(String cardNumber, Address address) {
 
-		this.CardNumber = CardNumber;
+		this.cardNumber = cardNumber;
 		this.address = address;
 
 	}
 
 	public String getCardNumber(){
-		return CardNumber
+		return cardNumber;
 	}
 
-	public void setCardNumber(String CardNumber) {
-		this.CardNumber = CardNumber;
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
 	}
 
 	public Address getAddress() {
@@ -28,7 +28,7 @@ public class Payment {
 
 	}
 
-	public void setAddress(Address addess) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
