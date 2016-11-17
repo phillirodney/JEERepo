@@ -18,11 +18,11 @@ public class Stock {
 	}
 	
 	public int getRequired(){
-		return this.required
+		return this.required;
 	}
 	
-	public int getReserverd(){
-		return this.reserved
+	public int getReserved(){
+		return this.reserved;
 	}
 	
 	public void setProductId(){
