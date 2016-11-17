@@ -1,3 +1,5 @@
+import javax.persistence.*;
+
 @Entity
 @Table(name = "customers")
 public class Customer {
@@ -105,4 +107,5 @@ public class Customer {
 	public void setAddresses(String addresses){
 		this.addresses = addresses
 	}
-}
+}m,
+...0
