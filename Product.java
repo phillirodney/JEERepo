@@ -11,7 +11,7 @@ public class Product {
 	private int productId;
 
 	@Column(name = "name")
-	private String name;
+	private String proudctName;
 
 	@Column(name = "quantity")
 	private int quantity;
@@ -33,11 +33,11 @@ public class Product {
 
 	ArrayList<String> images = new ArrayList<String>();
 
-	public Stock(int productId, String name, int quantity, long stockID, String stockRequired,
+	public Stock(int productId, String proudctName, int quantity, long stockID, String stockRequired,
 			String stockReserved, String currentStock, Boolean porousware) {
 
 		this.productId = productId;
-		this.name = name;
+		this.proudctName = proudctName;
 		this.quantity = quantity;
 		this.stockID = stockID;
 		this.stockRequired = stockRequired;
@@ -55,12 +55,12 @@ public class Product {
 		this.productId = productId;
 	}
 
-	public String getname() {
-		return name;
+	public String getproudctName() {
+		return proudctName;
 	}
 
-	public void setname(String name) {
-		this.name = name;
+	public void setproudctName(String proudctName) {
+		this.proudctName = proudctName;
 	}
 
 	public int getquantity() {
