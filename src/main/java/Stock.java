@@ -20,8 +20,9 @@ public class Stock {
 	public int getrequired() {
 		return this.required;
 	}
-
 	public int getreserved(){
+		return this.reserved;
+	}
 
 	public int getRequired() {
 		return this.required;
