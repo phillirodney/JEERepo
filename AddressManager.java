@@ -13,10 +13,10 @@ public interface AddressManager {
 	public Address createNewAddress(Address address);
 	// create new address
 	
-	public Address updateAddress(Address address);
+	public void Address updateAddress(Address address);
 	//update address
 	
-	public Address deleteAddress(Address address);
+	public void Address deleteAddress(Address address);
 	//delete address
 }
 
