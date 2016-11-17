@@ -1,4 +1,21 @@
-import javax.persistence.*;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "customers")
@@ -39,7 +56,7 @@ public class Customer {
 	private List<Address> addresses;
 
 	@OneToMany
-	@InverseJoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
+	@JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
 	private List<Basket> baskets;
 
 	public Customer() {
@@ -56,56 +73,69 @@ public class Customer {
 
 	}
 
-	public long getId(){
-		return id
+	public long getId() {
+		return id;
 	}
 
-	public String getFirstName(){
-		return firstName
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public String setFirstName(String firstName) {
-		this.firstName = firstName;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public String getLastName(){
-		return lastName
+	public String getEmail() {
+		return email;
 	}
 
-	public String setLastName(String lastName) {
-		this.lastName = lastName;
+	public String getPassword() {
+		return password;
 	}
 
-	public String getEmail(){
-		return email
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public String setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword(){
-		return password
-	}
-
-	public String setPassword(String password) {
-		this.password = password;
-	}
-
-	public Date getDateOfBirth(){
-		return dateOfBirth
-	}
-
-	public String setDateOfBirth(String dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public Address getAddresses() {
+	public List<Address> getAddresses() {
 		return addresses;
 	}
 
-	public void setAddresses(String addresses){
-		this.addresses = addresses
+	public List<Basket> getBaskets() {
+		return baskets;
 	}
-}m,
-...0
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+
+	public void setBaskets(List<Basket> baskets) {
+		this.baskets = baskets;
+	}
+
+	
+}

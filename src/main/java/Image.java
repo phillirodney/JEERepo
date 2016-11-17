@@ -1,19 +1,20 @@
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="images")
+@Table(name = "images")
 public class Image {
-	
+
 	@Id
-	@Column(name="product_id", nullable=false, unique=true)
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "product_id", nullable = false, unique = true)
+	// @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int productID;
-	
-	@Column(name="path")
+
+	@Column(name = "path")
 	private String path;
 
-	public Image(String path)
-	{
+	public Image(String path) {
 		this.path = path;
 	}
 
@@ -24,7 +25,5 @@ public class Image {
 	public void setPath(String path) {
 		this.path = path;
 	}
-	
-	
-}
 
+}
