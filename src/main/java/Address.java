@@ -11,7 +11,7 @@ public class Address {
 	@GeneratedValue
 	@Column (name = "address_id")
 	
-	private String addressId;
+	private int addressId;
 	
 	@Column(name = "house_number", nullable=false)
 	@NotNull
@@ -32,7 +32,7 @@ public class Address {
 	@NotNull
 	private String postcode;
 
-	public Address(String addressId, int houseNumber, String street, String city, String postcode) {
+	public Address(int addressId, int houseNumber, String street, String city, String postcode) {
 
 		this.addressId = addressId;
 		this.houseNumber = houseNumber;
@@ -42,11 +42,11 @@ public class Address {
 
 	}
 
-	public String getaddressId() {
+	public int getaddressId() {
 		return addressId;
 	}
 	
-	public void setaddressId(String addressId)
+	public void setaddressId(int addressId)
 	{
 		this.addressId = addressId;
 	}

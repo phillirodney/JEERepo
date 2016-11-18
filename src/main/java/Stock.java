@@ -30,24 +30,7 @@ public class Stock {
 	}
 
 	public int getReserved() {
-
 		return this.reserved;
-	}
-
-	public void setProductId() {
-
-	}
-
-	public void setpresent() {
-
-	}
-
-	public void setRequired() {
-
-	}
-
-	public void setReserverd() {
-
 	}
 
 }
