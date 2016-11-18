@@ -1,7 +1,16 @@
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table (name = "suppliers")
 public class Supplier {
 
+	@supplierId @GeneratedValue
+	@Column (name = "supplier_id")
 	private int supplierID;
+	
+	@Column (name = "supplier_name")
 	private String supplierName;
 
 	public Supplier() {
