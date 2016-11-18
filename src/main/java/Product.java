@@ -1,12 +1,17 @@
+import java.util.ArrayList;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "products")
 public class Product {
 
-	@productId @GeneratedValue
+	@Id
+	@GeneratedValue
 	@Column(name = "product_id")
 	private int productId;
 
@@ -15,26 +20,26 @@ public class Product {
 
 	@Column(name = "quantity")
 	private int quantity;
-	
+
 	@Column(name = "stock_id")
 	private long stockId;
-	
+
 	@Column(name = "stock_required")
 	private String stockRequired;
 
 	@Column(name = "stock_reserved")
 	private String stockReserved;
-	
+
 	@Column(name = "current_stock")
 	private String currentStock;
-	
+
 	@Column(name = "porousware")
 	private Boolean porousware;
 
 	ArrayList<String> images = new ArrayList<String>();
 
-	public Product(int productId, String name, int quantity, long stockId, String stockRequired,
-			String stockReserved, String currentStock, Boolean porousware) {
+	public Product(int productId, String name, int quantity, long stockId, String stockRequired, String stockReserved,
+			String currentStock, Boolean porousware) {
 
 		this.productId = productId;
 		this.name = name;
@@ -91,28 +96,24 @@ public class Product {
 		return stockReserved;
 	}
 
-	public void setstockReserved (String stockReserved){
+	public void setstockReserved(String stockReserved) {
 		this.stockReserved = stockReserved;
-									}
+	}
 
 	public String getcurrentStock() {
 		return currentStock;
 	}
-	
+
 	public void setcurrentStock(String currentStock) {
 		this.currentStock = currentStock;
 	}
 
 	public Boolean getporousware() {
-	return porousware;
+		return porousware;
 	}
 
 	public void setporousware(Boolean porousware) {
 		this.porousware = porousware;
 	}
 
-
-
 }
-
-

@@ -1,3 +1,10 @@
+
+import java.util.*;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "customer_orders")
 public class CustomerOrder {
@@ -9,14 +16,13 @@ public class CustomerOrder {
 
 	@Column(name = "total", nullable = false)
 	@NotNull
-	private int total;
+	private Double total;
 
 	@Column(name = "date", nullable = false)
 	@Type(type = "date")
 	@NotNull
 	private Date dateOfOrder;
 
-	
 	@Column(name = "dispatch_status", nullable = false, length = 225)
 	@Size(max = 225)
 	@NotNull
@@ -28,7 +34,9 @@ public class CustomerOrder {
 	private String paymentStatus;
 
 	@OneToMany
-	@InverseJoinColumn(name = "customer_order_id", nullable = false)
+
+	@JoinColumn(name = "customer_order_id", referencedColumnName = "id", nullable = false)
+	
 	@NotNull
 	private List<OrderLine> orderLines;
 
@@ -45,31 +53,32 @@ public class CustomerOrder {
 
 	}
 
-	public long getId(){
-		return id
+	public long getId() {
+		return id;
+
 	}
 
 	public Double getTotal() {
 		return total;
 	}
 
-	public Double setTotal(Double total) {
+	public void setTotal(Double total) {
 		this.total = total;
 	}
 
 	public Date getDateOfOrder() {
-		return date;
+		return dateOfOrder;
 	}
 
-	public Double setDateOfOrder(Date dateOfOrder) {
-		this.dateOfOrder = dateOfOrder;
+	public void setDateOfOrder(Date dateOfOrder) {
+		this.dateOfOrder = dateOfOrder; 
 	}
 
 	public String getDispatchStatus() {
 		return dispatchStatus;
 	}
 
-	public String setDispatchStatus(String dispatchStatus) {
+	public void setDispatchStatus(String dispatchStatus) {
 		this.dispatchStatus = dispatchStatus;
 	}
 
@@ -77,15 +86,15 @@ public class CustomerOrder {
 		return paymentStatus;
 	}
 
-	public String setPaymentStatus(String paymentStatus) {
+	public void setPaymentStatus(String paymentStatus) {
 		this.paymentStatus = paymentStatus;
 	}
 
-	public OrderLine getOrderLines() {
+	public List<OrderLine> getOrderLines() {
 		return orderLines;
 	}
 
-	public void setOrderLines(String orderLines){
-		this.orderLines = orderLines
+	public void setOrderLines(List<OrderLine> orderLines){
+		this.orderLines = orderLines;
 	}
 }

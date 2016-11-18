@@ -1,36 +1,40 @@
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 @Entity
 @Table(name = "addresses")
 
 public class Address {
 
-	@addressId
+	@Id
 	@GeneratedValue
 	@Column (name = "address_id")
 	
 	private String addressId;
 	
-	@Column (name = house_number, nullable=false)
+	@Column(name = "house_number", nullable=false)
 	@NotNull
 	private int houseNumber;
 	
-	@Column (name = street, nullable=false, length=225)
+	@Column(name = "street", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
 	private String street;
 	
-	@Column (name = city, nullable=false, length=225)
+	@Column(name = "city", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
 	private String city;
 	
-	@Column (name = postcode, nullable=false, length=225)
+	@Column(name = "postcode", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
 	private String postcode;
 
 	public Address(String addressId, int houseNumber, String street, String city, String postcode) {
 
-		this.addressId = addressID;
+		this.addressId = addressId;
 		this.houseNumber = houseNumber;
 		this.street = street;
 		this.city = city;
@@ -42,18 +46,20 @@ public class Address {
 		return addressId;
 	}
 	
-	public void setaddressId (String addressId)
-	this.addressId = addressId;
-}
+	public void setaddressId(String addressId)
+	{
+		this.addressId = addressId;
+	}
 
 	
 	public int gethouseNumber() {
 		return houseNumber;
 	}
 
-	public void sethouseNumber(int houseNumber) {
+	public void sethouseNumber(int houseNumber) 
+	{	
 		this.houseNumber = houseNumber;
-		
+	}
 	
 	public String getstreet() {
 		return street;
@@ -73,13 +79,14 @@ public class Address {
 							
 	}
 	
-	public String getpostcode() {
+	public String getpostcode()
+	{
 		return postcode;
 	}
 	
-	public void setpostcode (String postcode) {
-		this.postcode = postcode;
-		
+	public void setpostcode (String postcode)
+	{
+		this.postcode = postcode;	
 	}
-	}
+	
 }

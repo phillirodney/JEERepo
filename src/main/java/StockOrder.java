@@ -2,17 +2,17 @@ import java.util.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Stock Orders")
-public class stockOrder {
+@Table(name="stock_orders")
+public class StockOrder {
 
 	@Id
-	@Column(name="Stock Order ID", nullable=false, unique=true)
+	@Column(name="stock_order_id", nullable=false, unique=true)
 	private int sOrderID;
 	
-	@Column(name="Path")
+	@Column(name="path")	
 	private Date dateOrdered;
 	
-	public stockOrder(int orderID)
+	public StockOrder(int orderID)
 	{
 		this.sOrderID = orderID; // change to implement unique order ID
 		this.dateOrdered = new Date();	//date object created/current date
