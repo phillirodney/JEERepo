@@ -38,13 +38,13 @@ public class AddressManagerOffline implements AddressManager {
 
 	public Address createNewAddress(Address address) {
 		
-		testdata.se
+		//
 		
 		return null;
 	}
 
 	public void updateAddress(Address address) {
-		// TODO Auto-generated method stub
+		testdata.addToAddresses(address);
 		
 	}
 
