@@ -1,10 +1,11 @@
+import java.util.List;
 
 public interface AddressManager {
 
 	public Address findByAddressId(String addressId);
 	// find by address
 	
-	public Address findByCustomerId(int customerId);
+	public List<Address> findByCustomerId(int customerId);
 	//find by ID
 	
 	public Address findByAddress(String postcode, int houseNumber);

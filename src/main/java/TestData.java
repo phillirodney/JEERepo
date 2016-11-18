@@ -66,4 +66,8 @@ public class TestData {
 	public void setStock(List<Stock> stock) {
 		this.stock = stock;
 	}
+	
+	public void addToAddresses(Address address){
+		addresses.add(address);
+	}
 }
