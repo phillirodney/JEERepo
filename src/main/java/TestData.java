@@ -1,11 +1,8 @@
 import java.util.*;
 import javax.annotation.*;
-<<<<<<< HEAD
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
-=======
 import javax.ejb.*;
->>>>>>> 9e3228b54393e1cc2a8ab83fa9744f5c88db9455
 
 @Startup
 @Singleton
@@ -43,6 +40,8 @@ public class TestData {
 		return customers;
 	}
 
+
+
 	public List<CustomerOrder> getCustomerOrders() {
 		return customerOrders;
 	}
@@ -67,7 +66,4 @@ public class TestData {
 		this.stock = stock;
 	}
 	
-	public void addToAddresses(Address address){
-		addresses.add(address);
-	}
 }

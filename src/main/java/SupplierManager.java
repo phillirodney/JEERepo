@@ -2,9 +2,17 @@
 public interface SupplierManager {
 
 	// Find by supplierId
-	public Supplier findById(int supplierId);
+	Supplier findById(int supplierId);
 
 	// Find by supplierName
-	public Supplier findBySupplierName(String supplierName);
+	Supplier findBySupplierName(String supplierName);
+
+
+	Supplier createSupplier(Supplier supplier);
+
+	void updateSupplier(Supplier supplier);
+
+	void deleteSupplier(Supplier supplier);
+
 
 }

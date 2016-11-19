@@ -1,9 +1,18 @@
+import java.util.*;
 
 public interface BasketManager{
-	
-	//List<Products> basket = new ArrayList<Products>();
 
-	public Basket createBasket(Basket basket);
+
+	 Basket findById(int id);
+
+	 List<Basket> findBasketsByCustomerId(int id);
+
+	 Basket createBasket(Basket basket);
+
+	 void updateBasket(Basket basket);
+
+	 void deleteBasket(Basket basket);
+
 
 
 }

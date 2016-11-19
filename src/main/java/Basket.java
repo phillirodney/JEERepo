@@ -20,6 +20,10 @@ public class Basket {
 	@Column(name="date")
 	private Date date;
 
+	@ManyToOne
+	@JoinColumn(name="customer_id")
+	private Customer customer;
+
 	public Basket(){
 
 	}
