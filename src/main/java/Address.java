@@ -10,7 +10,6 @@ public class Address {
 	@Id
 	@GeneratedValue
 	@Column (name = "address_id")
-	
 	private int addressId;
 	
 	@Column(name = "house_number", nullable=false)
@@ -67,7 +66,6 @@ public class Address {
 	
 	public void setstreet (String street) {
 		this.street = street;
-		
 	}
 	
 	public String getcity() {

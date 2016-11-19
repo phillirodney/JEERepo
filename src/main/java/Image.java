@@ -1,22 +1,28 @@
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name = "images")
 public class Image {
 
-	@Id
-	@Column(name = "product_id", nullable = false, unique = true)
-	// @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int productID;
+/////////////////////This class is Not needed/////////////////////
 
-	@Column(name = "path")
+	private int imageId;
+
+
 	private String path;
+
+	public Image(){
+
+	}
 
 	public Image(String path) {
 		this.path = path;
+	}
+
+	public int getImageId(){
+		return imageId;
+	}
+
+	public void setImageId(){
+		this.imageId = imageId;
 	}
 
 	public String getPath() {
@@ -28,3 +34,5 @@ public class Image {
 	}
 
 }
+
+/////////////////////////////////////////////////////////////////////

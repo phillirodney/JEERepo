@@ -10,6 +10,7 @@ public abstract class CustomerManagerOffline implements CustomerManager {
 
 	// create an array list of customers to return.
 	ArrayList<Customer> list_of_customers = new ArrayList<Customer>();
+
 	@Inject
 	private TestData testData;
 
@@ -26,7 +27,7 @@ public abstract class CustomerManagerOffline implements CustomerManager {
 		return customer;
 	}
 
-	// Finf customers by their customerId and return the list
+	// Find customers by their customerId and return the list
 	public Customer findById(long id) {
 		for (Customer customer : testData.getCustomers())
 			if (customer.getId() == id) {
@@ -38,10 +39,10 @@ public abstract class CustomerManagerOffline implements CustomerManager {
 
 	// Update a field in the customer table. 
 	public void updateCustomer(Customer customer, String firstName,String updatedFirstName) {
-		for (Customer customer : testData.getCustomers())
-			if() {
-				
-			}
+		//for (Customer customer1 : testData.getCustomers())
+//			if() {
+//
+//			}
 			
 
 	}

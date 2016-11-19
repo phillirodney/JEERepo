@@ -1,14 +1,20 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
+import javax.inject.Inject;
+
 
 @Stateless
 @Default
 public class AddressManagerOffline implements AddressManager {
 
 	@Inject
-	private TestData testdata
+	private TestData testdata;
 
 	
-	public Address findByAddressId(String addressId) {
+	public Address findByAddressId(int addressId) {
 		for(Address address: testdata.getAddresses()){
 			if(address.getaddressId() == addressId){
 				return address;

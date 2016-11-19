@@ -1,26 +1,30 @@
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table (name = "order_lines")
 public class OrderLine {
 	
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	@Column (name = "line_id")
 	private int lineId;
-	
-	@Column (name = "product_id")
-	private int productId;
+
+
+	@OneToMany
+	@JoinColumn(name="product_id")
+	private Product product;
+
+
+	@OneToMany
+	@JoinColumn(name="customer_order_id")
+	private CustomerOrder customerOrder;
 
 	public OrderLine() { 
 	}
 
-	public OrderLine( int lineId, int productId){
+	public OrderLine(int lineId, Product product){
 		this.lineId = lineId;
-		this.productId = productId;
+		this.product = product;
 	}
 
 	public int getLineId() {
@@ -31,12 +35,12 @@ public class OrderLine {
 		this.lineId = lineId;
 }
 
-	public int getProductId(){
-		return productId;
+	public Product getProduct(){
+		return product;
 }
 
-	public void setProductId(int productId) {
-		 this.productId = productId;
+	public void setProduct(Product product) {
+		 this.product = product;
 	}
 
 }

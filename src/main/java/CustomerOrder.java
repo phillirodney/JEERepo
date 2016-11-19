@@ -10,7 +10,7 @@ import org.hibernate.annotations.Type;
 public class CustomerOrder {
 
 	@Id
-	@Column(name = "id", nullable = false, unique = true)
+	@Column(name = "customer_order_id", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
@@ -33,11 +33,7 @@ public class CustomerOrder {
 	@NotNull
 	private String paymentStatus;
 
-	@OneToMany
-
-	@JoinColumn(name = "customer_order_id", referencedColumnName = "id", nullable = false)
-	
-	@NotNull
+	@OneToMany(mappedBy = "customer_orders")
 	private List<OrderLine> orderLines;
 
 	public CustomerOrder() {

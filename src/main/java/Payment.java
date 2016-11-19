@@ -1,8 +1,23 @@
+import javax.persistence.*;
 
 public class Payment {
 
+
+
+	@Id
+	@Column(name = "card_number", nullable = false, unique = true)
+	@GeneratedValue
 	private String cardNumber;
+
+	//Uni-Directional Relationship
+	@ManyToOne
+	@JoinColumn(name = "address_id")
 	private Address address;
+
+
+	@ManyToOne
+	@JoinColumn(name= "customer_id")
+	private Customer customer;
 
 	public Payment() {
 

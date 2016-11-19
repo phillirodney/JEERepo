@@ -1,12 +1,59 @@
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.sql.Date;
 
 @Entity 
 @Table (name = "baskets")
-public class Basket extends Product{
-	
-	public Basket(int productId, String name, int quantity, long stockId, String stockRequired,
-			String stockReserved, String currentStock, Boolean porousware) {
-		super(quantity, currentStock, quantity, stockId, currentStock, currentStock, currentStock, porousware);
+public class Basket {
+
+	@Id
+	@Column(name="id", nullable=false, unique=true)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int basket_id;
+
+	@Column(name="quantity")
+	private int quantity;
+
+	@OneToOne
+	@JoinColumn(name="product_id")
+	private Product product;
+
+	@Column(name="date")
+	private Date date;
+
+	public Basket(){
+
 	}
+
+	public int getBasket_id(){
+		return this.basket_id;
+	}
+
+	public int getQuantity(){
+		return this.quantity;
+	}
+
+	public Product getProduct(){
+		return this.product;
+	}
+
+	public Date getDate(){
+		return this.date;
+	}
+
+	public void setQuantity(int quantity){
+		this.quantity = quantity;
+	}
+
+	public void setProduct(Product product){
+		this.product = product;
+	}
+
+	public void setDate(Date date){
+		this.date = date;
+	}
+
+	public void setBasket_id(){
+		this.basket_id = basket_id;
+	}
+
 }
