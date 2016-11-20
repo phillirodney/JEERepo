@@ -1,3 +1,4 @@
+import java.util.List;
 
 public interface SupplierManager {
 
@@ -5,7 +6,7 @@ public interface SupplierManager {
 	Supplier findById(int supplierId);
 
 	// Find by supplierName
-	Supplier findBySupplierName(String supplierName);
+	List<Supplier> findBySupplierName(String supplierName);
 
 
 	Supplier createSupplier(Supplier supplier);

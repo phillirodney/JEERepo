@@ -32,14 +32,6 @@ public class Stock {
 		return this.present;
 	}
 
-	public int getrequired() {
-		return this.required;
-	}
-
-	public int getreserved() {
-		return this.reserved;
-	}
-
 	public int getRequired() {
 		return this.required;
 	}
@@ -48,4 +40,7 @@ public class Stock {
 		return this.reserved;
 	}
 
+	public void setProductId(int productId){
+		this.productId = productId;
+	}
 }

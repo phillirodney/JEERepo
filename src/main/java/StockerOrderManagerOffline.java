@@ -36,12 +36,27 @@ public class StockerOrderManagerOffline implements StockOrderManager {
     @Override
     public void updateStockOrder() {
 
+        /////////////////DON'T KNOW/////////////////////////
 
     }
 
     @Override
     public void deleteStockOrder(StockOrder stockOrder) {
-        
+
+        List<StockOrder> stockOrders = testData.getStockOrders();
+        for(StockOrder so: stockOrders){
+            if(so.getstockOrderID() == stockOrder.getstockOrderID()){
+                stockOrders.remove(so);
+                break;
+            }
+        }
+        for(StockOrder so: stockOrders){
+            if(so.getstockOrderID() > stockOrder.getstockOrderID()){
+                so.setsOrderID(so.getstockOrderID() - 1 );
+            }
+        }
+        testData.setStockOrders(stockOrders);
+
 
     }
 }
