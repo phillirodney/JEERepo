@@ -18,6 +18,7 @@ public class TestData {
 	private List<Payment> payments;
 	private List<Product> products;
 	private List<StockOrder> stockOrders;
+	private List<Supplier> suppliers;
 
 	@PostConstruct
 	private void setupData() {
@@ -30,6 +31,8 @@ public class TestData {
 		payments = new ArrayList<Payment>();
 		products = new ArrayList<Product>();
 		stockOrders = new ArrayList<StockOrder>();
+		suppliers = new ArrayList<Supplier>();
+
 
 		// AddData
 		//Address address1 = new Address(null, 0, null, null, null);
@@ -43,6 +46,13 @@ public class TestData {
 
 	}
 
+	public List<Supplier> getSuppliers(){
+		return this.suppliers;
+	}
+
+	public void setSuppliers(List<Supplier> suppliers){
+		this.suppliers = suppliers;
+	}
 
 	public List<StockOrder> getStockOrders(){
 		return this.stockOrders;
