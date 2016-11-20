@@ -3,6 +3,7 @@ import javax.annotation.*;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.ejb.*;
+import javax.persistence.criteria.Order;
 
 @Startup
 @Singleton
@@ -13,6 +14,10 @@ public class TestData {
 	private List<CustomerOrder> customerOrders;
 	private List<Stock> stock;
 	private List<Basket> baskets;
+	private List<OrderLine> orderLines;
+	private List<Payment> payments;
+	private List<Product> products;
+	private List<StockOrder> stockOrders;
 
 	@PostConstruct
 	private void setupData() {
@@ -21,6 +26,10 @@ public class TestData {
 		customerOrders = new ArrayList<CustomerOrder>();
 		stock = new ArrayList<Stock>();
 		baskets = new ArrayList<Basket>();
+		orderLines = new ArrayList<OrderLine>();
+		payments = new ArrayList<Payment>();
+		products = new ArrayList<Product>();
+		stockOrders = new ArrayList<StockOrder>();
 
 		// AddData
 		//Address address1 = new Address(null, 0, null, null, null);
@@ -32,6 +41,32 @@ public class TestData {
 		stock.add(stock1);
 		customers.add(customer1);
 
+	}
+
+
+	public List<StockOrder> getStockOrders(){
+		return this.stockOrders;
+	}
+
+	public void setStockOrders(List<StockOrder> stockOrders){
+		this.stockOrders = stockOrders;
+	}
+
+
+	public List<Product> getProducts(){
+		return this.products;
+	}
+
+	public void setProducts(List<Product> products){
+		this.products = products;
+	}
+
+	public List<Payment> getPayments(){
+		return this.payments;
+	}
+
+	public void setPayments(List<Payment> payments){
+		this.payments = payments;
 	}
 
 	public List<Address> getAddresses() {
@@ -46,6 +81,13 @@ public class TestData {
 		return this.baskets;
 	}
 
+	public List<OrderLine> getOrderLines(){
+		return this.orderLines;
+	}
+
+	public void setOrderLines(List<OrderLine> orderLines){
+		this.orderLines = orderLines;
+	}
 
 	public List<CustomerOrder> getCustomerOrders() {
 		return customerOrders;

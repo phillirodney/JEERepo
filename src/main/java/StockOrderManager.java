@@ -3,13 +3,13 @@
  */
 public interface StockOrderManager {
 
-    StockOrder createStockOrder();
+    StockOrder createStockOrder(StockOrder stockOrder);
 
-    StockOrder findById();
+    StockOrder findById(int id);
 
     void updateStockOrder();
 
-    void deleteStockOrder();
+    void deleteStockOrder(StockOrder stockOrder);
 
 
 }

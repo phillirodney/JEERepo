@@ -38,11 +38,11 @@ public class Product implements Serializable{
 
 	}
 
-	public int getproductId(int productId) {
+	public int getproductId() {
 		return productId;
 	}
 
-	public void setproductId() {
+	public void setproductId(int productId) {
 		this.productId = productId;
 	}
 

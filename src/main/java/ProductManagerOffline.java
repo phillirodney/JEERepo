@@ -1,14 +1,34 @@
+import javax.inject.Inject;
+import java.util.List;
+
 /**
  * Created by Luke on 19/11/2016.
  */
 public class ProductManagerOffline implements ProductManager {
+
+    @Inject
+    private TestData testData;
+
     @Override
     public Product createProduct(Product product) {
-        return null;
+
+        List<Product> products = testData.getProducts();
+        product.setproductId(products.size() + 1);
+        testData.setProducts(products);
+        return findById(product.getproductId());
+
     }
 
     @Override
-    public Product findById(Product product) {
+    public Product findById(int id) {
+
+        for(Product p: testData.getProducts()){
+            if(p.getproductId() == id){
+                return p;
+            }
+        }
+
+
         return null;
     }
 
@@ -18,7 +38,21 @@ public class ProductManagerOffline implements ProductManager {
     }
 
     @Override
-    public void deleteProduct() {
+    public void deleteProduct(Product product) {
+
+        List<Product> products = testData.getProducts();
+
+        for(Product p: products){
+            if(p.getproductId() == product.getproductId()){
+                products.remove(p);
+            }
+        }
+
+        for(Product p: products){
+            if(p.getproductId() > product.getproductId()){
+                p.setproductId(p.getproductId() - 1);
+            }
+        }
 
     }
 }

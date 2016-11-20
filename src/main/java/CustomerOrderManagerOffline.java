@@ -1,3 +1,4 @@
+import javax.inject.Inject;
 import java.util.List;
 
 /**
@@ -5,6 +6,7 @@ import java.util.List;
  */
 public class CustomerOrderManagerOffline implements CustomerOrderManager {
 
+    @Inject
     private TestData testData;
 
 

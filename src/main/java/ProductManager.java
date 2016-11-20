@@ -3,10 +3,10 @@ public interface ProductManager {
 
     Product createProduct(Product product);
 
-    Product findById(Product product);
+    Product findById(int id);
 
     void updateProduct();
 
-    void deleteProduct();
+    void deleteProduct(Product product);
 
 }
