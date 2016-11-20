@@ -54,6 +54,10 @@ public class CustomerOrder {
 
 	}
 
+	public void setId(long id){
+		this.id = id;
+	}
+
 	public Double getTotal() {
 		return total;
 	}

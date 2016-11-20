@@ -1,5 +1,6 @@
 
 public interface PaymentsManager {
+
 	// create a new payment method
 	public PaymentsManager createNewPayment(PaymentsManager payment);
 
@@ -8,5 +9,7 @@ public interface PaymentsManager {
 
 	// delete a payment method
 	public void deletePayment(PaymentsManager payment);
+
+	PaymentsManager findByCardNumber(int cardNumber);
 
 }

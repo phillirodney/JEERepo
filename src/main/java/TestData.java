@@ -12,6 +12,7 @@ public class TestData {
 	private List<Customer> customers;
 	private List<CustomerOrder> customerOrders;
 	private List<Stock> stock;
+	private List<Basket> baskets;
 
 	@PostConstruct
 	private void setupData() {
@@ -19,6 +20,7 @@ public class TestData {
 		customers = new ArrayList<Customer>();
 		customerOrders = new ArrayList<CustomerOrder>();
 		stock = new ArrayList<Stock>();
+		baskets = new ArrayList<Basket>();
 
 		// AddData
 		//Address address1 = new Address(null, 0, null, null, null);
@@ -40,6 +42,9 @@ public class TestData {
 		return customers;
 	}
 
+	public List<Basket> getBaskets(){
+		return this.baskets;
+	}
 
 
 	public List<CustomerOrder> getCustomerOrders() {
@@ -49,6 +54,7 @@ public class TestData {
 	public List<Stock> getStock() {
 		return stock;
 	}
+
 
 	public void setAddresses(List<Address> addresses) {
 		this.addresses = addresses;
@@ -65,5 +71,8 @@ public class TestData {
 	public void setStock(List<Stock> stock) {
 		this.stock = stock;
 	}
-	
+
+	public void setBaskets(List<Basket> baskets){
+		this.baskets = baskets;
+	}
 }

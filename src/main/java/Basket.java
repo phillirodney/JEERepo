@@ -56,7 +56,7 @@ public class Basket {
 		this.date = date;
 	}
 
-	public void setBasket_id(){
+	public void setBasket_id(int basket_id){
 		this.basket_id = basket_id;
 	}
 

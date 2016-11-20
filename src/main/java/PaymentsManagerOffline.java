@@ -16,4 +16,9 @@ public class PaymentsManagerOffline implements PaymentsManager {
     public void deletePayment(PaymentsManager payment) {
 
     }
+
+    @Override
+    public PaymentsManager findByCardNumber(int cardNumber) {
+        return null;
+    }
 }
