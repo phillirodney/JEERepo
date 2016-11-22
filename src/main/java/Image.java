@@ -1,4 +1,15 @@
+
+
 import javax.persistence.*;
+
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 
 public class Image {
 

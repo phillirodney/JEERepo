@@ -1,4 +1,11 @@
-
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 public interface CustomerManager {
 	// create new customer
 	public Customer createNewCustomer(Customer customer);

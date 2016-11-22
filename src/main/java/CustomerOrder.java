@@ -4,7 +4,14 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import org.hibernate.annotations.Type;
-
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 @Entity
 @Table(name = "customer_orders")
 public class CustomerOrder {

@@ -1,9 +1,15 @@
+
+
 import javax.inject.Inject;
 import java.util.List;
-
 /**
- * Created by Luke on 19/11/2016.
- */
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * *//
 public class CustomerOrderManagerOffline implements CustomerOrderManager {
 
     @Inject

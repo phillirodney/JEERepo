@@ -1,8 +1,19 @@
+
+
 import java.util.ArrayList;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
+
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 
 @Stateless
 @Default
@@ -25,6 +36,7 @@ public abstract class CustomerManagerOffline implements CustomerManager {
 	// Add each new customer object to an ArrayList called Customer.
 	@Override
 	public Customer createNewCustomer(Customer customer) {
+		
 		list_of_customers.add(customer);
 		return customer;
 	}

@@ -1,11 +1,18 @@
+/**
+ * This is the address model
+ * 
+ * @author Luke Barge
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
+
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import java.util.List;
 
-/**
- * Created by Luke on 19/11/2016.
- */
+ 
 @Stateless
 @Default
 public class BasketManagerOffline implements BasketManager {
@@ -57,12 +64,7 @@ public class BasketManagerOffline implements BasketManager {
                 baskets.remove(b);
                 break;
             }
-        }
-        for(Basket b: baskets){
-            if(b.getBasket_id() > basket.getBasket_id()){
-                b.setBasket_id(b.getBasket_id() - 1);
-            }
-        }
+        }  
         testData.setBaskets(baskets);
 
     }
