@@ -51,7 +51,11 @@ public class BasketManagerOffline implements BasketManager {
     @Override
     public void updateBasket(Basket basket) {
 
-        ///////
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
 
     }
 

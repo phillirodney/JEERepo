@@ -34,6 +34,12 @@ public class StockManagerOffline implements StockManager {
 
     @Override
     public void updateStock(Stock stock) {
+    	
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
 
     }
 

@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
+<<<<<<< HEAD
  * This is the address model
  * 
  * @author ....
@@ -13,6 +14,12 @@ import javax.validation.constraints.Size;
  * 
  * */
  
+=======
+ *
+ * 
+ * @author Team
+ */
+>>>>>>> 25337b51f0f9212fe22a2eb805c3fe4feab2dd82
 
 @Entity
 @Table(name = "addresses")

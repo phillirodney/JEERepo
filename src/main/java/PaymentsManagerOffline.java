@@ -23,7 +23,12 @@ public class PaymentsManagerOffline implements PaymentsManager {
 
     @Override
     public void updatePayment(Payment payment) {
+    		
+    	// no operation - for an in-memory
 
+    	// database,
+
+    	// we update automatically in real time
     }
 
     @Override

@@ -40,7 +40,11 @@ public class OrderLineManagerOffline implements OrderLineManager {
 
     @Override
     public OrderLine updateOrderLine(OrderLine orderLine) {
-        return null;
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
     }
 
     @Override

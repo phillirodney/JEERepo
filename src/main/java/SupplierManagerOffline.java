@@ -47,6 +47,12 @@ public class SupplierManagerOffline implements SupplierManager {
 
     @Override
     public void updateSupplier(Supplier supplier) {
+    	
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
 
     }
 

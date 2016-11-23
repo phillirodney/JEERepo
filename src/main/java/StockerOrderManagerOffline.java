@@ -36,7 +36,11 @@ public class StockerOrderManagerOffline implements StockOrderManager {
     @Override
     public void updateStockOrder() {
 
-        /////////////////DON'T KNOW/////////////////////////
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
 
     }
 

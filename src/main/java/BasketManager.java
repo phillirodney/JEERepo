@@ -25,6 +25,6 @@ public interface BasketManager{
 
 	 void deleteBasket(Basket basket);
 
-
+	//Possibly create a delete which takes the ID (int) as a paramater
 
 }

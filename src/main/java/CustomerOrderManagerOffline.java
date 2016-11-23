@@ -37,7 +37,13 @@ public class CustomerOrderManagerOffline implements CustomerOrderManager {
 
     @Override
     public void updateCustomerOrder(CustomerOrder customerOrder) {
-                //////////////
+    	
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
+    	
     }
 
     @Override
