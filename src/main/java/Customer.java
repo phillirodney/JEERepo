@@ -1,3 +1,11 @@
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 
 import java.util.Date;
 import java.util.List;
@@ -17,6 +25,8 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Type;
 
+
+ 
 @Entity
 @Table(name = "customers")
 public class Customer {
@@ -52,12 +62,20 @@ public class Customer {
 	private Date dateOfBirth;
 
 	@ManyToMany
-	@JoinTable(name = "has_address", joinColumns = @JoinColumn(name = "customers_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "address_id", referencedColumnName = "id"))
+	@JoinTable(name = "has_address",
+			joinColumns =
+				@JoinColumn(name = "customer_id", referencedColumnName = "id"),
+			inverseJoinColumns =
+				@JoinColumn(name = "address_id", referencedColumnName = "address_id"))
 	private List<Address> addresses;
 
-	@OneToMany
-	@JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
+	@OneToMany(mappedBy = "customer")
 	private List<Basket> baskets;
+
+
+	@OneToMany(mappedBy = "customer")
+	private List<Payment> payment;
+
 
 	public Customer() {
 

@@ -5,13 +5,11 @@ public interface StockManager {
 	
 	//C
 	
-	public void createStock(Stock stock);
+	public Stock createStock(Stock stock);
 	
 	
 	//R
-	
-	public Stock findByStockId(int stockId);
-	
+
 	public Stock findByProductId(int productId);
 	
 	//U

@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.persistence.Column;
@@ -6,22 +7,27 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
 @Entity
-@Table(name = "products")
-public class Product extends Stock {
+public class Product implements Serializable{
 
-	@Id
-	@GeneratedValue
-	@Column(name = "product_id")
-	private int productId;
 
-	@Column(name = "name")
+	private static final long serialVersionUID = 1L;
+
+	@Id private int productId;
+
+
 	private String name;
 
-	@Column(name = "quantity")
+
 	private int quantity;
 
 	ArrayList<String> images = new ArrayList<String>();
+
+	public Product(){
+
+	}
 
 	public Product(int productId, String name, int quantity, long stockId, String stockRequired, String stockReserved,
 			String currentStock, Boolean porousware) {
@@ -32,11 +38,11 @@ public class Product extends Stock {
 
 	}
 
-	public int getproductId(int productId) {
+	public int getproductId() {
 		return productId;
 	}
 
-	public void setproductId() {
+	public void setproductId(int productId) {
 		this.productId = productId;
 	}
 

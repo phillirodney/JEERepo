@@ -1,19 +1,20 @@
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table (name = "suppliers")
 public class Supplier {
 
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	@Column (name = "supplier_id")
 	private int supplierID;
 	
 	@Column (name = "supplier_name")
 	private String supplierName;
+
+	@OneToMany(mappedBy = "supplier")
+	private List<StockOrder> stockOrder;
 
 	public Supplier() {
 	}

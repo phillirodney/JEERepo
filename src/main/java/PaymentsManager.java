@@ -1,12 +1,15 @@
 
 public interface PaymentsManager {
+
 	// create a new payment method
-	public PaymentsManager createNewPayment(PaymentsManager payment);
+	public Payment createNewPayment(Payment payment);
 
 	// update a payment method
-	public void updatePayment(PaymentsManager payment);
+	public void updatePayment(Payment payment);
 
 	// delete a payment method
-	public void deletePayment(PaymentsManager payment);
+	public void deletePayment(Payment payment);
+
+	Payment findByCardNumber(String cardNumber);
 
 }

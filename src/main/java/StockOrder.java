@@ -7,23 +7,27 @@ public class StockOrder {
 
 	@Id
 	@Column(name="stock_order_id", nullable=false, unique=true)
-	private int sOrderID;
+	private int stockOrderID;
 	
-	@Column(name="path")	
+	@Column(name="date_ordered")
 	private Date dateOrdered;
+
+	@ManyToOne
+	@JoinColumn(name="supplier_id")
+	private Supplier supplier;
 	
 	public StockOrder(int orderID)
 	{
-		this.sOrderID = orderID; // change to implement unique order ID
+		this.stockOrderID = orderID; // change to implement unique order ID
 		this.dateOrdered = new Date();	//date object created/current date
 	}
 
-	public int getsOrderID() {
-		return sOrderID;
+	public int getstockOrderID() {
+		return stockOrderID;
 	}
 
 	public void setsOrderID(int sOrderID) {
-		this.sOrderID = sOrderID;
+		this.stockOrderID = sOrderID;
 	}
 
 	public Date getDateOrdered() {
@@ -36,7 +40,7 @@ public class StockOrder {
 
 	@Override
 	public String toString() {
-		return "Stock Order ID: " + sOrderID + ", Date Ordered: " + dateOrdered + ".";
+		return "Stock Order ID: " + stockOrderID + ", Date Ordered: " + dateOrdered + ".";
 	}
 	
 	

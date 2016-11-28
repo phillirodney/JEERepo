@@ -1,22 +1,39 @@
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "images")
+
+import javax.persistence.*;
+
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
+
 public class Image {
 
-	@Id
-	@Column(name = "product_id", nullable = false, unique = true)
-	// @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int productID;
+/////////////////////This class is Not needed/////////////////////
 
-	@Column(name = "path")
+	private int imageId;
+
+
 	private String path;
+
+	public Image(){
+
+	}
 
 	public Image(String path) {
 		this.path = path;
+	}
+
+	public int getImageId(){
+		return imageId;
+	}
+
+	public void setImageId(){
+		this.imageId = imageId;
 	}
 
 	public String getPath() {
@@ -28,3 +45,5 @@ public class Image {
 	}
 
 }
+
+/////////////////////////////////////////////////////////////////////

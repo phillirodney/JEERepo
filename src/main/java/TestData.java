@@ -1,11 +1,9 @@
 import java.util.*;
 import javax.annotation.*;
-<<<<<<< HEAD
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
-=======
 import javax.ejb.*;
->>>>>>> 9e3228b54393e1cc2a8ab83fa9744f5c88db9455
+import javax.persistence.criteria.Order;
 
 @Startup
 @Singleton
@@ -15,6 +13,12 @@ public class TestData {
 	private List<Customer> customers;
 	private List<CustomerOrder> customerOrders;
 	private List<Stock> stock;
+	private List<Basket> baskets;
+	private List<OrderLine> orderLines;
+	private List<Payment> payments;
+	private List<Product> products;
+	private List<StockOrder> stockOrders;
+	private List<Supplier> suppliers;
 
 	@PostConstruct
 	private void setupData() {
@@ -22,6 +26,13 @@ public class TestData {
 		customers = new ArrayList<Customer>();
 		customerOrders = new ArrayList<CustomerOrder>();
 		stock = new ArrayList<Stock>();
+		baskets = new ArrayList<Basket>();
+		orderLines = new ArrayList<OrderLine>();
+		payments = new ArrayList<Payment>();
+		products = new ArrayList<Product>();
+		stockOrders = new ArrayList<StockOrder>();
+		suppliers = new ArrayList<Supplier>();
+
 
 		// AddData
 		//Address address1 = new Address(null, 0, null, null, null);
@@ -35,12 +46,57 @@ public class TestData {
 
 	}
 
+	public List<Supplier> getSuppliers(){
+		return this.suppliers;
+	}
+
+	public void setSuppliers(List<Supplier> suppliers){
+		this.suppliers = suppliers;
+	}
+
+	public List<StockOrder> getStockOrders(){
+		return this.stockOrders;
+	}
+
+	public void setStockOrders(List<StockOrder> stockOrders){
+		this.stockOrders = stockOrders;
+	}
+
+
+	public List<Product> getProducts(){
+		return this.products;
+	}
+
+	public void setProducts(List<Product> products){
+		this.products = products;
+	}
+
+	public List<Payment> getPayments(){
+		return this.payments;
+	}
+
+	public void setPayments(List<Payment> payments){
+		this.payments = payments;
+	}
+
 	public List<Address> getAddresses() {
 		return addresses;
 	}
 
 	public List<Customer> getCustomers() {
 		return customers;
+	}
+
+	public List<Basket> getBaskets(){
+		return this.baskets;
+	}
+
+	public List<OrderLine> getOrderLines(){
+		return this.orderLines;
+	}
+
+	public void setOrderLines(List<OrderLine> orderLines){
+		this.orderLines = orderLines;
 	}
 
 	public List<CustomerOrder> getCustomerOrders() {
@@ -50,6 +106,7 @@ public class TestData {
 	public List<Stock> getStock() {
 		return stock;
 	}
+
 
 	public void setAddresses(List<Address> addresses) {
 		this.addresses = addresses;
@@ -65,5 +122,9 @@ public class TestData {
 
 	public void setStock(List<Stock> stock) {
 		this.stock = stock;
+	}
+
+	public void setBaskets(List<Basket> baskets){
+		this.baskets = baskets;
 	}
 }

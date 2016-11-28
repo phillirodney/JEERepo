@@ -1,12 +1,23 @@
-
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 public interface CustomerOrderManager {
+
 	// create a new customer order
-	public CustomerOrder createNewCustomerOrder(CustomerOrder customerOrder);
+	 CustomerOrder createNewCustomerOrder(CustomerOrder customerOrder);
 
 	// find customer order by id
-	public CustomerOrder findById(long id);
+	 CustomerOrder findById(long id);
 
 	// update a customer order
-	public void updateCustomerOrder(CustomerOrder customerOrder);
+	void updateCustomerOrder(CustomerOrder customerOrder);
+
+	void deleteCustomerOrder(CustomerOrder customerOrder);
+
 
 }

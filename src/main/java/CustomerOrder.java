@@ -4,13 +4,20 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import org.hibernate.annotations.Type;
-
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 @Entity
 @Table(name = "customer_orders")
 public class CustomerOrder {
 
 	@Id
-	@Column(name = "id", nullable = false, unique = true)
+	@Column(name = "customer_order_id", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
@@ -33,11 +40,7 @@ public class CustomerOrder {
 	@NotNull
 	private String paymentStatus;
 
-	@OneToMany
-
-	@JoinColumn(name = "customer_order_id", referencedColumnName = "id", nullable = false)
-	
-	@NotNull
+	@OneToMany(mappedBy = "customer_orders")
 	private List<OrderLine> orderLines;
 
 	public CustomerOrder() {
@@ -56,6 +59,10 @@ public class CustomerOrder {
 	public long getId() {
 		return id;
 
+	}
+
+	public void setId(long id){
+		this.id = id;
 	}
 
 	public Double getTotal() {
