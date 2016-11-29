@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel=stylesheet type="text/css" href=navbar.css>
+    
+
 
   <style>
     #material {
@@ -43,13 +45,21 @@
 	}
 	
 	
-	
-	
 	.container {
 	  width: auto;
 	  max-width: 680px;
 	  padding: 0 15px;
 	}
+	
+	.nav-sidebar {
+		 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      background-color: #EBEBEB;
+	}
+	
+	.img-thumbnail{
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+
 
 
 
@@ -65,9 +75,9 @@
 	<div class="row" style="padding: 0px">
 		<div class="col-sm-1"> </div>
 		 <div class="col-sm-8"> 
-	    	<img src="NB Gardens logo.png" width=100px style="position: fixed;">
+	    	<img src="NB Gardens logo.png" width=100px style="position: absolute;">
 	    </div>
-	    <div class="col-sm-1" style="padding:10px"> Basket</div>
+	    <div class="col-sm-1" style="padding:13px"> Basket</div>
 	
     	<div class="col-sm-2" style="margin:0px">
 	      <a href="#">
@@ -107,31 +117,62 @@
   </div>
 </nav>
 
-<div class="container">
-<div class="jumbotron" id="material">
-<img src="garden_gnome.png" width="60px" style="float: right;">
-  <br>
-  <h2>Sign Up</h2>
-  <form>
-    <div class="form-group">
-      <label for="usr">First Name:</label>
-      <input type="text" class="form-control" id="usr">
-    </div>
-    <div class="form-group">
-      <label for="usr">Last Name:</label>
-      <input type="text" class="form-control" id="usr">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd">
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="text" class="form-control" id="eml">
-    </div>
-  </form>
-</div>
-</div>
+ <div class="container-fluid" style="padding-top:30px">
+      <div class="row">
+        <div class="col-sm-3 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="#">Price</a>
+            
+            	<input id="test" type="range"/>
+            		
+            
+            </li>
+            <li><a href="">Option 1</a></li>
+            <li><a href="">Optinion 2</a></li>
+            <li><a href="">Option 3</a></li>
+            <li><a href="">option 4</a></li>
+            <li><a href="">Option 45</a></li>
+            <li><a href="">OPtion 43</a></li>
+            <li><a href="">Option 45</a></li>
+            <li><a href="">OPtion 43</a></li>
+            <li><a href="">Option 45</a></li>
+            
+          </ul>
+        </div>
+       
+      
+            <div class=" col-sm-3 ">
+              <img src="gnome.jpg" class="img-thumbnail" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Gnome 1</h4>       
+            </div>
+            <div class="col-sm-3 ">
+              <img src="gnome.jpg" class="img-thumbnail" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Gnome 2</h4>       
+            </div>
+            <div class="col-sm-3 ">
+              <img src="gnome.jpg" class="img-thumbnail" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Gnome 3</h4>       
+            </div>
+            <div class="col-sm-3 ">
+              <img src="gnome.jpg" class="img-thumbnail" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Gnome 4</h4>       
+            </div>
+            <div class=" col-sm-3 ">
+              <img src="gnome.jpg" class="img-thumbnail" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Gnome 5</h4>       
+            </div>
+             <div class="col-sm-3 ">
+              <img src="gnome.jpg" class="img-thumbnail" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Gnome 6</h4>       
+            </div>
+          </div>
+          
+       
+          
+   
+  
+
+          
 
 
     <footer class="footer">
