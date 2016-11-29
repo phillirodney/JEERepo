@@ -20,6 +20,7 @@
     body {
         color: #black;
         background: url("background-texture-new.jpg");
+        
     }
     
 
@@ -51,8 +52,6 @@
 	  padding: 0 15px;
 	}
 
-
-
   </style>
 
 
@@ -65,9 +64,9 @@
 	<div class="row" style="padding: 0px">
 		<div class="col-sm-1"> </div>
 		 <div class="col-sm-8"> 
-	    	<img src="NB Gardens logo.png" width=100px style="position: fixed;">
+	    	<img src="NB Gardens logo.png" width=100px style="position: absolute;">
 	    </div>
-	    <div class="col-sm-1" style="padding:10px"> Basket</div>
+	    <div class="col-sm-1" style="padding:13px"> Basket</div>
 	
     	<div class="col-sm-2" style="margin:0px">
 	      <a href="#">
@@ -85,7 +84,7 @@
   <div class="container-fluid">
     
     <ul class="nav navbar-nav">
-    <li><a href="Product.html">Gnomes</a></li>		
+    <li><a href="#">Gnomes</a></li>		
       <li class="active"><a href="#">Garden</a></li>
       <li><a href="#">Offers</a></li>
       <li><a href="#">Season</a></li>
@@ -107,28 +106,30 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="container" style="color: gray;">
 <div class="jumbotron" id="material">
-<img src="garden_gnome.png" width="60px" style="float: right;">
   <br>
-  <h2>Sign Up</h2>
+  <h2>Login</h2>
+  <br>
   <form>
-    <div class="form-group">
-      <label for="usr">First Name:</label>
-      <input type="text" class="form-control" id="usr">
+    <div class="text">Please login in to your NB Gardens account. 
+    If you don't have an account, you can create one</text>
     </div>
+    <br>
+    <br>
     <div class="form-group">
-      <label for="usr">Last Name:</label>
+      <label for="usr">Email:</label>
       <input type="text" class="form-control" id="usr">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd">
+      <input type="text" class="form-control" id="pwd">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="text" class="form-control" id="eml">
-    </div>
+   	  <a href="">Forgotten Password? </a> 
+   	</div>
+   	<div class="form-group">
+   	  <button type="button">Login</button>
   </form>
 </div>
 </div>
@@ -139,10 +140,6 @@
         <span class="text-muted">FOOTER</span>
       </div>
     </footer>
-
-
-
-
 
 </body>
 </html>
