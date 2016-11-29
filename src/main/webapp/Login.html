@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>AboutUs</title>
+<head>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,6 +20,7 @@
     body {
         color: #black;
         background: url("background-texture-new.jpg");
+        
     }
     
 
@@ -32,9 +34,9 @@
 	}
 	.footer {
 	  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	  position: absolute;
 	  bottom: 0;
 	  width: 100%;
-	  position: float; bottom; 
 	  /* Set the fixed height of the footer here */
 	  height: 60px;
 	  line-height: 60px; /* Vertically center the text there */
@@ -50,8 +52,6 @@
 	  padding: 0 15px;
 	}
 
-
-
   </style>
 
 
@@ -64,7 +64,7 @@
 	<div class="row" style="padding: 0px">
 		<div class="col-sm-1"> </div>
 		 <div class="col-sm-8"> 
-	    	<img src="NB Gardens logo.png" width=100px style="position: fixed;">
+	    	<img src="NB Gardens logo.png" width=100px style="position: absolute;">
 	    </div>
 	    <div class="col-sm-1" style="padding:13px"> Basket</div>
 	
@@ -106,61 +106,40 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="container" style="color: gray;">
 <div class="jumbotron" id="material">
-<img src="gnome.png" width=265px style="float: right;">
-<h2>About Us</h2>
-  	<br><br>
-	NB Gardens was formed in 1984 with the aim of providing a new lease of life with our gnomes and garden ware. It was first established as a home "grown" business but soon blossomed into something special.
-
-George Gnomer II founded the business in Chester. <br> <br> He  believed that gnomes lived a secret life at night time and came alive under the moonlight to have garden parties and water the flowers ensuring they had a healthy and prosperous growth. He was a local treasure and soon his stories began to spread all over the world. He set up the business as a tribute his late wife, Lily, selling quality gnomes that would protect peoples gardens.
-
- <br> <br> Sadly, when George passed away in 2015 it was inherited by his son, Gregory Gnome. Gregory decided to add new products to the company in ode to his late father and alas; jacuzzis and seeds were stocked at NB Gardens. Since the companies birth we have delivered happiness in gnome form to millions of happy customers worldwide and delivered that extra special something to families around the world.
-	</body>
-	</html>
+  <br>
+  <h2>Login</h2>
+  <br>
+  <form>
+    <div class="text">Please login in to your NB Gardens account. 
+    If you don't have an account, you can create one</text>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="usr">Email:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="text" class="form-control" id="pwd">
+    </div>
+    <div class="form-group">
+   	  <a href="">Forgotten Password? </a> 
+   	</div>
+   	<div class="form-group">
+   	  <button type="button">Login</button>
+  </form>
 </div>
 </div>
 
-<div class="container">
-<div class="jumbotron" id="material">
-<h2> Get in touch</h2>
-<form>
-  <div class="form-group">
-    <label for="name">Name:</label>
-    <input type="name" class="form-control" id="name">
-  </div>
-  <div class="checkbox">
-  Are you already a member? <br> <br>
-  <label><input type="checkbox" value="">Yes</label>
-</div>
-<div class="checkbox">
-  <label><input type="checkbox" value="">No</label>
-</div>
-<div class="checkbox disabled">
 
-  <div class="form-group">
-  <label for="comment">Question/Comment: </label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
-</div>
-  <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-   
- 
-
-
-
-</body>
-
-
-
-  <footer>
-     <div class="footer">
+    <footer class="footer">
       <div class="container">
         <span class="text-muted">FOOTER</span>
       </div>
-      </div>
     </footer>
+
+</body>
 </html>
