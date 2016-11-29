@@ -1,96 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel=stylesheet type="text/css" href=navbar.css>
 
-    <!-- Bootstrap -->
-	<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-		crossorigin="anonymous">
+  <style>
+    #material {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      background-color: #8ee241;
+      border-style: solid;
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-		 integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
-		 crossorigin="anonymous">
+    }
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		 crossorigin="anonymous"></script>
+    html {
+
+    }
+
+    body {
+        color: #3c9350;
+        background: url("background-texture-new.jpg");
+    }
 
 
-	
-	<style>
-		body {
-	  padding-top: 50px;
-	}
-	.starter-template {
-	  padding: 40px 15px;
-	  text-align: center;
-	}
-</style>
-	
-	
-	
-  </head>
-   <body>
-   
-	
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+
+  </style>
+
+
+</head>
+
+<body>
+<div class="container">
+<div class="page-header">
+
+
+
+    <div class="row">
+
+    <div class="col-sm-7">  <h1>NB Gardens</h1>   </div>
+
+    <div class="col-sm-2" style="margin:0px">
+      <a href="#">
+        <img src="basket.png" width=50px><span style="padding:10px;">0</span>
+      </a>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+
+
+    <div class="col-sm-1">
+       <a href="#">
+      <img src="gnome.png" width=30px>
+      </a>
+    </div>
+
+
+    </div>
+    <h1></h1>      
+  </div>
+  </div>
+
+<nav class="navbar navbar-default" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">NBGardens</a>
+      <a href="#"><img src="gnome.jpg" width="50px"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Gnomes</a></li>
+      <li><a href="#">Garden</a></li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
       </div>
-    </nav>
+      <button type="submit" class="btn btn-default">Go</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
 
-  
-	
-<div class-"container">
-	<div class="starter-template">
-	<h1>Sign Up</h1>
-	<form action="Java_page.java" method="get">
+<div class="container">
+<div class="jumbotron" id="material">
+<img src="garden_gnome.png" width="60px" style="float: right;">
+  <br>
+  <h2>Sign Up</h2>
+  <form>
+    <div class="form-group">
+      <label for="usr">First Name:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="usr">Last Name:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="eml">
+    </div>
+  </form>
+</div>
+</div>
 
-		Name:<br>
-		<input type="text" name="Name"><br>
-		Email:<br>
-		<input type="text" name="Email"><br>
-		Date of Birth:<br>
-		<input type="date" name="bday"><br>
-		Password:<br>
-		<input type="password" name="pass"><br>
-
-	</form>
-	</div>
-	</div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+</body>
 </html>
