@@ -1,19 +1,21 @@
 .navbar-default {
-  background-color: #8ee241;
-  border-color: #62933c;
+  background-color: #69C974;
+  border-color: #69C974;
+  border-radius: 0px;
+
 }
 .navbar-default .navbar-brand {
   color: #3c9350;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #4a7144;
+  color: #69C974;
 }
 .navbar-default .navbar-text {
-  color: #3c9350;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #3c9350;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -23,7 +25,7 @@
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #4a7144;
-  background-color: #62933c;
+  background-color: #69C974;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
