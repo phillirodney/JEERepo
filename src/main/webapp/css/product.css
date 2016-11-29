@@ -348,4 +348,5 @@ body {
 	left:1500px;
 	bottom: 20px;
 	position: absolute;
+	z-index: 1;
 }
