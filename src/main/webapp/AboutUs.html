@@ -32,9 +32,9 @@
 	}
 	.footer {
 	  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	  position: absolute;
 	  bottom: 0;
 	  width: 100%;
+	  position: float; bottom; 
 	  /* Set the fixed height of the footer here */
 	  height: 60px;
 	  line-height: 60px; /* Vertically center the text there */
@@ -124,18 +124,43 @@ George Gnomer II founded the business in Chester. <br> <br> He  believed that gn
 <div class="container">
 <div class="jumbotron" id="material">
 <h2> Get in touch</h2>
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="name" class="form-control" id="name">
+  </div>
+  <div class="checkbox">
+  Are you already a member? <br> <br>
+  <label><input type="checkbox" value="">Yes</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">No</label>
+</div>
+<div class="checkbox disabled">
 
+  <div class="form-group">
+  <label for="comment">Question/Comment: </label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
    
  
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">FOOTER</span>
-      </div>
-    </footer>
-
-
 
 
 
 </body>
+
+
+
+  <footer>
+     <div class="footer">
+      <div class="container">
+        <span class="text-muted">FOOTER</span>
+      </div>
+      </div>
+    </footer>
 </html>
