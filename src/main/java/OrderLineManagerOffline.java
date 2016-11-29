@@ -1,10 +1,15 @@
+
 import javax.inject.Inject;
 import javax.persistence.criteria.Order;
 import java.util.List;
-
 /**
- * Created by Luke on 19/11/2016.
- */
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 public class OrderLineManagerOffline implements OrderLineManager {
 
 
@@ -35,7 +40,11 @@ public class OrderLineManagerOffline implements OrderLineManager {
 
     @Override
     public OrderLine updateOrderLine(OrderLine orderLine) {
-        return null;
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
     }
 
     @Override

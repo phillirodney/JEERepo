@@ -1,3 +1,4 @@
+
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -17,6 +18,18 @@ import java.util.NoSuchElementException;
  * @see StockManager
  * @see SupplierManager
  */
+
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
+ 
+
+
 
 public interface AddressManager {
 

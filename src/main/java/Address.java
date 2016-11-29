@@ -1,12 +1,25 @@
+
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
+<<<<<<< HEAD
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
+ 
+=======
  *
  *
  * @author Team
  */
+>>>>>>> 25337b51f0f9212fe22a2eb805c3fe4feab2dd82
 
 @Entity
 @Table(name = "addresses")
@@ -46,50 +59,83 @@ public class Address {
 		this.postcode = postcode;
 
 	}
+	
+	public Address(){
+		
+	}
 
 	public int getaddressId() {
+		/**
+		 * Getter method for the address Id
+		 */
+		
 		return addressId;
 	}
 	
-	public void setaddressId(int addressId)
-	{
+	public void setaddressId(int addressId){
+		/**
+		 * Setter for the address Id
+		 */
+		
 		this.addressId = addressId;
 	}
 
 	
 	public int gethouseNumber() {
+		/**
+		 * Getter for the house number
+		 */
+		
 		return houseNumber;
 	}
 
-	public void sethouseNumber(int houseNumber) 
-	{	
+	public void sethouseNumber(int houseNumber) {
+		/**
+		 * Setter for house Number
+		 */
 		this.houseNumber = houseNumber;
 	}
 	
 	public String getstreet() {
+		/**
+		 * Getter for Street 
+		 */
 		return street;
 	}
 	
 	public void setstreet (String street) {
+		/**
+		 * Setter for the Street
+		 */
 		this.street = street;
 	}
 	
 	public String getcity() {
+		/**
+		 * Getter for city
+		 */
 		return city;
 	}
 	
 	public void setcity (String city) {
+		/**
+		 * Setter for the city
+		 */
 		this.city = city;
 							
 	}
 	
-	public String getpostcode()
-	{
+	public String getpostcode(){
+		/**
+		 * Getter for the postcode
+		 */
 		return postcode;
 	}
 	
-	public void setpostcode (String postcode)
-	{
+	public void setpostcode (String postcode){
+		/**
+		 * Setter for the postcode
+		 */
 		this.postcode = postcode;	
 	}
 	

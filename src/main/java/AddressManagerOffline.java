@@ -1,10 +1,22 @@
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
+
+/**
+ * This is the address model
+ * 
+ * @author ....
+ * @Version 1.0
+ * @since 2016-09-14
+ * 
+ * */
 
 
 /**

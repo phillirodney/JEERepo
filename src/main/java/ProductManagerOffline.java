@@ -34,6 +34,12 @@ public class ProductManagerOffline implements ProductManager {
 
     @Override
     public void updateProduct() {
+    	
+    	// no operation - for an in-memory
+
+    	// database,
+
+    	// we update automatically in real time
 
     }
 
