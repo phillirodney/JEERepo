@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel=stylesheet type="text/css" href=navbar.css>
+  <link rel=stylesheet type="text/css" href="css/navbar.css">
     
 
 
@@ -59,6 +59,15 @@
 	.img-thumbnail{
 		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	}
+	
+
+	
+	@media screen and (max-width: 800px) {
+    .die {
+        visibility: hidden;
+    }
+}
+	
 
 
 
@@ -117,9 +126,10 @@
   </div>
 </nav>
 
- <div class="container-fluid" style="padding-top:30px">
+
+ <div class="container-fluid " style="padding-top:30px">
       <div class="row">
-        <div class="col-sm-3 sidebar">
+        <div class="col-sm-3 sidebar die">
           <ul class="nav nav-sidebar">
             <li><a href="#">Price</a>
             
@@ -138,7 +148,11 @@
             <li><a href="">Option 45</a></li>
             
           </ul>
-        </div>
+ </div>
+ 
+ 
+
+
        
       
             <div class=" col-sm-3 ">
@@ -166,15 +180,10 @@
               <h4>Gnome 6</h4>       
             </div>
           </div>
+          </div>
           
-       
           
-   
-  
-
           
-
-
     <footer class="footer">
       <div class="container">
         <span class="text-muted">FOOTER</span>
