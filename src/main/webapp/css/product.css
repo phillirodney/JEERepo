@@ -79,10 +79,10 @@ body {
 	margin-top: 50px;
 }
 
-.row-product {
-	background-color:#EBEBEB;
-}
+#middle-banner {
+	background-color: #00633d;
 
+}
 /*********************************************
 					VIEW
 *********************************************/
@@ -113,10 +113,16 @@ body {
 	max-width: 100%;
 }
 
+.footer-box {
+	padding-top: 50px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	padding-left: 80px;
+	
+}
 
 .frog {
-	
-	left:1500px;
+	left: 1500px;
 	bottom: 20px;
 	position: absolute;
 	z-index: 1;
