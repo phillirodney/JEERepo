@@ -12,21 +12,25 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
     	<ui:insert name="pageTitle" />
     </title>
     
-    <link rel="shortcut icon" href="http://www.cssreset.com/favicon.png" />
+    <link rel="shortcut icon" href="http://www.cssreset.com/favicon.png" ></link>
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel=stylesheet type="text/css" href=css/navbar.css>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="simple-sidebar.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+    
+    <link rel="stylesheet type=text/css" href="css/navbar.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/style.css" ></link>
+    <link href="simple-sidebar.css" rel="stylesheet"></link>
+    
+
 
     <style>
         .nav-sidebar {
@@ -37,6 +41,7 @@ xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 	.shadow {
 	     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	}
+
     </style>
 
 </head>
@@ -47,94 +52,72 @@ xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
     <div id="header">
 
-        <div class="row" style="padding: 0px">
+        
+			<div class="row" style="padding: 0px">
 
-            <div class="col-sm-1"> </div>
+				<div class="col-sm-1"></div>
 
-            <div class="col-sm-2">
-                <a href="#">
-                    <img src="img/NB Gardens logo.png" width=100px >
-                </a>
-            </div>
-
-            <div class="col-sm-7" style="padding:20px">
-                <h:form class="navbar-form">
-                    <div class="form-group" style="width:80%" >
-                        <input style="width:100%" type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Go</button>
-                </h:form>
-            </div>
-            
-            <div class="col-sm-6" style="padding:20px">
-                <h:form class="navbar-form">
-                    <div class="form-group" style="width:80%" >
-                        <h:inputText value="#{search.term}" style="width:100%" type="text" class="form-control" placeholder="Search">
-                        	<f:passThroughAttribute name="type" value="text" />
-							<f:passThroughAttribute name="placeholder" value="Search..." />
-							<f:passThroughAttribute name="alt" value="Search" />
-						</h:inputText>
-                    </div>
-                    <h:commandButton action="#{search.search}" value="Search" class="btn btn-default">
-                    <f:passThroughAttribute name="style" value="display: none;" />
-                    </h:commandButton>
-                </h:form>
-            </div>
-            
-            <div class="col-sm-1" style="padding: 20px">
-					<a href="#"> <img src="img/gnome-s.png" width=30px>
+				<div class="col-sm-2">
+					<a href="Gnomepage2.html"> <img src="img/NB Gardens logo.png" width="100px"/>
 					</a>
+				</div>
+
+				<div class="col-sm-6" style="padding: 20px">
+					<form class="navbar-form">
+						<div class="form-group" style="width: 80%">
+							<input style="width: 100%" type="text" class="form-control"
+								placeholder="Search"/>
+						</div>
+						<button type="submit" class="btn btn-default">Go</button>
+					</form>
+				</div>
+				
+				<div class="col-sm-1" style="padding: 20px">
+					<a href="#"> <img src="img/gnome-s.png" width="30px"/>
+					</a>
+				</div>
+
+
+
+				<div class="col-sm-2" style="padding: 20px">
+					<a href="#"> <img src="img/basket.png" width="50px"/><span
+						style="padding: 10px;">0</span>
+					</a>
+				</div>
+
 			</div>
 
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#myNavbar">
+							<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="Gnomepage2.html">NB Gardens</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+
+						<ul class="nav navbar-nav">  
+							<li><a href="Products2.html">Gnomes</a></li>
+							<li class="#"><a href="#">Garden</a></li>
+							<li><a href="#">Offers</a></li>
+							<li><a href="#">Season</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="AboutUs2.html">About Us</a></li>
+							<li class="active"><a href="SignUp2.html"><span
+									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="Login2.html"><span
+									class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+						</ul>
+					</div>
 
 
-            <div class="col-sm-2" style="padding: 20px">
-                <a href="#">
-                    <img src="img/basket.png" width=50px"><span style="padding:10px; ">0</span>
-                </a>
-            </div>
-
-        </div>
-
-        <nav class="navbar navbar-default" >
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">NB Gardens</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-
-                    <ul class="nav navbar-nav">
-                        <li><a href="Product.html">Gnomes</a></li>
-                        <li class="active"><a href="#">Garden</a></li>
-                        <li><a href="#">Offers</a></li>
-                        <li><a href="#">Season</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About Us</a></li>
-                        <li>
-                        	<h:outputLink rendered="#{user.loggedIn}"
-								value="Test.xhtml"><span class="glyphicon glyphicon-user"></span> Sign Up
-							</h:outputLink>
-                        </li>
-                        <li>
-                        <h:outputLink rendered="#{user.loggedIn}"
-								value="Test.xhtml"><span class="glyphicon glyphicon-log-in"></span> Login
-						</h:outputLink>
-                                      
-                        
-                        </li>
-
-                    </ul>
-                </div>
-
-
-            </div>
-        </nav>
+				</div>
+			</nav>
 
 </div><!-- #header -->
 
