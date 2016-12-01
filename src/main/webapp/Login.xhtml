@@ -1,0 +1,44 @@
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+
+template="templates/main.xhtml">
+<meta charset="utf-8" />
+
+		<ui:define name="maincontent">
+
+	            <div class="container-fluid" style="color: gray;">
+				<div class="jumbotron" id="material">
+					<br>
+					<h2>Login</h2>
+					<br>
+					<form>
+						<div class="text">
+							Please login in to your NB Gardens account. If you don't have an
+							account, you can create one
+							</text>
+						</div>
+						<br> <br>
+						<div class="form-group">
+							<label for="usr">Email:</label> <input type="text"
+								class="form-control" id="usr">
+						</div>
+						<div class="form-group">
+							<label for="pwd">Password:</label> <input type="text"
+								class="form-control" id="pwd">
+						</div>
+						<div class="form-group">
+							<a href="">Forgotten Password? </a>
+						</div>
+						<div class="form-group">
+							<button type="button">Login</button>
+					</form>
+				</div>
+			</div>
+	    
+			
+		</ui:define>
