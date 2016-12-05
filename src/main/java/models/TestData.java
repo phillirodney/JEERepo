@@ -65,13 +65,45 @@ public class TestData {
 		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 10007, paths, false);
 		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 10008, paths, false);
 		
+		Stock stock1 = new Stock(1, 100, 120, 50);
+		Stock stock2 = new Stock(2, 120, 140, 70);
+		Stock stock3 = new Stock(3, 130, 150, 60);
+		Stock stock4 = new Stock(4, 149, 169, 80);
+		Stock stock5 = new Stock(5, 156, 176, 75);
+		Stock stock6 = new Stock(6, 176, 196, 95);
+		Stock stock7 = new Stock(7, 177, 197, 98);
+		Stock stock8 = new Stock(8, 189, 209, 100);
 		
-		
-		Stock stock1 = new Stock();
 		Customer customer1 = new Customer();
 		
-		//addresses.add(address1);
+		addresses.add(address1);
+		addresses.add(address2);
+		addresses.add(address3);
+		addresses.add(address4);
+		addresses.add(address5);
+		addresses.add(address6);
+		addresses.add(address7);
+		addresses.add(address8);
+		
+		products.add(product1);
+		products.add(product2);
+		products.add(product3);
+		products.add(product4);
+		products.add(product5);
+		products.add(product6);
+		products.add(product7);
+		products.add(product8);
+		
 		stock.add(stock1);
+		stock.add(stock2);
+		stock.add(stock3);
+		stock.add(stock4);
+		stock.add(stock5);
+		stock.add(stock6);
+		stock.add(stock7);
+		stock.add(stock8);
+		
+		
 		customers.add(customer1);
 
 	}
