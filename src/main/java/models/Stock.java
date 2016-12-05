@@ -28,7 +28,14 @@ public class Stock {
 	private int reserved;
 
 	public Stock() {
-
+	}
+	
+	public Stock(int productId, int present, int required, int reserved)
+	{
+		this.productId = productId;
+		this.present = present;
+		this.required = required;
+		this.reserved = reserved;
 	}
 
 	public int getProductId() {
