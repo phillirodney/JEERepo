@@ -111,8 +111,10 @@
 							<li><a href="AboutUs.xhtml">About Us</a></li>
 							<li class="active"><a href="SignUp.xhtml"><span
 									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li><a href="Login.xhtml"><span
-									class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							<li>< h: outputLink rendered = "#{user.loggedIn}" value ="Login.xhtml"><span>
+									class="glyphicon glyphicon-log-in"></span> Login</h:outputLink></li>
+							<li>< h: outputLink rendered = "#{!user.loggedIn}" value ="#{user.logOut}""><span>
+									class="glyphicon glyphicon-log-in"></span> Login</h:outputLink></li>
 
 						</ul>
 					</div>
