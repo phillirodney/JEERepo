@@ -34,5 +34,4 @@ public class LoginService {
 		return customerManager.findByEmail(email.toLowerCase());
 	}
 	
-
 }
