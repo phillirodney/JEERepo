@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <!-- @author Marcus -->
+=======
+<!--  @author: Philli -->
+<!--  Beans links <h> tags added-->
+>>>>>>> 84f69f11f8ffe5c381561684dfb5dd81e9a6789c
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
 
 xmlns:f="http://xmlns.jcp.org/jsf/core"
@@ -12,27 +17,28 @@ template="maintemplate.xhtml">
 
 		<ui:define name="maincontent">
 
-	        <p>Shopping Basket</p>
+	        <p><h:outputText value="#{user.customer.firstName}" />'s Shopping Basket</p>
 		
 			<div class="container-fluid">
+			<ui:repeat var="product" value="#{shoppingbasket.shoppingbasket}">
 				<div class="row">
 					<div class="col-md-4 col-xs-12">
 						<img src="img/garden_gnome.png" width="100px" height="100px"/>
 					</div>
 					<div class="col-md-8">
 						<div class="col-sm-4">
-							<h1 id="producthead">Gnome</h1>
-							<h2>In Stock</h2>
-							<p>This is a Gnome</p>
+							<h1 id="producthead"><h:outputText value="#{selected.product.name}" />Gnome</h1>
+							<h2><h:outputText value="#{selected.product.stock}" />In Stock</h2>
+							<p><h:outputText value="#{selected.product.description}" />This is a Gnome</p>
 						</div>
-						<div class="col-sm-2">£19.99</div>
-						<div class="col-sm-2">drop1</div>
+						<div class="col-sm-2"><h:outputText value="#{selected.product.price}" />£19.99</div>
+						<!-- div class="col-sm-2">drop1</div> -->
 						<div class="col-sm-2">
-							<span class="glyphicon glyphicon-remove"></span>
+							<span class="glyphicon glyphicon-remove"><h:commandButton value="Remove From shoppingbasket" action="#{shoppingbasket.removeItem(product.id)}" class="btn btn-primary btn-block" /></span>
 						</div>
 					</div>
 				</div>
-			
+			</ui:repeat>
 			</div>
 
 	    
