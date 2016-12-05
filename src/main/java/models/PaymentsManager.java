@@ -1,5 +1,9 @@
 package models;
 
+/*
+ * @author Lewis
+ */
+
 public interface PaymentsManager {
 
 	// create a new payment method

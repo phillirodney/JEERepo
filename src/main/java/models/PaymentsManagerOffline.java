@@ -3,7 +3,7 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by Luke on 19/11/2016.
+ * @author Luke
  */
 public class PaymentsManagerOffline implements PaymentsManager {
 

@@ -5,6 +5,12 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+
+/*
+ * @author Luke
+ * 
+ */
+
 @Named("search")
 @RequestScoped
 public class SearchController {

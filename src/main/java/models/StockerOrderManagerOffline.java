@@ -3,8 +3,10 @@ import javax.inject.Inject;
 import java.util.List;
 
 /**
- * Created by Luke on 19/11/2016.
+ * @author Hayley
+ * @author Luke
  */
+
 public class StockerOrderManagerOffline implements StockOrderManager {
 
     @Inject

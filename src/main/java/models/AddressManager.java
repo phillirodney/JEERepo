@@ -23,7 +23,7 @@ import java.util.NoSuchElementException;
 /**
  * This is the address model
  * 
- * @author ....
+ * @author Luke and Hayley
  * @Version 1.0
  * @since 2016-09-14
  * 

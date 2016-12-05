@@ -1,5 +1,11 @@
 package models;
 
+/*
+ * @author Cieran
+ * @autor Philli
+ * 
+ */
+
 public interface ProductManager {
 
     Product createProduct(Product product);
