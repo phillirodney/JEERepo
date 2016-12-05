@@ -28,6 +28,7 @@ public class SearchController {
 	public String search(){
 		
 		List<ProductItem> results = searchService.searchBy(term);
+<<<<<<< HEAD
 		if (results != null)
 			if (results.size() == 1) {
 				selectedProduct.setProduct(results.get(0));
@@ -36,6 +37,13 @@ public class SearchController {
 				return "Producs";
 			}
 		return "Products";
+=======
+		if (results != null){
+				searchResults.setResults(results);
+				return "Products";
+		}
+		return "Browse";
+>>>>>>> 681b1d256cf3fdde4849562744a4da7ff260eca9
 	}
 
 	public String getTerm() { return term; }
