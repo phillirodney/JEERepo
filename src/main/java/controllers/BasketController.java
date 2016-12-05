@@ -22,11 +22,10 @@ import services.BasketService;
 
 @RequestScoped
 @Named(value = "basket")
-
 public class BasketController {
 
+	/////////////////////////////////THIS IS WRONG/////////////////////////////////
 	@Inject
-	
 	private CurrentUser currentUser;
 
 	@Inject

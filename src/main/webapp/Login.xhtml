@@ -26,18 +26,25 @@ template="maintemplate.xhtml">
 						</div>
 						<br/><br/>
 						<div class="form-group">
-							<label for="usr">Email:</label> <input type="text"
-								class="form-control" id="usr"/>
+							<h:inputText class="form-control" value="#{login.email}" >
+								<f:passThroughAttribute name="type" value="email" />
+								<f:passThroughAttribute name="placeholder" value="email..." />
+								<f:passThroughAttribute name="alt" value="Enter Email" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
 						</div>
-						<div class="form-group">
-							<label for="pwd">Password:</label> <input type="text"
-								class="form-control" id="pwd"/>
-						</div>
+						<h:inputText class="form-control" value="#{login.password}" >
+							<f:passThroughAttribute name="type" value="password" />
+							<f:passThroughAttribute name="placeholder" value="password..." />
+							<f:passThroughAttribute name="alt" value="Enter Password" />
+							<f:passThroughAttribute name="required" value="required" />
+						</h:inputText>
 						<div class="form-group">
 							<a href="">Forgotten Password? </a>
 						</div>
 						<div class="form-group">
 							<button type="button">Login</button>
+							<h:commandButton action="#{login.login}" value="Sign In"/>
 						</div>	
 					</form>
 				</div>

@@ -18,7 +18,8 @@ import javax.inject.Inject;
 
 @Stateless
 @Default
-public abstract class CustomerManagerOffline implements CustomerManager {
+
+public class CustomerManagerOffline implements CustomerManager {
 
 	// create an array list of customers to return.
 	ArrayList<Customer> list_of_customers = new ArrayList<Customer>();
@@ -53,18 +54,15 @@ public abstract class CustomerManagerOffline implements CustomerManager {
 		return null;
 	}
 
-	// Update a field in the customer table.
-	//@Override
-	public void updateCustomer(Customer customer, String firstName, String updatedFirstName) {
-		//for (Customer customer1 : testData.getCustomers())
-//			if() {
-//
-//			}
-			
 
-	}
 
 	@Override
 	public void deleteCustomer(Customer customer) {
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		
 	}
 }

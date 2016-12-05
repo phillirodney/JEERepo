@@ -18,7 +18,7 @@ public class ProductService {
 
 	public Product findProductById(int id) {
 		try {
-			return findProductById(id);
+			return productManager.findProductById(id);
 		} catch (Exception e) {
 			return null;
 		}
@@ -30,5 +30,9 @@ public class ProductService {
 	
 	public List<Product> findProductByDescription(String descrption) {
 		return productManager.findProductByDescription(descrption);
+	}
+	
+	public List<Product> findAll(){
+		return productManager.returnAll();
 	}
 }

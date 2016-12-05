@@ -1,10 +1,14 @@
 package models;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import java.util.List;
 
 /**
  * @author Luke
  */
+@Stateless
+@Default
 public class PaymentsManagerOffline implements PaymentsManager {
 
     @Inject

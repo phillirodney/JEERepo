@@ -22,5 +22,7 @@ public interface ProductManager {
     
     List<Product> findProductByDescription(String description);
     
+    List<Product> returnAll();
+    
 
 }

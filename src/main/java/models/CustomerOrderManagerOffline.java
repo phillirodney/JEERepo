@@ -1,6 +1,8 @@
 package models;
 
 
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import java.util.List;
 /**
@@ -11,6 +13,8 @@ import java.util.List;
  * @since 2016-09-14
  * 
  * */
+@Stateless
+@Default
 public class CustomerOrderManagerOffline implements CustomerOrderManager {
 
     @Inject

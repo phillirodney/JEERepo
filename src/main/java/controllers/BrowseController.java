@@ -7,20 +7,25 @@ package controllers;
  */
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.ConversationScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
+import models.*;
+
+import services.ProductService;
 
 @Named("browse")
 @ConversationScoped
 public class BrowseController implements Serializable{
 	private static final long serialVersionUID = 7787469800840772887L;
+	
 	@Inject
 	private ProductService productService;
-	private DataModel<productItem> products = null;
+	private List<Product> products = null;
 	
 	private void recreateModel() {
 		
@@ -28,9 +33,9 @@ public class BrowseController implements Serializable{
 		
 	}
 	
-	public DataModel<ProductItem> getProducts() {
+	public List<Product> getProducts() {
 		
-		products = productService.findall();
+		products = productService.findAll();
 		return products;
 	}
 	
