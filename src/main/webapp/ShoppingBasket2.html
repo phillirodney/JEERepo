@@ -16,6 +16,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel=stylesheet type="text/css" href=css/navbar.css>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/shoppingbasket.css" />
 <link href="simple-sidebar.css" rel="stylesheet">
 
 <style>
@@ -43,7 +44,8 @@
 				<div class="col-sm-1"></div>
 
 				<div class="col-sm-2">
-					<a href="Gnomepage2.html"> <img src="img/NB Gardens logo.png" width=100px>
+					<a href="Gnomepage2.html"> <img src="img/NB Gardens logo.png"
+						width=100px>
 					</a>
 				</div>
 
@@ -106,7 +108,7 @@
 
 		<div id="content">
 
-
+			<!--  
 			<p>Shopping Basket</p>
 			<hr>
 			<div class="container-fluid">
@@ -117,8 +119,8 @@
 					<div class="col-md-8">
 						<div class="col-sm-4">
 							<h1 id="producthead">Gnome</h1>
-							<h2>In Stock</h2>
-							<p>This is a Gnome</p>
+							<h2 id="instock">In Stock</h2>
+							<p id="description">This is a Gnome</p>
 						</div>
 						<div class="col-sm-2">£19.99</div>
 						<div class="col-sm-2">drop1</div>
@@ -129,18 +131,77 @@
 				</div>
 				<hr>
 			</div>
+		</div>
+	-->
+
+			<form method="post" action="#">
+				<table cellspacing="0" class="shop_table cart">
+					<thead>
+						<tr>
+							<th class="product-thumbnail">&nbsp;</th>
+							<th class="product-name">Product</th>
+							<th class="product-price">Price</th>
+							<th class="product-quantity">Quantity</th>
+							<th class="product-subtotal">Total</th>
+							<th class="product-remove">&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="cart_item">
 
 
+							<td class="product-thumbnail"><a href="single-product.htm"><img
+									width="145" height="145" alt="poster_1_up"
+									class="shop_thumbnail" src="img/gnome.jpg"></a></td>
+
+							<td class="product-name">
+								<h1>Gnome</h1>
+								<h2>In Stock</h2>
+								<p>Description</p>
+							</td>
+
+							<td class="product-price"><span class="amount">£15.00</span>
+							</td>
+
+							<td class="product-quantity">
+								<div class="quantity buttons_added">
+									<input type="button" class="minus" value="-"> <input
+										type="number" size="4" class="input-text qty text" title="Qty"
+										value="1" min="0" step="1"> <input type="button"
+										class="plus" value="+">
+								</div>
+							</td>
+
+							<td class="product-subtotal"><span class="amount">£15.00</span>
+							</td>
+							<td class="product-remove"><a title="Remove this item"
+								class="remove" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
+						</tr>
+						<tr>
+							<td class="actions" colspan="6">
+								<div class="coupon">
+									<label for="coupon_code">Coupon:</label> <input type="text"
+										placeholder="Coupon code" value="" id="coupon_code"
+										class="input-text" name="coupon_code"> <input
+										type="submit" value="Apply Coupon" name="apply_coupon"
+										class="button">
+								</div> <input type="submit" value="Update Cart" name="update_cart"
+								class="button"> <input type="submit" value="Checkout"
+								name="proceed" class="checkout-button button alt wc-forward">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+
+			<!-- #content -->
+
+
+			<div id="footer"></div>
+			<!-- #footer -->
 
 		</div>
-		<!-- #content -->
-
-		<div id="footer"></div>
-		<!-- #footer -->
-
-	</div>
-	<!-- #wrapper -->
-
+		<!-- #wrapper -->
 </body>
 
 </html>
