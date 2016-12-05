@@ -12,15 +12,15 @@ public interface ProductManager {
 
     Product createProduct(Product product);
 
-    Product findById(int id);
+    Product findProductById(int id);
 
     void updateProduct();
 
     void deleteProduct(Product product);
     
-    List<Product> findByName(String name);
+    List<Product> findProductByName(String name);
     
-    List<Product> findByDescription(String description);
+    List<Product> findProductByDescription(String description);
     
 
 }
