@@ -23,8 +23,8 @@ import javax.inject.Inject;
 /**
  * <p>This class is used for interacting with the test data associated with
  * with addresses
- * @author Team
- * @author Team
+ * @author Luke
+ * @author Hayley
  * @version 1.0
  * @see BasketManagerOffline
  * @see CustomerManagerOffline

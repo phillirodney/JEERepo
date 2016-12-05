@@ -2,6 +2,14 @@ package models;
 import java.util.*;
 import javax.persistence.*;
 
+
+
+/*
+ * @author Cieran
+ * @author Philli
+ * 
+ */
+
 @Entity
 @Table(name="stock_orders")
 public class StockOrder {

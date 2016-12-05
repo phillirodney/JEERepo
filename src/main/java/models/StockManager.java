@@ -1,5 +1,11 @@
 package models;
 
+/*
+ * @author Hayley
+ * 
+ */
+
+
 public interface StockManager {
 	
 	//CRUD

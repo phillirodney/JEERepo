@@ -9,6 +9,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
+/*
+ * @author Philli 
+ * @author Cieran
+ * @author Luke
+ * 
+ */
+
 
 @Entity
 public class Product implements Serializable{

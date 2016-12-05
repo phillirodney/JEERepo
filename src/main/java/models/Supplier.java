@@ -2,6 +2,12 @@ package models;
 import javax.persistence.*;
 import java.util.List;
 
+/*
+ * @author Lewis
+ * 
+ */
+
+
 @Entity
 @Table (name = "suppliers")
 public class Supplier {

@@ -1,7 +1,13 @@
 package models;
 import javax.persistence.*;
 
+/*
+ * @author Hayley
+ * 
+ */
+
 public class Payment {
+
 
 
 

@@ -4,6 +4,8 @@ import java.util.List;
 
 /**
  * Created by Luke on 19/11/2016.
+ * @author Cieran
+ * @author Philli
  */
 public class ProductManagerOffline implements ProductManager {
 

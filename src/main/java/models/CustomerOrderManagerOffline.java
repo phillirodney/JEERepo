@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * This is the address model
  * 
- * @author ....
+ * @author Luke
  * @Version 1.0
  * @since 2016-09-14
  * 

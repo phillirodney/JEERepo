@@ -5,7 +5,8 @@ import javax.persistence.*;
 /**
  * This is the address model
  * 
- * @author ....
+ * @author Cieran
+ * @author Philli
  * @Version 1.0
  * @since 2016-09-14
  * 

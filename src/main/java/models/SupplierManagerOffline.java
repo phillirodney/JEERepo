@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Luke on 19/11/2016.
+ * @author Luke
  */
 public class SupplierManagerOffline implements SupplierManager {
 

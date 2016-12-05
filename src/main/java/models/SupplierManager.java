@@ -1,5 +1,10 @@
 package models;
 import java.util.List;
+/*
+ * @author Lewis
+ * 
+ */
+
 
 public interface SupplierManager {
 

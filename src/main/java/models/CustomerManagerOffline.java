@@ -10,7 +10,7 @@ import javax.inject.Inject;
 /**
  * This is the address model
  * 
- * @author ....
+ * @author Philli
  * @Version 1.0
  * @since 2016-09-14
  * 
