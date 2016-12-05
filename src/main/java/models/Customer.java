@@ -76,6 +76,9 @@ public class Customer {
 
 	@OneToMany(mappedBy = "customer")
 	private List<Payment> payment;
+	
+	
+	private List<CustomerOrder> orders;
 
 
 	public Customer() {
@@ -154,6 +157,14 @@ public class Customer {
 
 	public void setBaskets(List<Basket> baskets) {
 		this.baskets = baskets;
+	}
+	
+	public List<CustomerOrder> getOrders() {
+		return this.orders;
+	}
+	
+	public void setOrders(List<CustomerOrder> orders) {
+		this.orders = orders;
 	}
 
 	
