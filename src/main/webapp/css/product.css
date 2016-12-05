@@ -40,6 +40,8 @@ body {
 	color: #FFBF00;
 }
 
+
+
 /*********************************************
 					PRODUCTS
 *********************************************/
@@ -82,14 +84,16 @@ body {
 
 
 #middle-banner {
-	background-color: #00633d;
+	background-color: #4F2F4F;
 }
 
 #middle-middle-banner {
+	color: white;
 	padding-top: 50px;
 	padding-right: 30px;
 	padding-bottom: 50px;
 	padding-left: 80px;
+	
 }
 /*********************************************
 					VIEW

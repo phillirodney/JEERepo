@@ -11,8 +11,6 @@ template="maintemplate.xhtml">
 
 
 
-
-
 		<ui:define name="maincontent">
 
 			<div class="container-fluid " style="padding-top: 30px">
@@ -76,7 +74,7 @@ template="maintemplate.xhtml">
 							</li>
 							<br/>
 
-							<li>Purchase Option
+							<li>Purchas Option
 								<div class="checkbox">
 									<label><input type="checkbox" value=""/>Option 1</label>
 								</div>
@@ -126,7 +124,7 @@ template="maintemplate.xhtml">
 					<div class="col-sm-9">
 						<div class="row">
 							<div class="container-fluid" style="overflow: hidden;">
-							<ui:repeat var="product" value="#{searchResults.results}">
+							<ui:repeat var="product" value="#{Browse.results}">
 								<div class="col-sm-4">
 									<h:graphicImage value="#{product.image}"/>
 									<h4><h:commandLink action="#{products.select(product.id)}" 
@@ -142,3 +140,4 @@ template="maintemplate.xhtml">
 
 	</ui:define>
 	</ui:composition>
+   
