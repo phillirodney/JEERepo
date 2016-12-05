@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 /*
  * @author Cieran
  * @autor Philli
@@ -15,5 +17,10 @@ public interface ProductManager {
     void updateProduct();
 
     void deleteProduct(Product product);
+    
+    List<Product> findByName(String name);
+    
+    List<Product> findByDescription(String description);
+    
 
 }

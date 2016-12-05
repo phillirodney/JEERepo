@@ -1,5 +1,7 @@
 package models;
 import javax.inject.Inject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,10 +32,35 @@ public class ProductManagerOffline implements ProductManager {
                 return p;
             }
         }
-
-
+        
         return null;
     }
+    
+    
+    @Override
+    public List<Product> findByName(String name){
+    	
+    	List<Product> products = new ArrayList<>();
+    	for(Product p: products) {
+    		if(p.getname().contains(name)) {
+    			products.add(p);
+    			
+    		}
+    	}
+    	return products;
+    	
+    }
+    
+    @Override
+    public List<Product> findByDescription(String description){
+    	List<Product> products = new ArrayList<>();
+    	for(Product p: products) {
+    		if(p.getDescription().contains(description)) {
+    			products.add(p);
+    		}
+    	}
+    }
+    
 
     @Override
     public void updateProduct() {
