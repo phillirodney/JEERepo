@@ -59,6 +59,7 @@ public class ProductManagerOffline implements ProductManager {
     			products.add(p);
     		}
     	}
+    	return products;
     }
     
 
