@@ -49,15 +49,15 @@
 				
 				<div class="col-md-2 "></div>
 				<div class=" col-md-3 product-price-details">
-					<div class="product-title">Jacksonville Jaguars Female Garden
+					<div class="product-title"><h:outputText value="#{selected.product.name}" />Jacksonville Jaguars Female Garden
 						Gnome</div>
-					<div class="product-price">£ 234.00</div>
-					<div class="product-stock">In Stock</div>
+					<div class="product-price"><h:outputText value="#{selected.product.price}" />£ 234.00</div>
+					<div class="product-stock"><h:outputText value="#{selected.product.stock}" />In Stock</div>
 					<div class="checkbox-porousware">
 						<label><input type="checkbox" value="" />Porousware</label>
 					</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">Add to cart</button>
+						<button type="button" class="btn btn-success" value="Basket" action="#{basket.addToBasket(selected.product.id)}">Add to cart</button>
 					</div>
 
 				</div>
