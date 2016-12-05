@@ -46,18 +46,28 @@
 
 
 				</div>
-				
+
 				<div class="col-md-2 "></div>
 				<div class=" col-md-3 product-price-details">
-					<div class="product-title"><h:outputText value="#{selected.product.name}" />Jacksonville Jaguars Female Garden
-						Gnome</div>
-					<div class="product-price"><h:outputText value="#{selected.product.price}" />£ 234.00</div>
-					<div class="product-stock"><h:outputText value="#{selected.product.stock}" />In Stock</div>
+					<div class="product-title">
+						<h:outputText value="#{selected.product.name}" />
+						Jacksonville Jaguars Female Garden Gnome with gift Hamper
+					</div>
+					<div class="product-price">
+						<h:outputText value="#{selected.product.price}" />
+						£ 234.00
+					</div>
+					<div class="product-stock">
+						<h:outputText value="#{selected.product.stock}" />
+						In Stock
+					</div>
 					<div class="checkbox-porousware">
 						<label><input type="checkbox" value="" />Porousware</label>
 					</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success" value="Basket" action="#{basket.addToBasket(selected.product.id)}">Add to cart</button>
+						<button type="button" class="btn btn-success" value="Basket"
+							action="#{basket.addToBasket(selected.product.id)}">Add
+							to cart</button>
 					</div>
 
 				</div>
@@ -67,92 +77,137 @@
 						<span class="glyphicon glyphicon-globe"> International
 							Delivery Not Available</span>
 						<hr />
-					<i class="fa fa-truck" aria-hidden="true"> Next Day Delivery
+						<i class="fa fa-truck" aria-hidden="true"> Next Day Delivery
 							Available</i>
-							
+
 						<hr></hr>
 					</div>
 				</div>
-<br></br>
+			</div>
+		</div>
+		<br></br>
+
+		<br></br>
+
 		<div class=" container-fluid">
 
-				<!--Item slider text-->
-				<div class="container">
-					<div class="row" id="slider-text">
-						<div class="col-md-9">
-							<h2>People also looked at:</h2>
-							<hr />
-						</div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home">Product
+						Description</a></li>
+				<li><a data-toggle="tab" href="#menu1">Deliveries and Returns</a></li>
+				<li><a data-toggle="tab" href="#menu2">Full List of Contents</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+					<h3>Product Description</h3>
+					<p>Some content.</p>
+				</div>
+				<div id="menu1" class="tab-pane fade">
+					<h3>Deliveries and  Returns</h3>
+					<p>However quickly you need your NB Gardens purchase, we have
+						the right option for you. From classic Standard to convenient
+						Collect in Store, the choice is yours. And if you need any more
+						help, simply speak to one of our expert Stylists who are always on
+						hand to assist.Please note we offer a free returns service via
+						Royal Mail using your Returns Note provided in your parcel or
+						alternatively return in person to your nearest store.</p>
+				</div>
+				<div id="menu2" class="tab-pane fade">
+					<h3>Full List of Contents</h3>
+					<ul>Baci di Dama Biscuits 200g</ul>
+					<ul>Green Olives with Lemon and Almond 410g</ul>
+					<ul>The Fine Cheese Co Goats’ Cheese and Walnut </ul>
+					<ul>Savouries 100g</ul>
+					<ul>Prosecco di Valdobbiadene NV Italy 750ml</ul>
+					<ul>Spiced Apple Candle</ul>
+					<ul>Chocolate Selection Box 160g</ul>
+					<ul>Wild Mushroom Risotto 175g</ul>
+					<ul>The Fine Cheese Co TOAST for Cheese Crackers Quince Pecan and Poppy Seed 100g </ul>
+					<ul>Mozart Chocolate Cream Liqueur Austria 500ml</ul>
+					<ul>Merlet Crème de Pêche Liqueur France 200ml</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<div class=" container-fluid">
+
+			<!--Item slider text-->
+			<div class="container">
+				<div class="row" id="slider-text">
+					<div class="col-md-9">
+						<h2>People also looked at:</h2>
+						<hr />
 					</div>
 				</div>
-				</div>
+			</div>
+		</div>
 
 
-				<!-- Item slider-->
-				<div class="container-fluid">
+		<!-- Item slider-->
+		<div class="container-fluid">
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12">
-							<div class="carousel carousel-showmanymoveone slide"
-								id="itemslider">
-								<div class="carousel-inner">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="carousel carousel-showmanymoveone slide"
+						id="itemslider">
+						<div class="carousel-inner">
 
-									<div class="item active">
-										<div class="col-xs-12 col-sm-6 col-md-2">
-											<a href="#"><img
-												src="https://assets.bakker.com/ProductPics/810x978/91987-00-BAKI_20120427203000.jpg"
-												class="img-responsive center-block" /></a>
-											<h4 class="text-center">Vincent the Musician Gnome</h4>
-											<h5 class="text-center">£200.00</h5>
-										</div>
-									</div>
-									<div class="item active">
-										<div class="col-xs-12 col-sm-6 col-md-2">
-											<a href="#"><img
-												src="https://assets.bakker.com/ProductPics/810x978/74198-00-BAKI_20160404164917.jpg"
-												class="img-responsive center-block" /></a>
-											<h4 class="text-center">Rien Poortvliet® Garden Gnome
-												with Toadstools</h4>
-											<h5 class="text-center">£270.00</h5>
-										</div>
-									</div>
-									<div class="item active">
-										<div class="col-xs-12 col-sm-6 col-md-2">
-											<a href="#"><img
-												src="https://assets.bakker.com/ProductPics/810x978/91944-00-BAKIE_20120504202800.jpg"
-												class="img-responsive center-block" /></a>
-											<h4 class="text-center">Garden Gnome + Toadstool</h4>
-											<h5 class="text-center">£90.00</h5>
-										</div>
-									</div>
-									<div class="item active">
-										<div class="col-xs-12 col-sm-6 col-md-2">
-											<a href="#"><img
-												src="https://assets.bakker.com/ProductPics/810x978/74230-00-BAKI_20160404164916.jpg"
-												class="img-responsive center-block" /></a>
-											<h4 class="text-center">Rien Poortvliet® Garden Gnome
-												with Bird</h4>
-											<h5 class="text-center">£110.00</h5>
-										</div>
-									</div>
-									<div class="item active">
-										<div class="col-xs-12 col-sm-6 col-md-2">
-											<a href="#"><img
-												src="https://assets.bakker.com/ProductPics/810x978/91943-00-BAKIE_20120821173042.jpg"
-												class="img-responsive center-block" /></a>
-											<h4 class="text-center">Garden Statue</h4>
-											<h5 class="text-center">£70.00</h5>
-										</div>
-									</div>
-									<div class="item active">
-										<div class="col-xs-12 col-sm-6 col-md-2">
-											<a href="#"><img
-												src="https://assets.bakker.com/ProductPics/810x978/91938-00-BAKIE_20120504202800.jpg"
-												class="img-responsive center-block" /></a>
-											<h4 class="text-center">Garden Gnome on a Pig</h4>
-											<h5 class="text-center">£31.00</h5>
-										</div>
-									</div>
+							<div class="item active">
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<a href="#"><img
+										src="https://assets.bakker.com/ProductPics/810x978/91987-00-BAKI_20120427203000.jpg"
+										class="img-responsive center-block" /></a>
+									<h4 class="text-center">Vincent the Musician Gnome</h4>
+									<h5 class="text-center">£200.00</h5>
+								</div>
+							</div>
+							<div class="item active">
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<a href="#"><img
+										src="https://assets.bakker.com/ProductPics/810x978/74198-00-BAKI_20160404164917.jpg"
+										class="img-responsive center-block" /></a>
+									<h4 class="text-center">Rien Poortvliet® Garden Gnome with
+										Toadstools</h4>
+									<h5 class="text-center">£270.00</h5>
+								</div>
+							</div>
+							<div class="item active">
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<a href="#"><img
+										src="https://assets.bakker.com/ProductPics/810x978/91944-00-BAKIE_20120504202800.jpg"
+										class="img-responsive center-block" /></a>
+									<h4 class="text-center">Garden Gnome + Toadstool</h4>
+									<h5 class="text-center">£90.00</h5>
+								</div>
+							</div>
+							<div class="item active">
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<a href="#"><img
+										src="https://assets.bakker.com/ProductPics/810x978/74230-00-BAKI_20160404164916.jpg"
+										class="img-responsive center-block" /></a>
+									<h4 class="text-center">Rien Poortvliet® Garden Gnome with
+										Bird</h4>
+									<h5 class="text-center">£110.00</h5>
+								</div>
+							</div>
+							<div class="item active">
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<a href="#"><img
+										src="https://assets.bakker.com/ProductPics/810x978/91943-00-BAKIE_20120821173042.jpg"
+										class="img-responsive center-block" /></a>
+									<h4 class="text-center">Garden Statue</h4>
+									<h5 class="text-center">£70.00</h5>
+								</div>
+							</div>
+							<div class="item active">
+								<div class="col-xs-12 col-sm-6 col-md-2">
+									<a href="#"><img
+										src="https://assets.bakker.com/ProductPics/810x978/91938-00-BAKIE_20120504202800.jpg"
+										class="img-responsive center-block" /></a>
+									<h4 class="text-center">Garden Gnome on a Pig</h4>
+									<h5 class="text-center">£31.00</h5>
 								</div>
 							</div>
 						</div>
