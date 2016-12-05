@@ -34,15 +34,19 @@ public class LoginController {
 	
 	public String login() {
 		
-		if(!email.isEmpty() && !password.isEmpty()){
-			if(loginService.validLogin(email, password))
+		if(!email.isEmpty() && !password.isEmpty()) {
+			if(loginService.validLogin(email, password)) {
 				currentUser.setCustomer(loginService.loginUser(email));
+				return "Gnomepage2";
+			}
 			else {
 				password = "";
 				email = "";
-				return "Gnomepage2";
+				return "Login";
 			}
 		}
+		password = "";
+		email = "";
 		return "Login";
 	}
 		
