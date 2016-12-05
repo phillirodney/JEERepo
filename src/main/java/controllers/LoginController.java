@@ -32,20 +32,22 @@ public class LoginController {
 	}
 	
 	
-		public String login() {
-			if(!email.isEmpty() && !password.isEmpty())
-				if(loginService.validLogin(email, password))
-					currentUser.setCustomer(loginService.loginUser(email));
-				else {
-					password = "";
-					email = "";
-					return "Gnomepage2";
-				}
-			return "Gnomepage2";
-		}
+	public String login() {
 		
-		public String logout() {
-			currentUser.setCustomer(null);
-			return "nbgardens";
+		if(!email.isEmpty() && !password.isEmpty()){
+			if(loginService.validLogin(email, password))
+				currentUser.setCustomer(loginService.loginUser(email));
+			else {
+				password = "";
+				email = "";
+				return "Gnomepage2";
+			}
 		}
+		return "Login";
+	}
+		
+	public String logout() {
+		currentUser.setCustomer(null);
+		return "Gnomepage2";
+	}
 }
