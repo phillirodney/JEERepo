@@ -1,6 +1,8 @@
 package controllers;
 import java.io.Serializable;
 
+import services.LoginService;
+
 /* @author Cieran */
 
 @RequestScoped 
