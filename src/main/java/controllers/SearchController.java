@@ -33,7 +33,6 @@ public class SearchController {
 				selectedProduct.setProduct(results.get(0));
 				return "product";
 			} else {
-				searchResults.setResults(results);
 				return "Producs";
 			}
 		return "Products";
@@ -41,4 +40,5 @@ public class SearchController {
 
 	public String getTerm() { return term; }
 	public void setTerm(String term) { this.term = term; }
+	
 }
