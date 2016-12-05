@@ -62,10 +62,12 @@
 						In Stock
 					</div>
 					<div class="checkbox-porousware">
-						<label><input type="checkbox" value="" />Porousware</label>
+						<label><input type="checkbox" value="Porousware"
+							action="#{basket.addPorousware(selected.product.id)}" />Porousware</label>
 					</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success" value="Shoppingbasket"
+						<button type="button" class="btn btn-success"
+							value="Shoppingbasket"
 							action="#{basket.addToShoppingbasket(selected.product.id)}">Add
 							to cart</button>
 					</div>
@@ -94,8 +96,10 @@
 			<ul class="nav nav-tabs">
 				<li class="active"><a data-toggle="tab" href="#home">Product
 						Description</a></li>
-				<li><a data-toggle="tab" href="#menu1">Deliveries and Returns</a></li>
-				<li><a data-toggle="tab" href="#menu2">Full List of Contents</a></li>
+				<li><a data-toggle="tab" href="#menu1">Deliveries and
+						Returns</a></li>
+				<li><a data-toggle="tab" href="#menu2">Full List of
+						Contents</a></li>
 			</ul>
 
 			<div class="tab-content">
@@ -104,7 +108,7 @@
 					<p>Some content.</p>
 				</div>
 				<div id="menu1" class="tab-pane fade">
-					<h3>Deliveries and  Returns</h3>
+					<h3>Deliveries and Returns</h3>
 					<p>However quickly you need your NB Gardens purchase, we have
 						the right option for you. From classic Standard to convenient
 						Collect in Store, the choice is yours. And if you need any more
@@ -115,17 +119,29 @@
 				</div>
 				<div id="menu2" class="tab-pane fade">
 					<h3>Full List of Contents</h3>
-					<ul>Baci di Dama Biscuits 200g</ul>
-					<ul>Green Olives with Lemon and Almond 410g</ul>
-					<ul>The Fine Cheese Co Goats’ Cheese and Walnut </ul>
-					<ul>Savouries 100g</ul>
-					<ul>Prosecco di Valdobbiadene NV Italy 750ml</ul>
-					<ul>Spiced Apple Candle</ul>
-					<ul>Chocolate Selection Box 160g</ul>
-					<ul>Wild Mushroom Risotto 175g</ul>
-					<ul>The Fine Cheese Co TOAST for Cheese Crackers Quince Pecan and Poppy Seed 100g </ul>
-					<ul>Mozart Chocolate Cream Liqueur Austria 500ml</ul>
-					<ul>Merlet Crème de Pêche Liqueur France 200ml</ul>
+					<ul>Baci di Dama Biscuits 200g
+					</ul>
+					<ul>Green Olives with Lemon and Almond 410g
+					</ul>
+					<ul>The Fine Cheese Co Goats’ Cheese and Walnut
+					</ul>
+					<ul>Savouries 100g
+					</ul>
+					<ul>Prosecco di Valdobbiadene NV Italy 750ml
+					</ul>
+					<ul>Spiced Apple Candle
+					</ul>
+					<ul>Chocolate Selection Box 160g
+					</ul>
+					<ul>Wild Mushroom Risotto 175g
+					</ul>
+					<ul>The Fine Cheese Co TOAST for Cheese Crackers Quince Pecan
+						and Poppy Seed 100g
+					</ul>
+					<ul>Mozart Chocolate Cream Liqueur Austria 500ml
+					</ul>
+					<ul>Merlet Crème de Pêche Liqueur France 200ml
+					</ul>
 
 				</div>
 			</div>
