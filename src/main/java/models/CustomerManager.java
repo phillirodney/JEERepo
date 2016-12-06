@@ -22,4 +22,5 @@ public interface CustomerManager {
 
 	// delete customer
 	public void  deleteCustomer(Customer customer);
+	
 }
