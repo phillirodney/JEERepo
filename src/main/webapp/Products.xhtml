@@ -129,7 +129,7 @@ template="maintemplate.xhtml">
 							<div class="container-fluid" style="overflow: hidden;">
 							<ui:repeat var="product" value="#{search.results}">
 								<div class="col-sm-4">
-									<h:graphicImage value="/img/gnome.png"/>
+									<h:graphicImage value="img/gnome.png" class="img-thumbnail shadow" width="200" height="200"/>
 									<h4><h:commandLink action="#{products.select(product.id)}" 
 									value="#{product.name}"/></h4>
 									<p><h:outputText value="#{product.description}"/></p>

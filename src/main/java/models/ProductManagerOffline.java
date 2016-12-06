@@ -47,26 +47,28 @@ public class ProductManagerOffline implements ProductManager {
     @Override
     public List<Product> findProductByName(String name){
     	
-    	List<Product> products = new ArrayList<>();
+    	List<Product> products = testData.getProducts();
+    	List<Product> pr = new ArrayList<>();
     	for(Product p: products) {
     		if(p.getname().contains(name)) {
-    			products.add(p);
+    			pr.add(p);
     			
     		}
     	}
-    	return products;
+    	return pr;
     	
     }
     
     @Override
     public List<Product> findProductByDescription(String description){
-    	List<Product> products = new ArrayList<>();
+    	List<Product> products = testData.getProducts();
+    	List<Product> pr = new ArrayList<>();
     	for(Product p: products) {
     		if(p.getDescription().contains(description)) {
-    			products.add(p);
+    			pr.add(p);
     		}
     	}
-    	return products;
+    	return pr;
     }
     
 
