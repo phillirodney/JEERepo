@@ -46,6 +46,7 @@ public class BasketManagerOffline implements BasketManager {
     public Basket createBasket(Basket basket) {
         List<Basket>  baskets = testData.getBaskets();
         basket.setBasket_id(baskets.size() + 1);
+        baskets.add(basket);
         testData.setBaskets(baskets);
         return findById(basket.getBasket_id());
     }
