@@ -43,6 +43,14 @@ public class Basket {
 	public Basket(){
 
 	}
+	
+	public Basket(int basket_id, int quantity, Product product, Date date, Customer customer) {
+		
+		this.basket_id = basket_id;
+		this.quantity = quantity;
+		this.product = product;
+		this.date = date;
+	}
 
 	public int getBasket_id(){
 		return this.basket_id;
