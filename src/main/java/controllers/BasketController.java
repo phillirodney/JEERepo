@@ -31,17 +31,19 @@ public class BasketController {
 	private CurrentUser currentUser;
 	
 	@Inject
-	private Product product;
+	private selectedProduct product;
 
 
 	@Inject
 	private BasketService basketService;
 
-	Basket basket = new Basket();
 
 
-	public void addToBasket(Product product) {
-		currentUser.getCustomer().getBaskets();
+	public void addToBasket() {
+		
+		BasketService.createNewBasket();
+		
+		
 	}
 	
 	public void removeFromBasket(Product product) {

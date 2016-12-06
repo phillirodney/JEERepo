@@ -87,14 +87,6 @@ public class Basket {
 		this.basket_id = basket_id;
 	}
 
-	public void add(CurrentUser currentUser) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void remove(CurrentUser currentUser) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
