@@ -4,8 +4,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import services.*;
 
-/* @author Cieran & Marcus */ 
 
 @RequestScoped
 @Named(value = "registration")
@@ -23,6 +23,7 @@ public class RegistrationController {
 	private String email = "";
 	private String phone = "";
 	private String password = "";
+	private String lastName = "";
 	
 	
 	public String getName(){
@@ -34,34 +35,48 @@ public class RegistrationController {
 	public String getPassword(){
 		return password; }
 	
-	public String setName(){
-		this.name = name; }
-	public String setEmail(){
-		this.email = email; }
-	public String setPhone(){
-		this.phone = phone; }
-	public String setPassword(){
-		this.password = password; }
+	public String getlastName(){
+		return lastName; }
 	
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setEmail(String email) {
+		this.email = email; 
+	}
+	public void setPhone(String phone) {
+		this.phone = phone; 
+	}
+	public void setPassword(String password) {
+		this.password = password; 
+	}
 	
+	public void setlastName(String lastName) {
+		this.lastName = lastName; 
+	}
+
 	public String register () {
 		
-		if(!name.isEmpty() && !email.isEmpty() && !phone.isEmpty() && !password.isEmpty()) {
-			if (registrationService.validRegistration(name, email, phone, password)) {
-				currentUser.setCustomer(reigistrationService.registerUser(email));
+		if(!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+			if (registrationService.validRegistration(email)) {
+				currentUser.setCustomer(registrationService.registerUser(name, email, phone, password));
 				return "Gnomepage2";
 			}
 			else {
 				name = "";
 				phone = "";
 				password = "";
-				return "Register";
+				return "SignUp";
 			}
+			
+			
 		}
 			name = "";
 			phone = "";
 			password = "";
-			return "Register"; 
+			return "SignUp"; 
+	}
 }
 
->>>>>>> 4ae4b55f34aadc767ba826c1c6af9c0900770023
+

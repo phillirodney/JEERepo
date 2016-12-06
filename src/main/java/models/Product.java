@@ -94,7 +94,8 @@ public class Product implements Serializable{
 		this.stockId = stockId;
 	}
 
-	//public void setPorousware(boolean porousware) {
-	//	this.porousware = porousware;
-	//}
+	public void setPorousware(boolean porousware) {
+		//this.porousware = porousware;
+		
+	}
 }

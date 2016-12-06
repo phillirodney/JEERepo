@@ -18,26 +18,53 @@ template="maintemplate.xhtml">
 					<img src="img/garden_gnome.png" width="60px" style="float: right;"/>
 					<br></br> 
 					<h2>Sign Up</h2>
-					<form>
+					<h:form>
 						<div class="form-group">
-							<label for="usr">First Name:</label> <input type="text"
-								class="form-control" id="usr"/>
+							<label for="usr">First Name:</label> 
+								
+								<h:inputText class="form-control" value="#{registration.name}">
+									<f:passThroughAttribute name="placeholder" value="First Name" />
+									<f:passThroughAttribute name="required" value="required" />
+									<f:passThroughAttribute name="id" value="firstName" />
+								</h:inputText>
 						</div>
 						<div class="form-group">
-							<label for="usr">Last Name:</label> <input type="text"
-								class="form-control" id="usr"/>
-						</div>
-						<div class="form-group">
-							<label for="pwd">Password:</label> <input type="password"
-								class="form-control" id="pwd"/>
-						</div>
-						<div class="form-group">
-							<label for="email">Email:</label> <input type="text"
-								class="form-control" id="eml"/> 
+							<label for="usr">Last Name:</label> 
+								<h:inputText class="form-control" value="#{registration.lastName}">
+									<f:passThroughAttribute name="placeholder" value="Last Name" />
+									<f:passThroughAttribute name="required" value="required" />
+									<f:passThroughAttribute name="id" value="lastName" />
+								</h:inputText>
+								
 								
 						</div>
-						<button type="submit" class="btn btn-default"> Submit</button>
-					</form>
+						<div class="form-group">
+							<label for="pwd">Password:</label> 
+								
+								<h:inputText class="form-control" value="#{registration.password}">
+									<f:passThroughAttribute name="type" value="password" />
+									<f:passThroughAttribute name="placeholder" value="password" />
+									<f:passThroughAttribute name="alt" value="Enter Password" />
+									<f:passThroughAttribute name="required" value="required" />
+									<f:passThroughAttribute name="id" value="password" />
+							</h:inputText>
+							
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>  
+								
+							<h:inputText class="form-control" value="#{registration.email}">
+								<f:passThroughAttribute name="type" value="email" />
+								<f:passThroughAttribute name="placeholder" value="email" />
+								<f:passThroughAttribute name="alt" value="Enter Email" />
+								<f:passThroughAttribute name="required" value="required" />
+								<f:passThroughAttribute name="id" value="email" />
+							</h:inputText>
+								
+						</div>
+						<h:commandButton class="btn btn-default" value="Register" action="#{registration.register}" />
+						
+					</h:form>
 				</div>
 			</div>
 	    
