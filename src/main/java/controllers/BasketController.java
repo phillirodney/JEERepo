@@ -34,20 +34,16 @@ public class BasketController {
 	private BasketService basketService;
 
 
-	/**
-	 * Method for customer to add products to their virtual basket
-	 * 
-	 * @param productId
-	 * @param name
-	 * @param description
-	 * @param stockId
-	 * @param imagepath
-	 * @param porousware
-	 * @return
-	 */
+
 	public void addToBasket(Product product) {
 		Basket basket = new Basket();
-		basket.add(currentUser);
+		currentUser.getCustomer().getBaskets();
+		//add basket to current user 
+	}
+	
+	public void removeFromBasket(Product product) {
+		Basket basket = new Basket();
+		basket.remove(currentUser);
 	}
 
 }
