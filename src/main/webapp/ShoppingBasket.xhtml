@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<!-- @author Marcus -->
-=======
-<!--  @author: Philli -->
-<!--  Beans links <h> tags added-->
->>>>>>> 84f69f11f8ffe5c381561684dfb5dd81e9a6789c
+
+
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
 
 xmlns:f="http://xmlns.jcp.org/jsf/core"
@@ -17,7 +13,7 @@ template="maintemplate.xhtml">
 
 		<ui:define name="maincontent">
 
-	        <p><h:outputText value="#{user.customer.firstName}" />'s Shopping Basket</p>
+	        <p><h:outputText value="#{user.customer.firstName}" /> Shopping Basket</p>
 		
 			<div class="container-fluid">
 			<ui:repeat var="product" value="#{shoppingbasket.shoppingbasket}">
