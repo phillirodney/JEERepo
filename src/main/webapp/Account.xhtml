@@ -130,19 +130,19 @@ enjoy-css {
 					<div class="col-sm-9">
 						<div class="container-fluid">
 							<div style="background-color: #dddddd; padding-left: 5%">
-								<b>Hello #{user.customer.name} <a href='#'>(Not you?)</a>, from this
+								<b>Hello #{user.customer.firstName} <a href='#'>(Not you?)</a>, from this
 									dashboard you may view your orders, edit account/shipping and
 									payment info
 								</b>
 							</div>
 							<br></br>
 
-							<h:datatable value="#(user.orders)" var="order">
+							<h:dataTable value="#{user.orders}" var="order">
 
 								<h:column>
 									<f:facet name="header">Order No.</f:facet>
 									#{order.id}
-							</h:column>
+								</h:column>
 
 								<h:column>
 									<f:facet name="header">Date</f:facet>
@@ -163,7 +163,7 @@ enjoy-css {
 									<f:facet name="header"></f:facet>
 								</h:column>
 
-							</h:datatable>
+							</h:dataTable>
 
 
 							<!--  <table>

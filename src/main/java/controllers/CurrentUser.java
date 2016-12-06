@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+
 @Named("user")
 @SessionScoped
 public class CurrentUser implements Serializable {
