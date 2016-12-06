@@ -1,4 +1,6 @@
 package models;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import java.util.List;
 
@@ -7,6 +9,8 @@ import java.util.List;
  * @author Luke
  */
 
+@Stateless
+@Default
 public class StockerOrderManagerOffline implements StockOrderManager {
 
     @Inject

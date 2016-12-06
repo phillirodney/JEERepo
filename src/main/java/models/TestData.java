@@ -73,8 +73,9 @@ public class TestData {
 		Stock stock6 = new Stock(6, 176, 196, 95);
 		Stock stock7 = new Stock(7, 177, 197, 98);
 		Stock stock8 = new Stock(8, 189, 209, 100);
+
 		
-		Customer customer1 = new Customer();
+		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "pass", new Date());
 		
 		addresses.add(address1);
 		addresses.add(address2);

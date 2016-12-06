@@ -2,12 +2,14 @@ package controllers;
 import java.io.Serializable;
 
 import services.LoginService;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 /* @author Cieran */
 
 @RequestScoped 
 @Named (value = "login")
-
 public class LoginController {
 	
 	@Inject 
@@ -22,8 +24,34 @@ public class LoginController {
 		return email; }
 	public String getPassword(){
 		return password; }
-	public String setEmail (String email){
-		this.email = email; }
-	public String setPassword (String password){
-		this.password = password; }
+	public void setEmail(String email){
+		this.email = email; 
+	}
+	public void setPassword(String password){
+		this.password = password; 
+	}
+	
+	
+	public String login() {
+		
+		if(!email.isEmpty() && !password.isEmpty()) {
+			if(loginService.validLogin(email, password)) {
+				currentUser.setCustomer(loginService.loginUser(email));
+				return "Gnomepage2";
+			}
+			else {
+				password = "";
+				email = "";
+				return "Login";
+			}
+		}
+		password = "";
+		email = "";
+		return "Login";
+	}
+		
+	public String logout() {
+		currentUser.setCustomer(null);
+		return "Gnomepage2";
+	}
 }

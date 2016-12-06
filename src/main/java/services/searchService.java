@@ -24,11 +24,11 @@ public class searchService {
 	}
 
 	private List<Product> searchByProductName(String name) {
-		return productRepository.findByName(name);
+		return productRepository.findProductByName(name);
 	}
 		
 	private List<Product> searchByProductDescription(String description) {
-		return productRepository.findByDescription(description);
+		return productRepository.findProductByDescription(description);
 	}
 	
 	

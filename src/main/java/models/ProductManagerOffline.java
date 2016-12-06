@@ -4,11 +4,18 @@ import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
+import javax.inject.Inject;
+
 /**
  * Created by Luke on 19/11/2016.
  * @author Cieran
  * @author Philli
  */
+@Stateless
+@Default
 public class ProductManagerOffline implements ProductManager {
 
     @Inject
@@ -20,12 +27,12 @@ public class ProductManagerOffline implements ProductManager {
         List<Product> products = testData.getProducts();
         product.setproductId(products.size() + 1);
         testData.setProducts(products);
-        return findById(product.getproductId());
+        return findProductById(product.getproductId());
 
     }
 
     @Override
-    public Product findById(int id) {
+    public Product findProductById(int id) {
 
         for(Product p: testData.getProducts()){
             if(p.getproductId() == id){
@@ -38,7 +45,7 @@ public class ProductManagerOffline implements ProductManager {
     
     
     @Override
-    public List<Product> findByName(String name){
+    public List<Product> findProductByName(String name){
     	
     	List<Product> products = new ArrayList<>();
     	for(Product p: products) {
@@ -52,7 +59,7 @@ public class ProductManagerOffline implements ProductManager {
     }
     
     @Override
-    public List<Product> findByDescription(String description){
+    public List<Product> findProductByDescription(String description){
     	List<Product> products = new ArrayList<>();
     	for(Product p: products) {
     		if(p.getDescription().contains(description)) {
@@ -91,5 +98,10 @@ public class ProductManagerOffline implements ProductManager {
             }
         }
 
+    }
+    
+    @Override
+    public List<Product> returnAll(){
+    	return testData.getProducts();
     }
 }
