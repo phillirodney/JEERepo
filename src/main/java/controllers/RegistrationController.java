@@ -4,8 +4,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import services.*;
 
-/* @author Cieran */ 
 
 @RequestScoped
 @Named(value = "registration")
@@ -16,12 +16,14 @@ public class RegistrationController {
 	private CurrentUser currentUser;
 	
 	@Inject 
-	//private RegistrationService registrationService;
+	private RegistrationService registrationService;
 	
+	// These four variables to login and view the gnomes, the rest can be added in the account page
 	private String name = "";
 	private String email = "";
 	private String phone = "";
 	private String password = "";
+	private String lastName = "";
 	
 	
 	public String getName(){
@@ -33,21 +35,48 @@ public class RegistrationController {
 	public String getPassword(){
 		return password; }
 	
-	public void setName() {
+	public String getlastName(){
+		return lastName; }
+	
+
+	public void setName(String name) {
 		this.name = name;
 	}
-	public void setEmail() {
+	public void setEmail(String email) {
 		this.email = email; 
 	}
-	public void setPhone() {
+	public void setPhone(String phone) {
 		this.phone = phone; 
 	}
-	public void setPassword() {
+	public void setPassword(String password) {
 		this.password = password; 
 	}
 	
+	public void setlastName(String lastName) {
+		this.lastName = lastName; 
+	}
 
-
+	public String register () {
+		
+		if(!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+			if (registrationService.validRegistration(email)) {
+				currentUser.setCustomer(registrationService.registerUser(name, email, phone, password));
+				return "Gnomepage2";
+			}
+			else {
+				name = "";
+				phone = "";
+				password = "";
+				return "SignUp";
+			}
+			
+			
+		}
+			name = "";
+			phone = "";
+			password = "";
+			return "SignUp"; 
+	}
 }
 
 

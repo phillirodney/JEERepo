@@ -25,24 +25,27 @@ public class Product implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	@Id private int productId;
+	@Id 
+	private int productId;
 	private String name;
 	private String description;
+	private double price;
 	private long stockId;
-	boolean porousware;
+	private long porouswareStockId;
 
 	private List<String> images;
 	public Product(){
 	}
 
-	public Product(int productId, String name, String description, long stockId, List<String> imagepath, boolean porousware) {
-
+	public Product(int productId, String name, String description, double price, long stockId, long porouswareStockId, List<String> imagepath) {
+		
 		this.productId = productId;
 		this.name = name;
 		this.description = description;
+		this.price = price;
 		this.images = imagepath;
 		this.stockId = stockId;
-		this.porousware = porousware;
+		this.porouswareStockId = porouswareStockId;
 		
 	}
 
@@ -84,7 +87,8 @@ public class Product implements Serializable{
 	}
 
 	public boolean isPorousware() {
-		return porousware;
+		//return porousware;
+		return false;
 	}
 
 	public void setStockId(long stockId) {
@@ -92,6 +96,7 @@ public class Product implements Serializable{
 	}
 
 	public void setPorousware(boolean porousware) {
-		this.porousware = porousware;
+		//this.porousware = porousware;
+		
 	}
 }

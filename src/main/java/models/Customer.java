@@ -94,6 +94,11 @@ public class Customer {
 		this.dateOfBirth = dateOfBirth;
 
 	}
+	public Customer(String name, String email, String phone, String password) {
+		this.firstName = name;
+		this.email = email;
+		this.password = password;
+	}
 
 	public long getId() {
 		return id;
