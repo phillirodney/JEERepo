@@ -130,66 +130,94 @@ enjoy-css {
 					<div class="col-sm-9">
 						<div class="container-fluid">
 							<div style="background-color: #dddddd; padding-left: 5%">
-								<b>Hello Lucas <a href='#'>(Not you?)</a>, from this
+								<b>Hello #{user.customer.name} <a href='#'>(Not you?)</a>, from this
 									dashboard you may view your orders, edit account/shipping and
 									payment info
 								</b>
 							</div>
 							<br></br>
-							<table>
-								<tr>
-									<th>Order No.</th>
-									<th>Date</th>
-									<th>Status</th>
-									<th>Total</th>
-									<th></th>
 
-								</tr>
-								<tr>
-									<td>569</td>
-									<td>Nov 5, 2016</td>
-									<td>On Hold</td>
-									<td>£10</td>
-									<td><a href='#'>View</a></td>
-								</tr>
-								<tr>
-									<td>501</td>
-									<td>Nov 6, 2016</td>
-									<td>On Hold</td>
-									<td>£10</td>
-									<td><a href='#'>View</a></td>
-								</tr>
-								<tr>
-									<td>488</td>
-									<td>Nov 7, 2016</td>
-									<td>On Hold</td>
-									<td>£10</td>
-									<td><a href='#'>View</a></td>
-								</tr>
-								<tr>
-									<td>433</td>
-									<td>Nov 8, 2016</td>
-									<td>On Hold</td>
-									<td>£10</td>
-									<td><a href='#'>View</a></td>
-								</tr>
-								<tr>
-									<td>421</td>
-									<td>Nov 9, 2016</td>
-									<td>On Hold</td>
-									<td>£10</td>
-									<td><a href='#'>View</a></td>
-								</tr>
-								<tr>
-									<td>288</td>
-									<td>Nov 10, 2016</td>
-									<td>On Hold</td>
-									<td>£10</td>
-									<td><a href='#'>View</a></td>
-								</tr>
-							</table>
+							<h:datatable value="#(user.orders)" var="order">
+
+								<h:column>
+									<f:facet name="header">Order No.</f:facet>
+									#{order.id}
+							</h:column>
+
+								<h:column>
+									<f:facet name="header">Date</f:facet>
+									#{order.dateOfOrder}
+							</h:column>
+
+								<h:column>
+									<f:facet name="header">Status</f:facet>
+									#{order.dispatchStatus}
+							</h:column>
+
+								<h:column>
+									<f:facet name="header">Total</f:facet>
+									#{order.total}
+							</h:column>
+
+								<h:column>
+									<f:facet name="header"></f:facet>
+								</h:column>
+
+							</h:datatable>
 
 
+							<!--  <table>
+									<tr>
+										<th>Order No.</th>
+										<th>Date</th>
+										<th>Status</th>
+										<th>Total</th>
+										<th></th>
+
+									</tr>
+									<tr>
+										<td>569</td>
+										<td>Nov 5, 2016</td>
+										<td>On Hold</td>
+										<td>£10</td>
+										<td><a href='#'>View</a></td>
+									</tr>
+									<tr>
+										<td>501</td>
+										<td>Nov 6, 2016</td>
+										<td>On Hold</td>
+										<td>£10</td>
+										<td><a href='#'>View</a></td>
+									</tr>
+									<tr>
+										<td>488</td>
+										<td>Nov 7, 2016</td>
+										<td>On Hold</td>
+										<td>£10</td>
+										<td><a href='#'>View</a></td>
+									</tr>
+									<tr>
+										<td>433</td>
+										<td>Nov 8, 2016</td>
+										<td>On Hold</td>
+										<td>£10</td>
+										<td><a href='#'>View</a></td>
+									</tr>
+									<tr>
+										<td>421</td>
+										<td>Nov 9, 2016</td>
+										<td>On Hold</td>
+										<td>£10</td>
+										<td><a href='#'>View</a></td>
+									</tr>
+									<tr>
+										<td>288</td>
+										<td>Nov 10, 2016</td>
+										<td>On Hold</td>
+										<td>£10</td>
+										<td><a href='#'>View</a></td>
+									</tr>
+								</table> -->
 						</div>
 					</div>
 				</div>
