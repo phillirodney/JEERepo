@@ -87,14 +87,14 @@ public class Product implements Serializable{
 	}
 
 	public boolean isPorousware() {
-		return porousware;
+		return false;
 	}
 
 	public void setStockId(long stockId) {
 		this.stockId = stockId;
 	}
 
-	public void setPorousware(boolean porousware) {
-		this.porousware = porousware;
-	}
+	//public void setPorousware(boolean porousware) {
+	//	this.porousware = porousware;
+	//}
 }

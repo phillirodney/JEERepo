@@ -91,12 +91,12 @@ public class TestData {
 		orders.add(corder3);
 		orders.add(corder4);
 		
-		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "pass", new Date(0));
-		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com", "pass", new Date(0));
-		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com", "pass", new Date(0));
-		Customer customer4 = new Customer(4, "Moe", "Szyslak", "moeszyslak@gmail.com", "pass", new Date(0));
-		Customer customer5 = new Customer(5, "Dwayne", "Johnson", "dwaynejohnson@gmail.com", "pass", new Date(0));
-		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "pass", new Date(0));
+		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass", new Date(0));
+		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com",  "01234567899", "pass", new Date(0));
+		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com",  "01234567899", "pass", new Date(0));
+		Customer customer4 = new Customer(4, "Moe", "Szyslak", "moeszyslak@gmail.com",  "01234567899", "pass", new Date(0));
+		Customer customer5 = new Customer(5, "Dwayne", "Johnson", "dwaynejohnson@gmail.com", "01234567899",  "pass", new Date(0));
+		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com",  "01234567899", "pass", new Date(0));
 	
 		customer1.setOrders(orders);
 		
@@ -104,6 +104,7 @@ public class TestData {
 		List<Basket> baskets = new ArrayList<Basket>();
 		
 		customer1.setBaskets(baskets);
+		
 		
 		addresses.add(address1);
 		addresses.add(address2);

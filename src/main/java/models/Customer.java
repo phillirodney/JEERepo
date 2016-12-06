@@ -26,8 +26,6 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Type;
 
-
- 
 @Entity
 @Table(name = "customers")
 public class Customer {
@@ -52,6 +50,11 @@ public class Customer {
 	@NotNull
 	private String email;
 
+	@Column(name = "phoneNumber", nullable = false, length = 225)
+	@Size(max = 225)
+	@NotNull
+	private String phoneNumber;
+
 	@Column(name = "password", nullable = false, length = 225)
 	@Size(max = 225)
 	@NotNull
@@ -63,33 +66,28 @@ public class Customer {
 	private Date dateOfBirth;
 
 	@ManyToMany
-	@JoinTable(name = "has_address",
-			joinColumns =
-				@JoinColumn(name = "customer_id", referencedColumnName = "id"),
-			inverseJoinColumns =
-				@JoinColumn(name = "address_id", referencedColumnName = "address_id"))
+	@JoinTable(name = "has_address", joinColumns = @JoinColumn(name = "customer_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "address_id", referencedColumnName = "address_id"))
 	private List<Address> addresses;
 
 	@OneToMany(mappedBy = "customer")
 	private List<Basket> baskets;
 
-
 	@OneToMany(mappedBy = "customer")
 	private List<Payment> payment;
-	
-	
-	private List<CustomerOrder> orders;
 
+	private List<CustomerOrder> orders;
 
 	public Customer() {
 
 	}
 
-	public Customer(long id, String firstName, String lastName, String email, String password, Date dateOfBirth) {
+	public Customer(long id, String firstName, String lastName, String email, String phoneNumber, String password,
+			Date dateOfBirth) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.phoneNumber = phoneNumber;
 		this.password = password;
 		this.dateOfBirth = dateOfBirth;
 
@@ -109,6 +107,10 @@ public class Customer {
 
 	public String getEmail() {
 		return email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
 	public String getPassword() {
@@ -142,6 +144,10 @@ public class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 
 	public void setPassword(String password) {
 		this.password = password;
@@ -158,14 +164,13 @@ public class Customer {
 	public void setBaskets(List<Basket> baskets) {
 		this.baskets = baskets;
 	}
-	
+
 	public List<CustomerOrder> getOrders() {
 		return this.orders;
 	}
-	
+
 	public void setOrders(List<CustomerOrder> orders) {
 		this.orders = orders;
 	}
 
-	
 }

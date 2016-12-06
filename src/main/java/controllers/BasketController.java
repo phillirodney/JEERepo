@@ -30,8 +30,7 @@ public class BasketController {
 	@Inject
 	private CurrentUser currentUser;
 	
-	@Inject
-	private Product product;
+	
 
 
 	@Inject
