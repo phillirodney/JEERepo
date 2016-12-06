@@ -30,24 +30,30 @@ public class BasketController {
 	@Inject
 	private CurrentUser currentUser;
 	
-	@Inject
-	private selectedProduct product;
-
 
 	@Inject
 	private BasketService basketService;
+	
+	@Inject
+	private selectedProduct product;
+	
+	private int quantity;
 
-
-
-	public void addToBasket() {
 		
-		BasketService.createNewBasket();
+
+	public String addToBasket() {
 		
+		public Basket(int basket_id, int quantity, Product product, Date date, Customer customer)
+		
+		Basket basket = new Basket(product.getProduct(), 1);
+		if(basketService.checkBasket(basket, currentUser.getCustomer())){return "Product";}
+		currentUser.getCustomer().getBaskets().add(basket);
+		return "Product";
 		
 	}
 	
-	public void removeFromBasket(Product product) {
-		currentUser.getCustomer().setBaskets(null);
+	public void removeFromBasket() {
+		
 	}
 
 }

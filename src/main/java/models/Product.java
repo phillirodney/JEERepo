@@ -87,7 +87,6 @@ public class Product implements Serializable{
 	}
 
 	public boolean isPorousware() {
-		//return porousware;
 		return false;
 	}
 
