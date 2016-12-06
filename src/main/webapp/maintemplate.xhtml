@@ -110,9 +110,18 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="AboutUs.xhtml">About Us</a></li>
-							<li class="active"><a href="SignUp.xhtml"><span
-									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><h:outputLink rendered="#{!user.loggedIn}" value="SignUp.xhtml">
+							<span class="glyphicon glyphicon-user"></span> Sign Up</h:outputLink></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><h:outputLink rendered="#{!user.loggedIn}" value="Login.xhtml">
+							<span class="glyphicon glyphicon-user"></span>Login</h:outputLink></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><h:outputLink rendered="#{user.loggedIn}" value="Login.xhtml">
+							<span class="glyphicon glyphicon-user"></span> Logout</h:outputLink></li>
 						</ul>
 					</div>
 
