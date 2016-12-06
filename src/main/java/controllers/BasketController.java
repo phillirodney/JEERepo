@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import models.Basket;
 import models.Customer;
 import models.Product;
 import services.BasketService;
@@ -32,7 +33,6 @@ public class BasketController {
 	@Inject
 	private BasketService basketService;
 
-	ArrayList<Product> list_of_products = new ArrayList<Product>();
 
 	/**
 	 * Method for customer to add products to their virtual basket
@@ -45,10 +45,9 @@ public class BasketController {
 	 * @param porousware
 	 * @return
 	 */
-	public void addToBasket(int productId, String name, String description, long stockId, List<String> imagepath,
-			boolean porousware) {
-		Product product = new Product();
-		list_of_products.add(product);
+	public void addToBasket(Product product) {
+		Basket basket = new Basket();
+		basket.add(currentUser);
 	}
 
 }

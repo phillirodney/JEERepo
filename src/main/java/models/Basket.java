@@ -3,6 +3,9 @@ package models;
 
 
 import javax.persistence.*;
+
+import controllers.CurrentUser;
+
 import java.sql.Date;
 
 /**
@@ -82,6 +85,16 @@ public class Basket {
 
 	public void setBasket_id(int basket_id){
 		this.basket_id = basket_id;
+	}
+
+	public void add(CurrentUser currentUser) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void remove(CurrentUser currentUser) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
