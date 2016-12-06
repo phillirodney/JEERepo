@@ -57,14 +57,14 @@ public class TestData {
 		List<String> paths = new ArrayList<>();
 		paths.add("/resources/image.png");
 		paths.add("/resources/image2.png");
-		Product product1 = new Product(1, "Tyrion Gnomister", "The popular character from the hit TV Show Game of Gnomes", 10001, paths, false);
-		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 10002, paths, false);
-		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 10003, paths, false);
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 10004, paths, false);
-		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 10005, paths, false);
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 10006, paths, false);
-		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 10007, paths, false);
-		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 10008, paths, false);
+		Product product1 = new Product(1, "Tyrion Gnomister", "The popular character from the hit TV Show Game of Gnomes", 21.99 ,10001, 11001, paths);
+		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99, 10002, 11002,paths);
+		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99, 10003, 11003,paths);
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, 10004, 11004,paths);
+		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, 10005, 11005,paths);
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, 10006, 11006,paths);
+		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007,paths);
+		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008,paths);
 		
 		Stock stock1 = new Stock(1, 100, 120, 50);
 		Stock stock2 = new Stock(2, 120, 140, 70);
