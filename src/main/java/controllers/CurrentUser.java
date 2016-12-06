@@ -6,7 +6,8 @@ import models.*;
 
 import java.io.Serializable;
 
-
+@Named("user")
+@SessionScoped
 public class CurrentUser implements Serializable {
 
 
@@ -14,7 +15,7 @@ public class CurrentUser implements Serializable {
 	
 	private Customer customer = null;
 	
-	public List<CustomerOrder> getOrders() {
+	public List<CustomerOrder> getOrd      ers() {
 		
 		return customer.getOrders();
 		
