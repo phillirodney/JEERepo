@@ -2,6 +2,8 @@ package controllers;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -24,62 +26,29 @@ import services.BasketService;
 @Named(value = "basket")
 public class BasketController {
 
-	/////////////////////////////////THIS IS WRONG/////////////////////////////////
 	@Inject
 	private CurrentUser currentUser;
 
 	@Inject
-	private BasketService basketService; 
+	private BasketService basketService;
 
+	ArrayList<Product> list_of_products = new ArrayList<Product>();
 
-	public int getBasket_id() {
-		return basket_id;
+	/**
+	 * Method for customer to add products to their virtual basket
+	 * 
+	 * @param productId
+	 * @param name
+	 * @param description
+	 * @param stockId
+	 * @param imagepath
+	 * @param porousware
+	 * @return
+	 */
+	public void addToBasket(int productId, String name, String description, long stockId, List<String> imagepath,
+			boolean porousware) {
+		Product product = new Product();
+		list_of_products.add(product);
 	}
-
-	public void setBasket_id(int basket_id) {
-		this.basket_id = basket_id;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public Product getProduct() {
-		return product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
-	private int basket_id;
-
-	private int quantity;
-
-	private Product product;
-
-	private Date date;
-
-	private Customer customer;
 
 }

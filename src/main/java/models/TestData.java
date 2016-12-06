@@ -1,4 +1,5 @@
 package models;
+import java.sql.Date;
 import java.util.*;
 import javax.annotation.*;
 import javax.ejb.Singleton;
@@ -73,9 +74,30 @@ public class TestData {
 		Stock stock6 = new Stock(6, 176, 196, 95);
 		Stock stock7 = new Stock(7, 177, 197, 98);
 		Stock stock8 = new Stock(8, 189, 209, 100);
+		
+		
+		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed");
+		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed");
+		CustomerOrder corder2 = new CustomerOrder(3, 200.0, new Date(0), "Dispatched", "payed");
+		CustomerOrder corder3 = new CustomerOrder(4, 200.0, new Date(0), "Dispatched", "payed");
+		CustomerOrder corder4 = new CustomerOrder(5, 200.0, new Date(0), "Dispatched", "payed");
+		
 
 		
-		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "pass", new Date());
+		List<CustomerOrder> orders = new ArrayList<CustomerOrder>();
+		orders.add(corder);
+		orders.add(corder1);
+		orders.add(corder2);
+		orders.add(corder3);
+		orders.add(corder4);
+		
+		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "pass", new Date(0));
+		customer1.setOrders(orders);
+		
+		Basket basket = new Basket(1, 1, product1, new Date(0), customer1);
+		List<Basket> baskets = new ArrayList<Basket>();
+		
+		customer1.setBaskets(baskets);
 		
 		addresses.add(address1);
 		addresses.add(address2);

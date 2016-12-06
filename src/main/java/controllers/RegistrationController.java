@@ -4,6 +4,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+<<<<<<< HEAD
 /*
 import com.qac.oc.controllers.session.CurrentUser;
 import com.qac.oc.services.RegistrationService;
@@ -70,3 +71,46 @@ public class RegistrationController {
 	public void setPostcode(String postcode) { this.postcode = postcode; }
 	
 }
+=======
+/* @author Cieran */ 
+
+@RequestScoped
+@Named(value = "registration")
+
+public class RegistrationController {
+	
+	@Inject 
+	private CurrentUser currentUser;
+	
+	@Inject 
+	private RegistrationService registrationService;
+	
+	private String name = "";
+	private String email = "";
+	private String phone = "";
+	private String password = "";
+	
+	
+	public String getName(){
+		return name; }
+	public String getEmail(){
+		return email; }
+	public String getPhone(){
+		return phone; }
+	public String getPassword(){
+		return password; }
+	
+	public String setName(){
+		this.name = name; }
+	public String setEmail(){
+		this.email = email; }
+	public String setPhone(){
+		this.phone = phone; }
+	public String setPassword(){
+		this.password = password; }
+	}
+
+
+}
+
+>>>>>>> 4ae4b55f34aadc767ba826c1c6af9c0900770023
