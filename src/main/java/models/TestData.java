@@ -92,6 +92,12 @@ public class TestData {
 		orders.add(corder4);
 		
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "pass", new Date(0));
+		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com", "pass", new Date(0));
+		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com", "pass", new Date(0));
+		Customer customer4 = new Customer(4, "Moe", "Szyslak", "moeszyslak@gmail.com", "pass", new Date(0));
+		Customer customer5 = new Customer(5, "Dwayne", "Johnson", "dwaynejohnson@gmail.com", "pass", new Date(0));
+		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "pass", new Date(0));
+	
 		customer1.setOrders(orders);
 		
 		Basket basket = new Basket(1, 1, product1, new Date(0), customer1);
@@ -128,6 +134,11 @@ public class TestData {
 		
 		
 		customers.add(customer1);
+		customers.add(customer2);
+		customers.add(customer3);
+		customers.add(customer4);
+		customers.add(customer5);
+		customers.add(customer6);
 
 	}
 
