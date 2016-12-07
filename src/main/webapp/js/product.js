@@ -21,14 +21,14 @@ function openCity(evt, cityName) {
 
 function incrementValue()
 {
-    var value = parseInt(document.getElementById('number').value, 10);
+    var value = parseInt(document.getElementById('number1').value, 10);
     value = isNaN(value) ? 0 : value;
     value++;
     document.getElementById('number').value = value;
 }
 function decrementValue()
 {
-    var value = parseInt(document.getElementById('number').value, 10);
+    var value = parseInt(document.getElementById('number2').value, 10);
     value = isNaN(value) ? 0 : value;
     value--;
     document.getElementById('number').value = value;

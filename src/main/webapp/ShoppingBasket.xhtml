@@ -30,19 +30,40 @@
 							</p>
 						</div>
 						<div class="col-sm-2">
-							<h:outputText value="#{basket.product.name}" />
-							£19.99
+							<br></br>
+							 <br></br>
+
+
+							<h:outputText value="#{basket.product.price}" />
+							
 						</div>
-						<form>
-							<input type="button" onclick="decrementValue()"
-								value="-" /> <input type="text" id="number"
-								value="0" /> <input type="button" onclick="incrementValue()"
-								value="+" />
-						</form>
+						<h:form>
+								<div class="quantity buttons_added">
+								<input type="number" size="4" class="input-text qty text" title="Qty"
+										value="1" min="0" step="1"></input>
+								</div>
+								</h:form>
 						<div class="col-sm-2"></div>
 					</div>
 				</div>
+
 			</ui:repeat>
+			<br></br>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2">
+				 </div>
+				<div class="col-sm-2"><h:outputText value="#{basket.product.getPrice}"/>
+				</div>
+				<div class="col-sm-2">
+					<h:commandButton type="button" value="Update
+						Cart" class="btn btn-outline-primary" action="#{Basket.addToBasket}"></h:commandButton>
+				</div>
+				<div class="col-sm-2">
+					<h:commandButton type="button" value="Checkout" class="btn btn-outline-primary"></h:commandButton>
+				</div>
+			</div>
 		</div>
 
 

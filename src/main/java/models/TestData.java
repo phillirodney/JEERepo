@@ -1,4 +1,5 @@
 package models;
+
 import java.sql.Date;
 import java.util.*;
 import javax.annotation.*;
@@ -11,7 +12,6 @@ import javax.persistence.criteria.Order;
  * @author Team
  * 
  */
-
 
 @Startup
 @Singleton
@@ -41,31 +41,34 @@ public class TestData {
 		stockOrders = new ArrayList<StockOrder>();
 		suppliers = new ArrayList<Supplier>();
 
-
 		// AddData
-		//Address address1 = new Address(null, 0, null, null, null);
+		// Address address1 = new Address(null, 0, null, null, null);
 		Address address1 = new Address(1, 123, "Fake Street", "Springfield", "SP10 8RT");
-		Address address2 = new Address(2, 666, "1st Avenue", "Hometown", "NYC 10" );
+		Address address2 = new Address(2, 666, "1st Avenue", "Hometown", "NYC 10");
 		Address address3 = new Address(3, 100, "Snake Way", "Jonestown", "SW90 SRT");
 		Address address4 = new Address(4, 345, "Basic Close", "Basictown", "BSC1 RTY");
 		Address address5 = new Address(5, 742, "Evergreen Terrace", "Springfield", "SP11 EGT");
 		Address address6 = new Address(6, 10, "Downing Street", "London", "LDN 10");
 		Address address7 = new Address(7, 888, "Some Street", "Sometown", "SMPC ODE");
 		Address address8 = new Address(8, 777, "Luke Street", "Teamthree", "TM3 LKE");
-		
-		//Product product1 = new Product(1, "Gnome1", 10, 1, null, null, null, null);
+
+		// Product product1 = new Product(1, "Gnome1", 10, 1, null, null, null,
+		// null);
 		List<String> paths = new ArrayList<>();
 		paths.add("/resources/image.png");
 		paths.add("/resources/image2.png");
-		Product product1 = new Product(1, "Tyrion Gnomister", "The popular character from the hit TV Show Game of Gnomes", 21.99 ,10001, 11001, paths);
-		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99, 10002, 11002,paths);
-		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99, 10003, 11003,paths);
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, 10004, 11004,paths);
-		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, 10005, 11005,paths);
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, 10006, 11006,paths);
-		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007,paths);
-		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008,paths);
-		
+		Product product1 = new Product(1, "Tyrion Gnomister",
+				"The popular character from the hit TV Show Game of Gnomes", 21.99, 10001, 11001, paths);
+		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99,
+				10002, 11002, paths);
+		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99,
+				10003, 11003, paths);
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, 10004, 11004, paths);
+		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, 10005, 11005, paths);
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, 10006, 11006, paths);
+		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007, paths);
+		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008, paths);
+
 		Stock stock1 = new Stock(1, 100, 120, 50, false);
 		Stock stock2 = new Stock(2, 120, 140, 70, false);
 		Stock stock3 = new Stock(3, 130, 150, 60, false);
@@ -74,38 +77,39 @@ public class TestData {
 		Stock stock6 = new Stock(6, 176, 196, 95, false);
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
-		
-		
+
 		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed");
 		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed");
 		CustomerOrder corder2 = new CustomerOrder(3, 200.0, new Date(0), "Dispatched", "payed");
 		CustomerOrder corder3 = new CustomerOrder(4, 200.0, new Date(0), "Dispatched", "payed");
 		CustomerOrder corder4 = new CustomerOrder(5, 200.0, new Date(0), "Dispatched", "payed");
-		
 
-		
 		List<CustomerOrder> orders = new ArrayList<CustomerOrder>();
 		orders.add(corder);
 		orders.add(corder1);
 		orders.add(corder2);
 		orders.add(corder3);
 		orders.add(corder4);
-		
-		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass", new Date(0));
-		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com",  "01234567899", "pass", new Date(0));
-		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com",  "01234567899", "pass", new Date(0));
-		Customer customer4 = new Customer(4, "Moe", "Szyslak", "moeszyslak@gmail.com",  "01234567899", "pass", new Date(0));
-		Customer customer5 = new Customer(5, "Dwayne", "Johnson", "dwaynejohnson@gmail.com", "01234567899",  "pass", new Date(0));
-		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com",  "01234567899", "pass", new Date(0));
-	
+
+		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
+				new Date(0));
+		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com", "01234567899", "pass",
+				new Date(0));
+		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com", "01234567899", "pass",
+				new Date(0));
+		Customer customer4 = new Customer(4, "Moe", "Szyslak", "moeszyslak@gmail.com", "01234567899", "pass",
+				new Date(0));
+		Customer customer5 = new Customer(5, "Dwayne", "Johnson", "dwaynejohnson@gmail.com", "01234567899", "pass",
+				new Date(0));
+		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "01234567899", "pass",
+				new Date(0));
+
 		customer1.setOrders(orders);
-		
+
 		Basket basket = new Basket(1, 1, product1, new Date(0), customer1);
 		List<Basket> baskets = new ArrayList<Basket>();
-		
-		customer1.setBaskets(baskets);
-		
-		
+
+	
 		addresses.add(address1);
 		addresses.add(address2);
 		addresses.add(address3);
@@ -114,7 +118,7 @@ public class TestData {
 		addresses.add(address6);
 		addresses.add(address7);
 		addresses.add(address8);
-		
+
 		products.add(product1);
 		products.add(product2);
 		products.add(product3);
@@ -123,7 +127,7 @@ public class TestData {
 		products.add(product6);
 		products.add(product7);
 		products.add(product8);
-		
+
 		stock.add(stock1);
 		stock.add(stock2);
 		stock.add(stock3);
@@ -132,7 +136,7 @@ public class TestData {
 		stock.add(stock6);
 		stock.add(stock7);
 		stock.add(stock8);
-		
+
 		customers.add(customer1);
 		customers.add(customer2);
 		customers.add(customer3);
@@ -142,36 +146,35 @@ public class TestData {
 
 	}
 
-	public List<Supplier> getSuppliers(){
+	public List<Supplier> getSuppliers() {
 		return this.suppliers;
 	}
 
-	public void setSuppliers(List<Supplier> suppliers){
+	public void setSuppliers(List<Supplier> suppliers) {
 		this.suppliers = suppliers;
 	}
 
-	public List<StockOrder> getStockOrders(){
+	public List<StockOrder> getStockOrders() {
 		return this.stockOrders;
 	}
 
-	public void setStockOrders(List<StockOrder> stockOrders){
+	public void setStockOrders(List<StockOrder> stockOrders) {
 		this.stockOrders = stockOrders;
 	}
 
-
-	public List<Product> getProducts(){
+	public List<Product> getProducts() {
 		return this.products;
 	}
 
-	public void setProducts(List<Product> products){
+	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
 
-	public List<Payment> getPayments(){
+	public List<Payment> getPayments() {
 		return this.payments;
 	}
 
-	public void setPayments(List<Payment> payments){
+	public void setPayments(List<Payment> payments) {
 		this.payments = payments;
 	}
 
@@ -183,15 +186,15 @@ public class TestData {
 		return customers;
 	}
 
-	public List<Basket> getBaskets(){
+	public List<Basket> getBaskets() {
 		return this.baskets;
 	}
 
-	public List<OrderLine> getOrderLines(){
+	public List<OrderLine> getOrderLines() {
 		return this.orderLines;
 	}
 
-	public void setOrderLines(List<OrderLine> orderLines){
+	public void setOrderLines(List<OrderLine> orderLines) {
 		this.orderLines = orderLines;
 	}
 
@@ -202,7 +205,6 @@ public class TestData {
 	public List<Stock> getStock() {
 		return stock;
 	}
-
 
 	public void setAddresses(List<Address> addresses) {
 		this.addresses = addresses;
@@ -220,7 +222,7 @@ public class TestData {
 		this.stock = stock;
 	}
 
-	public void setBaskets(List<Basket> baskets){
+	public void setBaskets(List<Basket> baskets) {
 		this.baskets = baskets;
 	}
 }
