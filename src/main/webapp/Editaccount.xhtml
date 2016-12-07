@@ -2,11 +2,19 @@
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="maintemplate.xhtml">
 	<meta charset="utf-8" />
 
 	<ui:define name="maincontent">
+	
+	<script>
+	
+	var test1 = document.getElementById("test");
+	
+	
+	</script>
 
 		<style>
 table {
@@ -197,13 +205,27 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Name: #{user.customer.firstName}<span>
-											#{user.customer.lastName} </span>
+
+									<td>First Name: <span id="test" contenteditable="true">#{user.customer.firstName}
+										</span>
 									</td>
-									<td><div class="enjoy-css">
+									
+									 <td><div class="enjoy-css">
 											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
 												aria-hidden="true"></span>
-										</div></td>
+										</div></td> 
+								</tr>
+								
+								<tr>
+
+									<td>Last Name: <span id="test" contenteditable="true">#{user.customer.lastName}
+										</span>
+									</td>
+									
+									 <td><div class="enjoy-css">
+											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
+												aria-hidden="true"></span>
+										</div></td> 
 								</tr>
 								<tr>
 									<td>Email: #{user.customer.email}</td>
@@ -241,6 +263,14 @@ enjoy-css {
 										</div></td>
 								</tr>
 							</table>
+							<h:form>
+							
+								<h:commandButton action="#{registration.change}" value="button1">
+								<f:passThroughAttribute name ="required" value="test1" assignTo="#{registration.name}"/>
+								</h:commandButton>								
+								</h:form>
+								#{registration.name}
+						
 						</div>
 					</div>
 				</div>
@@ -248,3 +278,4 @@ enjoy-css {
 		</div>
 	</ui:define>
 </ui:composition>
+

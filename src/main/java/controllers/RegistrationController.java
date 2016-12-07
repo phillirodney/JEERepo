@@ -38,6 +38,10 @@ public class RegistrationController {
 	public String getlastName(){
 		return lastName; }
 	
+	public void change(){
+		currentUser.getCustomer().setFirstName(name);
+	}
+	
 
 	public void setName(String name) {
 		this.name = name;
