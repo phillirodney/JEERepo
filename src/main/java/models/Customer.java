@@ -68,13 +68,13 @@ public class Customer {
 
 	@ManyToMany
 	@JoinTable(name = "has_address", joinColumns = @JoinColumn(name = "customer_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "address_id", referencedColumnName = "address_id"))
-	private List<Address> addresses;
+	private Address addresses;
 
 	@OneToMany(mappedBy = "customer")
 	private List<Basket> baskets;
 
 	@OneToMany(mappedBy = "customer")
-	private List<Payment> payment;
+	private Payment payment;
 
 	private List<CustomerOrder> orders;
 
@@ -128,7 +128,7 @@ public class Customer {
 		return dateOfBirth;
 	}
 
-	public List<Address> getAddresses() {
+	public Address getAddresses() {
 		return addresses;
 	}
 
@@ -164,7 +164,7 @@ public class Customer {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public void setAddresses(List<Address> addresses) {
+	public void setAddresses(Address addresses) {
 		this.addresses = addresses;
 	}
 

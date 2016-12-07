@@ -30,19 +30,18 @@
 							</p>
 						</div>
 						<div class="col-sm-2">
-							<br></br>
-							 <br></br>
+							<br></br> <br></br>
 
 
 							<h:outputText value="#{basket.product.price}" />
-							
+
 						</div>
 						<h:form>
-								<div class="quantity buttons_added">
-								<input type="number" size="4" class="input-text qty text" title="Qty"
-										value="1" min="0" step="1"></input>
-								</div>
-								</h:form>
+							<div class="quantity buttons_added">
+								<h:inputText type="number" size="4" class="input-text qty text"
+									title="Qty" value="1" min="0" step="1"></h:inputText>
+							</div>
+						</h:form>
 						<div class="col-sm-2"></div>
 					</div>
 				</div>
@@ -52,16 +51,18 @@
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
 				<div class="col-sm-2">
-				 </div>
-				<div class="col-sm-2"><h:outputText value="#{basket.product.getPrice}"/>
+					<h:outputText value="#{basket.product.getPrice}" />
 				</div>
 				<div class="col-sm-2">
 					<h:commandButton type="button" value="Update
-						Cart" class="btn btn-outline-primary" action="#{Basket.addToBasket}"></h:commandButton>
+						Cart"
+						class="btn btn-outline-primary" action="#{Basket.addToBasket}"></h:commandButton>
 				</div>
 				<div class="col-sm-2">
-					<h:commandButton type="button" value="Checkout" class="btn btn-outline-primary"></h:commandButton>
+					<h:commandButton type="button" value="Checkout"
+						class="btn btn-outline-primary"></h:commandButton>
 				</div>
 			</div>
 		</div>

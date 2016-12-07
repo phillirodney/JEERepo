@@ -58,7 +58,6 @@ public class BasketController {
 
 	public int getQuantity() {
 		
-		
 		return quantity;
 
 	}
