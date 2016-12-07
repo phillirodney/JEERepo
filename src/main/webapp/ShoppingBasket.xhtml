@@ -33,9 +33,12 @@
 							<h:outputText value="#{basket.product.name}" />
 							£19.99
 						</div>
-						<input type="button" class="minus" value="-"></input> 
-							<input type="button"
-							class="plus" value="+"></input>
+						<form>
+							<input type="button" onclick="decrementValue()"
+								value="-" /> <input type="text" id="number"
+								value="0" /> <input type="button" onclick="incrementValue()"
+								value="+" />
+						</form>
 						<div class="col-sm-2"></div>
 					</div>
 				</div>
