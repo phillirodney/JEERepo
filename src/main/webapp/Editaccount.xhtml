@@ -139,6 +139,26 @@ enjoy-css {
 }
 </style>
 
+<script type="text/javascript">
+    function setHiddenValue(){
+
+    	 document.getElementById('myform:hidden').value = document.getElementById('test').innerHTML;
+	}
+    function setLastnameValue(){
+
+   	 document.getElementById('surname:surnameText').value = document.getElementById('surnameEdit').innerHTML;
+	}
+    function setEmailValue(){
+
+   	 document.getElementById('email:emailText').value = document.getElementById('emailEdit').innerHTML;
+	}
+    function setPhoneValue(){
+
+   	 document.getElementById('phone:phoneText').value = document.getElementById('phoneEdit').innerHTML;
+	}
+ 
+</script>
+
 		<div class="jumbotron" id="material"
 			style="padding-left: 5%; padding-right: 5%">
 			<div class="container-fluid" style="padding-top: 5px">
@@ -210,36 +230,61 @@ enjoy-css {
 										</span>
 									</td>
 									
-									 <td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td> 
+									 <td>
+									 	<h:form id="myform">
+							
+							 
+												<h:inputHidden id="hidden" value="#{registration.name}" />
+  												<h:commandButton value="Edit" action="#{registration.change}" onclick="setHiddenValue();" />	
+  															
+										</h:form>
+									</td> 
 								</tr>
 								
 								<tr>
 
-									<td>Last Name: <span id="test" contenteditable="true">#{user.customer.lastName}
+									<td>Last Name: <span id="surnameEdit" contenteditable="true">#{user.customer.lastName}
 										</span>
 									</td>
 									
-									 <td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td> 
+									 <td>
+										 <h:form id="surname">
+							
+							 
+												<h:inputHidden id="surnameText" value="#{registration.lastname}" />
+  												<h:commandButton value="Edit" action="#{registration.changeLastName}" onclick="setLastnameValue();" />	
+  															
+										</h:form>
+									</td> 
 								</tr>
 								<tr>
-									<td>Email: #{user.customer.email}</td>
-									<td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td>
+									<td>Email: <span id="emailEdit" contenteditable="true">#{user.customer.email}
+									 </span>
+									 </td>
+									 
+									 <td>
+									<h:form id="email">
+							
+							 
+												<h:inputHidden id="emailText" value="#{registration.email}" />
+  												<h:commandButton value="Edit" action="#{registration.changeEmail}" onclick="setEmailValue();" />	
+  															
+										</h:form>
+									</td>
 								</tr>
 								<tr>
-									<td>Phone: #{user.customer.phoneNumber}</td>
-									<td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td>
+									<td>Phone:<span id="phoneEdit" contenteditable="true">#{user.customer.phoneNumber}
+									</span>
+									</td>
+									<td>
+										<h:form id="phone">
+							
+							 
+												<h:inputHidden id="phoneText" value="#{registration.phone}" />
+  												<h:commandButton value="Edit" action="#{registration.changePhone}" onclick="setPhoneValue();" />	
+  															
+										</h:form>
+									</td>
 								</tr>
 								<tr>
 									<td>Contact by telephone</td>
@@ -263,14 +308,11 @@ enjoy-css {
 										</div></td>
 								</tr>
 							</table>
-							<h:form>
 							
-								<h:commandButton action="#{registration.change}" value="button1">
-								<f:passThroughAttribute name ="required" value="test1" assignTo="#{registration.name}"/>
-								</h:commandButton>								
-								</h:form>
-								#{registration.name}
-						
+							
+							
+							
+			
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,9 @@
 package controllers;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -9,6 +12,7 @@ import services.*;
 
 @RequestScoped
 @Named(value = "registration")
+
 
 public class RegistrationController {
 	
@@ -19,12 +23,18 @@ public class RegistrationController {
 	private RegistrationService registrationService;
 	
 	// These four variables to login and view the gnomes, the rest can be added in the account page
+
 	private String name = "";
+	private String lastname = "";
+	
 	private String email = "";
 	private String phone = "";
 	private String password = "";
 	private String lastName = "";
 	
+	public String getLastname() {
+		return this.lastName;
+	}
 	
 	public String getName(){
 		return name; }
@@ -42,8 +52,25 @@ public class RegistrationController {
 		currentUser.getCustomer().setFirstName(name);
 	}
 	
+	public void changeLastName(){
+		currentUser.getCustomer().setLastName(lastName);
+	}
+	
+	public void changeEmail(){
+		currentUser.getCustomer().setEmail(email);
+	}
+	
+	public void changePhone(){
+		currentUser.getCustomer().setPhoneNumber(phone);
+	}
+	
+	
+	public void setLastname(String lastName){
+		this.lastName = lastName;
+	}
 
 	public void setName(String name) {
+		//currentUser.getCustomer().setFirstName(name);
 		this.name = name;
 	}
 	public void setEmail(String email) {
