@@ -27,15 +27,18 @@ public class Stock {
 	@Column(name = "reserved")
 	private int reserved;
 
+	private boolean porousware;
+	
 	public Stock() {
 	}
 	
-	public Stock(int productId, int present, int required, int reserved)
+	public Stock(int productId, int present, int required, int reserved, boolean porousware)
 	{
 		this.productId = productId;
 		this.present = present;
 		this.required = required;
 		this.reserved = reserved;
+		this.porousware = porousware;
 	}
 
 	public int getProductId() {

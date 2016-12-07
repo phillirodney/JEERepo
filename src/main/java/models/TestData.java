@@ -66,14 +66,14 @@ public class TestData {
 		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007,paths);
 		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008,paths);
 		
-		Stock stock1 = new Stock(1, 100, 120, 50);
-		Stock stock2 = new Stock(2, 120, 140, 70);
-		Stock stock3 = new Stock(3, 130, 150, 60);
-		Stock stock4 = new Stock(4, 149, 169, 80);
-		Stock stock5 = new Stock(5, 156, 176, 75);
-		Stock stock6 = new Stock(6, 176, 196, 95);
-		Stock stock7 = new Stock(7, 177, 197, 98);
-		Stock stock8 = new Stock(8, 189, 209, 100);
+		Stock stock1 = new Stock(1, 100, 120, 50, false);
+		Stock stock2 = new Stock(2, 120, 140, 70, false);
+		Stock stock3 = new Stock(3, 130, 150, 60, false);
+		Stock stock4 = new Stock(4, 149, 169, 80, false);
+		Stock stock5 = new Stock(5, 156, 176, 75, false);
+		Stock stock6 = new Stock(6, 176, 196, 95, false);
+		Stock stock7 = new Stock(7, 177, 197, 98, false);
+		Stock stock8 = new Stock(8, 189, 209, 100, false);
 		
 		
 		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed");
@@ -131,7 +131,6 @@ public class TestData {
 		stock.add(stock6);
 		stock.add(stock7);
 		stock.add(stock8);
-		
 		
 		customers.add(customer1);
 		customers.add(customer2);

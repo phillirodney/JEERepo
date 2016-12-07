@@ -86,15 +86,23 @@ public class Product implements Serializable{
 		return stockId;
 	}
 
-	public boolean isPorousware() {
-		return porousware;
-	}
-
 	public void setStockId(long stockId) {
 		this.stockId = stockId;
 	}
 
-	public void setPorousware(boolean porousware) {
-		this.porousware = porousware;
+	public double getPrice() {
+		return price;
+	}
+
+	public long getPorouswareStockId() {
+		return porouswareStockId;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public void setPorouswareStockId(long porouswareStockId) {
+		this.porouswareStockId = porouswareStockId;
 	}
 }
