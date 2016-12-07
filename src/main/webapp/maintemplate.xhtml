@@ -65,13 +65,16 @@
 				</div>
 
 				<div class="col-sm-6" style="padding: 20px">
-					<form class="navbar-form">
+					<h:form class="navbar-form">
 						<div class="form-group" style="width: 80%">
-							<input style="width: 100%" type="text" class="form-control"
-								placeholder="Search" />
+							<h:inputText value="#{search.term}" class="form-control" style="width: 100%" >
+								<f:passThroughAttribute name="type" value="text" />
+								<f:passThroughAttribute name="placeholder" value="Search..." />
+								<f:passThroughAttribute name="alt" value="Search" />
+							</h:inputText>
 						</div>
-						<button type="submit" class="btn btn-default">Go</button>
-					</form>
+						 <h:commandButton action="#{search.search}" value="Search" class="btn btn-default" />
+					</h:form>
 				</div>
 
 				<div class="col-sm-1" style="padding: 20px">
@@ -102,7 +105,7 @@
 
 						<ul class="nav navbar-nav">
 
-							<li><a href="Products.xhtml">Gnomes</a></li>
+							<li><a href="Browse.xhtml">Gnomes</a></li>
 							<li class="#"><a href="Browse.xhtml">Garden</a></li>
 
 							<li><a href="#">Offers</a></li>
@@ -110,9 +113,18 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="AboutUs.xhtml">About Us</a></li>
-							<li class="active"><a href="SignUp.xhtml"><span
-									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><h:outputLink rendered="#{!user.loggedIn}" value="SignUp.xhtml">
+							<span class="glyphicon glyphicon-user"></span> Sign Up</h:outputLink></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><h:outputLink rendered="#{!user.loggedIn}" value="Login.xhtml">
+							<span class="glyphicon glyphicon-user"></span>Login</h:outputLink></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><h:outputLink rendered="#{user.loggedIn}" value="Login.xhtml">
+							<span class="glyphicon glyphicon-user"></span> Logout</h:outputLink></li>
 						</ul>
 					</div>
 

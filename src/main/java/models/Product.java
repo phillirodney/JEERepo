@@ -86,10 +86,18 @@ public class Product implements Serializable{
 		return stockId;
 	}
 
+<<<<<<< HEAD
+=======
+	public boolean isPorousware() {
+		return false;
+	}
+
+>>>>>>> 8903e23c772677979325db3f9f7e0f445949979b
 	public void setStockId(long stockId) {
 		this.stockId = stockId;
 	}
 
+<<<<<<< HEAD
 	public double getPrice() {
 		return price;
 	}
@@ -104,5 +112,10 @@ public class Product implements Serializable{
 
 	public void setPorouswareStockId(long porouswareStockId) {
 		this.porouswareStockId = porouswareStockId;
+=======
+	public void setPorousware(boolean porousware) {
+		//this.porousware = porousware;
+		
+>>>>>>> 8903e23c772677979325db3f9f7e0f445949979b
 	}
 }

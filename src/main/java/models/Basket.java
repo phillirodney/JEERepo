@@ -54,6 +54,12 @@ public class Basket {
 		this.product = product;
 		this.date = date;
 	}
+	
+	public Basket(Product product, int quantity) {
+		this.quantity = quantity;
+		this.product = product;
+		this.date = new Date(0);
+	}
 
 	public int getBasket_id(){
 		return this.basket_id;
@@ -87,14 +93,6 @@ public class Basket {
 		this.basket_id = basket_id;
 	}
 
-	public void add(CurrentUser currentUser) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void remove(CurrentUser currentUser) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

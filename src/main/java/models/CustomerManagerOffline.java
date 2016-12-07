@@ -65,4 +65,8 @@ public class CustomerManagerOffline implements CustomerManager {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void addToBasket(){
+		
+	}
 }
