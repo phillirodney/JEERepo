@@ -1,4 +1,4 @@
-
+package controllers;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.ArrayList;
@@ -18,12 +18,12 @@ import javax.persistence.OneToOne;
 import models.Basket;
 import models.Customer;
 import models.Product;
-import services.BasketService;
+import services.*;
 
 /* @author Philli */
 
 @RequestScoped
-@Named(value = "basket")
+@Named(value = "Basket")
 public class BasketController {
 
 	@Inject
@@ -42,16 +42,18 @@ public class BasketController {
 
 	public String addToBasket() {
 		
-		Basket(int basket_id, int quantity, Product product, Date date, Customer customer)
-		
-		Basket basket = new Basket(product.getProduct(), 1);
+		if(currentUser.getCustomer() == null){return "Product";}
+		Basket basket = basketService.createBasket(product.getProduct(), 1);
 		if(basketService.checkBasket(basket, currentUser.getCustomer())){return "Product";}
 		currentUser.getCustomer().getBaskets().add(basket);
 		return "Product";
+	
 		
 	}
 	
 	public void removeFromBasket() {
+		
+		
 		
 	}
 
