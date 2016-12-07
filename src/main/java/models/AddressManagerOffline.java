@@ -54,7 +54,7 @@ public class AddressManagerOffline implements AddressManager {
 	 */
 
 	@Override
-	public Address findByAddressId(int addressId) {
+	public  Address findByAddressId(int addressId) {
 		for(Address address: testdata.getAddresses()){
 			if(address.getaddressId() == addressId){
 				return address;
@@ -76,7 +76,7 @@ public class AddressManagerOffline implements AddressManager {
 	public List<Address> findByCustomerId(int customerId) {
 		for(Customer customer: testdata.getCustomers()){
 			if(customer.getId() == customer.getId()){
-				return customer.getAddresses();
+				return (List<Address>) customer.getAddresses();
 			}
 		}
 		return null;
