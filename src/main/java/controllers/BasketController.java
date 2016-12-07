@@ -43,7 +43,7 @@ public class BasketController {
 
 	public String addToBasket() {
 		
-		public Basket(int basket_id, int quantity, Product product, Date date, Customer customer)
+		Basket(int basket_id, int quantity, Product product, Date date, Customer customer)
 		
 		Basket basket = new Basket(product.getProduct(), 1);
 		if(basketService.checkBasket(basket, currentUser.getCustomer())){return "Product";}
