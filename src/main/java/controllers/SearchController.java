@@ -49,4 +49,8 @@ public class SearchController {
 	
 	public void setTerm(String term) { this.term = term; }
 	
+	public List<Product> getResults() {
+		return this.results;
+	}
+	
 }

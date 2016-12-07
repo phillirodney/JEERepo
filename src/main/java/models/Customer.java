@@ -8,6 +8,7 @@ package models;
  * 
  * */
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -96,6 +97,7 @@ public class Customer {
 		this.firstName = name;
 		this.email = email;
 		this.password = password;
+		this.baskets = new ArrayList<>();
 	}
 
 	public long getId() {
