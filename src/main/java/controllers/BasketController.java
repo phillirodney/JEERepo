@@ -39,6 +39,8 @@ public class BasketController {
 	private int quantity;
 
 	List<Basket> basket_list;
+	//Basket basket_list;
+
 
 	public String addToBasket() {
 
@@ -50,8 +52,7 @@ public class BasketController {
 			return "Product";
 		}
 		currentUser.getCustomer().getBaskets().add(basket);
-		// basket.getQuantity();
-		// quantity++;
+	
 		return "Product";
 
 	}

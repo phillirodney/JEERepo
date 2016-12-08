@@ -62,10 +62,11 @@
 
 						<h:form>
 							<h:commandButton action="#{Basket.addToBasket}"
-								value="Add to Cart" class="btn btn-success" /><p id="add"></p>
+								value="Add to Cart" class="btn btn-success" />
+							<p id="add"></p>
 						</h:form>
 					</div>
-					
+
 
 				</div>
 
@@ -99,6 +100,9 @@
 			<div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
 					<h3>Product Description</h3>
+					<p>#{selected.product.name}
+					</p>
+					
 					<p>Nullam rhoncus non arcu nec aliquam. Aliquam at porttitor
 						nisi. Suspendisse sagittis mattis augue sed pulvinar. Praesent
 						interdum porttitor dictum. Fusce est erat, maximus sit amet
@@ -123,6 +127,8 @@
 				</div>
 				<div id="menu2" class="tab-pane fade">
 					<h3>Full List of Contents</h3>
+					<ul>#{selected.product.name} and <b>free gift set </b>  containing
+					</ul>
 					<ul>Baci di Dama Biscuits 200g
 					</ul>
 					<ul>Green Olives with Lemon and Almond 410g
@@ -146,7 +152,6 @@
 					</ul>
 					<ul>Merlet Crème de Pêche Liqueur France 200ml
 					</ul>
-
 				</div>
 			</div>
 		</div>
