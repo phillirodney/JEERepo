@@ -68,7 +68,7 @@ public class Customer {
 
 	@ManyToMany
 	@JoinTable(name = "has_address", joinColumns = @JoinColumn(name = "customer_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "address_id", referencedColumnName = "address_id"))
-	private Address addresses;
+	private Address addresses = new Address();
 
 	@OneToMany(mappedBy = "customer")
 	private List<Basket> baskets;
