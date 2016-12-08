@@ -106,7 +106,7 @@ public class TestData {
 		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "01234567899", "pass",
 				new Date(0));
 
-		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner");
+		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner", 123);
 
 		customer1.setPayment(payment1);
 		customer1.setOrders(orders);
@@ -119,7 +119,6 @@ public class TestData {
 
 		addresses.add(address1);
 		addresses.add(address2);
-		addresses.add(address3);
 		addresses.add(address4);
 		addresses.add(address5);
 		addresses.add(address6);
