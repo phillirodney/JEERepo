@@ -9,8 +9,6 @@ import javax.validation.constraints.Size;
  * @Author: Hayley & Marcus
  * 
  */
-
-
 @Entity
 @Table(name = "addresses")
 

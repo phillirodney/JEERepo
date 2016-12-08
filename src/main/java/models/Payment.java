@@ -36,15 +36,20 @@ public class Payment {
 	@NotNull
 	private Date expiryDate;
 	
+	@OneToOne
+	@JoinColumn(name= "name_on_card")
+	private String nameOnCard;
+	
 	public Payment() {
 
 	}
 
-	public Payment(String cardNumber, Address address, Date expiryDate) {
+	public Payment(String cardNumber, Address address, Date expiryDate, String nameOnCard) {
 
 		this.cardNumber = cardNumber;
 		this.address = address;
 		this.expiryDate= expiryDate;
+		this.nameOnCard = nameOnCard;
 
 	}
 
@@ -71,6 +76,14 @@ public class Payment {
 
 	public void setExpiryDate(Date expiryDate) {
 		this.expiryDate = expiryDate;
+	}
+	
+	public String getNameOnCard() {
+		return nameOnCard;
+	}
+
+	public void setNameOnCard(String nameOnCard) {
+		this.nameOnCard = nameOnCard;
 	}
 
 }
