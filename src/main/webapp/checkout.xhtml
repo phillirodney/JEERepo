@@ -79,6 +79,31 @@ enjoy-css {
 }
 </style>
 
+		<script type="text/javascript">
+			var test1 = document.getElementById("test");
+
+			function setHiddenValue() {
+
+				document.getElementById('myform:hidden').value = document
+						.getElementById('test').innerHTML;
+			}
+			function setLastnameValue() {
+
+				document.getElementById('surname:surnameText').value = document
+						.getElementById('surnameEdit').innerHTML;
+			}
+			function setEmailValue() {
+
+				document.getElementById('email:emailText').value = document
+						.getElementById('emailEdit').innerHTML;
+			}
+			function setPhoneValue() {
+
+				document.getElementById('phone:phoneText').value = document
+						.getElementById('phoneEdit').innerHTML;
+			}
+		</script>
+
 		<div class="jumbotron" id="material"
 			style="padding-left: 5%; padding-right: 5%">
 			<div class="container-fluid" style="padding-top: 5px">
@@ -95,15 +120,58 @@ enjoy-css {
 						<div>
 							<table>
 								<tr>
-									<td>Name: #{user.customer.firstName}<span>
-											#{user.customer.lastName}</span></td>
+									<td>First Name: <span id="test" contenteditable="true">
+											#{user.customer.firstName}</span></td>
+
+									<td><h:form id="myform">
+
+
+											<h:inputHidden id="hidden" value="#{registration.name}" />
+											<h:commandButton value="Edit" action="#{registration.change}"
+												onclick="setHiddenValue();" />
+
+										</h:form></td>
+
 								</tr>
 								<tr>
-									<td>Email: #{user.customer.email}</td>
+									<td>Last Name: <span id="surnameEdit"
+										contenteditable="true">#{user.customer.lastName}</span></td>
+									<td><h:form id="surname">
+
+
+											<h:inputHidden id="surnameText"
+												value="#{registration.lastname}" />
+											<h:commandButton value="Edit"
+												action="#{registration.changeLastName}"
+												onclick="setLastNameValue();" />
+
+										</h:form></td>
+								</tr>
+								<tr>
+									<td>Email: <span id="emailEdit" contenteditable="true">#{user.customer.email}</span></td>
+									<td><h:form id="email">
+
+
+											<h:inputHidden id="emailText" value="#{registration.email}" />
+											<h:commandButton value="Edit"
+												action="#{registration.changeEmail}"
+												onclick="setEmailValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Phone: #{user.customer.phoneNumber}</td>
+									<td>Phone: <span id="phoneEdit" contenteditable="true">
+											#{user.customer.phoneNumber}</span></td>
+									<td><h:form id="phone">
+
+
+											<h:inputHidden id="phoneText" value="#{registration.phone}" />
+											<h:commandButton value="Edit"
+												action="#{registration.changePhone}"
+												onclick="setPhoneValue();" />
+
+										</h:form></td>
 								</tr>
 
 							</table>
@@ -242,7 +310,6 @@ enjoy-css {
 
 										<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
 									</div></td>
-
 							</tr>
 						</table>
 					</div>
