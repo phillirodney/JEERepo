@@ -1,0 +1,43 @@
+
+
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="maintemplate.xhtml">
+	<meta charset="utf-8" />
+
+	<ui:define name="maincontent">
+
+		<div class="jumbotron" id="material"
+			style="padding-left: 5%; padding-right: 5%">
+			<div class="container-fluid" style="padding-top: 5px">
+				<div class="row">
+					<p>
+						<h:outputText value="#{user.customer.firstName}"></h:outputText>
+						, that's your order completed! <br></br> Your order will be with
+						you shortly, please enjoy 30% off your next order with this
+						voucher code!
+					</p>
+
+				</div>
+
+				<div class="container-fluid" style="padding-top: 5px">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4">
+						<p>MAJOR-KEY-ALERT-123</p>
+					</div>
+				</div>
+
+
+				<div class="row"
+					style="position: absolute; top: 50%; left: 45%; margin-top: -50px; margin-left: -100px">
+
+					<p>Come back soon !</p>
+					<img src="img/lovegnomes.jpg"></img>
+				</div>
+			
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
