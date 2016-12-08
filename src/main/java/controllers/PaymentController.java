@@ -49,5 +49,23 @@ public class PaymentController {
 	public void setCVC() {
 		currentUser.getCustomer().getPayment().setCVC(cvc);
 	}
-
-}
+	
+	
+	public String Entry() {
+		
+		if(!cardNumber.isEmpty() && !nameOnCard.isEmpty()) {
+			if (paymentService.validPayment(cardNumber, nameOnCard)) {
+				currentUser.setCustomer(paymentService.userPayment(cardNumber));
+				return "Payment";
+			}
+			else {
+				cardNumber = "";
+				nameOnCard = "";
+				return "Payment";
+			}
+		}
+		cardNumber = "";
+		nameOnCard = "";
+		return "Payment";
+		}
+	}
