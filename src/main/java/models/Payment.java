@@ -40,16 +40,21 @@ public class Payment {
 	@JoinColumn(name= "name_on_card")
 	private String nameOnCard;
 	
+	@OneToOne
+	@JoinColumn(name = "CVC")
+	private short cvc;
+	
 	public Payment() {
 
 	}
 
-	public Payment(String cardNumber, Address address, Date expiryDate, String nameOnCard) {
+	public Payment(String cardNumber, Address address, Date expiryDate, String nameOnCard, short cvc) {
 
 		this.cardNumber = cardNumber;
 		this.address = address;
 		this.expiryDate= expiryDate;
 		this.nameOnCard = nameOnCard;
+		this.cvc = cvc;
 
 	}
 
@@ -85,5 +90,12 @@ public class Payment {
 	public void setNameOnCard(String nameOnCard) {
 		this.nameOnCard = nameOnCard;
 	}
-
+	
+	public short getCVC(){
+		return cvc;
+	}
+	
+	public void setCVC(short cvc) {
+		this.cvc = cvc;
+	}
 }
