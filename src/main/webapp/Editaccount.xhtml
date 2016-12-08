@@ -8,13 +8,10 @@
 	<meta charset="utf-8" />
 
 	<ui:define name="maincontent">
-	
-	<script>
-	
-	var test1 = document.getElementById("test");
-	
-	
-	</script>
+
+		<script>
+			var test1 = document.getElementById("test");
+		</script>
 
 		<style>
 table {
@@ -139,25 +136,28 @@ enjoy-css {
 }
 </style>
 
-<script type="text/javascript">
-    function setHiddenValue(){
+		<script type="text/javascript">
+			function setHiddenValue() {
 
-    	 document.getElementById('myform:hidden').value = document.getElementById('test').innerHTML;
-	}
-    function setLastnameValue(){
+				document.getElementById('myform:hidden').value = document
+						.getElementById('test').innerHTML;
+			}
+			function setLastnameValue() {
 
-   	 document.getElementById('surname:surnameText').value = document.getElementById('surnameEdit').innerHTML;
-	}
-    function setEmailValue(){
+				document.getElementById('surname:surnameText').value = document
+						.getElementById('surnameEdit').innerHTML;
+			}
+			function setEmailValue() {
 
-   	 document.getElementById('email:emailText').value = document.getElementById('emailEdit').innerHTML;
-	}
-    function setPhoneValue(){
+				document.getElementById('email:emailText').value = document
+						.getElementById('emailEdit').innerHTML;
+			}
+			function setPhoneValue() {
 
-   	 document.getElementById('phone:phoneText').value = document.getElementById('phoneEdit').innerHTML;
-	}
- 
-</script>
+				document.getElementById('phone:phoneText').value = document
+						.getElementById('phoneEdit').innerHTML;
+			}
+		</script>
 
 		<div class="jumbotron" id="material"
 			style="padding-left: 5%; padding-right: 5%">
@@ -227,64 +227,64 @@ enjoy-css {
 								<tr>
 
 									<td>First Name: <span id="test" contenteditable="true">#{user.customer.firstName}
-										</span>
+									</span>
 									</td>
-									
-									 <td>
-									 	<h:form id="myform">
-							
-							 
-												<h:inputHidden id="hidden" value="#{registration.name}" />
-  												<h:commandButton value="Edit" action="#{registration.change}" onclick="setHiddenValue();" />	
-  															
-										</h:form>
-									</td> 
+
+									<td><h:form id="myform">
+
+
+											<h:inputHidden id="hidden" value="#{registration.name}" />
+											<h:commandButton value="Edit" action="#{registration.change}"
+												onclick="setHiddenValue();" />
+
+										</h:form></td>
 								</tr>
-								
+
 								<tr>
 
-									<td>Last Name: <span id="surnameEdit" contenteditable="true">#{user.customer.lastName}
-										</span>
+									<td>Last Name: <span id="surnameEdit"
+										contenteditable="true">#{user.customer.lastName} </span>
 									</td>
-									
-									 <td>
-										 <h:form id="surname">
-							
-							 
-												<h:inputHidden id="surnameText" value="#{registration.lastname}" />
-  												<h:commandButton value="Edit" action="#{registration.changeLastName}" onclick="setLastnameValue();" />	
-  															
-										</h:form>
-									</td> 
+
+									<td><h:form id="surname">
+
+
+											<h:inputHidden id="surnameText"
+												value="#{registration.lastname}" />
+											<h:commandButton value="Edit"
+												action="#{registration.changeLastName}"
+												onclick="setLastnameValue();" />
+
+										</h:form></td>
 								</tr>
 								<tr>
 									<td>Email: <span id="emailEdit" contenteditable="true">#{user.customer.email}
-									 </span>
-									 </td>
-									 
-									 <td>
-									<h:form id="email">
-							
-							 
-												<h:inputHidden id="emailText" value="#{registration.email}" />
-  												<h:commandButton value="Edit" action="#{registration.changeEmail}" onclick="setEmailValue();" />	
-  															
-										</h:form>
+									</span>
 									</td>
+
+									<td><h:form id="email">
+
+
+											<h:inputHidden id="emailText" value="#{registration.email}" />
+											<h:commandButton value="Edit"
+												action="#{registration.changeEmail}"
+												onclick="setEmailValue();" />
+
+										</h:form></td>
 								</tr>
 								<tr>
 									<td>Phone:<span id="phoneEdit" contenteditable="true">#{user.customer.phoneNumber}
 									</span>
 									</td>
-									<td>
-										<h:form id="phone">
-							
-							 
-												<h:inputHidden id="phoneText" value="#{registration.phone}" />
-  												<h:commandButton value="Edit" action="#{registration.changePhone}" onclick="setPhoneValue();" />	
-  															
-										</h:form>
-									</td>
+									<td><h:form id="phone">
+
+
+											<h:inputHidden id="phoneText" value="#{registration.phone}" />
+											<h:commandButton value="Edit"
+												action="#{registration.changePhone}"
+												onclick="setPhoneValue();" />
+
+										</h:form></td>
 								</tr>
 								<tr>
 									<td>Contact by telephone</td>
@@ -308,11 +308,11 @@ enjoy-css {
 										</div></td>
 								</tr>
 							</table>
-							
-							
-							
-							
-			
+
+
+
+
+
 						</div>
 					</div>
 				</div>
