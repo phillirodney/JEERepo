@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/> 
+    
+     <style>
+
+  	body {
+  		padding: 5%;
+  		background-color: #AFAFAF;
+  	}
+
+  	.shadow {
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  	}
+
+
+
+  </style>
+	
+
+</head>
+
+<body>
+
+  <div class="row">
+
+  	<div class="col-sm-6">
+
+  	<div class="jumbotron shadow" style="padding:0px">  
+
+  	<ul class="nav nav-tabs" >
+    	<li class="active"><a data-toggle="tab" href="#home">Customer Order</a></li>
+    	<li><a data-toggle="tab" href="#menu1">Supply Orders</a></li>
+    	<li><a data-toggle="tab" href="#menu2">Products</a></li>
+  	</ul>
+
+  		<input type="text" id="search" name="Searcher" style="margin: 5%; width: 80%;"/>
+
+
+  	<div style="padding: 3%;">
+  	<div style="padding: 3%; background-color: white;" class="shadow">	
+  	<div class="tab-content">
+    	<div id="home" class="tab-pane fade in active">
+
+    	<br/>
+
+  		<table class="table table-bordered table-striped">
+		    <thead>
+		      <tr>
+		       <th>ID</th>
+		        <th>Name</th>
+		        <th>Date</th>
+		        <th>Dispatch Status</th>
+		        <th>Payment Status</th>
+		        <th>Total Price</th>
+		        <th>View</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>1</td>
+		        <td>Doe</td>
+		        <td>jDoe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
+		      </tr>
+		      <tr>
+		        <td>2</td>
+		        <td>Moe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
+		      </tr>
+		      <tr>
+		        <td>3</td>
+		        <td>Dooley</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
+		      </tr>
+		    </tbody>
+  		</table>
+  		
+  		
+    		
+
+  		</div>
+
+
+    	<div id="menu1" class="tab-pane fade">
+
+    	<br/>
+
+  		<table class="table table-bordered table-striped">
+		    <thead>
+		      <tr>
+		        <th>Id</th>
+		        <th>Date</th>
+		        <th>Suplier</th>
+		        <th>Status</th>
+		        <th>View</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>John</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
+		      </tr>
+		      <tr>
+		        <td>Mary</td>
+		        <td>Vera</td>
+		        <td>Moe</td>
+		        <td>Doe</td>
+		        <td><button type="button" onclick="alert('Hello world!')" >View</button></td>
+		      </tr>
+		      <tr>
+		        <td>July</td>
+		        <td>Dooley</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td><button type="button" onclick="alert('Hello world!')" >View</button></td>
+		      </tr>
+		    </tbody>
+  		</table>
+
+  		</div>
+
+  		
+    	<div id="menu2" class="tab-pane fade">
+
+    	<br/>
+  		
+  		<h:dataTable value="#{browse.products}" var="p"
+    			class="table table-bordered table-striped">
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Id</f:facet>
+    				<!-- row record -->
+    				#{p.productId}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Name</f:facet>
+    				#{p.name}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Price(£)</f:facet>
+    				#{p.price}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">View</f:facet>
+    				<button type="button" onclick="alert('Hello world!')" >View</button>
+    			</h:column>
+
+    		</h:dataTable>
+
+  	
+
+  		</div>
+
+  	</div>
+
+  	</div>
+
+  	</div>
+
+  	</div>
+
+  	<div class ="jumbotron shadow" style="padding:0;">
+
+
+	  	<p style="background-color:grey; text-align:center;"> Product ID:</p>
+	  	
+	  	<div class="row">
+
+	  		<div class="col-sm-4">
+
+	  			<div class="container">
+
+	  				<img src="https://i5.walmartimages.com/asr/2937fb8d-f6c0-4948-8f1f-91a734ed7ab0_1.0c28c246c2ad8b24a9bde762949367a7.jpeg" style="width:100%"/> 
+
+
+	  			</div>
+
+	  		</div>
+
+	  		<div class="col-sm-8">
+
+	  		<h4>Name:</h4>
+
+	  		<h4>Description:</h4>
+
+	  		<p style="font-size:10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus eget sapien laoreet auctor eu vel nisl. Suspendisse at ligula sit amet nisi convallis semper. Curabitur hendrerit lectus sit amet sem mattis mollis. Morbi vel elementum nulla. Nam urna odio, elementum porttitor faucibus a, pulvinar id libero. Pellentesque mollis dictum massa quis dignissim</p>
+
+
+	  		</div>
+
+
+	  	</div>
+
+	  	<div class="container">
+
+	  	<div style="padding: 3%;">
+  			<div style="padding: 3%; background-color: white;" class="shadow">	
+
+	  		<table class="table table-bordered table-striped">
+		    <tbody>
+		      <tr>
+		        <td>Price: £32</td>
+		        <td>Width: 34cm</td>
+		        <td>P.Stock: 54</td>
+		      </tr>
+		      <tr>
+		        <td>ID: 1</td>
+		        <td>Height: 34cm</td>
+		        <td>Stock: 45</td>
+		      </tr>
+		    </tbody>
+  			</table>
+
+	  	</div>
+
+	  	</div>
+
+	  	</div>
+
+
+
+  	</div>
+
+  	<div class ="jumbotron shadow" style="padding:0;">
+
+
+	  	<p style="background-color:grey; text-align:center;"> Product Creation</p>
+
+	  	<div class="container">
+	
+	  		<h4>Name:</h4>
+
+	  		<h4>Description:</h4>
+
+	  		<p style="font-size:10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus eget sapien laoreet auctor eu vel nisl. Suspendisse at ligula sit amet nisi convallis semper. Curabitur hendrerit lectus sit amet sem mattis mollis. Morbi vel elementum nulla. Nam urna odio, elementum porttitor faucibus a, pulvinar id libero. Pellentesque mollis dictum massa quis dignissim</p>
+
+
+	  	</div>
+	  
+
+	  	<div class="container">
+
+	  	<div style="padding: 3%;">
+  			<div style="padding: 3%; background-color: white;" class="shadow">	
+
+	  		<table class="table table-bordered table-striped">
+		    <tbody>
+		      <tr>
+		        <td>Price: £32</td>
+		        <td>Width: 34cm</td>
+		        <td>P.Stock: 54</td>
+		      </tr>
+		      <tr>
+		        <td>ID: 1</td>
+		        <td>Height: 34cm</td>
+		        <td>Stock: 45</td>
+		      </tr>
+		    </tbody>
+  			</table>
+
+	  	</div>
+
+	  	</div>
+
+	  	</div>
+
+
+
+  	</div>
+
+  	</div>
+
+	  	<div class="col-sm-6">
+
+	  		<div class="row">
+
+	  			<div class="col-sm-8">
+
+	  				<div class="jumbotron shadow">  
+
+	  					<div class="container">
+
+	  					<div class="row">
+
+	  						<div class="col-sm-6">
+
+	  							<img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" width="100%"/>
+
+	  						</div>
+
+	  						<div class="col-sm-6">
+	  							<div style="border-color:black; border-style: solid;">
+
+	  								Matt Damon
+
+	  							</div>
+	  							
+								<button type="button" onclick="alert('Hello world!')" style="margin-top:10%;">Click Me!</button>
+	  						</div>
+
+	  						</div>
+
+	  					</div>
+
+	  				
+
+	  			</div>
+	  			</div>
+
+	  			<div class="col-sm-4">
+
+	  				<div class="jumbotron shadow"> 
+
+
+	  							<img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" width="100%"/> 
+
+	  				</div>
+
+	  			</div>
+
+	  		
+
+
+
+	  		</div>
+
+	  		<div class="jumbotron shadow" style="padding:0;"> 
+
+	  	<p style="background-color:grey; text-align: center;">Customer Order ID:</p>
+
+
+	  	<p style="margin-left:5%;">Customer Name:</p> 
+	  	
+  	
+
+    	<br/>
+
+
+    	<div style="padding: 3%;">
+  			<div style="padding: 3%; background-color: white;" class="shadow">	
+
+
+	  		<h:dataTable value="#{user.customer.orders.orderLines}" var="o"
+    			class="table table-bordered table-striped">
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">ProductID</f:facet>
+    				<!-- row record -->
+    				#{o.}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Product Name</f:facet>
+    				#{p.name}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Price(£)</f:facet>
+    				#{p.price}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Quantity</f:facet>
+    				<button type="button" onclick="alert('Hello world!')" >View</button>
+    			</h:column>
+
+    		</h:dataTable>
+
+	  		</div>
+
+	  		</div>
+
+	  		<button type="button" class="btn btn-default" style="position:relative; left:70%;margin-bottom:3%;">Cancel Order</button>
+
+	  		</div>
+
+
+
+	  		<div class="jumbotron shadow" style="padding:0;"> 
+	  		<p style="background-color:grey; text-align:center">Supply Order ID:</p>
+
+
+
+	  		<div style="padding: 3%;">
+  			<div style="padding: 3%; background-color: white;" class="shadow">	
+
+
+
+	  		<table class="table table-bordered">
+		    <thead>
+		      <tr>
+		        <th>Id</th>
+		        <th>Date</th>
+		        <th>Suplier</th>
+		        <th>Status</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>John</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		      </tr>
+		      <tr>
+		        <td>Mary</td>
+		        <td>Vera</td>
+		        <td>Moe</td>
+		        <td>mary</td>
+		      </tr>
+		      <tr>
+		        <td>July</td>
+		        <td>Dooley</td>
+		        <td>Doe</td>
+		        <td>Doe</td>
+		      </tr>
+		    </tbody>
+
+		    </table>
+
+		    </div>
+
+		    </div>
+
+		    <button type="button" class="btn btn-default" style="position:relative; left:70%;margin-bottom:3%;">Cancel Order</button>
+
+
+
+
+	  		</div>
+
+
+	  	</div>
+
+  	</div>
+
+
+
+
+
+
+
+  </body>
+
+</html>
