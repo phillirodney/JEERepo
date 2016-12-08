@@ -1,3 +1,4 @@
+package controllers;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -18,41 +19,54 @@ import javax.persistence.OneToOne;
 import models.Basket;
 import models.Customer;
 import models.Product;
-import services.BasketService;
+import services.*;
 
 /* @author Philli */
 
 @RequestScoped
-@Named(value = "basket")
+@Named(value = "Basket")
 public class BasketController {
 
 	@Inject
 	private CurrentUser currentUser;
-	
 
 	@Inject
 	private BasketService basketService;
-	
+
 	@Inject
 	private selectedProduct product;
-	
+
 	private int quantity;
 
-		
+	List<Basket> basket_list;
 
 	public String addToBasket() {
-		
-		Basket(int basket_id, int quantity, Product product, Date date, Customer customer)
-		
-		Basket basket = new Basket(product.getProduct(), 1);
-		if(basketService.checkBasket(basket, currentUser.getCustomer())){return "Product";}
+
+		if (currentUser.getCustomer() == null) {
+			return "Product";
+		}
+		Basket basket = basketService.createBasket(product.getProduct(), 1);
+		if (basketService.checkBasket(basket, currentUser.getCustomer())) {
+			return "Product";
+		}
 		currentUser.getCustomer().getBaskets().add(basket);
+		// basket.getQuantity();
+		// quantity++;
 		return "Product";
-		
+
 	}
-	
-	public void removeFromBasket() {
+
+	public int getQuantity() {
 		
+		return quantity;
+
 	}
+	/*
+	 * public double getSubTotal() { double price = 0; for (Basket basket :
+	 * basket_list) { Product product = (Product) basket.getProduct(); price =+
+	 * basket.getQuantity() * product.getPrice(); } return price;
+	 * 
+	 * }
+	 */
 
 }

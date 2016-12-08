@@ -1,42 +1,72 @@
 
 
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="maintemplate.xhtml">
+	<meta charset="utf-8" />
 
-xmlns:f="http://xmlns.jcp.org/jsf/core"
+	<ui:define name="maincontent">
 
-xmlns:h="http://xmlns.jcp.org/jsf/html"
+		<h1>
+			<h:outputText value="#{user.customer.firstName}" />
+			's Shopping Basket
+		</h1>
 
-xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-
-template="maintemplate.xhtml">
-<meta charset="utf-8" />
-
-		<ui:define name="maincontent">
-
-	        <p><h:outputText value="#{user.customer.firstName}" /> Shopping Basket</p>
-		
-			<div class="container-fluid">
+		<div class="container-fluid">
 			<ui:repeat var="basket" value="#{user.customer.baskets}">
 				<div class="row">
 					<div class="col-md-4 col-xs-12">
-						<img src="img/garden_gnome.png" width="100px" height="100px"/>
+						<img src="img/garden_gnome.png" width="100px" height="100px" />
 					</div>
 					<div class="col-md-8">
 						<div class="col-sm-4">
-							<h1 id="producthead"><h:outputText value="#{basket.product.name}" /></h1>
-							<h2><h:outputText value="#{basket.product.name}" />#{basket.product.name}</h2>
-							<p><h:outputText value="#{basket.product.description}" /></p>
+							<h2>
+								<h:outputText value="#{basket.product.name}" />
+							</h2>
+							<p>
+								<h:outputText value="#{basket.product.description}" />
+							</p>
 						</div>
-						<div class="col-sm-2"><h:outputText value="#{basket.product.name}" />£19.99</div>
-						<!-- div class="col-sm-2">drop1</div> -->
 						<div class="col-sm-2">
-							<!--  <span class="glyphicon glyphicon-remove"><h:commandButton value="Remove From shoppingbasket" action="" class="btn btn-primary btn-block" /></span>-->
+							<br></br> <br></br>
+
+
+							<h:outputText value="#{basket.product.price}" />
+
 						</div>
+						<h:form>
+							<div class="quantity buttons_added">
+								<h:inputText type="number" size="4" class="input-text qty text"
+									title="Qty" value="1" min="0" step="1"></h:inputText>
+							</div>
+						</h:form>
+						<div class="col-sm-2"></div>
 					</div>
 				</div>
-			</ui:repeat>
-			</div>
 
-	    
-		</ui:define>
+			</ui:repeat>
+			<br></br>
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2">
+					<h:outputText value="#{basket.product.getPrice}" />
+				</div>
+				<div class="col-sm-2">
+					<h:commandButton type="button" value="Update
+						Cart"
+						class="btn btn-outline-primary" action="#{Basket.addToBasket}"></h:commandButton>
+				</div>
+				<div class="col-sm-2">
+					<h:commandButton type="button" value="Checkout"
+						class="btn btn-outline-primary"></h:commandButton>
+				</div>
+			</div>
+		</div>
+
+
+	</ui:define>
 </ui:composition>

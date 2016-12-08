@@ -51,27 +51,21 @@
 				<div class=" col-md-3 product-price-details">
 					<div class="product-title">
 						<h:outputText value="#{selected.product.name}" />
-						
+
 					</div>
-					<div class="product-price">
-						£ 234.00
-					</div>
-					<div class="product-stock">
-						In Stock
-					</div>
+					<div class="product-price">£ 234.00</div>
+					<div class="product-stock">In Stock</div>
 					<div class="checkbox-porousware">
-						<label><input type="checkbox" value="Porousware"
-							action="" />Porousware</label>
+						<label><input type="checkbox" value="Porousware" action="" />Porousware</label>
 					</div>
 					<div class="btn-group cart">
-						<button type="button" class="btn btn-success"
-							value="Shoppingbasket"
-							action="">Add
-							to cart</button>
-							<h:form>
-								<h:commandButton action="#{Basket.addToBasket}" value="add" class="btn btn-success"/>
-							</h:form>
+
+						<h:form>
+							<h:commandButton action="#{Basket.addToBasket}"
+								value="Add to Cart" class="btn btn-success" /><p id="add"></p>
+						</h:form>
 					</div>
+					
 
 				</div>
 

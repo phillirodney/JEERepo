@@ -1,5 +1,10 @@
 package models;
+import java.util.Date;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.Type;
 
 /*
  * @author Hayley
@@ -26,14 +31,25 @@ public class Payment {
 	@JoinColumn(name= "customer_id")
 	private Customer customer;
 
+	@Column(name = "expiry_date", nullable = false)
+	@Type(type = "expiryDate")
+	@NotNull
+	private Date expiryDate;
+	
+	@OneToOne
+	@JoinColumn(name= "name_on_card")
+	private String nameOnCard;
+	
 	public Payment() {
 
 	}
 
-	public Payment(String cardNumber, Address address) {
+	public Payment(String cardNumber, Address address, Date expiryDate, String nameOnCard) {
 
 		this.cardNumber = cardNumber;
 		this.address = address;
+		this.expiryDate= expiryDate;
+		this.nameOnCard = nameOnCard;
 
 	}
 
@@ -52,6 +68,22 @@ public class Payment {
 
 	public void setAddress(Address address) {
 		this.address = address;
+	}
+
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	
+	public String getNameOnCard() {
+		return nameOnCard;
+	}
+
+	public void setNameOnCard(String nameOnCard) {
+		this.nameOnCard = nameOnCard;
 	}
 
 }

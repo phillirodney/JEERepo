@@ -25,6 +25,7 @@ import javax.inject.Inject;
  * with addresses
  * @author Luke
  * @author Hayley
+ * @author Philli
  * @version 1.0
  * @see BasketManagerOffline
  * @see CustomerManagerOffline
@@ -54,7 +55,7 @@ public class AddressManagerOffline implements AddressManager {
 	 */
 
 	@Override
-	public Address findByAddressId(int addressId) {
+	public  Address findByAddressId(int addressId) {
 		for(Address address: testdata.getAddresses()){
 			if(address.getaddressId() == addressId){
 				return address;
@@ -73,10 +74,10 @@ public class AddressManagerOffline implements AddressManager {
 	 */
 
 	@Override
-	public List<Address> findByCustomerId(int customerId) {
+	public Address findByCustomerId(int customerId) {
 		for(Customer customer: testdata.getCustomers()){
 			if(customer.getId() == customer.getId()){
-				return customer.getAddresses();
+				return (List<Address>) customer.getAddresses();
 			}
 		}
 		return null;
@@ -121,7 +122,7 @@ public class AddressManagerOffline implements AddressManager {
 	@Override
 	public Address createNewAddress(Address address) {
 
-		List<Address> addresses = testdata.getAddresses();
+		Address addresses = testdata.getAddresses();
 
 		Address tempAddress = null;
 		for(Address a: addresses){
@@ -152,7 +153,7 @@ public class AddressManagerOffline implements AddressManager {
 
 		//Don't think this is correct
 
-		List<Address> addresses = testdata.getAddresses();
+		Address addresses = testdata.getAddresses();
 
 		int index = 0;
 
@@ -177,7 +178,7 @@ public class AddressManagerOffline implements AddressManager {
 	@Override
 	public void deleteAddress(Address address) throws NoSuchElementException{
 
-		List<Address> addresses = testdata.getAddresses();
+		Address addresses = testdata.getAddresses();
 		try {
 			addresses.remove(address);
 		}catch (NoSuchElementException e){
