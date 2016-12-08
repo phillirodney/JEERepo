@@ -52,7 +52,7 @@ public class Address {
 		
 	}
 
-	public int getaddressId() {
+	public int getAddressId() {
 		/**
 		 * Getter method for the address Id
 		 */
@@ -60,7 +60,7 @@ public class Address {
 		return addressId;
 	}
 	
-	public void setaddressId(int addressId){
+	public void setAddressId(int addressId){
 		/**
 		 * Setter for the address Id
 		 */
@@ -69,7 +69,7 @@ public class Address {
 	}
 
 	
-	public int gethouseNumber() {
+	public int getHouseNumber() {
 		/**
 		 * Getter for the house number
 		 */
@@ -77,35 +77,35 @@ public class Address {
 		return houseNumber;
 	}
 
-	public void sethouseNumber(int houseNumber) {
+	public void setHouseNumber(int houseNumber) {
 		/**
 		 * Setter for house Number
 		 */
 		this.houseNumber = houseNumber;
 	}
 	
-	public String getstreet() {
+	public String getStreet() {
 		/**
 		 * Getter for Street 
 		 */
 		return street;
 	}
 	
-	public void setstreet (String street) {
+	public void setStreet (String street) {
 		/**
 		 * Setter for the Street
 		 */
 		this.street = street;
 	}
 	
-	public String getcity() {
+	public String getCity() {
 		/**
 		 * Getter for city
 		 */
 		return city;
 	}
 	
-	public void setcity (String city) {
+	public void setCity (String city) {
 		/**
 		 * Setter for the city
 		 */
@@ -113,14 +113,14 @@ public class Address {
 							
 	}
 	
-	public String getpostcode(){
+	public String getPostcode(){
 		/**
 		 * Getter for the postcode
 		 */
 		return postcode;
 	}
 	
-	public void setpostcode (String postcode){
+	public void setPostcode (String postcode){
 		/**
 		 * Setter for the postcode
 		 */
