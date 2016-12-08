@@ -71,7 +71,7 @@ public class Customer {
 	private Address addresses = new Address();
 
 	@OneToMany(mappedBy = "customer")
-	private List<Basket> baskets;
+	private List<Basket> baskets = new ArrayList<>();
 
 	@OneToMany(mappedBy = "customer")
 	private Payment payment;

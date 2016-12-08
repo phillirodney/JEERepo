@@ -1,10 +1,9 @@
 package controllers;
-import java.io.Serializable;
-
-import services.LoginService;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import services.LoginService;
 
 /* @author Cieran */
 

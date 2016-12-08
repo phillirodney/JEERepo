@@ -27,6 +27,7 @@ public class TestData {
 	private List<Product> products;
 	private List<StockOrder> stockOrders;
 	private List<Supplier> suppliers;
+	private List<SupplierOrderLine> supplierOrderLines;
 
 	@PostConstruct
 	private void setupData() {
@@ -40,6 +41,7 @@ public class TestData {
 		products = new ArrayList<Product>();
 		stockOrders = new ArrayList<StockOrder>();
 		suppliers = new ArrayList<Supplier>();
+		supplierOrderLines = new ArrayList<SupplierOrderLine>();
 
 		// AddData
 		// Address address1 = new Address(null, 0, null, null, null);
@@ -104,22 +106,19 @@ public class TestData {
 		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "01234567899", "pass",
 				new Date(0));
 
-		
+		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner", 123);
 
-		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner" );
-		
 		customer1.setPayment(payment1);
 		customer1.setOrders(orders);
 		customer1.setAddresses(address1);
-		
+
 		Basket basket = new Basket(1, 1, product1, new Date(0), customer1);
 		List<Basket> baskets = new ArrayList<Basket>();
 
 		payments.add(payment1);
-	
+
 		addresses.add(address1);
 		addresses.add(address2);
-		addresses.add(address3);
 		addresses.add(address4);
 		addresses.add(address5);
 		addresses.add(address6);
@@ -232,4 +231,13 @@ public class TestData {
 	public void setBaskets(List<Basket> baskets) {
 		this.baskets = baskets;
 	}
+
+	public List<SupplierOrderLine> getSupplierOrderLines() {
+		return this.supplierOrderLines;
+	}
+
+	public void setSupplierOrderLines(List<SupplierOrderLine> supplierOrderLine) {
+		this.supplierOrderLines = supplierOrderLines;
+	}
+
 }
