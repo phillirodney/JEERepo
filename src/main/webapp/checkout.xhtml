@@ -250,16 +250,16 @@ enjoy-css {
 				<div class="row">
 					<div class="col-sm-12">
 
-						<h:dataTable value="#{user.customer.baskets}" var="product">
+						<h:dataTable value="#{user.customer.baskets}" var="basket">
 
 							<h:column>
 								<f:facet name="header">Product</f:facet>
-								#{product.name}
+								#{basket.product.name}
 							</h:column>
 
 							<h:column>
 								<f:facet name="header">Quantity</f:facet>
-								#{product.quantity}
+								#{basket.quantity}
 							</h:column>
 
 							<h:column>
