@@ -37,7 +37,7 @@ public class AddressController {
 		return this.city;
 	}
 	
-	public String getpostCode(){
+	public String getPostcode(){
 		return this.postcode;
 	}
 	
@@ -53,24 +53,24 @@ public class AddressController {
 		this.city = city;
 	}
 	
-	public void setPostCode(String postcode){
+	public void setPostcode(String postcode){
 		this.postcode = postcode;
 	}
 	
 	public void changeHouseNumber(){
-		currentUser.getCustomer().getAddresses().sethouseNumber(houseNumber);
+		currentUser.getCustomer().getAddresses().setHouseNumber(houseNumber);
 	}
 	
 	public void changeStreet(){
-		currentUser.getCustomer().getAddresses().setstreet(street);
+		currentUser.getCustomer().getAddresses().setStreet(street);
 	}
 	
 	public void changeCity(){
-		currentUser.getCustomer().getAddresses().setcity(city);
+		currentUser.getCustomer().getAddresses().setCity(city);
 	}
 	
 	public void changePostcode(){
-		currentUser.getCustomer().getAddresses().setpostcode(postcode);
+		currentUser.getCustomer().getAddresses().setPostcode(postcode);
 	}
 	
 	
