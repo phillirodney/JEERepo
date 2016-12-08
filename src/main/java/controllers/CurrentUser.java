@@ -13,25 +13,25 @@ import javax.inject.Named;
 @SessionScoped
 public class CurrentUser implements Serializable {
 
-
 	private static final long serialVersionUID = 1L;
-	
+
 	private Customer customer = null;
-	
+
 	public List<CustomerOrder> getOrders() {
-		
+
 		return customer.getOrders();
-		
+
 	}
-	
-	
+
 	public boolean isLoggedIn() {
-		return (customer==null) ? false : true;
+		return (customer == null) ? false : true;
 	}
-	
-	public Customer getCustomer() { return customer; }
 
-	public void setCustomer(Customer customer) { this.customer = customer; }
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 }
-	
-

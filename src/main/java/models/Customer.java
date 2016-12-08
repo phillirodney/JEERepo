@@ -98,6 +98,7 @@ public class Customer {
 		this.email = email;
 		this.password = password;
 		this.baskets = new ArrayList<>();
+
 	}
 
 	public long getId() {
@@ -130,6 +131,10 @@ public class Customer {
 
 	public Address getAddresses() {
 		return addresses;
+	}
+	
+	public Payment getPayment() {
+		return payment;
 	}
 
 	public List<Basket> getBaskets() {
@@ -170,6 +175,10 @@ public class Customer {
 
 	public void setBaskets(List<Basket> baskets) {
 		this.baskets = baskets;
+	}
+	
+	public void setPayment(Payment payment) {
+		this.payment = payment;
 	}
 
 	public List<CustomerOrder> getOrders() {

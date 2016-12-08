@@ -79,8 +79,6 @@ enjoy-css {
 }
 </style>
 
-
-
 		<div class="jumbotron" id="material"
 			style="padding-left: 5%; padding-right: 5%">
 			<div class="container-fluid" style="padding-top: 5px">
@@ -137,7 +135,7 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Post Code: #{user.customer.addresses.postCode}</td>
+									<td>Post Code: #{user.customer.addresses.postcode}</td>
 								</tr>
 							</table>
 						</div>
@@ -155,14 +153,14 @@ enjoy-css {
 						<div>
 							<table>
 								<tr>
-									<td>Name on card:</td>
+									<td>Name on card: #{user.customer.payment.nameOnCard}</td>
 								</tr>
 								<tr>
-									<td>Card No:</td>
+									<td>Card No: #{user.customer.payment.cardNumber}</td>
 								</tr>
 
 								<tr>
-									<td>Expiry Date:</td>
+									<td>Expiry Date: #{user.customer.payment.expiryDate}</td>
 								</tr>
 
 								<tr>
@@ -226,20 +224,21 @@ enjoy-css {
 					<div>
 						<table>
 							<tr>
-								<td>Items: </td>
+								<td>Items:</td>
 							</tr>
 							<tr>
-								<td>Delivery: </td>
+								<td>Delivery:</td>
 							</tr>
 
 							<tr>
-								<td>Total: </td>
+								<td>Total:</td>
 							</tr>
 
 							<tr>
 								<td><div class="enjoy-css">
-										<b>CHECKOUT </b><span class="glyphicon glyphicon-ok"
-											aria-hidden="true"></span>
+										<h:button type="button" class="btn btn-outline-primary"
+											value="CHECKOUT" outcome="confirmCheckout"></h:button>
+										<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
 									</div></td>
 							</tr>
 						</table>
