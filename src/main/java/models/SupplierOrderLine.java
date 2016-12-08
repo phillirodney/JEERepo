@@ -14,8 +14,8 @@ public class SupplierOrderLine {
 	
 	@Id
 	@GeneratedValue
-	@Column (name = "line_id")
-	private int lineId;
+	@Column (name = "supplier_order_line_id")
+	private int supplierOrderLineId;
 
 
 	@OneToMany
@@ -31,16 +31,16 @@ public class SupplierOrderLine {
 	}
 
 	public SupplierOrderLine(int lineId, Product product){
-		this.lineId = lineId;
+		this.supplierOrderLineId = supplierOrderLineId;
 		this.product = product;
 	}
 
-	public int getLineId() {
-		return lineId;
+	public int getSupplierOrderLineId() {
+		return supplierOrderLineId;
 }
 
-	public void setLineId(int lineId){
-		this.lineId = lineId;
+	public void setSupplierOrderLineId(int lineId){
+		this.supplierOrderLineId = lineId;
 }
 
 	public Product getProduct(){

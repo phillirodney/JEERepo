@@ -3,7 +3,6 @@ package models;
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
-import javax.persistence.criteria.Order;
 import java.util.List;
 /**
  * This is the address model
