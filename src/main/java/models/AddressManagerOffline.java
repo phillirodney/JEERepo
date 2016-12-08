@@ -77,7 +77,7 @@ public class AddressManagerOffline implements AddressManager {
 	public Address findByCustomerId(int customerId) {
 		for(Customer customer: testdata.getCustomers()){
 			if(customer.getId() == customer.getId()){
-				return (Address) customer.getAddresses();
+				return customer.getAddresses();
 			}
 		}
 		return null;

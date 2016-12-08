@@ -48,7 +48,7 @@ public interface AddressManager {
 	 * @return List of addresses which is in a associated to a
 	 * 		   particular customer
 	 */
-	List<Address> findByCustomerId(int customerId);
+	Address findByCustomerId(int customerId);
 
 	/**
 	 * find address by composit candidate key of postcode and houseNumber.
