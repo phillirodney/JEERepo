@@ -25,6 +25,9 @@ public class OrderLine {
 	@OneToMany
 	@JoinColumn(name="product_id")
 	private Product product;
+	
+	@Column(name="quantity")
+	private int quantity;
 
 
 	@OneToMany
@@ -34,9 +37,10 @@ public class OrderLine {
 	public OrderLine() { 
 	}
 
-	public OrderLine(int lineId, Product product){
+	public OrderLine(int lineId, Product product, int quantity){
 		this.lineId = lineId;
 		this.product = product;
+		this.quantity = quantity;
 	}
 
 	public int getLineId() {
@@ -53,6 +57,14 @@ public class OrderLine {
 
 	public void setProduct(Product product) {
 		 this.product = product;
+	}
+	
+	public int getQuantity(){
+		return this.quantity;
+	}
+	
+	public void setQuantity(int quantity){
+		this.quantity = quantity;
 	}
 
 }
