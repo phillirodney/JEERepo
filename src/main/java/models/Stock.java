@@ -38,7 +38,7 @@ public class Stock {
 		this.present = present;
 		this.required = required;
 		this.reserved = reserved;
-		this.porousware = porousware;
+		this.setPorousware(porousware);
 	}
 
 	public int getProductId() {
@@ -59,5 +59,13 @@ public class Stock {
 
 	public void setProductId(int productId){
 		this.productId = productId;
+	}
+
+	public boolean isPorousware() {
+		return porousware;
+	}
+
+	public void setPorousware(boolean porousware) {
+		this.porousware = porousware;
 	}
 }

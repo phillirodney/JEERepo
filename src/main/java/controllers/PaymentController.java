@@ -86,4 +86,10 @@ public class PaymentController {
 		nameOnCard = "";
 		return "Payment";
 		}
+	public LoginService getLoginService() {
+		return loginService;
+	}
+	public void setLoginService(LoginService loginService) {
+		this.loginService = loginService;
+	}
 	}
