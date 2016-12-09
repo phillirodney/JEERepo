@@ -26,13 +26,18 @@ public class SupplierOrderLine {
 	@OneToMany
 	@JoinColumn(name="suppliler_order_id")
 	private StockOrder stockOrder;
+	
+	private int quantity;
 
 	public SupplierOrderLine() { 
 	}
 
-	public SupplierOrderLine(int lineId, Product product){
-		this.supplierOrderLineId = supplierOrderLineId;
+	public SupplierOrderLine(int quantity, Product product, StockOrder stockOrder){
+		
+		this.quantity = quantity;
 		this.product = product;
+		this.stockOrder = stockOrder;
+		
 	}
 
 	public int getSupplierOrderLineId() {
