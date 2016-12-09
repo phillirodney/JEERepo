@@ -48,6 +48,14 @@ public class Product implements Serializable{
 		this.porouswareStockId = porouswareStockId;
 		
 	}
+	
+	public Product(String name, String description, double price ){
+		
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		
+	}
 
 	public int getproductId() {
 		return productId;

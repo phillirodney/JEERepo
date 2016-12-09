@@ -15,6 +15,15 @@ public class ProductController {
 	@Inject
 	private ProductService productService;
 	
+	
+	private String name;
+	
+	private String description;
+	
+	private double price;
+	
+	
+	
 	/**
 	 * This is used by JSF pages to select a product to display and then redirect the user to the product page.
 	 * 
@@ -29,4 +38,45 @@ public class ProductController {
 		}
 		return "Browse";
 	}
+	
+	
+	public void setName(String name){
+		
+		this.name = name;
+		
+	}
+	
+	public void setDescription(String description){
+		
+		this.description = description;
+	}
+	
+	public void setPrice(double price) {
+		
+		this.price = price;
+		
+	}
+	
+	public String makeProduct() {
+		
+		productService.createProduct(name, description, price);
+		
+		return "Imstuff";
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public double getPrice() {
+		return price;
+	}
+	
+	
 }

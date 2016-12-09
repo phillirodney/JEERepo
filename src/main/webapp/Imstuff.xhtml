@@ -27,6 +27,27 @@
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   	}
   	
+  	.sideButton {
+  	
+  		postion: relative;
+  		left: 80%;
+  	}
+  	
+  	.inline, p.inline {
+  		
+  		display: inline-block;
+  		font-size: 10px;
+  	
+  	}
+  	
+  	.cellinput {
+  	
+  		width: 50px;	
+  		
+  	}
+  	
+ 
+  	
   	
   
 
@@ -266,15 +287,18 @@
 
 
 	  	<p style="background-color:grey; text-align:center;"> Product Creation</p>
+	  	
+	  	<h:form>
+		
 
 	  	<div class="container">
 	
-	  		<h4>Name:</h4>
+		
+	  		<h4>Name:</h4><h:inputText class="form-control" value="#{products.name}"></h:inputText>
 
-	  		<h4>Description:</h4>
+	  		<h4>Description:</h4><h:inputText class="form-control" value="#{products.description}" ></h:inputText>
 
-	  		<p style="font-size:10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus eget sapien laoreet auctor eu vel nisl. Suspendisse at ligula sit amet nisi convallis semper. Curabitur hendrerit lectus sit amet sem mattis mollis. Morbi vel elementum nulla. Nam urna odio, elementum porttitor faucibus a, pulvinar id libero. Pellentesque mollis dictum massa quis dignissim</p>
-
+				
 
 	  	</div>
 	  
@@ -287,7 +311,7 @@
 	  		<table class="table table-bordered table-striped">
 		    <tbody>
 		      <tr>
-		        <td>Price: £32</td>
+		        <td ><p class="inline">Price: £ </p> <h:inputText value="#{products.price}" class="inline cellinput"></h:inputText></td>
 		        <td>Width: 34cm</td>
 		        <td>P.Stock: 54</td>
 		      </tr>
@@ -304,6 +328,11 @@
 	  	</div>
 
 	  	</div>
+	  	
+	  	
+	  	<h:commandButton class="btn btn-default" value="Create" action="#{products.makeProduct}" />
+	  	
+	  </h:form>
 
 
 

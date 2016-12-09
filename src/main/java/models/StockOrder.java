@@ -52,6 +52,14 @@ public class StockOrder {
 		return "Stock Order ID: " + stockOrderID + ", Date Ordered: " + dateOrdered + ".";
 	}
 	
+	public Supplier getSupplier() {
+		return this.supplier;
+	}
+	
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}
+	
 	
 }
 
