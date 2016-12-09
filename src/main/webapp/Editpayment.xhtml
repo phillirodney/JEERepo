@@ -82,6 +82,24 @@ enjoy-css {
 }
 </style>
 
+		<script type="text/javascript">
+			function setPaymentValue() {
+
+				document.getElementById('nameForm:name').value = document
+						.getElementById('nameEdit').innerHTML;
+			}
+			function setCardNumberValue() {
+
+				document.getElementById('cardNumberForm:number').value = document
+						.getElementById('numberEdit').innerHTML;
+			}
+			function setExpiryValue() {
+
+				document.getElementById('expiryDateForm:expiry').value = document
+						.getElementById('expiryEdit').innerHTML;
+			}
+		</script>
+
 		<div class="jumbotron" id="material"
 			style="padding-left: 5%; padding-right: 5%">
 			<div class="container-fluid" style="padding-top: 5px">
@@ -146,28 +164,45 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Name on card: #{user.customer.payment.nameOnCard}
-									</td>
-									<td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td>
+									<td>Name on card: <span id="nameEdit"
+										contenteditable="true">#{user.customer.payment.nameOnCard}</span></td>
+									<td><h:form id="nameForm">
+
+
+											<h:inputHidden id="name" value="#{payment.nameOnCard}" />
+											<h:commandButton value="Edit"
+												action="#{payment.changeNameOnCard}"
+												onclick="setPaymentValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Card Number: #{user.customer.payment.cardNumber}</td>
-									<td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td>
+									<td>Card Number: <span id="numberEdit"
+										contenteditable="true">#{user.customer.payment.cardNumber}</span></td>
+									<td><h:form id="cardNumberForm">
+
+
+											<h:inputHidden id="number" value="#{payment.cardNumber}" />
+											<h:commandButton value="Edit"
+												action="#{payment.changeCardNumber}"
+												onclick="setCardNumberValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Expiry Date: #{user.customer.payment.expiryDate}</td>
-									<td><div class="enjoy-css">
-											<b>EDIT </b><span class="glyphicon glyphicon-pencil"
-												aria-hidden="true"></span>
-										</div></td>
+									<td>Expiry Date: <span id="expiryEdit"
+										contenteditable="true">#{user.customer.payment.expiryDate}</span></td>
+									<td><h:form id="expiryDateForm">
+
+
+											<h:inputHidden id="expiry" value="#{payment.expiryDate}" />
+											<h:commandButton value="Edit"
+												action="#{payment.changeExpiryDate}"
+												onclick="setExpiryDateValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>

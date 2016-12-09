@@ -13,12 +13,11 @@ import javax.inject.Named;
 @Named("user")
 @SessionScoped
 public class CurrentUser implements Serializable {
-	
-
 
 	private static final long serialVersionUID = 1L;
 
 	private Customer customer = null;
+	private Product product;
 
 	public List<CustomerOrder> getOrders() {
 
@@ -37,6 +36,9 @@ public class CurrentUser implements Serializable {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	
+
+	public Product getProduct() {
+		return product;
+	}
 
 }

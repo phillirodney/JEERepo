@@ -102,6 +102,46 @@ enjoy-css {
 				document.getElementById('phone:phoneText').value = document
 						.getElementById('phoneEdit').innerHTML;
 			}
+
+			function setHouseNumberValue() {
+
+				document.getElementById('houseNumber:number').value = document
+						.getElementById('houseNumberEdit').innerHTML;
+			}
+
+			function setStreetValue() {
+
+				document.getElementById('changeStreet:street').value = document
+						.getElementById('streetEdit').innerHTML;
+			}
+
+			function setCityValue() {
+
+				document.getElementById('changeCity:city').value = document
+						.getElementById('cityEdit').innerHTML;
+			}
+
+			function setPostcodeValue() {
+
+				document.getElementById('changePostcode:postcode').value = document
+						.getElementById('postcodeEdit').innerHTML;
+			}
+
+			function setPaymentValue() {
+
+				document.getElementById('nameForm:name').value = document
+						.getElementById('nameEdit').innerHTML;
+			}
+			function setCardNumberValue() {
+
+				document.getElementById('cardNumberForm:number').value = document
+						.getElementById('numberEdit').innerHTML;
+			}
+			function setExpiryValue() {
+
+				document.getElementById('expiryDateForm:expiry').value = document
+						.getElementById('expiryEdit').innerHTML;
+			}
 		</script>
 
 		<div class="jumbotron" id="material"
@@ -192,19 +232,60 @@ enjoy-css {
 						<div>
 							<table>
 								<tr>
-									<td>House Number: #{user.customer.addresses.houseNumber}</td>
-								</tr>
-								<tr>
-									<td>Street: #{user.customer.addresses.street}</td>
+									<td>House Number: <span id="houseNumberEdit"
+										contenteditable="true">#{user.customer.addresses.houseNumber}</span></td>
+									<td><h:form id="houseNumber">
+
+
+											<h:inputHidden id="number" value="#{address.houseNumber}" />
+											<h:commandButton value="Edit"
+												action="#{address.changeHouseNumber}"
+												onclick="setHouseNumberValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>City: #{user.customer.addresses.city}</td>
+									<td>Street: <span id="streetEdit" contenteditable="true">
+											#{user.customer.addresses.street}</span></td>
+									<td><h:form id="changeStreet">
+
+
+											<h:inputHidden id="street" value="#{address.street}" />
+											<h:commandButton value="Edit"
+												action="#{address.changeStreet}" onclick="setStreetValue();" />
+
+										</h:form></td>
+
 								</tr>
 
 								<tr>
-									<td>Post Code: #{user.customer.addresses.postcode}</td>
+									<td>City: <span id="cityEdit" contenteditable="true">#{user.customer.addresses.city}</span></td>
+									<td><h:form id="changeCity">
+
+
+											<h:inputHidden id="city" value="#{address.city}" />
+											<h:commandButton value="Edit" action="#{address.changeCity}"
+												onclick="setCityValue();" />
+
+										</h:form></td>
 								</tr>
+
+								<tr>
+									<td>PostCode: <span id="postcodeEdit"
+										contenteditable="true">#{user.customer.addresses.postcode}</span></td>
+									<td><h:form id="changePostcode">
+
+
+											<h:inputHidden id="postcode" value="#{address.postcode}" />
+											<h:commandButton value="Edit"
+												action="#{address.changePostcode}"
+												onclick="setPostcodeValue();" />
+
+										</h:form></td>
+
+								</tr>
+
 							</table>
 						</div>
 
@@ -221,18 +302,44 @@ enjoy-css {
 						<div>
 							<table>
 								<tr>
-									<td>Name on card: #{user.customer.payment.nameOnCard}</td>
-								</tr>
-								<tr>
-									<td>Card No: #{user.customer.payment.cardNumber}</td>
+									<td>Name on card: <span id="nameEdit"
+										contenteditable="true">#{user.customer.payment.nameOnCard}</span></td>
+									<td><h:form id="nameForm">
+
+											<h:inputHidden id="name" value="#{payment.nameOnCard}" />
+											<h:commandButton value="Edit"
+												action="#{payment.changeNameOnCard}"
+												onclick="setPaymentValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Expiry Date: #{user.customer.payment.expiryDate}</td>
+									<td>Card Number: <span id="numberEdit"
+										contenteditable="true">#{user.customer.payment.cardNumber}</span></td>
+									<td><h:form id="cardNumberForm">
+
+
+											<h:inputHidden id="number" value="#{payment.cardNumber}" />
+											<h:commandButton value="Edit"
+												action="#{payment.changeCardNumber}"
+												onclick="setCardNumberValue();" />
+
+										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Re Enter CVC:</td>
+									<td>Expiry Date: <span id="expiryEdit"
+										contenteditable="true">#{user.customer.payment.expiryDate}</span></td>
+									<td><h:form id="expiryDateForm">
+
+
+											<h:inputHidden id="expiry" value="#{payment.expiryDate}" />
+											<h:commandButton value="Edit"
+												action="#{payment.changeExpiryDate}"
+												onclick="setExpiryDateValue();" />
+
+										</h:form></td>
 								</tr>
 							</table>
 						</div>

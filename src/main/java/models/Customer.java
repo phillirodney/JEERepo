@@ -93,6 +93,7 @@ public class Customer {
 		this.dateOfBirth = dateOfBirth;
 
 	}
+
 	public Customer(String name, String email, String phone, String password) {
 		this.firstName = name;
 		this.email = email;
@@ -132,7 +133,7 @@ public class Customer {
 	public Address getAddresses() {
 		return addresses;
 	}
-	
+
 	public Payment getPayment() {
 		return payment;
 	}
@@ -156,7 +157,7 @@ public class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
@@ -176,7 +177,7 @@ public class Customer {
 	public void setBaskets(List<Basket> baskets) {
 		this.baskets = baskets;
 	}
-	
+
 	public void setPayment(Payment payment) {
 		this.payment = payment;
 	}
@@ -188,5 +189,7 @@ public class Customer {
 	public void setOrders(List<CustomerOrder> orders) {
 		this.orders = orders;
 	}
+
+
 
 }
