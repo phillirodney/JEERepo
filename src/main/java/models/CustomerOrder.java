@@ -43,17 +43,30 @@ public class CustomerOrder {
 
 	@OneToMany(mappedBy = "customer_orders")
 	private List<OrderLine> orderLines;
+	
+	//Need to set the database value;
+	private Customer customer;
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 
 	public CustomerOrder() {
 
 	}
 
-	public CustomerOrder(long id, Double total, Date dateOfOrder, String dispatchStatus, String paymentStatus) {
+	public CustomerOrder(long id, Double total, Date dateOfOrder, String dispatchStatus, String paymentStatus, Customer customer) {
 		this.id = id;
 		this.total = total;
 		this.dateOfOrder = dateOfOrder;
 		this.dispatchStatus = dispatchStatus;
 		this.paymentStatus = paymentStatus;
+		this.orderLines = new ArrayList<>();
+		this.customer = customer;
 
 	}
 

@@ -1,4 +1,7 @@
 package models;
+
+import java.util.List;
+
 /**
  * This is the address model
  * 
@@ -19,6 +22,8 @@ public interface CustomerOrderManager {
 	void updateCustomerOrder(CustomerOrder customerOrder);
 
 	void deleteCustomerOrder(CustomerOrder customerOrder);
+
+	List<CustomerOrder> returnAll();
 
 
 }

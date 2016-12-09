@@ -70,4 +70,9 @@ public class CustomerOrderManagerOffline implements CustomerOrderManager {
 
 
     }
+    
+    @Override
+    public List<CustomerOrder> returnAll(){
+    	return testData.getCustomerOrders();
+    }
 }

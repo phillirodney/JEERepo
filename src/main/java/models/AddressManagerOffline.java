@@ -57,7 +57,7 @@ public class AddressManagerOffline implements AddressManager {
 	@Override
 	public  Address findByAddressId(int addressId) {
 		for(Address address: testdata.getAddresses()){
-			if(address.getaddressId() == addressId){
+			if(address.getAddressId() == addressId){
 				return address;
 			}
 		}
@@ -96,7 +96,7 @@ public class AddressManagerOffline implements AddressManager {
 	public Address findByAddress(String postcode, int houseNumber) {
 		
 		for(Address address: testdata.getAddresses()){
-			if((address.getpostcode().equals(postcode)) && (address.gethouseNumber() == houseNumber)){
+			if((address.getPostcode().equals(postcode)) && (address.getHouseNumber() == houseNumber)){
 				return address;
 			}
 		}
@@ -129,15 +129,15 @@ public class AddressManagerOffline implements AddressManager {
 			if(tempAddress == null){
 				tempAddress = a;
 			}else{
-				if (a.getaddressId() > tempAddress.getaddressId())
+				if (a.getAddressId() > tempAddress.getAddressId())
 					tempAddress = a;
 			}
 		}
 
-		address.setaddressId(tempAddress.getaddressId());
+		address.setAddressId(tempAddress.getAddressId());
 		addresses.add(address);
 		testdata.setAddresses(addresses);
-		return findByAddressId(address.getaddressId());
+		return findByAddressId(address.getAddressId());
 
 	}
 
@@ -158,8 +158,8 @@ public class AddressManagerOffline implements AddressManager {
 		int index = 0;
 
 		for(Address a: addresses){
-			if (a.getaddressId() == address.getaddressId())
-				index = a.getaddressId();
+			if (a.getAddressId() == address.getAddressId())
+				index = a.getAddressId();
 		}
 		if(index < 0) return;
 

@@ -18,6 +18,7 @@
      <style>
 
   	body {
+  	
   		padding: 5%;
   		background-color: #AFAFAF;
   	}
@@ -25,6 +26,9 @@
   	.shadow {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   	}
+  	
+  	
+  
 
 
 
@@ -41,7 +45,7 @@
 
   	<div class="jumbotron shadow" style="padding:0px">  
 
-  	<ul class="nav nav-tabs" >
+  	<ul class="nav nav-tabs nav-justified" >
     	<li class="active"><a data-toggle="tab" href="#home">Customer Order</a></li>
     	<li><a data-toggle="tab" href="#menu1">Supply Orders</a></li>
     	<li><a data-toggle="tab" href="#menu2">Products</a></li>
@@ -51,54 +55,57 @@
 
 
   	<div style="padding: 3%;">
-  	<div style="padding: 3%; background-color: white;" class="shadow">	
-  	<div class="tab-content">
+  	<div style=" background-color: white;" class="shadow">	
+  	<div class="tab-content container-fluid ">
     	<div id="home" class="tab-pane fade in active">
 
     	<br/>
 
-  		<table class="table table-bordered table-striped">
-		    <thead>
-		      <tr>
-		       <th>ID</th>
-		        <th>Name</th>
-		        <th>Date</th>
-		        <th>Dispatch Status</th>
-		        <th>Payment Status</th>
-		        <th>Total Price</th>
-		        <th>View</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>1</td>
-		        <td>Doe</td>
-		        <td>jDoe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
-		      </tr>
-		      <tr>
-		        <td>2</td>
-		        <td>Moe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
-		      </tr>
-		      <tr>
-		        <td>3</td>
-		        <td>Dooley</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
-		      </tr>
-		    </tbody>
-  		</table>
+  	
+  		
+  		<h:dataTable value="#{customerorder.orders}" var="co"
+    			class="table table-bordered table-striped">
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Id</f:facet>
+    				<!-- row record -->
+    				#{co.id}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Name</f:facet>
+    				#{co.customer.firstName}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Date</f:facet>
+    				#{co.dateOfOrder}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">DStatus</f:facet>
+    				#{co.dispatchStatus}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">PStatus</f:facet>
+    				#{co.paymentStatus}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Price</f:facet>
+    				£232
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">View</f:facet>
+    				<h:form>
+    					<h:commandButton action="#{cuorder.selectOrder(co)}" value="View"></h:commandButton>
+    				</h:form>
+    			</h:column>
+
+    	</h:dataTable>
   		
   		
     		
@@ -174,7 +181,9 @@
 
     			<h:column>
     				<f:facet name="header">View</f:facet>
-    				<button type="button" onclick="alert('Hello world!')" >View</button>
+    				<h:form>
+        				<h:commandButton value="View" action="#{selectedims.selectProduct(p)}"></h:commandButton>
+        			</h:form>
     			</h:column>
 
     		</h:dataTable>
@@ -211,11 +220,11 @@
 
 	  		<div class="col-sm-8">
 
-	  		<h4>Name:</h4>
+	  		<h4>Name: #{selectedims.product.name}</h4>
 
 	  		<h4>Description:</h4>
 
-	  		<p style="font-size:10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus eget sapien laoreet auctor eu vel nisl. Suspendisse at ligula sit amet nisi convallis semper. Curabitur hendrerit lectus sit amet sem mattis mollis. Morbi vel elementum nulla. Nam urna odio, elementum porttitor faucibus a, pulvinar id libero. Pellentesque mollis dictum massa quis dignissim</p>
+	  		<p style="font-size:10px"> #{selectedims.product.description}</p>
 
 
 	  		</div>
@@ -231,12 +240,12 @@
 	  		<table class="table table-bordered table-striped">
 		    <tbody>
 		      <tr>
-		        <td>Price: £32</td>
+		        <td>£#{selectedims.product.price}</td>
 		        <td>Width: 34cm</td>
 		        <td>P.Stock: 54</td>
 		      </tr>
 		      <tr>
-		        <td>ID: 1</td>
+		        <td>#{selectedims.product.productId}</td>
 		        <td>Height: 34cm</td>
 		        <td>Stock: 45</td>
 		      </tr>
@@ -341,11 +350,15 @@
 
 	  			<div class="col-sm-4">
 
-	  				<div class="jumbotron shadow"> 
+	  				<div> 
 
-
-	  							<img src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/470/2015/10/23122001/CommonMan.jpg" width="100%"/> 
-
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+					<script type="text/javascript" src="http://onlinehtmltools.com/clocks/analog-clock/index_files/coolclock.js"></script>
+					<script type="text/javascript" src="http://onlinehtmltools.com/clocks/analog-clock/index_files/moreskins.js"></script>
+					<canvas style="width: 100%; " id="_coolclock_auto_id_56" class="CoolClock:swissRail"></canvas>
+					
+														
+										
 	  				</div>
 
 	  			</div>
@@ -358,10 +371,10 @@
 
 	  		<div class="jumbotron shadow" style="padding:0;"> 
 
-	  	<p style="background-color:grey; text-align: center;">Customer Order ID:</p>
+	  	<p style="background-color:grey; text-align: center;">Customer Order ID: #{cuorder.customer.id}</p>
 
 
-	  	<p style="margin-left:5%;">Customer Name:</p> 
+	  	<p style="margin-left:5%;">Customer Name: #{cuorder.customer.firstName} #{cuorder.customer.lastName}</p> 
 	  	
   	
 
@@ -372,31 +385,27 @@
   			<div style="padding: 3%; background-color: white;" class="shadow">	
 
 
-	  		<h:dataTable value="#{user.customer.orders.orderLines}" var="o"
+	  		<h:dataTable value="#{cuorder.orderLines}" var="ol"
     			class="table table-bordered table-striped">
 
     			<h:column>
     				<!-- column header -->
     				<f:facet name="header">ProductID</f:facet>
     				<!-- row record -->
-    				#{o.}
+    				#{ol.product.productId}
     			</h:column>
 
     			<h:column>
     				<f:facet name="header">Product Name</f:facet>
-    				#{p.name}
-    			</h:column>
-
-    			<h:column>
-    				<f:facet name="header">Price(£)</f:facet>
-    				#{p.price}
+    				#{ol.product.name}
     			</h:column>
 
     			<h:column>
     				<f:facet name="header">Quantity</f:facet>
-    				<button type="button" onclick="alert('Hello world!')" >View</button>
+    				#{ol.quantity}
     			</h:column>
 
+    		
     		</h:dataTable>
 
 	  		</div>

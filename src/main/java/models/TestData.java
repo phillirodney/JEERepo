@@ -28,6 +28,8 @@ public class TestData {
 	private List<StockOrder> stockOrders;
 	private List<Supplier> suppliers;
 	private List<SupplierOrderLine> supplierOrderLines;
+	
+
 
 	@PostConstruct
 	private void setupData() {
@@ -80,18 +82,7 @@ public class TestData {
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
 
-		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed");
-		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed");
-		CustomerOrder corder2 = new CustomerOrder(3, 200.0, new Date(0), "Dispatched", "payed");
-		CustomerOrder corder3 = new CustomerOrder(4, 200.0, new Date(0), "Dispatched", "payed");
-		CustomerOrder corder4 = new CustomerOrder(5, 200.0, new Date(0), "Dispatched", "payed");
-
-		List<CustomerOrder> orders = new ArrayList<CustomerOrder>();
-		orders.add(corder);
-		orders.add(corder1);
-		orders.add(corder2);
-		orders.add(corder3);
-		orders.add(corder4);
+	
 
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
 				new Date(0));
@@ -107,6 +98,23 @@ public class TestData {
 				new Date(0));
 
 		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner", 123);
+		
+		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed", customer1);
+		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed", customer1);
+		CustomerOrder corder2 = new CustomerOrder(3, 200.0, new Date(0), "Dispatched", "payed", customer1);
+		CustomerOrder corder3 = new CustomerOrder(4, 200.0, new Date(0), "Dispatched", "payed", customer1);
+		CustomerOrder corder4 = new CustomerOrder(5, 200.0, new Date(0), "Dispatched", "payed", customer1);
+
+		List<CustomerOrder> orders = new ArrayList<CustomerOrder>();
+		orders.add(corder);
+		orders.add(corder1);
+		orders.add(corder2);
+		orders.add(corder3);
+		orders.add(corder4);
+		
+		OrderLine ol = new OrderLine(1, product1, 2);
+		
+		corder.getOrderLines().add(ol);
 
 		customer1.setPayment(payment1);
 		customer1.setOrders(orders);
@@ -149,6 +157,13 @@ public class TestData {
 		customers.add(customer4);
 		customers.add(customer5);
 		customers.add(customer6);
+		
+		customerOrders.add(corder);
+		customerOrders.add(corder1);
+		customerOrders.add(corder2);
+		customerOrders.add(corder3);
+		customerOrders.add(corder4);
+
 
 	}
 

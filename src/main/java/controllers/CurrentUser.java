@@ -7,11 +7,14 @@ import models.*;
 import java.io.Serializable;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named("user")
 @SessionScoped
 public class CurrentUser implements Serializable {
+	
+
 
 	private static final long serialVersionUID = 1L;
 
@@ -34,4 +37,6 @@ public class CurrentUser implements Serializable {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
+	
+
 }
