@@ -6,8 +6,6 @@ import java.util.List;
  * @author Lewis
  * 
  */
-
-
 @Entity
 @Table (name = "suppliers")
 public class Supplier {
@@ -35,7 +33,7 @@ public class Supplier {
 		return supplierID;
 	}
 
-	public void setSupplierID(int supplierId) {
+	public void setSupplierID(int supplierID) {
 		this.supplierID = supplierID;
 	}
 
@@ -43,7 +41,7 @@ public class Supplier {
 		return supplierName;
 	}
 
-	public void setSupplierName() {
+	public void setSupplierName(String supplierName) {
 		this.supplierName = supplierName;
 	}
 

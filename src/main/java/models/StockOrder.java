@@ -26,9 +26,10 @@ public class StockOrder {
 
 	List<SupplierOrderLine> supplierOrderLine = new ArrayList<SupplierOrderLine>();
 
-	public StockOrder(int orderID) {
+	public StockOrder(int orderID, Date dateOrdered, int supplierID, String supplierName) {
 		this.stockOrderID = orderID; // change to implement unique order ID
-		this.dateOrdered = new Date(); // date object created/current date
+		this.dateOrdered = new Date();
+		this.supplier = new Supplier();
 	}
 
 	public int getstockOrderID() {
@@ -52,16 +53,12 @@ public class StockOrder {
 		return "Stock Order ID: " + stockOrderID + ", Date Ordered: " + dateOrdered + ".";
 	}
 
-	
 	public Supplier getSupplier() {
-		return this.supplier;
+		return supplier;
 	}
-	
+
 	public void setSupplier(Supplier supplier) {
 		this.supplier = supplier;
 	}
-	
-	
+
 }
-
-

@@ -25,7 +25,6 @@ public class RegistrationController {
 	// These four variables to login and view the gnomes, the rest can be added in the account page
 
 	private String name = "";
-	private String lastname = "";
 	
 	private String email = "";
 	private String phone = "";

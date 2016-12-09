@@ -29,6 +29,7 @@ public class TestData {
 	private List<Supplier> suppliers;
 	private List<SupplierOrderLine> supplierOrderLines;
 	
+	
 
 
 	@PostConstruct
@@ -62,16 +63,16 @@ public class TestData {
 		paths.add("/resources/image.png");
 		paths.add("/resources/image2.png");
 		Product product1 = new Product(1, "Tyrion Gnomister",
-				"The popular character from the hit TV Show Game of Gnomes", 21.99, 10001, 11001, 120, 80, 4, 1, paths);
+				"The popular character from the hit TV Show Game of Gnomes", 21.99, 10001, 11001, 120, 80, 4, paths);
 		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99,
-				10002, 11002, 120, 80, 4, 1, paths);
+				10002, 11002, 120, 80, 4, paths);
 		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99,
-				10003, 11003, 120, 80, 4, 1 ,paths);
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, 10004, 11004, 120, 80, 4, 1, paths);
-		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, 10005, 11005, 120, 80, 4, 1, paths);
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, 10006, 11006, 120, 80, 4, 1, paths);
-		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007, 120, 80, 4, 1, paths);
-		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008, 120, 80, 4, 1, paths);
+				10003, 11003, 120, 80, 4, paths);
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, 10004, 11004, 120, 80, 4, paths);
+		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, 10005, 11005, 120, 80, 4, paths);
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, 10006, 11006, 120, 80, 4, paths);
+		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007, 120, 80, 4, paths);
+		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008, 120, 80, 4, paths);
 
 		Stock stock1 = new Stock(1, 100, 120, 50, false);
 		Stock stock2 = new Stock(2, 120, 140, 70, false);
@@ -82,7 +83,26 @@ public class TestData {
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
 
-	
+		StockOrder stockOrder1 = new StockOrder(1, new Date(0), 1, "Funky Gnomes");
+		StockOrder stockOrder2 = new StockOrder(2, new Date(0), 1, "Saucy Gnomes");
+		StockOrder stockOrder3 = new StockOrder(3, new Date(0), 1, "Gnomes R Us");
+		StockOrder stockOrder4 = new StockOrder(4, new Date(0), 1, "Gnomes UK");
+		StockOrder stockOrder5 = new StockOrder(5, new Date(0), 1, "Gnome Stop");
+		StockOrder stockOrder6 = new StockOrder(6, new Date(0), 1, "Gnomes Avenue");
+		StockOrder stockOrder7 = new StockOrder(7, new Date(0), 1, "Gnomes Consulting");
+		StockOrder stockOrder8 = new StockOrder(8, new Date(0), 1, "Gnome Time");
+
+		List<StockOrder> stockOrders = new ArrayList<StockOrder>();
+		
+		stockOrders.add(stockOrder1);
+		stockOrders.add(stockOrder2);
+		stockOrders.add(stockOrder3);
+		stockOrders.add(stockOrder4);
+		stockOrders.add(stockOrder5);
+		stockOrders.add(stockOrder6);
+		stockOrders.add(stockOrder7);
+		stockOrders.add(stockOrder8);
+
 
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
 				new Date(0));
@@ -105,6 +125,7 @@ public class TestData {
 		CustomerOrder corder3 = new CustomerOrder(4, 200.0, new Date(0), "Dispatched", "payed", customer1);
 		CustomerOrder corder4 = new CustomerOrder(5, 200.0, new Date(0), "Dispatched", "payed", customer1);
 
+		
 		List<CustomerOrder> orders = new ArrayList<CustomerOrder>();
 		orders.add(corder);
 		orders.add(corder1);

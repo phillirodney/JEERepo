@@ -32,9 +32,15 @@ public class SupplierOrderLine {
 	public SupplierOrderLine() { 
 	}
 
+<<<<<<< HEAD
 	public SupplierOrderLine(int quantity, Product product, StockOrder stockOrder){
 		
 		this.quantity = quantity;
+=======
+	
+	public SupplierOrderLine(int supplierOrderLineId, Product product){
+		this.supplierOrderLineId = supplierOrderLineId;
+>>>>>>> be5e7bd476908c944ca07fc757aa54e77692d2d1
 		this.product = product;
 		this.stockOrder = stockOrder;
 		
