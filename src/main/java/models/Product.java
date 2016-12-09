@@ -55,6 +55,7 @@ public class Product implements Serializable {
 
 	}
 
+
 	public int getproductId() {
 		return productId;
 	}

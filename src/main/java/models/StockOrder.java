@@ -60,6 +60,5 @@ public class StockOrder {
 	public void setSupplier(Supplier supplier) {
 		this.supplier = supplier;
 	}
-	
-	
+
 }

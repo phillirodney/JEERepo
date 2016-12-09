@@ -36,4 +36,11 @@ public class ProductService {
 	public List<Product> findAll(){
 		return productManager.returnAll();
 	}
+	
+	public void createProduct(String name, String desciption, double price){
+			
+		Product product = new Product(name, desciption, price);
+		productManager.createProduct(product);
+		
+	} 
 }
