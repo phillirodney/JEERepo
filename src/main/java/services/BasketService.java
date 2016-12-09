@@ -15,6 +15,9 @@ public class BasketService {
 	@Inject
 	private BasketManager manager;
 	
+	@Inject
+	private Basket basket;
+	
 	
 	public boolean checkBasket(Basket basket, Customer customer){
 		
@@ -30,6 +33,7 @@ public class BasketService {
 		Basket basket = manager.createBasket(new Basket(product, quantity));
 		return basket;
 	}
+
 
 }
 

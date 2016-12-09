@@ -57,17 +57,10 @@ public class BasketController {
 
 	}
 
-	public int getQuantity() {
-		
-		return quantity;
+	public void updateQuantity() {
+		Basket basket = new Basket();
+		currentUser.getProduct().setStock(quantity);
 
 	}
-	/*
-	 * public double getSubTotal() { double price = 0; for (Basket basket :
-	 * basket_list) { Product product = (Product) basket.getProduct(); price =+
-	 * basket.getQuantity() * product.getPrice(); } return price;
-	 * 
-	 * }
-	 */
 
 }

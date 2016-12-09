@@ -18,7 +18,8 @@ public class CheckoutService {
 	@Inject
 	private CustomerOrderManager customerOrderManager;
 	
-	public createOrder(Basket basket, Customer customer)
+	public void createOrder(Basket basket, Customer customer) {
+	}
 	
 
 	
