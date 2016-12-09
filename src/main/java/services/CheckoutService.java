@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import models.Basket;
 import models.BasketManager;
 import models.Customer;
+import models.CustomerOrder;
 import models.CustomerOrderManager;
 
 /* @author Cieran */
@@ -18,9 +19,20 @@ public class CheckoutService {
 	@Inject
 	private CustomerOrderManager customerOrderManager;
 	
-	public void createOrder(Basket basket, Customer customer) {
-	}
-	
 
+	public boolean validCheckout(Basket basket, Customer customer) {
+		
+		for (Basket b: customer.getBaskets()){
+			if(b.getProduct() == basket.getProduct()){
+				return true;
+			}
+		}
+		return false;
+	}	
+	
+	public CustomerOrder createNewCustomerOrder(Basket basket, Customer customer){
+		CustomerOrder customerOrder = customerOrderManager.createNewCustomerOrder(new CustomerOrder());
+		return customerOrder;
+	}
 	
 }
