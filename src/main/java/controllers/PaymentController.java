@@ -37,16 +37,34 @@ public class PaymentController {
 	public short getCVC() {
 		return cvc; }
 	
-	public void setCardNumber() {
+	
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+	
+	public void setExpiryDate( Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	
+	public void setNameOnCard(String nameOnCard) {
+		this.nameOnCard = nameOnCard;
+	}
+	
+	public void setCVC(short cvc) {
+		this.cvc = cvc;
+	}
+	
+	
+	public void changeCardNumber() {
 		currentUser.getCustomer().getPayment().setCardNumber(cardNumber);
 	}
-	public void setExpiryDate() {
+	public void changeExpiryDate() {
 		currentUser.getCustomer().getPayment().setExpiryDate(expiryDate);
 	}
-	public void setNameOnCard() {
+	public void changeNameOnCard() {
 		currentUser.getCustomer().getPayment().setNameOnCard(nameOnCard);
 	}
-	public void setCVC() {
+	public void changeCVC() {
 		currentUser.getCustomer().getPayment().setCVC(cvc);
 	}
 	
