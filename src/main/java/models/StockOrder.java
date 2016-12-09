@@ -1,8 +1,7 @@
 package models;
+
 import java.util.*;
 import javax.persistence.*;
-
-
 
 /*
  * @author Cieran
@@ -11,24 +10,25 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="stock_orders")
+@Table(name = "stock_orders")
 public class StockOrder {
 
 	@Id
-	@Column(name="stock_order_id", nullable=false, unique=true)
+	@Column(name = "stock_order_id", nullable = false, unique = true)
 	private int stockOrderID;
-	
-	@Column(name="date_ordered")
+
+	@Column(name = "date_ordered")
 	private Date dateOrdered;
 
 	@ManyToOne
-	@JoinColumn(name="supplier_id")
+	@JoinColumn(name = "supplier_id")
 	private Supplier supplier;
-	
-	public StockOrder(int orderID)
-	{
+
+	List<SupplierOrderLine> supplierOrderLine = new ArrayList<SupplierOrderLine>();
+
+	public StockOrder(int orderID) {
 		this.stockOrderID = orderID; // change to implement unique order ID
-		this.dateOrdered = new Date();	//date object created/current date
+		this.dateOrdered = new Date(); // date object created/current date
 	}
 
 	public int getstockOrderID() {
@@ -51,7 +51,5 @@ public class StockOrder {
 	public String toString() {
 		return "Stock Order ID: " + stockOrderID + ", Date Ordered: " + dateOrdered + ".";
 	}
-	
-	
-}
 
+}
