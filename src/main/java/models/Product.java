@@ -32,12 +32,16 @@ public class Product implements Serializable{
 	private double price;
 	private long stockId;
 	private long porouswareStockId;
-
+	private int height;
+	private int length;
+	private int weight;
+	
 	private List<String> images;
 	public Product(){
 	}
 
-	public Product(int productId, String name, String description, double price, long stockId, long porouswareStockId, List<String> imagepath) {
+	public Product(int productId, String name, String description, double price, long stockId, 
+			long porouswareStockId, int height, int length, int weight, List<String> imagepath) {
 		
 		this.productId = productId;
 		this.name = name;
@@ -46,9 +50,12 @@ public class Product implements Serializable{
 		this.images = imagepath;
 		this.stockId = stockId;
 		this.porouswareStockId = porouswareStockId;
+		this.height = height;
+		this.length = length;
+		this.weight = weight;
 		
 	}
-
+	
 	public int getproductId() {
 		return productId;
 	}
@@ -86,7 +93,6 @@ public class Product implements Serializable{
 		return stockId;
 	}
 
-
 	public void setStockId(long stockId) {
 		this.stockId = stockId;
 	}
@@ -103,8 +109,31 @@ public class Product implements Serializable{
 		this.price = price;
 	}
 
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
 	public void setPorouswareStockId(long porouswareStockId) {
 		this.porouswareStockId = porouswareStockId;
-
 	}
 }
