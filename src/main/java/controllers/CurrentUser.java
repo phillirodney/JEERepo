@@ -17,7 +17,7 @@ public class CurrentUser implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Customer customer = null;
-	private Product product;
+	private Basket basket =  new Basket();
 
 	public List<CustomerOrder> getOrders() {
 
@@ -37,8 +37,12 @@ public class CurrentUser implements Serializable {
 		this.customer = customer;
 	}
 
-	public Product getProduct() {
-		return product;
+	public Basket  getBasket() {
+		return basket;
+	}
+
+	public void setBasket(Basket basket) {
+		this.basket = basket;
 	}
 
 }

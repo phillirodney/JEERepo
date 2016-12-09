@@ -30,7 +30,8 @@ public class SupplierOrderLine {
 	public SupplierOrderLine() { 
 	}
 
-	public SupplierOrderLine(int lineId, Product product){
+	
+	public SupplierOrderLine(int supplierOrderLineId, Product product){
 		this.supplierOrderLineId = supplierOrderLineId;
 		this.product = product;
 	}

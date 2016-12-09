@@ -35,12 +35,10 @@ public class BasketController {
 
 	@Inject
 	private selectedProduct product;
-
 	private int quantity;
 
 	List<Basket> basket_list;
-	//Basket basket_list;
-
+	// Basket basket_list;
 
 	public String addToBasket() {
 
@@ -52,14 +50,21 @@ public class BasketController {
 			return "Product";
 		}
 		currentUser.getCustomer().getBaskets().add(basket);
-	
+
 		return "Product";
 
 	}
 
-	public void updateQuantity() {
-		Basket basket = new Basket();
-		currentUser.getProduct().setStock(quantity);
+	public int getQuantity() {
+		return this.quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public void changeQuantity() {
+		currentUser.getCustomer().setQuantity(quantity);
 
 	}
 

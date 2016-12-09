@@ -1,4 +1,5 @@
 package models;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 /*
  * @author Philli 
  * @author Cieran
@@ -18,32 +18,30 @@ import javax.persistence.Table;
  * 
  */
 
-
 @Entity
-public class Product implements Serializable{
-
+public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@Id 
+	@Id
 	private int productId;
 	private String name;
 	private String description;
 	private double price;
-	private int stock;
 	private long stockId;
 	private long porouswareStockId;
 	private int height;
 	private int length;
 	private int weight;
-	
+
 	private List<String> images;
-	public Product(){
+	
+	public Product() {
 	}
 
-	public Product(int productId, String name, String description, double price, int stock, long stockId, 
+	public Product(int productId, String name, String description, double price,long stockId,
 			long porouswareStockId, int height, int length, int weight, List<String> imagepath) {
-		
+
 		this.productId = productId;
 		this.name = name;
 		this.description = description;
@@ -54,11 +52,9 @@ public class Product implements Serializable{
 		this.height = height;
 		this.length = length;
 		this.weight = weight;
-		this.stock = stock;
 
-		
 	}
-	
+
 	public int getproductId() {
 		return productId;
 	}
@@ -73,7 +69,7 @@ public class Product implements Serializable{
 
 	public void setname(String name) {
 		this.name = name;
-		
+
 	}
 
 	public String getDescription() {
@@ -83,7 +79,7 @@ public class Product implements Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 	public List<String> getImages() {
 		return images;
 	}
@@ -140,11 +136,6 @@ public class Product implements Serializable{
 		this.porouswareStockId = porouswareStockId;
 	}
 
-	public int getStock() {
-		return stock;
-	}
+	
 
-	public void setStock(int stock) {
-		this.stock = stock;
-	}
 }
