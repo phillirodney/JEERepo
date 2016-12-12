@@ -8,6 +8,8 @@ import models.BasketManager;
 import models.Customer;
 import models.CustomerOrder;
 import models.CustomerOrderManager;
+import models.OrderLine;
+import models.OrderLineManager;
 
 /* @author Cieran */
 
@@ -18,6 +20,9 @@ public class CheckoutService {
 	private BasketManager basketManager;
 	@Inject
 	private CustomerOrderManager customerOrderManager;
+	
+	@Inject
+	private OrderLineManager orderLineManager;
 	
 
 	public boolean validCheckout(Basket basket, Customer customer) {
@@ -30,9 +35,14 @@ public class CheckoutService {
 		return false;
 	}	
 	
-	public CustomerOrder createNewCustomerOrder(Basket basket, Customer customer){
+	public CustomerOrder createNewCustomerOrder(){
 		CustomerOrder customerOrder = customerOrderManager.createNewCustomerOrder(new CustomerOrder());
 		return customerOrder;
 	}
+	
+	public OrderLine createNewCustomerOrderLine(){
+		OrderLine orderline = orderLineManager.createOrderLine(new OrderLine());
+		return orderline;
+	} 
 	
 }

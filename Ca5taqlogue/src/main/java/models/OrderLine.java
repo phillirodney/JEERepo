@@ -35,6 +35,8 @@ public class OrderLine {
 	private CustomerOrder customerOrder;
 
 	public OrderLine() { 
+		
+		
 	}
 
 	public OrderLine(int lineId, Product product, int quantity){

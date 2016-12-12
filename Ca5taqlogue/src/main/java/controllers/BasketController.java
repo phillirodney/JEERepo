@@ -67,5 +67,23 @@ public class BasketController {
 		//currentUser.getCustomer().setQuantity(quantity);
 
 	}
+	
+
+	
+	public void updateQuantity(Basket basket, int quan){
+		
+		basket.setQuantity(quan);
+		
+		/*
+		
+		for(Basket b: currentUser.getCustomer().getBaskets()){
+			if(basket.getBasket_id() == b.getBasket_id()){
+				
+			}
+		}
+		*/
+		
+		
+	}
 
 }

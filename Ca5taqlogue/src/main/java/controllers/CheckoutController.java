@@ -6,7 +6,10 @@ import javax.inject.Named;
 import java.util.List;
 
 import models.Basket;
+import models.CustomerOrder;
+import models.OrderLine;
 import services.BasketService;
+import services.CheckoutService;
 
 /* @author Cieran */
 	
@@ -20,16 +23,31 @@ public class CheckoutController {
 	@Inject
 	private BasketService basketService;
 	
+	@Inject
+	private CheckoutService checkoutService;
+	
 	List<Basket> basket_list;
 	
-	public String addOrder() {
+	public String makeOrder() {
 		
-		if (currentUser.getCustomer().getBaskets() == null) {
-			return "ShoppingBasket"; }
+		CustomerOrder order = checkoutService.createNewCustomerOrder();
 		
-		Order orders = checkoutService.createOrder(basket_list);
-		if (checkoutService.checkBasket(orders, currentUser.getCustomer())) {
-			return "Checkout"; }
+		currentUser.getCustomer().getOrders().add(order);
 		
+		for(Basket b : currentUser.getCustomer().getBaskets()){
+			
+			OrderLine orderline = checkoutService.createNewCustomerOrderLine();
+			
+			orderline.setProduct(b.getProduct());
+			
+			order.getOrderLines().add(orderline);
+
 		}
+		
+		return "ConfirmCheckout";
+			
+		
+		
+		
+	}
 }	

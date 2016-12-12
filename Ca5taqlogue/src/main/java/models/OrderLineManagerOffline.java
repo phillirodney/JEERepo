@@ -27,8 +27,9 @@ public class OrderLineManagerOffline implements OrderLineManager {
 
         List<OrderLine>  orderLines = testData.getOrderLines();
         orderLine.setLineId(orderLines.size() + 1);
+        orderLines.add(orderLine);
         testData.setOrderLines(orderLines);
-        return findById(orderLine.getLineId());
+        return orderLine;
 
     }
 

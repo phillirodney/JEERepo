@@ -56,6 +56,11 @@ public class CustomerOrder {
 	}
 
 	public CustomerOrder() {
+		
+		orderLines = new ArrayList<OrderLine>();
+		dateOfOrder = new Date();
+		dispatchStatus = "Dispatched";
+		
 
 	}
 
