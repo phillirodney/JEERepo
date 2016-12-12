@@ -1,0 +1,22 @@
+/*@author Marcus */
+@CHARSET "ISO-8859-1";
+
+/*
+@author Marcus
+*/
+
+
+#row1img
+{
+	width : 10px;
+}
+#producthead{
+	font-size:24px;
+	font-style:bold;
+}
+
+#instock{
+	font-size:14px;
+	color:green;
+	
+}
