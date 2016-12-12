@@ -103,7 +103,7 @@ public class TestData {
 		stockOrders.add(stockOrder7);
 		stockOrders.add(stockOrder8);
 
-
+		SupplierOrderLine sol = new SupplierOrderLine();
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
 				new Date(0));
 		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com", "01234567899", "pass",
