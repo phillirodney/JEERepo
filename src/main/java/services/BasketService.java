@@ -15,7 +15,6 @@ public class BasketService {
 	@Inject
 	private BasketManager manager;
 	
-	@Inject
 	private Basket basket;
 	
 	

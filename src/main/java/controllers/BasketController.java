@@ -64,7 +64,7 @@ public class BasketController {
 	}
 
 	public void changeQuantity() {
-		currentUser.getCustomer().setQuantity(quantity);
+		//currentUser.getCustomer().setQuantity(quantity);
 
 	}
 
