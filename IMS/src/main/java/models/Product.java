@@ -36,6 +36,9 @@ public class Product implements Serializable {
 	private int length;
 	private int weight;
 	private String material;
+	
+	private String status;
+	
 
 	private List<String> images;
 	
@@ -58,6 +61,8 @@ public class Product implements Serializable {
 		this.length = length;
 		this.weight = weight;
 		this.material = material;
+		this.setStatus("Active");
+		this.productId = productId;
 
 	}
 
@@ -156,6 +161,14 @@ public class Product implements Serializable {
 
 	public void setPorousStock(Stock porousStock) {
 		this.porousStock = porousStock;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 

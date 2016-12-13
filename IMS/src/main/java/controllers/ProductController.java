@@ -15,6 +15,9 @@ public class ProductController {
 	@Inject
 	private ProductService productService;
 	
+	@Inject
+	private SelectedProductIms selectedIms;
+	
 	
 	private String name;
 	
@@ -37,6 +40,20 @@ public class ProductController {
 			return "Product";
 		}
 		return "Browse";
+	}
+	
+	public void Deactivate(){
+		selectedIms.getProduct().setStatus("Deactivated");
+	}
+	
+	public void Activate(){
+		selectedIms.getProduct().setStatus("Active");
+	}
+	
+	public boolean isActive(){
+		if(selectedIms.getProduct() == null) {return false;}
+		if(selectedIms.getProduct().getStatus().equals("Active")) {return true;}
+		return false;
 	}
 	
 	
@@ -76,6 +93,10 @@ public class ProductController {
 
 	public double getPrice() {
 		return price;
+	}
+	
+	public void Update(){
+		
 	}
 	
 	

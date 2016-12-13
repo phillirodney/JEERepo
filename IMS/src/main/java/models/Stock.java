@@ -48,6 +48,10 @@ public class Stock {
 	public int getPresent() {
 		return this.present;
 	}
+	
+	public void setPresent(int present){
+		this.present = present;
+	}
 
 	public int getRequired() {
 		return this.required;

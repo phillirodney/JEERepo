@@ -223,7 +223,25 @@
   	</div>
 
   	<div class ="jumbotron shadow" style="padding:0;">
+  	
+  	<script type="text/javascript">
+			function setHiddenValue() {
 
+				document.getElementById('product:hidden').value = document.getElementById('productName').innerHTML;
+				document.getElementById('product:hiddenDescription').value = document.getElementById('productDescription').innerHTML;
+				document.getElementById('product:hiddenPrice').value = document.getElementById('productPrice').innerHTML;
+				document.getElementById('product:hiddenLength').value = document.getElementById('productLength').innerHTML;
+				document.getElementById('product:hiddenStock').value = document.getElementById('productStock').innerHTML;
+				document.getElementById('product:hiddenHeight').value = document.getElementById('productHeight').innerHTML;
+				document.getElementById('product:hiddenPorousStock').value = document.getElementById('productPorousStock').innerHTML;
+
+				
+				
+			}
+			
+			
+	</script>
+<h:form id="product">
 
 	  	<p style="background-color:grey; text-align:center;"> Product ID:</p>
 	  	
@@ -241,14 +259,25 @@
 	  		</div>
 
 	  		<div class="col-sm-8">
+			
+			
+	  		<h4>Name: <span contenteditable="true" id="productName">#{selectedims.product.name}</span><span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></h4>
+	  		<h:inputHidden id="hidden" value="#{selectedims.product.name}"/>
 
-	  		<h4>Name: #{selectedims.product.name}</h4>
+	  		<h4>Description: <span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></h4>
 
-	  		<h4>Description:</h4>
-
-	  		<p style="font-size:10px"> #{selectedims.product.description}</p>
-
-
+	  		<p style="font-size:10px" contenteditable="true" id="productDescription"> #{selectedims.product.description}</p>
+	  		<h:inputHidden id="hiddenDescription" value="#{selectedims.product.description}"/>
+			
+			<h4 style="float:left">Status: #{selectedims.product.status}</h4>
+			
+			
+			<h:commandButton class="sideButton btn btn-default " style="margin-left:5%;"
+	  	value="Deactivate" action="#{products.Deactivate}" rendered="#{products.isActive()}" />
+			
+			<h:commandButton class="sideButton btn btn-default " style="margin-left:5%;"
+	  	value="Activate" action="#{products.Activate}" rendered="#{!products.isActive()}"/>
+			
 	  		</div>
 
 
@@ -262,14 +291,24 @@
 	  		<table class="table table-bordered table-striped">
 		    <tbody>
 		      <tr>
-		        <td>£#{selectedims.product.price}</td>
-		        <td>Width: 34cm</td>
-		        <td>P.Stock: #{selectedims.product.stock.present}</td>
+		        <td>£<span contenteditable="true" id="productPrice">#{selectedims.product.price}</span> <span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></td>
+		        <h:inputHidden id="hiddenPrice" value="#{selectedims.product.price}"/> 
+		        
+		        <td>Width: <span contenteditable="true" id="productLength">#{selectedims.product.length}</span>cm <span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></td>
+		        <h:inputHidden id="hiddenLength" value="#{selectedims.product.length}"/> 
+		        
+		        <td>P.Stock: <span contenteditable="true" id="productStock">#{selectedims.product.stock.present}</span> <span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></td>
+		        <h:inputHidden id="hiddenStock" value="#{selectedims.product.stock.present}"/> 
 		      </tr>
 		      <tr>
-		        <td>#{selectedims.product.productId}</td>
-		        <td>Height: 34cm</td>
-		        <td>Stock: #{selectedims.product.porousStock.present}</td>
+		        <td>ID: #{selectedims.product.productId}</td>
+		        
+		        <td>Height:<span contenteditable="true" id="productHeight">#{selectedims.product.height}</span>cm <span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></td>
+		        <h:inputHidden id="hiddenHeight" value="#{selectedims.product.height}"/> 
+		        
+		        <td>Stock:<span contenteditable="true" id="productPorousStock">#{selectedims.product.porousStock.present}</span> <span class="glyphicon glyphicon-edit" aria-hidden="true" style="margin-left:5%"></span></td>
+		        <h:inputHidden id="hiddenPorousStock" value="#{selectedims.product.porousStock.present}"/> 
+		        
 		      </tr>
 		    </tbody>
   			</table>
@@ -279,8 +318,12 @@
 	  	</div>
 
 	  	</div>
-
-
+	  		 
+	  	<h:commandButton style="position:relative; 
+	  	left:80%; margin: 3%;" class="sideButton btn btn-default " 
+	  	value="Update" action="#{products.Update}" onclick="setHiddenValue();" />
+	  	
+</h:form>
 
   	</div>
 
