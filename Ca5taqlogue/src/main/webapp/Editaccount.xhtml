@@ -28,8 +28,6 @@ tr:nth-child(even) {
 	background-color: #dddddd;
 }
 
-
-
 enjoy-css {
 	display: inline-block;
 	-webkit-box-sizing: content-box;
@@ -184,7 +182,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="hidden" value="#{registration.name}" />
-											<h:commandButton value="Edit" action="#{registration.change}"
+											<h:commandButton value="UPDATE" action="#{registration.change}"
 												onclick="setHiddenValue();" />
 
 										</h:form></td>
@@ -201,7 +199,7 @@ enjoy-css {
 
 											<h:inputHidden id="surnameText"
 												value="#{registration.lastname}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{registration.changeLastName}"
 												onclick="setLastnameValue();" />
 
@@ -216,7 +214,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="emailText" value="#{registration.email}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{registration.changeEmail}"
 												onclick="setEmailValue();" />
 
@@ -230,7 +228,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="phoneText" value="#{registration.phone}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{registration.changePhone}"
 												onclick="setPhoneValue();" />
 
@@ -240,12 +238,7 @@ enjoy-css {
 								<tr>
 									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
-								<tr>
-									<td><div class="enjoy-css">
-											<b>UPDATE </b><span class="glyphicon glyphicon-ok"
-												aria-hidden="true"></span>
-										</div></td>
-								</tr>
+
 							</table>
 
 

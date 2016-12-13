@@ -170,7 +170,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="name" value="#{payment.nameOnCard}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{payment.changeNameOnCard}"
 												onclick="setPaymentValue();" />
 
@@ -184,7 +184,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="number" value="#{payment.cardNumber}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{payment.changeCardNumber}"
 												onclick="setCardNumberValue();" />
 
@@ -198,7 +198,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="expiry" value="#{payment.expiryDate}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{payment.changeExpiryDate}"
 												onclick="setExpiryDateValue();" />
 
@@ -208,12 +208,7 @@ enjoy-css {
 								<tr>
 									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
-								<tr>
-									<td><div class="enjoy-css">
-											<b>UPDATE </b><span class="glyphicon glyphicon-ok"
-												aria-hidden="true"></span>
-										</div></td>
-								</tr>
+
 							</table>
 
 						</div>

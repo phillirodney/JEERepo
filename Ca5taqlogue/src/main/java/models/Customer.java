@@ -54,7 +54,7 @@ public class Customer {
 	@Column(name = "phoneNumber", nullable = false, length = 225)
 	@Size(max = 225)
 	@NotNull
-	private String phoneNumber;
+	private String phoneNumber = "####";
 
 	@Column(name = "password", nullable = false, length = 225)
 	@Size(max = 225)

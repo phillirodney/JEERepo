@@ -17,7 +17,7 @@ public class Payment {
 	@Id
 	@Column(name = "card_number", nullable = false, unique = true)
 	@GeneratedValue
-	private String cardNumber;
+	private String cardNumber  = "####";
 
 	// Uni-Directional Relationship
 	@ManyToOne
@@ -31,11 +31,11 @@ public class Payment {
 	@Column(name = "expiry_date", nullable = false)
 	@Type(type = "expiryDate")
 	@NotNull
-	private Date expiryDate;
+	private Date expiryDate = new Date(0);
 
 	@OneToOne
 	@JoinColumn(name = "name_on_card")
-	private String nameOnCard;
+	private String nameOnCard = "####";
 
 	@OneToOne
 	@JoinColumn(name = "CVC")
