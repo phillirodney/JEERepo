@@ -31,10 +31,11 @@ public class ProductController {
 	 * @return
 	 */
 	public String select(int id) {
+		System.out.println(id);
 		Product item = productService.findProductById(id);
 		if (item != null) {
 			product.setProduct(item);
-			return "Product";
+			return "ProductNew";
 		}
 		return "Browse";
 	}

@@ -44,15 +44,15 @@ public class BasketController {
 	public String addToBasket() {
 
 		if (currentUser.getCustomer() == null) {
-			return "Product";
+			return "ProductNew";
 		}
 		Basket basket = basketService.createBasket(product.getProduct(), 1);
 		if (basketService.checkBasket(basket, currentUser.getCustomer())) {
-			return "Product";
+			return "ProductNew";
 		}
 		currentUser.getCustomer().getBaskets().add(basket);
 
-		return "Product";
+		return "ProductNew";
 
 	}
 

@@ -24,5 +24,6 @@ public interface ProductManager {
     
     List<Product> returnAll();
     
+    List<Product> findbyMaterial(String material);
 
 }

@@ -72,15 +72,15 @@ public class PaymentController {
 	public String Entry() {
 		
 		if(!cardNumber.isEmpty() && !nameOnCard.isEmpty()) {
-			if (paymentService.validPayment(cardNumber, nameOnCard)) {
-				currentUser.setCustomer(paymentService.userPayment(cardNumber));
+			//if (paymentService.validPayment(cardNumber, nameOnCard)) {
+		//		currentUser.setCustomer(paymentService.userPayment(cardNumber));
 				return "Payment";
-			}
-			else {
-				cardNumber = "";
-				nameOnCard = "";
-				return "Payment";
-			}
+	//		}
+	//		else {
+	//			cardNumber = "";
+	//			nameOnCard = "";
+	//			return "Payment";
+	//		}
 		}
 		cardNumber = "";
 		nameOnCard = "";
