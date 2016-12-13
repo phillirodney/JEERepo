@@ -34,7 +34,7 @@ public class ProductController {
 		Product item = productService.findProductById(id);
 		if (item != null) {
 			product.setProduct(item);
-			return "Product";
+			return "ProductNew";
 		}
 		return "Browse";
 	}
