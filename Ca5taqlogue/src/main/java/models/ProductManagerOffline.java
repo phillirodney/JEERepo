@@ -107,4 +107,18 @@ public class ProductManagerOffline implements ProductManager {
     public List<Product> returnAll(){
     	return testData.getProducts();
     }
+
+	@Override
+	public List<Product> findbyMaterial(String material) {
+		List<Product> products = testData.getProducts();
+		List<Product> product1 = new ArrayList<>();
+		for(Product p: products) {
+			if(p.getMaterial().equals(material)) {
+				product1.add(p);
+				
+			}
+		}
+	
+		return product1;
+	}
 }

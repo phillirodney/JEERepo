@@ -20,17 +20,23 @@ template="maintemplate.xhtml">
 				<div class="row">
 					<div class="col-sm-3 sidebar die">
 						<ul class="nav nav-sidebar" style="padding: 8%">
-							<li>Material
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 1</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 2</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 3</label>
-								</div>
-							</li>
+						
+						<li>Material <h:form style="margin-bottom:10%;">
+
+								<h:selectOneRadio value="#{Criteria.material}"
+									layout="pageDirection">
+									<f:selectItem itemValue="Leather" itemLabel="Leather" />
+									<f:selectItem itemValue="Pot" itemLabel="Pot" />
+									<f:selectItem itemValue="China" itemLabel="China" />
+								</h:selectOneRadio>
+
+								<h:commandButton action="#{Criteria.findby}" value="Find" />
+
+
+							</h:form>
+
+						</li>
+							
 							<br/>
 
 							<li>
@@ -130,7 +136,7 @@ template="maintemplate.xhtml">
 							<ui:repeat var="product" value="#{search.results}">
 								<div class="col-sm-4">
 									<h:graphicImage value="img/gnome.png" class="img-thumbnail shadow" width="200" height="200"/>
-									<h4><h:commandLink action="#{products.select(product.id)}" 
+									<h4><h:commandLink action="#{products.select(product.productId)}" 
 									value="#{product.name}"/></h4>
 									<p><h:outputText value="#{product.description}"/></p>
 								</div>
