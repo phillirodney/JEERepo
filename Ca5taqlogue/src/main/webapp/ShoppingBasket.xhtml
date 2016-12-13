@@ -15,50 +15,84 @@
 		</h1>
 
 		<div class="container-fluid">
+		<h:form>
 			<ui:repeat var="basket" value="#{user.customer.baskets}">
-				<div class="row">
-					<div class="col-md-4 col-xs-12">
+			<div class="jumbotron shadow" style="padding-top:1%;">
+				<div class="row" style="margin-top:5%;">
+				
+					<div class="col-sm-2">
 						<img src="img/garden_gnome.png" width="100px" height="100px" />
 					</div>
-					<div class="col-md-8">
-						<div class="col-sm-4">
+					<div class="col-sm-4">
+						
 							<h2>
-								<h:outputText value="#{basket.product.name}" />
+								#{basket.product.name}
 							</h2>
-							<p>
-								<h:outputText value="#{basket.product.description}" />
-							</p>
-						</div>
-						<div class="col-sm-2">
-							<br></br> <br></br>
-
-
-							<h:outputText value="#{basket.product.price}" />
-
-						</div>
-						<h:form>
-							<div class="quantity buttons_added">
-								<h:inputText type="number" size="4" class="input-text qty text"
-									title="Qty" value="#{basket.quantity}" min="0" step="1"></h:inputText>
-							</div>
-						</h:form>
-						<div class="col-sm-2"></div>
+						
+								#{basket.product.description}
+							
 					</div>
+						
+					<div class="col-sm-2">
+							
+							
+							<h2 class="parse">
+							#{basket.product.price}
+							</h2>
+
+					</div>
+					
+					
+						
+					<div class="col-sm-2" style="margin-top:2%;">
+							
+							<h:inputText  class="input-text qty text thisclass"
+									 value="#{basket.quantity}" ></h:inputText>
+								
+							
+							<h:commandButton  value="Update"
+								class="btn btn-outline-primary" action="#{Basket.updateQuantity(basket)}" style="margin-top:10%;"/>
+					</div>
+					
+					</div>
+						
+						
 				</div>
 
 			</ui:repeat>
+			</h:form>
+			
+			
+			<p id="total">Hello World!</p>			
+			<script type="text/javascript">
+				var total = 0;
+				var x = document.getElementsByClassName("parse");
+				var y = document.getElementsByClassName("thisclass");
+				for(items in y){console.log(y[items].value);}
+				for(items in x){
+					console.log(x[items].innerHTML);
+					if(typeof x[items].innerHTML != 'undefined'){
+							
+					
+						total += (parseInt(x[items].innerHTML));
+					}
+					
+				}
+				document.getElementById("total").innerHTML = total;
+			</script>
+			
+			
+			
 			<br></br>
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-2"></div>
 				<div class="col-sm-2"></div>
 				<div class="col-sm-2">
-					<h:outputText value="#{basket.product.getPrice}" />
+					
 				</div>
 				<div class="col-sm-2">
-					<h:commandButton type="button" value="Update
-						Cart"
-						class="btn btn-outline-primary" action="#{Basket.updateQuantity}"></h:commandButton>
+					
 				</div>
 				<div class="col-sm-2">
 					<h:button type="button"

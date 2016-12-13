@@ -35,6 +35,7 @@ public class BasketController {
 
 	@Inject
 	private selectedProduct product;
+	
 	private int quantity;
 
 	List<Basket> basket_list;
@@ -70,9 +71,9 @@ public class BasketController {
 	
 
 	
-	public void updateQuantity(Basket basket, int quan){
+	public void updateQuantity(Basket basket){
 		
-		basket.setQuantity(quan);
+		System.out.println(basket.getQuantity());
 		
 		/*
 		
