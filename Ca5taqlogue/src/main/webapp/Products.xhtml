@@ -130,8 +130,9 @@ template="maintemplate.xhtml">
 							<ui:repeat var="product" value="#{search.results}">
 								<div class="col-sm-4">
 									<h:graphicImage value="img/gnome.png" class="img-thumbnail shadow" width="200" height="200"/>
+									<h:form>
 									<h4><h:commandLink action="#{products.select(product.id)}" 
-									value="#{product.name}"/></h4>
+									value="#{product.name}"/></h4></h:form>
 									<p><h:outputText value="#{product.description}"/></p>
 								</div>
 							</ui:repeat>
