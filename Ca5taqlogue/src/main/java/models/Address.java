@@ -26,17 +26,17 @@ public class Address {
 	@Column(name = "street", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
-	private String street;
+	private String street = "####";
 	
 	@Column(name = "city", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
-	private String city;
+	private String city  = "####";
 	
 	@Column(name = "postcode", nullable=false, length=225)
 	@Size(max=225)
 	@NotNull
-	private String postcode;
+	private String postcode  = "####";
 
 	public Address(int addressId, int houseNumber, String street, String city, String postcode) {
 

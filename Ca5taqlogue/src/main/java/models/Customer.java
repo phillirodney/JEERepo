@@ -54,7 +54,7 @@ public class Customer {
 	@Column(name = "phoneNumber", nullable = false, length = 225)
 	@Size(max = 225)
 	@NotNull
-	private String phoneNumber;
+	private String phoneNumber = "####";
 
 	@Column(name = "password", nullable = false, length = 225)
 	@Size(max = 225)
@@ -94,10 +94,11 @@ public class Customer {
 
 	}
 
-	public Customer(String name, String email, String phone, String password) {
+	public Customer(String name, String lastName, String email, String password) {
 		this.firstName = name;
 		this.email = email;
 		this.password = password;
+		this.lastName = lastName;
 		this.baskets = new ArrayList<>();
 
 	}
@@ -189,7 +190,5 @@ public class Customer {
 	public void setOrders(List<CustomerOrder> orders) {
 		this.orders = orders;
 	}
-
-
 
 }

@@ -176,7 +176,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="number" value="#{address.houseNumber}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{address.changeHouseNumber}"
 												onclick="setHouseNumberValue();" />
 
@@ -190,7 +190,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="street" value="#{address.street}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{address.changeStreet}" onclick="setStreetValue();" />
 
 										</h:form></td>
@@ -203,7 +203,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="city" value="#{address.city}" />
-											<h:commandButton value="Edit" action="#{address.changeCity}"
+											<h:commandButton value="UPDATE" action="#{address.changeCity}"
 												onclick="setCityValue();" />
 
 										</h:form></td>
@@ -216,7 +216,7 @@ enjoy-css {
 
 
 											<h:inputHidden id="postcode" value="#{address.postcode}" />
-											<h:commandButton value="Edit"
+											<h:commandButton value="UPDATE"
 												action="#{address.changePostcode}"
 												onclick="setPostcodeValue();" />
 
@@ -226,12 +226,7 @@ enjoy-css {
 								<tr>
 									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
-								<tr>
-									<td><div class="enjoy-css">
-											<b>UPDATE </b><span class="glyphicon glyphicon-ok"
-												aria-hidden="true"></span>
-										</div></td>
-								</tr>
+
 							</table>
 
 						</div>
