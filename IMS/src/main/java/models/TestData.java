@@ -82,17 +82,23 @@ public class TestData {
 		Stock stock6 = new Stock(6, 176, 196, 95, false);
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
+		
+		List<SupplierOrderLine> sol = new ArrayList<>();
+		
+		sol.add(new SupplierOrderLine(2, product1));
+		sol.add(new SupplierOrderLine(3, product2));
+		sol.add(new SupplierOrderLine(1, product3));
+		
 
-		StockOrder stockOrder1 = new StockOrder(1, new Date(0), 1, "Funky Gnomes");
-		StockOrder stockOrder2 = new StockOrder(2, new Date(0), 1, "Saucy Gnomes");
-		StockOrder stockOrder3 = new StockOrder(3, new Date(0), 1, "Gnomes R Us");
-		StockOrder stockOrder4 = new StockOrder(4, new Date(0), 1, "Gnomes UK");
-		StockOrder stockOrder5 = new StockOrder(5, new Date(0), 1, "Gnome Stop");
-		StockOrder stockOrder6 = new StockOrder(6, new Date(0), 1, "Gnomes Avenue");
-		StockOrder stockOrder7 = new StockOrder(7, new Date(0), 1, "Gnomes Consulting");
-		StockOrder stockOrder8 = new StockOrder(8, new Date(0), 1, "Gnome Time");
+		StockOrder stockOrder1 = new StockOrder(1, sol);
+		StockOrder stockOrder2 = new StockOrder(2, sol);
+		StockOrder stockOrder3 = new StockOrder(3, sol);
+		StockOrder stockOrder4 = new StockOrder(4, sol);
+		StockOrder stockOrder5 = new StockOrder(5, sol);
+		StockOrder stockOrder6 = new StockOrder(6, sol);
+		StockOrder stockOrder7 = new StockOrder(7, sol);
+		StockOrder stockOrder8 = new StockOrder(8, sol);
 
-		List<StockOrder> stockOrders = new ArrayList<StockOrder>();
 		
 		stockOrders.add(stockOrder1);
 		stockOrders.add(stockOrder2);

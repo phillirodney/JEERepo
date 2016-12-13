@@ -1,4 +1,7 @@
 package models;
+
+import java.util.List;
+
 /**
  * @author Philli
  * @author Cieran
@@ -12,6 +15,8 @@ public interface StockOrderManager {
     void updateStockOrder();
 
     void deleteStockOrder(StockOrder stockOrder);
+    
+    List<StockOrder> returnAll();
 
 
 }

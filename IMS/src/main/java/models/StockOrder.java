@@ -24,12 +24,12 @@ public class StockOrder {
 	@JoinColumn(name = "supplier_id")
 	private Supplier supplier;
 
-	List<SupplierOrderLine> supplierOrderLine = new ArrayList<SupplierOrderLine>();
+	List<SupplierOrderLine> supplierOrderLine;
 
-	public StockOrder(int orderID, Date dateOrdered, int supplierID, String supplierName) {
+	public StockOrder(int orderID, List<SupplierOrderLine> supplierOrderLine) {
 		this.stockOrderID = orderID; // change to implement unique order ID
 		this.dateOrdered = new Date();
-		this.supplier = new Supplier();
+		this.supplierOrderLine = supplierOrderLine;
 	}
 
 	public int getstockOrderID() {
@@ -59,6 +59,10 @@ public class StockOrder {
 
 	public void setSupplier(Supplier supplier) {
 		this.supplier = supplier;
+	}
+	
+	public List<SupplierOrderLine> getSupplyOrderLines() {
+		return this.supplierOrderLine;
 	}
 
 }

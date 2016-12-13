@@ -33,15 +33,10 @@ public class SupplierOrderLine {
 	}
 
 
-	public SupplierOrderLine(int quantity, Product product, StockOrder stockOrder){
+	public SupplierOrderLine(int quantity, Product product){
 		
-		this.quantity = quantity;
-	}
-
-	public SupplierOrderLine(int supplierOrderLineId, Product product){
-		this.supplierOrderLineId = supplierOrderLineId;
+		this.setQuantity(quantity);
 		this.product = product;
-		this.stockOrder = stockOrder;
 		
 	}
 
@@ -59,6 +54,16 @@ public class SupplierOrderLine {
 
 	public void setProduct(Product product) {
 		 this.product = product;
+	}
+
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 }

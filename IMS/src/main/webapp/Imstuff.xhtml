@@ -139,41 +139,40 @@
     	<div id="menu1" class="tab-pane fade">
 
     	<br/>
+    	
+    	<h:dataTable value="#{supplierorder.orders}" var="so"
+    			class="table table-bordered table-striped">
 
-  		<table class="table table-bordered table-striped">
-		    <thead>
-		      <tr>
-		        <th>Id</th>
-		        <th>Date</th>
-		        <th>Suplier</th>
-		        <th>Status</th>
-		        <th>View</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>John</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td><button type="button" onclick="alert('Hello world!')">View</button></td>
-		      </tr>
-		      <tr>
-		        <td>Mary</td>
-		        <td>Vera</td>
-		        <td>Moe</td>
-		        <td>Doe</td>
-		        <td><button type="button" onclick="alert('Hello world!')" >View</button></td>
-		      </tr>
-		      <tr>
-		        <td>July</td>
-		        <td>Dooley</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td><button type="button" onclick="alert('Hello world!')" >View</button></td>
-		      </tr>
-		    </tbody>
-  		</table>
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Id</f:facet>
+    				<!-- row record -->
+    				#{so.stockOrderID}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Name</f:facet>
+    				Name
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Date</f:facet>
+    				#{so.dateOrdered}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Status</f:facet>
+    				#{co.dispatchStatus}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">View</f:facet>
+    				<h:form>
+    					<h:commandButton action="#{sorder.selectSupplyOrder(so)}" value="View"></h:commandButton>
+    				</h:form>
+    			</h:column>
+
+    	</h:dataTable>
 
   		</div>
 
@@ -456,40 +455,30 @@
 
 	  		<div style="padding: 3%;">
   			<div style="padding: 3%; background-color: white;" class="shadow">	
+  			
+  				<h:dataTable value="#{sorder.supplyOrderLines}" var="sol"
+    			class="table table-bordered table-striped">
 
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">ProductID</f:facet>
+    				<!-- row record -->
+    				#{sol.product.productId}
+    			</h:column>
 
+    			<h:column>
+    				<f:facet name="header">Product Name</f:facet>
+    				#{sol.product.name}
+    			</h:column>
 
-	  		<table class="table table-bordered">
-		    <thead>
-		      <tr>
-		        <th>Id</th>
-		        <th>Date</th>
-		        <th>Suplier</th>
-		        <th>Status</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>John</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		      </tr>
-		      <tr>
-		        <td>Mary</td>
-		        <td>Vera</td>
-		        <td>Moe</td>
-		        <td>mary</td>
-		      </tr>
-		      <tr>
-		        <td>July</td>
-		        <td>Dooley</td>
-		        <td>Doe</td>
-		        <td>Doe</td>
-		      </tr>
-		    </tbody>
+    			<h:column>
+    				<f:facet name="header">Quantity</f:facet>
+    				#{sol.quantity}
+    			</h:column>
 
-		    </table>
+    		
+    		</h:dataTable>
+
 
 		    </div>
 

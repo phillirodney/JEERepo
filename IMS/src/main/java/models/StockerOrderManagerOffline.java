@@ -70,4 +70,12 @@ public class StockerOrderManagerOffline implements StockOrderManager {
 
 
     }
+
+	@Override
+	public List<StockOrder> returnAll() {
+		
+		if(testData.getStockOrders() == null){System.out.print("dsasd");} else{System.out.print("Non nUll");}
+		return testData.getStockOrders();
+	
+	}
 }

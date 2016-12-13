@@ -25,7 +25,7 @@ public class SelectedSupplyOrder implements Serializable{
 		return "Imstuff";
 	}
 	
-	public  List<StockOrder> getStockOrders(){
+	public  List<SupplierOrderLine> getSupplyOrderLines(){
 		if(supplyOrder == null){return null;}
 		return supplyOrder.getSupplyOrderLines();
 	}
