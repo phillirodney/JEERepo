@@ -59,21 +59,7 @@ public class TestData {
 
 		// Product product1 = new Product(1, "Gnome1", 10, 1, null, null, null,
 		// null);
-		List<String> paths = new ArrayList<>();
-		paths.add("/resources/image.png");
-		paths.add("/resources/image2.png");
-		Product product1 = new Product(1, "Tyrion Gnomister",
-				"The popular character from the hit TV Show Game of Gnomes", 21.99, 10001, 11001, 120, 80, 4, paths);
-		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99,
-				10002, 11002, 120, 80, 4, paths);
-		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99,
-				10003, 11003, 120, 80, 4, paths);
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, 10004, 11004, 120, 80, 4, paths);
-		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, 10005, 11005, 120, 80, 4, paths);
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, 10006, 11006, 120, 80, 4, paths);
-		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, 10007, 11007, 120, 80, 4, paths);
-		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, 10008, 11008, 120, 80, 4, paths);
-
+		
 		Stock stock1 = new Stock(1, 100, 120, 50, false);
 		Stock stock2 = new Stock(2, 120, 140, 70, false);
 		Stock stock3 = new Stock(3, 130, 150, 60, false);
@@ -83,21 +69,43 @@ public class TestData {
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
 		
-		List<SupplierOrderLine> sol = new ArrayList<>();
 		
-		sol.add(new SupplierOrderLine(2, product1));
-		sol.add(new SupplierOrderLine(3, product2));
-		sol.add(new SupplierOrderLine(1, product3));
+		
+		List<String> paths = new ArrayList<>();
+		paths.add("/resources/image.png");
+		paths.add("/resources/image2.png");
+		Product product1 = new Product(1, "Tyrion Gnomister",
+				"The popular character from the hit TV Show Game of Gnomes", 21.99, stock1, stock2, 120, 80, 4, paths, "Pot");
+		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99,
+				stock3, stock4, 120, 80, 4, paths, "Leather");
+		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99,
+				stock5, stock6, 120, 80, 4, paths, "Pot");
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 17.99, stock7, stock8, 120, 80, 4, paths, "China");
+		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 17.99, stock1, stock2, 120, 80, 4, paths, "China");
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 17.99, stock3, stock4, 120, 80, 4, paths, "China");
+		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 17.99, stock5, stock6, 120, 80, 4, paths, "Leather");
+		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 17.99, stock7, stock8, 120, 80, 4, paths, "Pot");
+
+	
+		SupplierOrderLine sol = new SupplierOrderLine(1, product1);
+		SupplierOrderLine sol2 = new SupplierOrderLine(2, product2);
+		SupplierOrderLine sol3 = new SupplierOrderLine(3, product3);
+		List<SupplierOrderLine> orderlines = new ArrayList<>();
+		orderlines.add(sol);
+		orderlines.add(sol2);
+		orderlines.add(sol3);
+		
+		
 		
 
-		StockOrder stockOrder1 = new StockOrder(1, sol);
-		StockOrder stockOrder2 = new StockOrder(2, sol);
-		StockOrder stockOrder3 = new StockOrder(3, sol);
-		StockOrder stockOrder4 = new StockOrder(4, sol);
-		StockOrder stockOrder5 = new StockOrder(5, sol);
-		StockOrder stockOrder6 = new StockOrder(6, sol);
-		StockOrder stockOrder7 = new StockOrder(7, sol);
-		StockOrder stockOrder8 = new StockOrder(8, sol);
+		StockOrder stockOrder1 = new StockOrder(1, orderlines);
+		StockOrder stockOrder2 = new StockOrder(2, orderlines);
+		StockOrder stockOrder3 = new StockOrder(3, orderlines);
+		StockOrder stockOrder4 = new StockOrder(4, orderlines);
+		StockOrder stockOrder5 = new StockOrder(5, orderlines);
+		StockOrder stockOrder6 = new StockOrder(6, orderlines);
+		StockOrder stockOrder7 = new StockOrder(7, orderlines);
+		StockOrder stockOrder8 = new StockOrder(8, orderlines);
 
 		
 		stockOrders.add(stockOrder1);
@@ -109,10 +117,11 @@ public class TestData {
 		stockOrders.add(stockOrder7);
 		stockOrders.add(stockOrder8);
 
-
+		
+		
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
 				new Date(0));
-		Customer customer2 = new Customer(2, "Homer", "Simpson", "homersimpson@gmail.com", "01234567899", "pass",
+		Customer customer2 = new Customer(2, "Beauty", "Beauty", "blackbeauty@gmail.com", "01234567899", "pass",
 				new Date(0));
 		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com", "01234567899", "pass",
 				new Date(0));

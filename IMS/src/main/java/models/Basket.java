@@ -4,7 +4,6 @@ package models;
 
 import javax.persistence.*;
 
-import controllers.CurrentUser;
 
 import java.sql.Date;
 

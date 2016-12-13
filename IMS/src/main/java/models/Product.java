@@ -25,33 +25,39 @@ public class Product implements Serializable {
 
 	@Id
 	private int productId;
+
+	private Stock stock;
+	private Stock porousStock;
+	
 	private String name;
 	private String description;
 	private double price;
-	private long stockId;
-	private long porouswareStockId;
 	private int height;
 	private int length;
 	private int weight;
+	private String material;
 
 	private List<String> images;
 	
 	public Product() {
 	}
 
-	public Product(int productId, String name, String description, double price,long stockId,
-			long porouswareStockId, int height, int length, int weight, List<String> imagepath) {
+	public Product(int productId, String name, String description, double price, Stock stock,
+			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material) {
 
-		this.productId = productId;
+
 		this.name = name;
 		this.description = description;
 		this.price = price;
 		this.images = imagepath;
-		this.stockId = stockId;
-		this.porouswareStockId = porouswareStockId;
+		
+		this.setStock(stock);
+		this.setPorousStock(porousStock);
+		
 		this.height = height;
 		this.length = length;
 		this.weight = weight;
+		this.material = material;
 
 	}
 
@@ -94,21 +100,11 @@ public class Product implements Serializable {
 		this.images = images;
 	}
 
-	public long getStockId() {
-		return stockId;
-	}
-
-	public void setStockId(long stockId) {
-		this.stockId = stockId;
-	}
 
 	public double getPrice() {
 		return price;
 	}
 
-	public long getPorouswareStockId() {
-		return porouswareStockId;
-	}
 
 	public void setPrice(double price) {
 		this.price = price;
@@ -138,10 +134,30 @@ public class Product implements Serializable {
 		this.weight = weight;
 	}
 
-	public void setPorouswareStockId(long porouswareStockId) {
-		this.porouswareStockId = porouswareStockId;
+	public String getMaterial() {
+		return material;
 	}
 
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	public Stock getStock() {
+		return stock;
+	}
+
+	public void setStock(Stock stock) {
+		this.stock = stock;
+	}
+
+	public Stock getPorousStock() {
+		return porousStock;
+	}
+
+	public void setPorousStock(Stock porousStock) {
+		this.porousStock = porousStock;
+	}
 	
+
 
 }
