@@ -94,10 +94,11 @@ public class Customer {
 
 	}
 
-	public Customer(String name, String email, String phone, String password) {
+	public Customer(String name, String lastName, String email, String password) {
 		this.firstName = name;
 		this.email = email;
 		this.password = password;
+		this.lastName = lastName;
 		this.baskets = new ArrayList<>();
 
 	}
@@ -189,7 +190,5 @@ public class Customer {
 	public void setOrders(List<CustomerOrder> orders) {
 		this.orders = orders;
 	}
-
-
 
 }
