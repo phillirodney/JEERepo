@@ -18,15 +18,34 @@ template="maintemplate.xhtml">
 				<div class="row">
 					<div class="col-sm-3 sidebar die">
 						<ul class="nav nav-sidebar" style="padding: 8%">
+						
+						<li>Material
+
+						<h:form>
+
+						<h:selectOneRadio value="#{Criteria.material}" layout="pageDirection">
+							<f:selectItem itemValue="Leather" itemLabel="Leather"/>
+							<f:selectItem itemValue="Pot" itemLabel="Pot"/>
+							<f:selectItem itemValue="China" itemLabel="China"/>
+						</h:selectOneRadio>  
+						
+						<h:commandButton action="#{Criteria.findby}" value="Find"/>
+						
+						
+						</h:form>
+						
+						</li>
+						
+						
 							<li>Material
 								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 1</label>
+									<label><input type="checkbox" value=""/>Pot</label>
 								</div>
 								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 2</label>
+									<label><input type="checkbox" value=""/>Leather</label>
 								</div>
 								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 3</label>
+									<label><input type="checkbox" value=""/>China</label>
 								</div>
 							</li>
 							<br/>

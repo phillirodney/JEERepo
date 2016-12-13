@@ -1,7 +1,9 @@
 package controllers;
+import java.io.Serializable;
 import java.util.List;
 
-import javax.enterprise.context.RequestScoped;
+
+import javax.enterprise.context.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -16,8 +18,8 @@ import models.*;
  */
 
 @Named("search")
-@RequestScoped
-public class SearchController {
+@SessionScoped
+public class SearchController implements Serializable {
 	
 	@Inject
 	private searchService searchService;

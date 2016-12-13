@@ -33,6 +33,7 @@ public class Product implements Serializable {
 	private int height;
 	private int length;
 	private int weight;
+	private String material;
 
 	private List<String> images;
 	
@@ -40,7 +41,7 @@ public class Product implements Serializable {
 	}
 
 	public Product(int productId, String name, String description, double price,long stockId,
-			long porouswareStockId, int height, int length, int weight, List<String> imagepath) {
+			long porouswareStockId, int height, int length, int weight, List<String> imagepath, String material) {
 
 		this.productId = productId;
 		this.name = name;
@@ -52,6 +53,7 @@ public class Product implements Serializable {
 		this.height = height;
 		this.length = length;
 		this.weight = weight;
+		this.material = material;
 
 	}
 
@@ -140,6 +142,14 @@ public class Product implements Serializable {
 
 	public void setPorouswareStockId(long porouswareStockId) {
 		this.porouswareStockId = porouswareStockId;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
 	}
 
 	
