@@ -74,14 +74,14 @@ public class TestData {
 		List<String> paths = new ArrayList<>();
 		paths.add("/resources/image.png");
 		paths.add("/resources/image2.png");
-		Product product1 = new Product(1, "Tyrion Gnomister","The popular character from the hit TV Show Game of Gnomes", 100, stock1, stock2, 120, 80, 4, paths, "Pot", "No");
-		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 23.99, stock3, stock4, 120, 80, 4, paths, "Leather", "No");
-		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 24.99, stock5, stock6, 120, 80, 4, paths, "Pot", "No");
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 200, stock7, stock8, 120, 80, 4, paths, "China", "No");
-		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 300, stock1, stock2, 120, 80, 4, paths, "China", "No");
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 400, stock3, stock4, 120, 80, 4, paths, "China", "No");
-		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 500, stock5, stock6, 120, 80, 4, paths, "Leather", "No");
-		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 600, stock7, stock8, 120, 80, 4, paths, "Pot", "No");
+		Product product1 = new Product(1, "Tyrion Gnomister","The popular character from the hit TV Show Game of Gnomes", 55.00, stock1, stock2, 120, 80, 4, paths, "Pot", "No");
+		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 30.00, stock3, stock4, 120, 80, 4, paths, "Leather", "No");
+		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 27.00, stock5, stock6, 120, 80, 4, paths, "Pot", "No");
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "China", "No");
+		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 15.00, stock1, stock2, 120, 80, 4, paths, "China", "No");
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 15.00, stock3, stock4, 120, 80, 4, paths, "China", "No");
+		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 15.00, stock5, stock6, 120, 80, 4, paths, "Leather", "No");
+		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "Pot", "No");
 	
 
 
