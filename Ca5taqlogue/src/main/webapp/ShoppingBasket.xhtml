@@ -15,94 +15,91 @@
 		</h1>
 
 		<div class="container-fluid">
-		<h:form>
-			<ui:repeat var="basket" value="#{user.customer.baskets}">
-			<div class="jumbotron shadow" style="padding-top:1%;">
-				<div class="row" style="margin-top:5%;">
-				
-					<div class="col-sm-2">
-						<img src="img/garden_gnome.png" width="100px" height="100px" />
-					</div>
-					<div class="col-sm-4">
-						
-							<h2>
-								#{basket.product.name}
-							</h2>
-						
+			<h:form>
+				<ui:repeat var="basket" value="#{user.customer.baskets}">
+					<div class="jumbotron shadow" style="padding-top: 1%;">
+						<div class="row" style="margin-top: 5%;">
+
+							<div class="col-sm-2">
+								<img src="img/garden_gnome.png" width="100px" height="100px" />
+							</div>
+							<div class="col-sm-4">
+
+								<h2>#{basket.product.name}</h2>
+
 								#{basket.product.description}
-							
-					</div>
-						
-					<div class="col-sm-2">
-							
-							
-							<h2 class="parse">
-							#{basket.product.price}
-							</h2>
+
+							</div>
+
+							<div class="col-sm-2">
+
+
+								<h2 class="parse">#{basket.product.price}</h2>
+
+							</div>
+
+
+
+							<div class="col-sm-2" style="margin-top: 2%;">
+
+								<h:inputText class="input-text qty text thisclass"
+									value="#{basket.quantity}"></h:inputText>
+								<div class="popup" onclick="myFunction()">
+									<h:commandButton value="Update" class="btn btn-outline-primary"
+										action="#{Basket.updateQuantity(basket)}"
+										style="margin-top:10%;" />
+									<span class="popuptext" id="myPopup">A Simple Popup!</span>
+								</div>
+
+
+							</div>
+
+
+						</div>
+
 
 					</div>
-					
-					
-						
-					<div class="col-sm-2" style="margin-top:2%;">
-							
-							<h:inputText  class="input-text qty text thisclass"
-									 value="#{basket.quantity}" ></h:inputText>
-								
-							
-							<h:commandButton  value="Update"
-								class="btn btn-outline-primary" action="#{Basket.updateQuantity(basket)}" style="margin-top:10%;"/>
-					</div>
-					
-					</div>
-						
-						
-				</div>
 
-			</ui:repeat>
+				</ui:repeat>
 			</h:form>
-			
-			
-			<p id="total">Hello World!</p>			
+
+
+			<p id="total">Hello World!</p>
 			<script type="text/javascript">
 				var total = 0;
 				var x = document.getElementsByClassName("parse");
 				var y = document.getElementsByClassName("thisclass");
-				for(items in y){console.log(y[items].value);}
-				for(items in x){
+				for (items in y) {
+					console.log(y[items].value);
+				}
+				for (items in x) {
 					console.log(x[items].innerHTML);
-					if(typeof x[items].innerHTML != 'undefined'){
-							
-					
+					if (typeof x[items].innerHTML != 'undefined') {
+
 						total += (parseInt(x[items].innerHTML));
 					}
-					
+
 				}
 				document.getElementById("total").innerHTML = total;
 			</script>
-			
-			
-			
+
+
+
 			<br></br>
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-2"></div>
 				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-2"></div>
 				<div class="col-sm-2">
-					
-				</div>
-				<div class="col-sm-2">
-					
-				</div>
-				<div class="col-sm-2">
-					<h:button type="button"
-						class="btn btn-outline-primary" value="Checkout Page" outcome="checkout">
+					<h:button type="button" class="btn btn-outline-primary"
+						value="Checkout Page" outcome="checkout">
 					</h:button>
-					
+
 				</div>
 			</div>
 		</div>
-
 
 	</ui:define>
 </ui:composition>
