@@ -179,10 +179,13 @@ enjoy-css {
 
 
 											<h:inputHidden id="number" value="#{address.houseNumber}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changeHouseNumber}"
-												onclick="setHouseNumberValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changeHouseNumber}"
+													onclick="setHouseNumberValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
@@ -195,9 +198,13 @@ enjoy-css {
 
 
 											<h:inputHidden id="street" value="#{address.street}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changeStreet}" onclick="setStreetValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changeStreet}"
+													onclick="setStreetValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 
 								</tr>
@@ -210,9 +217,12 @@ enjoy-css {
 
 
 											<h:inputHidden id="city" value="#{address.city}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changeCity}" onclick="setCityValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changeCity}" onclick="setCityValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
@@ -224,10 +234,13 @@ enjoy-css {
 
 
 											<h:inputHidden id="postcode" value="#{address.postcode}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changePostcode}"
-												onclick="setPostcodeValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changePostcode}"
+													onclick="setPostcodeValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
