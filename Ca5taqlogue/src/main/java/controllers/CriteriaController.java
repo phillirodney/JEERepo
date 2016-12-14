@@ -24,7 +24,7 @@ public class CriteriaController implements Serializable{
 	private CriteriaService cService;
 
 	private String material;
-	private String porousware;
+	private boolean porousware;
 	
 	List<Product> results;
 	
@@ -50,14 +50,25 @@ public class CriteriaController implements Serializable{
 		return results;
 	}
 
-	public String getPorousware() {
+	public boolean getPorousware() {
 		return porousware;
 	}
 
-	public void setPorousware(String porousware) {
+	public void setPorousware(boolean porousware) {
 		this.porousware = porousware;
 	}
 	
+	
+	public String findby1() {
+		results = cService.findbyCriteria(porousware);
+		return "productCriteria";
+		
+		
+	}
+	
+	public List<Product> getResults1() {
+		return results;
+	}
 	
 }
 

@@ -39,7 +39,7 @@ public class ProductService {
 	
 	public void createProduct(String name, String desciption, double price){
 			
-		Product product = new Product(name, desciption, price);
+		Product product = new Product(name, desciption, price)
 		productManager.createProduct(product);
 		
 	} 

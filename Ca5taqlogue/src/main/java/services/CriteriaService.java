@@ -19,13 +19,17 @@ public class CriteriaService {
 		List<Product> pList = new ArrayList<>();
 		pList = pManager.findbyMaterial(material);
 		return pList;
-		
-		
-	}
+
+		}
+	
+	
+public List<Product> findbyCriteria (boolean porousware) {
+	List<Product> pList = new ArrayList<>();
+	pList = pManager.findbyPorousware(porousware);
+return pList;
 	
 	
 	
-	
-	
-}
+}}
+
 

@@ -123,7 +123,7 @@ public class ProductManagerOffline implements ProductManager {
 	}
 
 	@Override
-	public List<Product> findbyPorousware(String porousware) {
+	public List<Product> findbyPorousware(boolean porousware) {
 		List<Product> products = testData.getProducts();
 		List<Product> product1 = new ArrayList<>();
 		for(Product p: products) {
