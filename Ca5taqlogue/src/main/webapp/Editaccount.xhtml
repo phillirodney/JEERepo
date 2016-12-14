@@ -174,16 +174,16 @@ enjoy-css {
 
 								<tr>
 
-									<td>First Name: <span id="test" contenteditable="true">#{user.customer.firstName}
-									</span>
+									<td>First Name: <span id="test" contenteditable="true"
+										style="background: #fff;">#{user.customer.firstName} </span>
 									</td>
 
 									<td><h:form id="myform">
 
 
 											<h:inputHidden id="hidden" value="#{registration.name}" />
-											<h:commandButton value="UPDATE" action="#{registration.change}"
-												onclick="setHiddenValue();" />
+											<h:commandButton value="UPDATE"
+												action="#{registration.change}" onclick="setHiddenValue();" />
 
 										</h:form></td>
 								</tr>
@@ -191,7 +191,8 @@ enjoy-css {
 								<tr>
 
 									<td>Last Name: <span id="surnameEdit"
-										contenteditable="true">#{user.customer.lastName} </span>
+										contenteditable="true" style="background: #fff;">#{user.customer.lastName}
+									</span>
 									</td>
 
 									<td><h:form id="surname">
@@ -206,8 +207,8 @@ enjoy-css {
 										</h:form></td>
 								</tr>
 								<tr>
-									<td>Email: <span id="emailEdit" contenteditable="true">#{user.customer.email}
-									</span>
+									<td>Email: <span id="emailEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.email} </span>
 									</td>
 
 									<td><h:form id="email">
@@ -221,7 +222,8 @@ enjoy-css {
 										</h:form></td>
 								</tr>
 								<tr>
-									<td>Phone:<span id="phoneEdit" contenteditable="true">#{user.customer.phoneNumber}
+									<td>Phone:<span id="phoneEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.phoneNumber}
 									</span>
 									</td>
 									<td><h:form id="phone">

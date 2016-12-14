@@ -171,7 +171,7 @@ enjoy-css {
 
 								<tr>
 									<td>House Number: <span id="houseNumberEdit"
-										contenteditable="true">#{user.customer.addresses.houseNumber}</span></td>
+										contenteditable="true" style="background: #fff;">#{user.customer.addresses.houseNumber}</span></td>
 									<td><h:form id="houseNumber">
 
 
@@ -184,7 +184,8 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Street: <span id="streetEdit" contenteditable="true">
+									<td>Street: <span id="streetEdit" contenteditable="true"
+										style="background: #fff;">
 											#{user.customer.addresses.street}</span></td>
 									<td><h:form id="changeStreet">
 
@@ -198,20 +199,21 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>City: <span id="cityEdit" contenteditable="true">#{user.customer.addresses.city}</span></td>
+									<td>City: <span id="cityEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.addresses.city}</span></td>
 									<td><h:form id="changeCity">
 
 
 											<h:inputHidden id="city" value="#{address.city}" />
-											<h:commandButton value="UPDATE" action="#{address.changeCity}"
-												onclick="setCityValue();" />
+											<h:commandButton value="UPDATE"
+												action="#{address.changeCity}" onclick="setCityValue();" />
 
 										</h:form></td>
 								</tr>
 
 								<tr>
 									<td>PostCode: <span id="postcodeEdit"
-										contenteditable="true">#{user.customer.addresses.postcode}</span></td>
+										contenteditable="true" style="background: #fff;">#{user.customer.addresses.postcode}</span></td>
 									<td><h:form id="changePostcode">
 
 
