@@ -24,6 +24,7 @@ public class CriteriaController implements Serializable{
 	private CriteriaService cService;
 
 	private String material;
+	private String porousware;
 	
 	List<Product> results;
 	
@@ -59,6 +60,7 @@ public class CriteriaController implements Serializable{
 		return results;
 	}
 
+
 	public int getMinPrice() {
 		return minPrice;
 	}
@@ -73,6 +75,15 @@ public class CriteriaController implements Serializable{
 
 	public void setMaxPrice(int maxPrice) {
 		this.maxPrice = maxPrice;
+	}
+
+	public String getPorousware() {
+		return porousware;
+	}
+
+	public void setPorousware(String porousware) {
+		this.porousware = porousware;
+>>>>>>> 493d94f4d734dc0814a874d00ec41d3f3a35178e
 	}
 	
 	

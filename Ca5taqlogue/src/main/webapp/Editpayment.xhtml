@@ -158,57 +158,62 @@ enjoy-css {
 							<table>
 								<tr>
 									<th>Payment Information</th>
-								</tr>
-								<tr>
 									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+									<td></td>
 								</tr>
-
 								<tr>
-									<td>Name on card: <span id="nameEdit"
-										contenteditable="true">#{user.customer.payment.nameOnCard}</span></td>
+									<td>Name on card:</td>
+									<td><span id="nameEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.payment.nameOnCard}</span></td>
 									<td><h:form id="nameForm">
 
 
 											<h:inputHidden id="name" value="#{payment.nameOnCard}" />
-											<h:commandButton value="UPDATE"
-												action="#{payment.changeNameOnCard}"
-												onclick="setPaymentValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{payment.changeNameOnCard}"
+													onclick="setPaymentValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Card Number: <span id="numberEdit"
-										contenteditable="true">#{user.customer.payment.cardNumber}</span></td>
+									<td>Card Number:</td>
+									<td><span id="numberEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.payment.cardNumber}</span></td>
 									<td><h:form id="cardNumberForm">
 
 
 											<h:inputHidden id="number" value="#{payment.cardNumber}" />
-											<h:commandButton value="UPDATE"
-												action="#{payment.changeCardNumber}"
-												onclick="setCardNumberValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{payment.changeCardNumber}"
+													onclick="setCardNumberValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Expiry Date: <span id="expiryEdit"
-										contenteditable="true">#{user.customer.payment.expiryDate}</span></td>
+									<td>Expiry Date:</td>
+									<td><span id="expiryEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.payment.expiryDate}</span></td>
 									<td><h:form id="expiryDateForm">
 
 
 											<h:inputHidden id="expiry" value="#{payment.expiryDate}" />
-											<h:commandButton value="UPDATE"
-												action="#{payment.changeExpiryDate}"
-												onclick="setExpiryDateValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{payment.changeExpiryDate}"
+													onclick="setExpiryDateValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
-
-								<tr>
-									<td><a href='#'><b>Online Support</b></a></td>
-								</tr>
-
 							</table>
 
 						</div>

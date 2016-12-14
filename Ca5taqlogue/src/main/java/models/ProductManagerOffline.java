@@ -1,9 +1,9 @@
 package models;
+
 import javax.inject.Inject;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
@@ -121,4 +121,18 @@ public class ProductManagerOffline implements ProductManager {
 	
 		return product1;
 	}
-}
+
+	@Override
+	public List<Product> findbyPorousware(String porousware) {
+		List<Product> products = testData.getProducts();
+		List<Product> product1 = new ArrayList<>();
+		for(Product p: products) {
+			if(p.getPorousware() == porousware) {
+				product1.add(p);
+			}
+		}
+		 return product1;
+	
+		}}
+
+	

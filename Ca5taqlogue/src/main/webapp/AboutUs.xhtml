@@ -39,31 +39,32 @@
 		<div class="container-fluid">
 			<div class="jumbotron" id="material">
 				<a id="jumptoform"><h2>Get in touch</h2></a>
-				<form>
-					<div class="form-group">
-						<label for="name">Name:</label> <input type="name"
-							class="form-control" id="name" />
-					</div>
-					<div class="checkbox">
-						Are you already a member? <br /> <br /> <label><input
-							type="checkbox" value="" />Yes</label>
-					</div>
-					<div class="checkbox">
-						<label><input type="checkbox" value="" />No</label>
-					</div>
-					<div class="checkbox disabled">
+					<form action="mailto:customer-services@nbgardens.org?subject=NB%20Gardens%20Customer%20Feedback" method="post"
+						enctype="text/plain">
 						<div class="form-group">
-							<label for="comment">Question/Comment: </label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
+							<label for="name">Name:</label> <input type="name"
+								class="form-control" name="Customer Name" />
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox" /> Remember me</label>
+							Are you already a member? <br /> <br /> <label><input
+								type="checkbox" name="" />Yes</label>
 						</div>
-						
-							<button type="submit" class="btn btn-default">Submit</button>
-						
-					</div>
-				</form>
+						<div class="checkbox">
+							<label><input type="checkbox" name="" />No</label>
+						</div>
+						<div class="checkbox disabled">
+							<div class="form-group">
+								<label for="comment">Question/Comment: </label>
+								<textarea class="form-control" rows="5" name="Feedback"></textarea>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" /> Remember me</label>
+							</div>
+
+							<button type="submit" class="btn btn-default" value="Send">Submit</button>
+
+						</div>
+					</form>
 			</div>
 			
 			
@@ -132,8 +133,7 @@
     </p:dialog>
 </h:form>
 		</div>
-
-		<!-- <div class="container-fluid">
+			<!-- <div class="container-fluid">
 			<div class="jumbotron" id="material">
 				<a id="jumptoform"><h2>Get in touch</h2></a>
 				
@@ -164,10 +164,14 @@
 				
 			</div>
 		</div> -->
+
 		
 		
 
 
 	</ui:define>
+
+</ui:define>
+
 </ui:composition>
 

@@ -164,67 +164,84 @@ enjoy-css {
 							<table>
 								<tr>
 									<th>Shipping Information</th>
+									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+									<td></td>
 								</tr>
 								<tr>
-									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+
 								</tr>
 
 								<tr>
-									<td>House Number: <span id="houseNumberEdit"
-										contenteditable="true">#{user.customer.addresses.houseNumber}</span></td>
+									<td>House Number:</td>
+									<td><span id="houseNumberEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.addresses.houseNumber}</span></td>
 									<td><h:form id="houseNumber">
 
 
 											<h:inputHidden id="number" value="#{address.houseNumber}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changeHouseNumber}"
-												onclick="setHouseNumberValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changeHouseNumber}"
+													onclick="setHouseNumberValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>Street: <span id="streetEdit" contenteditable="true">
+									<td>Street:</td>
+									<td><span id="streetEdit" contenteditable="true"
+										style="background: #fff;">
 											#{user.customer.addresses.street}</span></td>
 									<td><h:form id="changeStreet">
 
 
 											<h:inputHidden id="street" value="#{address.street}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changeStreet}" onclick="setStreetValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changeStreet}"
+													onclick="setStreetValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 
 								</tr>
 
 								<tr>
-									<td>City: <span id="cityEdit" contenteditable="true">#{user.customer.addresses.city}</span></td>
+									<td>City:</td>
+									<td><span id="cityEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.addresses.city}</span></td>
 									<td><h:form id="changeCity">
 
 
 											<h:inputHidden id="city" value="#{address.city}" />
-											<h:commandButton value="UPDATE" action="#{address.changeCity}"
-												onclick="setCityValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changeCity}" onclick="setCityValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
 								<tr>
-									<td>PostCode: <span id="postcodeEdit"
-										contenteditable="true">#{user.customer.addresses.postcode}</span></td>
+									<td>PostCode:</td>
+									<td><span id="postcodeEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.addresses.postcode}</span></td>
 									<td><h:form id="changePostcode">
 
 
 											<h:inputHidden id="postcode" value="#{address.postcode}" />
-											<h:commandButton value="UPDATE"
-												action="#{address.changePostcode}"
-												onclick="setPostcodeValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{address.changePostcode}"
+													onclick="setPostcodeValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
-								</tr>
-
-								<tr>
-									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
 
 							</table>

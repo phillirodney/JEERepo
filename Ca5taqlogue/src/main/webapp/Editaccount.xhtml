@@ -81,6 +81,7 @@ enjoy-css {
 	-o-transition: none;
 	transition: none;
 }
+}
 </style>
 
 		<script type="text/javascript">
@@ -104,7 +105,6 @@ enjoy-css {
 				document.getElementById('phone:phoneText').value = document
 						.getElementById('phoneEdit').innerHTML;
 			}
-			
 		</script>
 
 		<div class="jumbotron" id="material"
@@ -166,77 +166,86 @@ enjoy-css {
 
 							<table>
 								<tr>
+
 									<th>Account Information</th>
-								</tr>
-								<tr>
 									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+									<td></td>
 								</tr>
 
 								<tr>
 
-									<td>First Name: <span id="test" contenteditable="true">#{user.customer.firstName}
-									</span>
-									</td>
+									<td>First Name:</td>
+									<td><span id="test" contenteditable="true"
+										style="background: #fff;">#{user.customer.firstName} </span></td>
 
 									<td><h:form id="myform">
 
 
 											<h:inputHidden id="hidden" value="#{registration.name}" />
-											<h:commandButton value="UPDATE" action="#{registration.change}"
-												onclick="setHiddenValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{registration.change}" onclick="setHiddenValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
 								<tr>
 
-									<td>Last Name: <span id="surnameEdit"
-										contenteditable="true">#{user.customer.lastName} </span>
-									</td>
+									<td>Last Name:</td>
+									<td><span id="surnameEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.lastName} </span></td>
 
 									<td><h:form id="surname">
 
 
 											<h:inputHidden id="surnameText"
 												value="#{registration.lastName}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.changeLastName}"
-												onclick="setLastnameValue();" />
+											<div class="popup" onclick="myFunction()">
+												<h:commandButton value="UPDATE"
+													action="#{registration.changeLastName}"
+													onclick="setLastnameValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 
 										</h:form></td>
 								</tr>
 								<tr>
-									<td>Email: <span id="emailEdit" contenteditable="true">#{user.customer.email}
-									</span>
-									</td>
+									<td>Email:</td>
+									<td><span id="emailEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.email} </span></td>
 
 									<td><h:form id="email">
 
 
 											<h:inputHidden id="emailText" value="#{registration.email}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.changeEmail}"
-												onclick="setEmailValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{registration.changeEmail}"
+													onclick="setEmailValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 								<tr>
-									<td>Phone:<span id="phoneEdit" contenteditable="true">#{user.customer.phoneNumber}
-									</span>
-									</td>
+									<td>Phone:</td>
+									<td><span id="phoneEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.phoneNumber}
+									</span></td>
 									<td><h:form id="phone">
 
 
 											<h:inputHidden id="phoneText" value="#{registration.phone}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.changePhone}"
-												onclick="setPhoneValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{registration.changePhone}"
+													onclick="setPhoneValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
-								</tr>
-
-								<tr>
-									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
 
 							</table>

@@ -15,6 +15,7 @@ import javax.persistence.Table;
  * @author Cieran
  * @author Luke
  * @author Marcus
+ * @author Hayley
  * 
  */
 
@@ -36,6 +37,9 @@ public class Product implements Serializable {
 	private int length;
 	private int weight;
 	private String material;
+	private String porousware;
+	
+	
 
 	private List<String> images;
 	
@@ -43,7 +47,7 @@ public class Product implements Serializable {
 	}
 
 	public Product(int productId, String name, String description, double price, Stock stock,
-			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material) {
+			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material, String porousware) {
 
 
 		this.name = name;
@@ -58,13 +62,18 @@ public class Product implements Serializable {
 		this.length = length;
 		this.weight = weight;
 		this.material = material;
+        this.porousware = porousware;
+        this.productId = productId;
+		
 
 	}
 
-	public Product(String name, String desciption, double price){
+	public Product(String name, String desciption, double price, String description, String material, String porousware){
 		this.name = name;
 		this.description = description;
 		this.price = price;
+		this.material = material;
+		this.porousware = porousware;
 	}
 
 	public int getproductId() {
@@ -157,7 +166,16 @@ public class Product implements Serializable {
 	public void setPorousStock(Stock porousStock) {
 		this.porousStock = porousStock;
 	}
-	
+
+	public String getPorousware() {
+		return porousware;
+	}
+
+	public void setPorousware(String porousware) {
+		this.porousware = porousware;
+	}
+
+
 
 
 }

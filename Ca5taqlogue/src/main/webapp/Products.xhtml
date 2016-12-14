@@ -83,18 +83,28 @@ template="maintemplate.xhtml">
 							</li>
 							<br/>
 
-							<li>Purchase Option
+							<li>Porousware option Available?
 								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 1</label>
+									<label><input type="checkbox" value=""/>Yes</label>
 								</div>
 								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 2</label>
+									<label><input type="checkbox" value=""/>No</label>
 								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 3</label>
-								</div>
-								
+						
 								<input type="submit"/>
+								
+									<h:selectOneRadio value="#{Criteria.porousware}"
+									layout="pageDirection">
+									<f:selectItem itemValue="Yes" itemLabel="Yes" />
+									<f:selectItem itemValue="No" itemLabel="No" />
+								
+								</h:selectOneRadio>
+
+								<h:commandButton action="#{Criteria.findby}" value="Find" />
+
+
+							</h:form>
+								
 
 							</li>
 							<br/>

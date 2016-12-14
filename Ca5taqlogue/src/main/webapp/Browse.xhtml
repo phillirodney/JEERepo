@@ -1,18 +1,33 @@
 <!-- @author Luke -->
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
-
-xmlns:f="http://xmlns.jcp.org/jsf/core"
-
-xmlns:h="http://xmlns.jcp.org/jsf/html"
-
-xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-
-xmlns:p="http://primefaces.org/ui"  
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="maintemplate.xhtml">
+	<meta charset="utf-8" />
 
 
-template="maintemplate.xhtml">
+
+	<ui:define name="maincontent">
+
+
+
 <meta charset="utf-8" />
 
+		<div class="container-fluid " style="padding-top: 30px">
+			<div class="row">
+				<div class="col-sm-3 sidebar die">
+					<ul class="nav nav-sidebar" style="padding: 8%">
+
+
+				<li>Material <h:form>
+
+								<h:selectOneRadio value="#{Criteria.material}"
+									layout="pageDirection">
+									<f:selectItem itemValue="Leather" itemLabel="Leather" />
+									<f:selectItem itemValue="Pot" itemLabel="Pot" />
+									<f:selectItem itemValue="China" itemLabel="China" />
+								</h:selectOneRadio>
 
 
 
@@ -36,14 +51,11 @@ function showVal2(newVal){
 	
 </script>
 
-			<div class="container-fluid " style="padding-top: 30px">
-				<div class="row">
-					<div class="col-sm-3 sidebar die">
-						<ul class="nav nav-sidebar" style="padding: 8%">
-						
-						<li>Material
+								<h:commandButton action="#{Criteria.findby}" value="Find" />
 
-						<h:form  id="thisForm">
+
+
+					<h:form  id="thisForm">
 
 						<h:selectOneRadio value="#{Criteria.material}" layout="pageDirection">
 							<f:selectItem itemValue="Leather" itemLabel=" Leather"/>
@@ -57,7 +69,6 @@ function showVal2(newVal){
 						</h:form>
 						
 						</li>
-						
 						
 			
 							<br/>
@@ -76,10 +87,7 @@ function showVal2(newVal){
 									<h:commandButton action="#{Criteria.findbyPriceRange}" value="Search" />		
 							
 								</h:form>
-								
-								
 							
-
 
 							</li>
 
@@ -109,85 +117,126 @@ function showVal2(newVal){
 										<img src="img/brown.png"/>
 									</div>
 
-								</div>
-								<br/>
-								<input type="submit"/>
+							</h:form>
 
-							</li>
-							<br/>
+						</li>
 
-							<li>Purchase Option
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 1</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 2</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Option 3</label>
-								</div>
-								
-								<input type="submit"/>
 
-							</li>
-							<br/>
 
-							<li>Rating
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>1 or
-										more</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>2 or
-										more</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>3 or
-										more</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>4 or
-										more</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>5 or
-										more</label>
-								</div>
-								
-							
-								<input type="submit"/>
-							</li>
-							
-								
+				<li>Material
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />Pot</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />Leather</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />China</label>
+							</div>
+						</li>
+						<br />
 
-						</ul>
-					</div>
-					
+						<li>
 
-					<div class="col-sm-9">
-						<div class="row">
-							<div class="container-fluid" style="overflow: hidden;">
+							<form action="action_page.php" method="get">
+								Price: <input type="range" name="points" min="0" max="10" /> <br />
+								<input type="range" name="points" min="0" max="10" /> <br /> <input
+									type="submit" />
+							</form>
+
+
+						</li>
+
+						<br />
+
+						<li>Colour
+							<div class="row">
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+								<div class="col-sm-1">
+									<img src="img/brown.png" />
+								</div>
+
+							</div> <br /> <input type="submit" />
+
+						</li>
+						<br />
+
+						<li>Porousware option available
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />Yes</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />No</label>
+							</div> <input type="submit" />
+
+						</li>
+						<br />
+
+						<li>Rating
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />1 or more</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />2 or more</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />3 or more</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />4 or more</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />5 or more</label>
+							</div> <input type="submit" />
+						</li>
+
+
+
+					</ul>
+				</div>
+
+
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="container-fluid" style="overflow: hidden;">
 							<ui:repeat var="product" value="#{browse.products}">
 								<div class="col-sm-4">
-									<h:graphicImage value="img/download (1).jpg" class="img-thumbnail shadow"
-										width="200" height="200"/>
-										<h:form>
-									<h4><h:commandLink action="#{products.select(product.productId)}" 
-									value="#{product.name}"/></h4>
+									<h:graphicImage value="img/download (1).jpg"
+										class="img-thumbnail shadow" width="200" height="200" />
+									<h:form>
+										<h4>
+											<h:commandLink action="#{products.select(product.productId)}"
+												value="#{product.name}" />
+										</h4>
 									</h:form>
-									<p><h:outputText value="#{product.description}"/></p>
+									<p>
+										<h:outputText value="#{product.description}" />
+									</p>
 								</div>
 							</ui:repeat>
-							</div>
 						</div>
 					</div>
 					
-
-
-					
 				</div>
 			</div>
+		</div>
 
 	</ui:define>
-	</ui:composition>
-   
+</ui:composition>
