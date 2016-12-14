@@ -6,54 +6,37 @@
 	template="maintemplate.xhtml">
 	<meta charset="utf-8" />
 
-
-
-	<ui:define name="maincontent">
-
-
-
-<meta charset="utf-8" />
-
-		<div class="container-fluid " style="padding-top: 30px">
-			<div class="row">
-				<div class="col-sm-3 sidebar die">
-					<ul class="nav nav-sidebar" style="padding: 8%">
-
-
-				<li>Material <h:form>
-
-								<h:selectOneRadio value="#{Criteria.material}"
-									layout="pageDirection">
-									<f:selectItem itemValue="Leather" itemLabel="Leather" />
-									<f:selectItem itemValue="Pot" itemLabel="Pot" />
-									<f:selectItem itemValue="China" itemLabel="China" />
-								</h:selectOneRadio>
-
+	
 
 
 		<ui:define name="maincontent">
 		
-<script type="text/javascript">
-	
-	function showVal(newVal){
+	<script type="text/javascript">
 		
-		document.getElementById("stuff").innerHTML=newVal;
-		document.getElementById("otherForm:hiddenMin").value=newVal;
-	}
-	
-function showVal2(newVal){
+		function showVal(newVal){
+			
+			document.getElementById("stuff").innerHTML=newVal;
+			document.getElementById("otherForm:hiddenMin").value=newVal;
+		}
 		
-		document.getElementById("stuff2").innerHTML=newVal;
-		document.getElementById("otherForm:hiddenMax").value=newVal;
-	}
+	function showVal2(newVal){
+			
+			document.getElementById("stuff2").innerHTML=newVal;
+			document.getElementById("otherForm:hiddenMax").value=newVal;
+		}
+		
 	
-
+		
+	</script>
 	
-</script>
+	<div class="container-fluid " style="padding-top: 30px">
+			<div class="row">
+				<div class="col-sm-3 sidebar die">
+					<ul class="nav nav-sidebar" style="padding: 8%">
 
-								<h:commandButton action="#{Criteria.findby}" value="Find" />
+			
 
-
+				<li>Material 
 
 					<h:form  id="thisForm">
 
@@ -116,25 +99,11 @@ function showVal2(newVal){
 									<div class="col-sm-1">
 										<img src="img/brown.png"/>
 									</div>
-
-							</h:form>
+								</div>
 
 						</li>
 
-
-
-				<li>Material
-							<div class="checkbox">
-								<label><input type="checkbox" value="" />Pot</label>
-							</div>
-							<div class="checkbox">
-								<label><input type="checkbox" value="" />Leather</label>
-							</div>
-							<div class="checkbox">
-								<label><input type="checkbox" value="" />China</label>
-							</div>
-						</li>
-						<br />
+						<br/>
 
 						<li>
 
@@ -147,7 +116,7 @@ function showVal2(newVal){
 
 						</li>
 
-						<br />
+						<br/>
 
 						<li>Colour
 							<div class="row">
@@ -176,7 +145,7 @@ function showVal2(newVal){
 							</div> <br /> <input type="submit" />
 
 						</li>
-						<br />
+						<br/>
 
 						<li>Porousware option available
 							<div class="checkbox">
@@ -187,7 +156,7 @@ function showVal2(newVal){
 							</div> <input type="submit" />
 
 						</li>
-						<br />
+						<br/>
 
 						<li>Rating
 							<div class="checkbox">
