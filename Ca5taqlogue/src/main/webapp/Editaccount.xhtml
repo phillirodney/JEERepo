@@ -104,7 +104,6 @@ enjoy-css {
 				document.getElementById('phone:phoneText').value = document
 						.getElementById('phoneEdit').innerHTML;
 			}
-			
 		</script>
 
 		<div class="jumbotron" id="material"
@@ -182,9 +181,12 @@ enjoy-css {
 
 
 											<h:inputHidden id="hidden" value="#{registration.name}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.change}" onclick="setHiddenValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{registration.change}" onclick="setHiddenValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
@@ -200,9 +202,12 @@ enjoy-css {
 
 											<h:inputHidden id="surnameText"
 												value="#{registration.lastName}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.changeLastName}"
-												onclick="setLastnameValue();" />
+											<div class="popup" onclick="myFunction()">
+												<h:commandButton value="UPDATE"
+													action="#{registration.changeLastName}"
+													onclick="setLastnameValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 
 										</h:form></td>
 								</tr>
@@ -215,10 +220,13 @@ enjoy-css {
 
 
 											<h:inputHidden id="emailText" value="#{registration.email}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.changeEmail}"
-												onclick="setEmailValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{registration.changeEmail}"
+													onclick="setEmailValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 								<tr>
@@ -230,10 +238,13 @@ enjoy-css {
 
 
 											<h:inputHidden id="phoneText" value="#{registration.phone}" />
-											<h:commandButton value="UPDATE"
-												action="#{registration.changePhone}"
-												onclick="setPhoneValue();" />
+											<div class="popup" onclick="myFunction()">
 
+												<h:commandButton value="UPDATE"
+													action="#{registration.changePhone}"
+													onclick="setPhoneValue();" />
+												<span class="popuptext" id="myPopup"> Updated!</span>
+											</div>
 										</h:form></td>
 								</tr>
 
