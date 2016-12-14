@@ -122,7 +122,7 @@ public class TestData {
 		
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
 				new Date(0));
-		Customer customer2 = new Customer(2, "Beauty", "Beauty", "blackbeauty@gmail.com", "01234567899", "pass",
+		Customer customer2 = new Customer(2, "Booty", "Beauty", "blackbeauty@gmail.com", "01234567899", "pass",
 				new Date(0));
 		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com", "01234567899", "pass",
 				new Date(0));
@@ -134,11 +134,11 @@ public class TestData {
 				new Date(0));
 
 		Payment payment1 = new Payment("XXXX-XXXX-XXXX-2345", address1, new Date(0), "Jason Bourner", 123);
-		Payment payment2 = new Payment("XXXX-XXXX-XXXX-1859", address2, new Date(0), "Jason Bourner", 123);
-		Payment payment3 = new Payment("XXXX-XXXX-XXXX-6365", address3, new Date(0), "Jason Bourner", 123);
-		Payment payment4 = new Payment("XXXX-XXXX-XXXX-8956", address4, new Date(0), "Jason Bourner", 123);
-		Payment payment5 = new Payment("XXXX-XXXX-XXXX-1025", address5, new Date(0), "Jason Bourner", 123);
-		Payment payment6 = new Payment("XXXX-XXXX-XXXX-3677", address6, new Date(0), "Jason Bourner", 123);
+		Payment payment2 = new Payment("XXXX-XXXX-XXXX-1859", address2, new Date(0), "Booty Beauty", 158);
+		Payment payment3 = new Payment("XXXX-XXXX-XXXX-6365", address3, new Date(0), "Lisa  Simpson", 963);
+		Payment payment4 = new Payment("XXXX-XXXX-XXXX-8956", address4, new Date(0), "Moe Szylak", 025);
+		Payment payment5 = new Payment("XXXX-XXXX-XXXX-1025", address5, new Date(0), "Dwayne Johnson", 569);
+		Payment payment6 = new Payment("XXXX-XXXX-XXXX-3677", address6, new Date(0), "Tom Cruise", 021);
 		
 		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed", customer1);
 		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed", customer1);
