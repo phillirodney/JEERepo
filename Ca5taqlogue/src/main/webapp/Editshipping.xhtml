@@ -164,14 +164,17 @@ enjoy-css {
 							<table>
 								<tr>
 									<th>Shipping Information</th>
+									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+									<td></td>
 								</tr>
 								<tr>
-									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+
 								</tr>
 
 								<tr>
-									<td>House Number: <span id="houseNumberEdit"
-										contenteditable="true" style="background: #fff;">#{user.customer.addresses.houseNumber}</span></td>
+									<td>House Number:</td>
+									<td><span id="houseNumberEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.addresses.houseNumber}</span></td>
 									<td><h:form id="houseNumber">
 
 
@@ -184,7 +187,8 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Street: <span id="streetEdit" contenteditable="true"
+									<td>Street:</td>
+									<td><span id="streetEdit" contenteditable="true"
 										style="background: #fff;">
 											#{user.customer.addresses.street}</span></td>
 									<td><h:form id="changeStreet">
@@ -199,7 +203,8 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>City: <span id="cityEdit" contenteditable="true"
+									<td>City:</td>
+									<td><span id="cityEdit" contenteditable="true"
 										style="background: #fff;">#{user.customer.addresses.city}</span></td>
 									<td><h:form id="changeCity">
 
@@ -212,8 +217,9 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>PostCode: <span id="postcodeEdit"
-										contenteditable="true" style="background: #fff;">#{user.customer.addresses.postcode}</span></td>
+									<td>PostCode:</td>
+									<td><span id="postcodeEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.addresses.postcode}</span></td>
 									<td><h:form id="changePostcode">
 
 
@@ -223,10 +229,6 @@ enjoy-css {
 												onclick="setPostcodeValue();" />
 
 										</h:form></td>
-								</tr>
-
-								<tr>
-									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
 
 							</table>

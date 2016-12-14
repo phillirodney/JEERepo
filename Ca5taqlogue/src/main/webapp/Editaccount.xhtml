@@ -81,6 +81,7 @@ enjoy-css {
 	-o-transition: none;
 	transition: none;
 }
+}
 </style>
 
 		<script type="text/javascript">
@@ -166,17 +167,17 @@ enjoy-css {
 
 							<table>
 								<tr>
+
 									<th>Account Information</th>
-								</tr>
-								<tr>
 									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+									<td></td>
 								</tr>
 
 								<tr>
 
-									<td>First Name: <span id="test" contenteditable="true"
-										style="background: #fff;">#{user.customer.firstName} </span>
-									</td>
+									<td>First Name:</td>
+									<td><span id="test" contenteditable="true"
+										style="background: #fff;">#{user.customer.firstName} </span></td>
 
 									<td><h:form id="myform">
 
@@ -190,10 +191,9 @@ enjoy-css {
 
 								<tr>
 
-									<td>Last Name: <span id="surnameEdit"
-										contenteditable="true" style="background: #fff;">#{user.customer.lastName}
-									</span>
-									</td>
+									<td>Last Name:</td>
+									<td><span id="surnameEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.lastName} </span></td>
 
 									<td><h:form id="surname">
 
@@ -207,9 +207,9 @@ enjoy-css {
 										</h:form></td>
 								</tr>
 								<tr>
-									<td>Email: <span id="emailEdit" contenteditable="true"
-										style="background: #fff;">#{user.customer.email} </span>
-									</td>
+									<td>Email:</td>
+									<td><span id="emailEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.email} </span></td>
 
 									<td><h:form id="email">
 
@@ -222,10 +222,10 @@ enjoy-css {
 										</h:form></td>
 								</tr>
 								<tr>
-									<td>Phone:<span id="phoneEdit" contenteditable="true"
+									<td>Phone:</td>
+									<td><span id="phoneEdit" contenteditable="true"
 										style="background: #fff;">#{user.customer.phoneNumber}
-									</span>
-									</td>
+									</span></td>
 									<td><h:form id="phone">
 
 
@@ -235,10 +235,6 @@ enjoy-css {
 												onclick="setPhoneValue();" />
 
 										</h:form></td>
-								</tr>
-
-								<tr>
-									<td><a href='#'><b>Online Support</b></a></td>
 								</tr>
 
 							</table>

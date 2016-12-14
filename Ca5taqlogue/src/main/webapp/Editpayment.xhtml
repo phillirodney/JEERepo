@@ -158,14 +158,13 @@ enjoy-css {
 							<table>
 								<tr>
 									<th>Payment Information</th>
-								</tr>
-								<tr>
 									<td style="margin: 0 auto;"><b>#{user.customer.firstName}</b></td>
+									<td></td>
 								</tr>
-
 								<tr>
-									<td>Name on card: <span id="nameEdit"
-										contenteditable="true" style="background: #fff;">#{user.customer.payment.nameOnCard}</span></td>
+									<td>Name on card:</td>
+									<td><span id="nameEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.payment.nameOnCard}</span></td>
 									<td><h:form id="nameForm">
 
 
@@ -178,8 +177,9 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Card Number: <span id="numberEdit"
-										contenteditable="true" style="background: #fff;">#{user.customer.payment.cardNumber}</span></td>
+									<td>Card Number:</td>
+									<td><span id="numberEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.payment.cardNumber}</span></td>
 									<td><h:form id="cardNumberForm">
 
 
@@ -192,8 +192,9 @@ enjoy-css {
 								</tr>
 
 								<tr>
-									<td>Expiry Date: <span id="expiryEdit"
-										contenteditable="true" style="background: #fff;">#{user.customer.payment.expiryDate}</span></td>
+									<td>Expiry Date:</td>
+									<td><span id="expiryEdit" contenteditable="true"
+										style="background: #fff;">#{user.customer.payment.expiryDate}</span></td>
 									<td><h:form id="expiryDateForm">
 
 
@@ -204,11 +205,6 @@ enjoy-css {
 
 										</h:form></td>
 								</tr>
-
-								<tr>
-									<td><a href='#'><b>Online Support</b></a></td>
-								</tr>
-
 							</table>
 
 						</div>
