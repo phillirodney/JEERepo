@@ -122,7 +122,7 @@ public class TestData {
 		
 		Customer customer1 = new Customer(1, "Jason", "Bourne", "jasonbourne@gmail.com", "01234567899", "pass",
 				new Date(0));
-		Customer customer2 = new Customer(2, "Beauty", "Beauty", "blackbeauty@gmail.com", "01234567899", "pass",
+		Customer customer2 = new Customer(2, "Booty", "Beauty", "blackbeauty@gmail.com", "01234567899", "pass",
 				new Date(0));
 		Customer customer3 = new Customer(3, "Lisa", "Simpson", "lisasimpson@gmail.com", "01234567899", "pass",
 				new Date(0));
@@ -133,7 +133,16 @@ public class TestData {
 		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "01234567899", "pass",
 				new Date(0));
 
+<<<<<<< HEAD
 		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner", 123);
+=======
+		Payment payment1 = new Payment("XXXX-XXXX-XXXX-2345", address1, new Date(0), "Jason Bourner", 123);
+		Payment payment2 = new Payment("XXXX-XXXX-XXXX-1859", address2, new Date(0), "Booty Beauty", 158);
+		Payment payment3 = new Payment("XXXX-XXXX-XXXX-6365", address3, new Date(0), "Lisa  Simpson", 963);
+		Payment payment4 = new Payment("XXXX-XXXX-XXXX-8956", address4, new Date(0), "Moe Szylak", 025);
+		Payment payment5 = new Payment("XXXX-XXXX-XXXX-1025", address5, new Date(0), "Dwayne Johnson", 569);
+		Payment payment6 = new Payment("XXXX-XXXX-XXXX-3677", address6, new Date(0), "Tom Cruise", 021);
+>>>>>>> a356ea3588c4919cc40494ceae3e6e0bd80bf54b
 		
 		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed", customer1);
 		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed", customer1);
@@ -156,6 +165,26 @@ public class TestData {
 		customer1.setPayment(payment1);
 		customer1.setOrders(orders);
 		customer1.setAddresses(address1);
+		
+		customer2.setPayment(payment2);
+		customer2.setOrders(orders);
+		customer2.setAddresses(address2);
+		
+		customer3.setPayment(payment3);
+		customer3.setOrders(orders);
+		customer3.setAddresses(address3);
+		
+		customer4.setPayment(payment4);
+		customer4.setOrders(orders);
+		customer4.setAddresses(address4);
+		
+		customer5.setPayment(payment5);
+		customer5.setOrders(orders);
+		customer5.setAddresses(address5);
+		
+		customer6.setPayment(payment6);
+		customer6.setOrders(orders);
+		customer6.setAddresses(address6);
 
 		Basket basket = new Basket(1, 1, product1, new Date(0), customer1);
 		List<Basket> baskets = new ArrayList<Basket>();

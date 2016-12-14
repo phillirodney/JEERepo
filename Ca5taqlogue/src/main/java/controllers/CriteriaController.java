@@ -24,6 +24,7 @@ public class CriteriaController implements Serializable{
 	private CriteriaService cService;
 
 	private String material;
+	private String porousware;
 	
 	List<Product> results;
 	
@@ -47,6 +48,14 @@ public class CriteriaController implements Serializable{
 	
 	public List<Product> getResults() {
 		return results;
+	}
+
+	public String getPorousware() {
+		return porousware;
+	}
+
+	public void setPorousware(String porousware) {
+		this.porousware = porousware;
 	}
 	
 	

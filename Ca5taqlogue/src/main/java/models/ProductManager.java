@@ -26,4 +26,6 @@ public interface ProductManager {
     
     List<Product> findbyMaterial(String material);
 
+    List<Product> findbyPorousware(String porousware);
+    
 }
