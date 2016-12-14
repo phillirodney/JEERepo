@@ -83,7 +83,6 @@ public class CriteriaController implements Serializable{
 
 	public void setPorousware(String porousware) {
 		this.porousware = porousware;
->>>>>>> 493d94f4d734dc0814a874d00ec41d3f3a35178e
 	}
 	
 	
