@@ -23,6 +23,21 @@ public class CriteriaService {
 		
 	}
 	
+	public List<Product> findByRange(int minPrice, int maxPrice){
+		
+		List<Product> pList = new ArrayList<>();
+		
+		
+		
+		for(Product p: pManager.returnAll()){
+			if(p.getPrice() >= minPrice && p.getPrice() <= maxPrice){
+				pList.add(p);
+			}
+		}
+		return pList;
+		
+	}
+	
 	
 	
 	

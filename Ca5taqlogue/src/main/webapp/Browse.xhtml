@@ -7,12 +7,34 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
 
 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 
+xmlns:p="http://primefaces.org/ui"  
+
+
 template="maintemplate.xhtml">
 <meta charset="utf-8" />
 
 
 
+
 		<ui:define name="maincontent">
+		
+<script type="text/javascript">
+	
+	function showVal(newVal){
+		
+		document.getElementById("stuff").innerHTML=newVal;
+		document.getElementById("otherForm:hiddenMin").value=newVal;
+	}
+	
+function showVal2(newVal){
+		
+		document.getElementById("stuff2").innerHTML=newVal;
+		document.getElementById("otherForm:hiddenMax").value=newVal;
+	}
+	
+
+	
+</script>
 
 			<div class="container-fluid " style="padding-top: 30px">
 				<div class="row">
@@ -21,15 +43,15 @@ template="maintemplate.xhtml">
 						
 						<li>Material
 
-						<h:form>
+						<h:form  id="thisForm">
 
 						<h:selectOneRadio value="#{Criteria.material}" layout="pageDirection">
-							<f:selectItem itemValue="Leather" itemLabel="Leather"/>
-							<f:selectItem itemValue="Pot" itemLabel="Pot"/>
-							<f:selectItem itemValue="China" itemLabel="China"/>
+							<f:selectItem itemValue="Leather" itemLabel=" Leather"/>
+							<f:selectItem itemValue="Pot" itemLabel=" Pot"/>
+							<f:selectItem itemValue="China" itemLabel=" China"/>
 						</h:selectOneRadio>  
 						
-						<h:commandButton action="#{Criteria.findby}" value="Find"/>
+						<h:commandButton action="#{Criteria.findby}" value="Search"/>
 						
 						
 						</h:form>
@@ -37,26 +59,26 @@ template="maintemplate.xhtml">
 						</li>
 						
 						
-							<li>Material
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Pot</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>Leather</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value=""/>China</label>
-								</div>
-							</li>
+			
 							<br/>
 
 							<li>
 
-								<form action="action_page.php" method="get">
-									Price: <input type="range" name="points" min="0" max="10"/>
-									<br/> <input type="range" name="points" min="0" max="10"/>
-									<br/> <input type="submit"/>
-								</form>
+								<h:form id="otherForm">
+									<label>Min Price:</label> £<span id="stuff">  0</span>
+									 <input type="range" name="points1" min="0" max="1000" oninput="showVal(this.value)"/>
+									<h:inputHidden id="hiddenMin" value="#{Criteria.minPrice}" />
+									
+									<label>Max Price:</label>	£<span id="stuff2">  0</span>
+									<br/> <input type="range" min="0" max="1000" step="1" oninput="showVal2(this.value);"/>
+									<h:inputHidden id="hiddenMax" value="#{Criteria.maxPrice}" />
+									
+									<h:commandButton action="#{Criteria.findbyPriceRange}" value="Search" />		
+							
+								</h:form>
+								
+								
+							
 
 
 							</li>
@@ -159,6 +181,10 @@ template="maintemplate.xhtml">
 							</div>
 						</div>
 					</div>
+					
+
+
+					
 				</div>
 			</div>
 
