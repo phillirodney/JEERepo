@@ -91,6 +91,7 @@ public class Customer {
 		this.phoneNumber = phoneNumber;
 		this.password = password;
 		this.dateOfBirth = dateOfBirth;
+		payment = new Payment();
 
 	}
 
@@ -100,6 +101,8 @@ public class Customer {
 		this.password = password;
 		this.lastName = lastName;
 		this.baskets = new ArrayList<>();
+		payment = new Payment();
+
 
 	}
 
