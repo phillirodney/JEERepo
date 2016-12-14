@@ -41,8 +41,7 @@ public class ProductService {
 	public void createProduct(int productId, String name, String description, double price, Stock stock,
 			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material, String porousware){
 			
-		Product product = new Product(productId,  name,  description,  price,  stock,
-			 porousStock,  height,  length,  weight, imagepath,  material,  porousware);
+		Product product = new Product();
 		productManager.createProduct(product);
 		
 	}

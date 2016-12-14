@@ -60,7 +60,7 @@ public class ProductController {
 	
 	public String makeProduct() {
 		
-		productService.createProduct(name, description, price);
+		productService.createProduct(0, name, description, price, null, null, 0, 0, 0, null, description, description);
 		
 		return "Imstuff";
 	}
