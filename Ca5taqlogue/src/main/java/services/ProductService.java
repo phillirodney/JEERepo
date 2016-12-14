@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 import models.Product;
 import models.ProductManager;
+import models.Stock;
 import models.StockManager;
 
 @Stateless
@@ -28,19 +29,20 @@ public class ProductService {
 	public List<Product> findProductByName(String name) {
 		return productManager.findProductByName(name);
 	}
-	
+
 	public List<Product> findProductByDescription(String descrption) {
 		return productManager.findProductByDescription(descrption);
 	}
-	
-	public List<Product> findAll(){
+
+	public List<Product> findAll() {
 		return productManager.returnAll();
 	}
-	
-	public void createProduct(String name, String desciption, double price){
+
+	public void createProduct(int productId, String name, String description, double price, Stock stock,
+			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material, String porousware){
 			
-		Product product = new Product(name, desciption, price);
+		Product product = new Product();
 		productManager.createProduct(product);
 		
-	} 
+	}
 }

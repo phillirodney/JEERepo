@@ -37,7 +37,7 @@ public class Product implements Serializable {
 	private int length;
 	private int weight;
 	private String material;
-	private String porousware;
+	private boolean porousware;
 	
 	
 
@@ -47,7 +47,7 @@ public class Product implements Serializable {
 	}
 
 	public Product(int productId, String name, String description, double price, Stock stock,
-			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material, String porousware) {
+			Stock porousStock, int height, int length, int weight, List<String> imagepath, String material, boolean porousware) {
 
 
 		this.name = name;
@@ -68,7 +68,7 @@ public class Product implements Serializable {
 
 	}
 
-	public Product(String name, String desciption, double price, String description, String material, String porousware){
+	public Product(String name, String desciption, double price, String description, String material, boolean porousware){
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -167,11 +167,11 @@ public class Product implements Serializable {
 		this.porousStock = porousStock;
 	}
 
-	public String getPorousware() {
+	public boolean getPorousware() {
 		return porousware;
 	}
 
-	public void setPorousware(String porousware) {
+	public void setPorousware(boolean porousware) {
 		this.porousware = porousware;
 	}
 
