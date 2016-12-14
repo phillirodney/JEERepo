@@ -29,6 +29,10 @@ public class CriteriaController implements Serializable{
 	List<Product> results;
 	
 	
+	private int minPrice;
+	private int maxPrice;
+	
+	
 
 	public String getMaterial() {
 		return material;
@@ -46,16 +50,38 @@ public class CriteriaController implements Serializable{
 		
 	}
 	
+	public String findbyPriceRange(){
+		results = cService.findByRange(minPrice, maxPrice);
+		return "productCriteria";
+	
+	}
+	
 	public List<Product> getResults() {
 		return results;
 	}
 
-	public boolean getPorousware() {
-		return porousware;
+
+
+
+	public int getMinPrice() {
+		return minPrice;
+	}
+
+	public void setMinPrice(int minPrice) {
+		this.minPrice = minPrice;
+	}
+
+	public int getMaxPrice() {
+		return maxPrice;
+	}
+
+	public void setMaxPrice(int maxPrice) {
+		this.maxPrice = maxPrice;
 	}
 
 	public void setPorousware(boolean porousware) {
 		this.porousware = porousware;
+
 	}
 	
 	

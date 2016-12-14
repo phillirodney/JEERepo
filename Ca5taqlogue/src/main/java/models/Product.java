@@ -63,6 +63,7 @@ public class Product implements Serializable {
 		this.weight = weight;
 		this.material = material;
         this.porousware = porousware;
+        this.productId = productId;
 		
 
 	}
