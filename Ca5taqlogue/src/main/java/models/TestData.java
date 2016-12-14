@@ -133,16 +133,15 @@ public class TestData {
 		Customer customer6 = new Customer(6, "Tom", "Cruise", "tomcruise@gmail.com", "01234567899", "pass",
 				new Date(0));
 
-<<<<<<< HEAD
-		Payment payment1 = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner", 123);
-=======
+
+		Payment payment = new Payment("4550-5006-9789-2345", address1, new Date(0), "Jason Bourner", 123);
+
 		Payment payment1 = new Payment("XXXX-XXXX-XXXX-2345", address1, new Date(0), "Jason Bourner", 123);
 		Payment payment2 = new Payment("XXXX-XXXX-XXXX-1859", address2, new Date(0), "Booty Beauty", 158);
 		Payment payment3 = new Payment("XXXX-XXXX-XXXX-6365", address3, new Date(0), "Lisa  Simpson", 963);
 		Payment payment4 = new Payment("XXXX-XXXX-XXXX-8956", address4, new Date(0), "Moe Szylak", 025);
 		Payment payment5 = new Payment("XXXX-XXXX-XXXX-1025", address5, new Date(0), "Dwayne Johnson", 569);
 		Payment payment6 = new Payment("XXXX-XXXX-XXXX-3677", address6, new Date(0), "Tom Cruise", 021);
->>>>>>> a356ea3588c4919cc40494ceae3e6e0bd80bf54b
 		
 		CustomerOrder corder = new CustomerOrder(1, 200.0, new Date(0), "Dispatched", "payed", customer1);
 		CustomerOrder corder1 = new CustomerOrder(2, 200.0, new Date(0), "Dispatched", "payed", customer1);
