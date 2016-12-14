@@ -161,6 +161,26 @@ public class TestData {
 		customer1.setPayment(payment1);
 		customer1.setOrders(orders);
 		customer1.setAddresses(address1);
+		
+		customer2.setPayment(payment2);
+		customer2.setOrders(orders);
+		customer2.setAddresses(address2);
+		
+		customer3.setPayment(payment3);
+		customer3.setOrders(orders);
+		customer3.setAddresses(address3);
+		
+		customer4.setPayment(payment4);
+		customer4.setOrders(orders);
+		customer4.setAddresses(address4);
+		
+		customer5.setPayment(payment5);
+		customer5.setOrders(orders);
+		customer5.setAddresses(address5);
+		
+		customer6.setPayment(payment6);
+		customer6.setOrders(orders);
+		customer6.setAddresses(address6);
 
 		Basket basket = new Basket(1, 1, product1, new Date(0), customer1);
 		List<Basket> baskets = new ArrayList<Basket>();
