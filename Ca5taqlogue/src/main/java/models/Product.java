@@ -22,14 +22,12 @@ import javax.persistence.Table;
 @Entity
 public class Product implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 17897845642L;
 
 	@Id
 	private int productId;
-
 	private Stock stock;
 	private Stock porousStock;
-	
 	private String name;
 	private String description;
 	private double price;

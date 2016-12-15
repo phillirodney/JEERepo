@@ -20,10 +20,10 @@ public class StockManagerOffline implements StockManager {
     public Stock createStock(Stock stock) {
 
         List<Stock> stocks = testData.getStock();
-        stock.setProductId(stocks.size() - 1);
+        stock.setStockId(stocks.size() - 1);
         stocks.add(stock);
         testData.setStock(stocks);
-        return findByProductId(stock.getProductId());
+        return findByProductId(stock.getStockId());
     }
 
 
@@ -31,7 +31,7 @@ public class StockManagerOffline implements StockManager {
     public Stock findByProductId(int productId) {
 
         for(Stock s: testData.getStock()){
-            if(s.getProductId() == productId){
+            if(s.getStockId() == productId){
                 return s;
             }
         }
@@ -54,14 +54,14 @@ public class StockManagerOffline implements StockManager {
 
         List<Stock> stocks = testData.getStock();
         for(Stock s: testData.getStock()){
-            if(s.getProductId() == stock.getProductId()){
+            if(s.getStockId() == stock.getStockId()){
                 stocks.remove(s);
                 break;
             }
         }
         for(Stock s: testData.getStock()){
-            if(s.getProductId() > stock.getProductId()){
-                s.setProductId((s.getProductId() - 1));
+            if(s.getStockId() > stock.getStockId()){
+                s.setStockId((s.getStockId() - 1));
             }
         }
         testData.setStock(stocks);

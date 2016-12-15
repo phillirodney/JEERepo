@@ -25,4 +25,8 @@ public class LoginService {
 		return customerManager.findByEmail(email.toLowerCase());
 	}
 	
+	public Customer findById(int id){
+		return customerManager.findById(id);
+	}
+	
 }

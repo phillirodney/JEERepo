@@ -48,7 +48,7 @@ public class CustomerManagerOffline implements CustomerManager {
 	public Customer findById(long id) {
 		for (Customer customer : testData.getCustomers())
 			if (customer.getId() == id) {
-				System.out.println(id);
+				return customer;
 
 			}
 		return null;

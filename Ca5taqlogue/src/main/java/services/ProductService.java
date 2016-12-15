@@ -11,7 +11,15 @@ import models.ProductManager;
 import models.Stock;
 import models.StockManager;
 
+import javax.inject.Inject;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+
 @Stateless
+@Path("/Products")
 public class ProductService {
 	@Inject
 	private ProductManager productManager;

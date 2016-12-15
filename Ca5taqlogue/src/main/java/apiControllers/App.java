@@ -1,4 +1,4 @@
-package services;
+package apiControllers;
 
 
 import javax.ws.rs.ApplicationPath;
