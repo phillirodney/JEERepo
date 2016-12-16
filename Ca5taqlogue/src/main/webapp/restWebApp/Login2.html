@@ -29,6 +29,36 @@
 }
 </style>
 
+<script type="text/javascript">
+
+
+
+$("button").click(function(){
+
+	var email = $("input[name=\"email\"]").val();
+	var password = $("input[name= "password\"]").val();
+	
+	$.ajax({
+		url: "http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/login",
+		type: "POST",
+		async: true,
+		cache: false,
+		dataType: "json",
+		data: "{'email': '" + email + "', 'password': '" + password + "'}",
+		contentType: "application/json; charset=utf-8",
+		success: function(data) {
+			console.log("success");
+		},
+		error: function(xhr, ajaxOptions, thrownError){
+			console.log("FAIL");
+		}
+	});
+
+});
+
+	
+</script>
+
 
 </head>
 
@@ -111,27 +141,26 @@
 					<br>
 					<h2>Login</h2>
 					<br>
-					<form>
+				
 						<div class="text">
 							Please login in to your NB Gardens account. If you don't have an
 							account, you can create one
-							</text>
 						</div>
 						<br> <br>
 						<div class="form-group">
 							<label for="usr">Email:</label> <input type="text"
-								class="form-control" id="usr">
+								class="form-control" name="email" id="usr">
 						</div>
 						<div class="form-group">
 							<label for="pwd">Password:</label> <input type="text"
-								class="form-control" id="pwd">
+								class="form-control" name="password" id="pwd">
 						</div>
 						<div class="form-group">
 							<a href="">Forgotten Password? </a>
 						</div>
 						<div class="form-group">
-							<button type="button">Login</button>
-					</form>
+							<button type="button" id="submitLogin">Login</button>
+						</div>
 				</div>
 			</div>
 		</div>

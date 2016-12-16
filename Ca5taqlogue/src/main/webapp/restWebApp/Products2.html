@@ -32,6 +32,8 @@
 
 <script type="text/javascript">
 
+var url = "Product2.html";
+
 $(document).ready(function(){
 	$("#this1").click(function(){
         $.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/products/", function(data, status){
@@ -40,7 +42,8 @@ $(document).ready(function(){
 				for(var item in data) {
 					var elem = '<div class="col-sm-4"><img src="../img/gnome.jpg" class="img-thumbnail shadow"' 
 					+ 'width="200" height="200" class="img-responsive"' 
-					+ 'alt="Generic placeholder thumbnail"> <h4><a class="gnome-1" href='+"http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/products/1"+'>'
+					+ 'alt="Generic placeholder thumbnail"> <h4><a class="gnome-1" href='
+					+"Product2.html"+ "?" + data[item].productId +'>'
 					+ data[item].name 
 					+ '</div>'
 					$(elem).appendTo( $("#stuff"));
