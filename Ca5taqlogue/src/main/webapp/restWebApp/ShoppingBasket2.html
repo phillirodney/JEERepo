@@ -33,16 +33,6 @@
 }
 </style>
 
-<script>
-	
-	$(document).ready(function(){
-		$(".aform").submit(function(event){
-			alert($("input:first").val());
-			event.preventDefault();	
-		});
-	});
-
-</script>
 
 
 
@@ -76,11 +66,13 @@
 
 		<div class="col-sm-2" style="margin-top: 2%;">
 		
-		<form class="aform">
+		<form>
 
-			<input class="input-text qty text thisclass"
-				value="{{quantity}}">
+			<input class="input-text qty text thisclasse
+				value="{{quantity}}" name="quantity">
 			</input>
+			
+			<input type="hidden" name="hiddenValue" value="Norway"></input>
 			
 			<input type="submit" value="Update">
 			
@@ -103,7 +95,10 @@
 
 </script>
 
+
 <script>
+
+//$(document).ready(function(){
 	
 	$.getJSON('http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/1', function(data){
 		
@@ -111,8 +106,21 @@
 		var info = Mustache.to_html(template, data);
 		$('#content').html(info);
 		
-	})
+	});
+//});
 	
+
+</script>
+
+<script>
+	
+	$(document).ready(function(){
+		$("form").submit(function(event){
+			var x = $('input[name=hiddenValue]', this).val();
+			alert(x);
+			event.preventDefault();	
+		});
+	});
 
 </script>
 
@@ -187,17 +195,15 @@
 
 				</div>
 			</nav>
-
-
+			
 		</div>
 		<!-- #header -->
-
+	
 		<div id="content">
-
-			
+		
 		
 		</div>
-
+		
 			<!-- #content -->
 
 
