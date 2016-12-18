@@ -15,10 +15,12 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel=stylesheet type="text/css" href=css/navbar.css>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/shoppingbasket.css" />
+<link rel=stylesheet type="text/css" href="../css/navbar.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/shoppingbasket.css" />
 <link href="simple-sidebar.css" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
 <style>
 .nav-sidebar {
@@ -30,6 +32,89 @@
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 </style>
+
+<script>
+	
+	$(document).ready(function(){
+		$(".aform").submit(function(event){
+			alert($("input:first").val());
+			event.preventDefault();	
+		});
+	});
+
+</script>
+
+
+
+<script id = "nameTemplate">
+
+{{#baskets}}
+	
+<div class="container-fluid">
+<div class="jumbotron shadow" style="padding-top: 1%;">
+	<div class="row" style="margin-top: 5%;">
+
+		<div class="col-sm-2">
+			<img src="img/garden_gnome.png" width="100px" height="100px" />
+		</div>
+		<div class="col-sm-4">
+
+			<h2>{{product.name}}</h2>
+
+			{{product.description}}
+
+			</div>
+
+		<div class="col-sm-2">
+
+
+			<h2 class="parse">Price: £{{product.price}}</h2>
+
+		</div>
+
+
+
+		<div class="col-sm-2" style="margin-top: 2%;">
+		
+		<form class="aform">
+
+			<input class="input-text qty text thisclass"
+				value="{{quantity}}">
+			</input>
+			
+			<input type="submit" value="Update">
+			
+		</form>	
+		
+		</div>
+
+
+		</div>
+
+
+	</div>
+
+
+
+</div>
+
+{{/baskets}}
+
+
+</script>
+
+<script>
+	
+	$.getJSON('http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/1', function(data){
+		
+		var template = $('#nameTemplate').html();
+		var info = Mustache.to_html(template, data);
+		$('#content').html(info);
+		
+	})
+	
+
+</script>
 
 
 </head>
@@ -109,91 +194,9 @@
 
 		<div id="content">
 
-			<!--  
-			<p>Shopping Basket</p>
-			<hr>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4 col-xs-12">
-						<img src="img/garden_gnome.png" width="100px" height="100px">
-					</div>
-					<div class="col-md-8">
-						<div class="col-sm-4">
-							<h1 id="producthead">Gnome</h1>
-							<h2 id="instock">In Stock</h2>
-							<p id="description">This is a Gnome</p>
-						</div>
-						<div class="col-sm-2">£19.99</div>
-						<div class="col-sm-2">drop1</div>
-						<div class="col-sm-2">
-							<span class="glyphicon glyphicon-remove"></span>
-						</div>
-					</div>
-				</div>
-				<hr>
-			</div>
+			
+		
 		</div>
-	-->
-
-			<form method="post" action="#">
-				<table cellspacing="0" class="shop_table cart">
-					<thead>
-						<tr>
-							<th class="product-thumbnail">&nbsp;</th>
-							<th class="product-name">Product</th>
-							<th class="product-price">Price</th>
-							<th class="product-quantity">Quantity</th>
-							<th class="product-subtotal">Total</th>
-							<th class="product-remove">&nbsp;</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="cart_item">
-
-
-							<td class="product-thumbnail"><a href="single-product.htm"><img
-									width="145" height="145" alt="poster_1_up"
-									class="shop_thumbnail" src="img/gnome.jpg"></a></td>
-
-							<td class="product-name">
-								<h1>Gnome</h1>
-								<h2>In Stock</h2>
-								<p>Description</p>
-							</td>
-
-							<td class="product-price"><span class="amount">£15.00</span>
-							</td>
-
-							<td class="product-quantity">
-								<div class="quantity buttons_added">
-									<input type="button" class="minus" value="-"> <input
-										type="number" size="4" class="input-text qty text" title="Qty"
-										value="1" min="0" step="1"> <input type="button"
-										class="plus" value="+">
-								</div>
-							</td>
-
-							<td class="product-subtotal"><span class="amount">£15.00</span>
-							</td>
-							<td class="product-remove"><a title="Remove this item"
-								class="remove" href="#"><span class="glyphicon glyphicon-remove"></span></a></td>
-						</tr>
-						<tr>
-							<td class="actions" colspan="6">
-								<div class="coupon">
-									<label for="coupon_code">Coupon:</label> <input type="text"
-										placeholder="Coupon code" value="" id="coupon_code"
-										class="input-text" name="coupon_code"> <input
-										type="submit" value="Apply Coupon" name="apply_coupon"
-										class="button">
-								</div> <input type="submit" value="Update Cart" name="update_cart"
-								class="button"> <input type="submit" value="Checkout"
-								name="proceed" class="checkout-button button alt wc-forward">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</form>
 
 			<!-- #content -->
 

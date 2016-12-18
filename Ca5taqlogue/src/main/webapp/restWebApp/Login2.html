@@ -14,8 +14,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel=stylesheet type="text/css" href=css/navbar.css>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel=stylesheet type="text/css" href=../css/navbar.css>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
 <link href="simple-sidebar.css" rel="stylesheet">
 
 <style>
@@ -29,32 +29,37 @@
 }
 </style>
 
+<script src="Session.js"></script>
+
 <script type="text/javascript">
 
-
-
-$("button").click(function(){
-
-	var email = $("input[name=\"email\"]").val();
-	var password = $("input[name= "password\"]").val();
+$(document).ready(function(){
+$("#submitLogin").click(function(){
 	
-	$.ajax({
-		url: "http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/login",
-		type: "POST",
-		async: true,
-		cache: false,
-		dataType: "json",
-		data: "{'email': '" + email + "', 'password': '" + password + "'}",
-		contentType: "application/json; charset=utf-8",
-		success: function(data) {
-			console.log("success");
-		},
-		error: function(xhr, ajaxOptions, thrownError){
-			console.log("FAIL");
-		}
+	console.log("button prezzed");
+
+	var emailtext = $("input[name=\"email\"]").val();
+	var passwordtext = $("input[name= \"password\"]").val();
+	
+	$.post("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/query/",
+			{
+				email: emailtext,
+				password: passwordtext
+			},
+			
+			function(data, status) {
+				if(data == "Success") {
+					document.cookie = emailtext;
+					alert(document.cookie);
+				} else{
+					alert(data);
+				}
+			});
+		});
+	
 	});
 
-});
+
 
 	
 </script>
@@ -73,7 +78,7 @@ $("button").click(function(){
 				<div class="col-sm-1"></div>
 
 				<div class="col-sm-2">
-					<a href="Gnomepage2.html"> <img src="img/NB Gardens logo.png" width=100px>
+					<a href="Gnomepage2.html"> <img src="../img/NB Gardens logo.png" width=100px>
 					</a>
 				</div>
 

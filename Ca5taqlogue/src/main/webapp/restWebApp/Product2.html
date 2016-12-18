@@ -14,10 +14,10 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel=stylesheet type="text/css" href=css/navbar.css>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel=stylesheet type="text/css" href="../css/navbar.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
 <link href="simple-sidebar.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/product.css" />
+<link rel="stylesheet" type="text/css" href="../css/product.css" />
 
 
 <style>
@@ -45,6 +45,27 @@
 			
 			$("#name").html(data.name);
 			
+		});
+	});
+	
+	
+	var basketURL = "http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/basket/mybasket"; 
+	
+	$(document).ready(function(){
+		$("#basket").click(function(){
+			$.get(basketURL,
+				{
+						id: queryString,
+						email: document.cookie
+				},
+				
+				function(data, status){
+						if(data == "Success"){
+							console.log("Success");
+						} else{
+							console.log("Failed to add");
+						}
+				});
 		});
 	});
 	
@@ -136,12 +157,12 @@
 						<div class="col-sm-5">
 					
 							<p style="float:left;">Quantity</p>
-							<form>
+						
 							
-								<button value="Add to Basket" class="btn btn-success"></button>
+								<button value="Add to Basket" class="btn btn-success" id="basket"></button>
 									
 								<p id="add"></p>
-							</form>
+						
 						
 						</div>
 						

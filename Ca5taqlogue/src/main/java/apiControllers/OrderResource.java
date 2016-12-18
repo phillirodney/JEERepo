@@ -1,6 +1,7 @@
 package apiControllers;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -17,38 +18,30 @@ import javax.ws.rs.core.MediaType;
 
 import models.Customer;
 import models.CustomerManager;
+import models.CustomerOrder;
 import models.Product;
 import models.ProductManager;
-
+import services.CustomerOrderService;
 import services.LoginService;
 
 
-@Path("/login")
-public class CustomerResource {
+@Path("/orders")
+public class OrderResource {
 	
 	@Inject
-	private LoginService loginService;
+	LoginService loginService;
 	
-	
+	@Inject
+	CustomerOrderService customerOrderService;
+	 
 	@GET
-	@Path("/{id}")
+	@Path("/myorders")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Customer select(@PathParam("id") int id){
-		
-		return loginService.findById(id);
+	public List<CustomerOrder> getOrders(@QueryParam("email") String e){
+		return  customerOrderService.getCustomerOrders(e);
 	}
 	
-	
-	@Path("/query")
-	@POST
-	@Produces("text/plain")
-	public String login(@QueryParam("email") String e, @QueryParam("password") String p ) {
-		
-		//loginService.loginUser(e);
-		return "Success" ;
-	}
+	 
 	
 	
-	
-
 }

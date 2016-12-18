@@ -32,6 +32,7 @@ public class CustomerManagerOffline implements CustomerManager {
 		for (Customer customer : testData.getCustomers())
 			if (customer.getEmail().equalsIgnoreCase(email))
 				return customer;
+		System.out.println(email);
 		return null;
 	}
 
@@ -53,8 +54,6 @@ public class CustomerManagerOffline implements CustomerManager {
 			}
 		return null;
 	}
-
-
 
 	@Override
 	public void deleteCustomer(Customer customer) {
