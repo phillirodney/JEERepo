@@ -312,10 +312,12 @@
 
 		<script type="text/javascript">
 			
-
 				var app = angular.module('myApp', []);
-				app.controller('myCtrl', function($scope, $location) {
-					$scope.product  = $location.search();
+				app.controller('myCtrl', function($scope, $location, $http) {
+					
+					$scope.product = $location.search().productId;
+					$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/products/" + $location.search().productId)
+					
 
 				});
 				

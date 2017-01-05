@@ -198,7 +198,7 @@
 									<div ng-repeat="x in content">
 										<div class="col-sm-4">
 											<img src="../img/gnome.jpg" class="img-thumbnail shadow"/>
-											<a ng-href="Product.html?productId={{x.productId}}">{{x.name}}</a>
+											<a ng-href="Product.html#?productId={{x.productId}}">{{x.name}}</a>
 										</div>
 										
 									</div>
@@ -211,10 +211,6 @@
 					
 			
 					<script>
-					
-					.config(['$locationProvider', function($locationProvider){
-					    $locationProvider.html5Mode(true)
-					}]);
 					
 						var app = angular.module('myApp', []);
 						app.controller('myCtrl', function($scope, $http) {
