@@ -11,12 +11,26 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  
+   <link rel="stylesheet" href="jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
+  
+  
+<script src="js/Cataloguejs.js"></script>
+	
 <link rel=stylesheet type="text/css" href="../css/navbar.css"/>
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
-<link href="../simple-sidebar.css" rel="stylesheet">
+<link href="../simple-sidebar.css" rel="stylesheet"/>
 
-<body>
+<link rel=stylesheet type= "text/css" href="css/CatalogueCss.css"/>
+
 	
+
+
+<body ng-app="myApp">
 	
 	<div id="wrapper">
 
@@ -31,14 +45,14 @@
 					</a>
 				</div>
 
-				<div class="col-sm-7" style="padding: 20px">
+				<div class="col-sm-7" style="padding: 20px" ng-controller="myCtrl2">
 					
 						<div class="form-group" style="width: 80%">
 							<input style="width: 100%" type="text" class="form-control"
-								placeholder="Search">
+								placeholder="Search" ng-change="myfunc()" ng-model="searchWord">
 						</div>
-						<button class="btn btn-default" id="this1">Go</button>
-					
+						<div >
+						</div>
 				</div>
 
 
@@ -108,12 +122,14 @@
 
 							<li>
 
-								<form action="action_page.php" method="get">
-									Price: <input type="range" name="points" min="0" max="10">
-									<br> <input type="range" name="points" min="0" max="10">
-									<br> <input type="submit">
-								</form>
-
+								<div ng-controller="newCont">	
+									<p>
+								  		<label for="amount">Price range:</label>
+								  		<input type="text" id="amount" readonly  class="price"/>
+									</p>
+									<div id="slider-range"></div>
+									<button ng-click="thisfunc()" style="margin-top:10%">submit</button>
+								</div>
 
 							</li>
 
@@ -194,11 +210,16 @@
 					<div class="col-sm-9">
 						<div class="row">
 							<div class="container-fluid" id="stuff" style="overflow: hidden;">
-								<div ng-app="myApp" ng-controller="myCtrl">
+							
+								<div  ng-controller="myCtrl">
 									<div ng-repeat="x in content">
-										<div class="col-sm-4">
-											<img src="../img/gnome.jpg" class="img-thumbnail shadow"/>
-											<a ng-href="Product.html#?productId={{x.productId}}">{{x.name}}</a>
+										<div class="col-sm-4 ImageLayout ">
+											<a ng-href="Product.html#?productId={{x.productId}}"> 
+												<img src="../img/gnome.jpg" class="img-thumbnail shadow ProductLayout"/>
+											 	{{x.name}}
+											 </a>
+											<div class="rating">☆☆☆☆ (3)</div>
+											<div>£{{x.price}}.00</div>
 										</div>
 										
 									</div>
@@ -208,29 +229,17 @@
 					</div>						
 					
 					</div>
-					
-			
-					<script>
-					
-						var app = angular.module('myApp', []);
-						app.controller('myCtrl', function($scope, $http) {
-							$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/products/").then(function(response){
-								$scope.content = response.data;
-							});
-						});
-						
-						
-					</script>
-				
-					
+
 				</div>
 			</div>
-		
-		</div>
-		
-		</div>
+			<!-- #Content -->
 			
-	
-
+			<div id="footer">
+		
+		</div>
+		<!-- #footer -->
+					
+		</div>
+		
 </body>
 </html>

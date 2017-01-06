@@ -1,0 +1,28 @@
+.nav-sidebar {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	background-color: #EBEBEB;
+}
+
+.shadow {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.ImageLayout {
+	margin-bottom: 4%;
+}
+
+.ProductLayout {
+	margin-bottom: 5%;
+}
+
+.rating {
+   content: "\2605";
+}
+
+.price {
+	border:0; 
+	color:#f6931f; 
+	background-color:#EBEBEB ;
+	font-weight:bold; 
+	width:50%;
+}
