@@ -46,8 +46,7 @@ public class CriteriaController implements Serializable{
 	public String findby() {
 		results = cService.findbyCriteria(material);
 		return "productCriteria";
-		
-		
+				
 	}
 	
 	public String findbyPriceRange(){

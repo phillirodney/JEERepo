@@ -96,8 +96,11 @@
 
 				</div>
 			</nav>
-
-
+			
+		
+		
+												
+			
 		</div>
 		
 		<div id="content">
@@ -107,17 +110,19 @@
 				<div class="row">
 					<div class="col-sm-3 sidebar die">
 						<ul class="nav nav-sidebar" style="padding: 8%">
-							<li>Material
+							<li ng-controller = "materialController"> <label>Material:</label>
 								<div class="checkbox">
-									<label><input type="checkbox" value="">Option 1</label>
+									<label><input type="checkbox" ng-model="myVar1" value="Leather">Leather</label>
 								</div>
 								<div class="checkbox">
-									<label><input type="checkbox" value="">Option 2</label>
+									<label><input type="checkbox" ng-model="myVar2" value="Pot">Pot</label>
 								</div>
 								<div class="checkbox">
-									<label><input type="checkbox" value="">Option 3</label>
+									<label><input type="checkbox" ng-model="myVar3" value="China">China</label>
 								</div>
+								<button class="btn btn-success" ng-click="materialfunc()" >submit</button>
 							</li>
+							
 							<br>
 
 							<li>
@@ -128,56 +133,53 @@
 								  		<input type="text" id="amount" readonly  class="price"/>
 									</p>
 									<div id="slider-range"></div>
-									<button ng-click="thisfunc()" style="margin-top:10%">submit</button>
+									<button class="btn btn-success" ng-click="thisfunc()" style="margin-top:10%">submit</button>
 								</div>
 
 							</li>
 
 							<br>
 
-							<li>Color
+							<li><label>Color:</label>
 								<div class="row" style="padding-right:10px;">
 									<div class="col-sm-1">
-										<img src="img/brown.png">
+										<img src="../img/brown.png">
 									</div>
 									<div class="col-sm-1">
-										<img src="img/brown.png">
+										<img src="../img/brown.png">
 									</div>
 									<div class="col-sm-1">
-										<img src="img/brown.png">
+										<img src="../img/brown.png">
 									</div>
 									<div class="col-sm-1">
-										<img src="img/brown.png">
+										<img src="../img/brown.png">
 									</div>
 									<div class="col-sm-1">
-										<img src="img/brown.png">
+										<img src="../img/brown.png">
 									</div>
 									
 
 								</div>
 								<br>
-								<input type="submit">
+								<button class="btn btn-success"  >submit</button>
+
 
 							</li>
 							<br>
 
-							<li>Purchas Option
-								<div class="checkbox">
-									<label><input type="checkbox" value="">Option 1</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value="">Option 2</label>
-								</div>
-								<div class="checkbox">
-									<label><input type="checkbox" value="">Option 3</label>
-								</div>
-								
-								<input type="submit">
+							<li><label>Porousware:</label>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />Yes</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="" />No</label>
+							</div> 
+							<button class="btn btn-success"  >submit</button>
 
-							</li>
+						</li>
 							<br>
 
-							<li>Ratings
+							<li><label>Rating:</label>
 								<div class="checkbox">
 									<label><input type="checkbox" value="">1 or
 										more</label>
@@ -200,7 +202,7 @@
 								</div>
 								
 							
-								<input type="submit">
+								<button class="btn btn-success"  >submit</button>
 							</li>
 							
 								

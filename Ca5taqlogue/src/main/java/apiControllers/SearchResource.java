@@ -1,5 +1,6 @@
 package apiControllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -7,9 +8,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import models.Product;
+import services.CriteriaService;
 import services.ProductService;
 import services.searchService;
 
@@ -21,6 +24,9 @@ public class SearchResource {
 	
 	@Inject
 	ProductService productSevice;
+	
+	@Inject
+	CriteriaService cService;
 	
 	@GET
 	@Path("/{word}")
@@ -41,6 +47,27 @@ public class SearchResource {
 		return productSevice.findAll();
 		
 	}
+	
+	@GET
+	@Path("/material/{word}")
+	@Produces(MediaType.APPLICATION_JSON)
+	
+	public List<Product> findby(@PathParam("id") String material) {
+		
+		List<Product> results = cService.findbyCriteria(material);
+		return results;
 
+			
+	}
+	
+	@GET
+	@Path("/Price")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Product> findbyPriceRange(@QueryParam("minPrice") int minPrice, @QueryParam("maxPrice") int maxPrice){
+		List<Product >results = cService.findByRange(minPrice, maxPrice);
+		return results;
+	
+	}
+	
 
 }

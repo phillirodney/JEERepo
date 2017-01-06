@@ -31,7 +31,10 @@ app.controller('myCtrl2', function($scope, $http, productService) {
 });
 
 
-app.controller('newCont', function($scope, productService) {
+app.controller('newCont', function($scope, $http, productService) {
+	
+	var a = 0;
+	var b = 0;
 
 	$( function() {
 	  $( "#slider-range" ).slider({
@@ -41,17 +44,41 @@ app.controller('newCont', function($scope, productService) {
 	    values: [ 75, 300 ],
 	    slide: function( event, ui ) {
 	      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-	      productService.value1 = ui.values[ 0 ];
-	      productService.value2 = ui.values[ 1 ];
+	      a = ui.values[ 0 ];
+	      b = ui.values[ 1 ];
 	    }
 	  });
 	  $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
 	    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 	} );
 	
+	 function funt(a, b) {
+		
+		var config = {
+				
+			    params: {
+			        minPrice: a,
+			        maxPrice: b
+			    }
+		}
+		
+		return config;    
+	}
+	
 	$scope.thisfunc = function() {
-		alert(productService.value2);
+		$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/search/Price", funt(a, b)).then(function(response){
+			productService.stuff.content = response.data;
+		});
 	}
 	
 
+});
+
+
+app.controller('materialController', function($scope, $http) {
+	
+	$scope.materialfunc = function() {
+		console.log($scope.myVar1);
+	}
+	
 });
