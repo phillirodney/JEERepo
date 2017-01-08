@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -51,11 +52,15 @@ public class SearchResource {
 	@GET
 	@Path("/material/{word}")
 	@Produces(MediaType.APPLICATION_JSON)
-	
+	@Consumes(MediaType.APPLICATION_JSON)
 	public List<Product> findby(@PathParam("id") String material) {
 		
-		List<Product> results = cService.findbyCriteria(material);
-		return results;
+		
+			System.out.println(material);
+		
+		return null;
+		//List<Product> results = cService.findbyCriteria(material);
+		//return results;
 
 			
 	}
