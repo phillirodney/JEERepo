@@ -77,17 +77,18 @@ app.controller('newCont', function($scope, $http, productService) {
 
 app.controller('materialController', function($scope, $http, productService) {
 	
-	var materials = [];
+	
 	
 	$scope.materialfunc = function() {
+		var materials = [];
 		if($scope.leather) {
-			materials.push("leather");
+			materials.push("Leather");
 		}
 		if($scope.pot) {
-			materials.push("pot");
+			materials.push("Pot");
 		}
 		if($scope.china) {
-			materials.push("china");
+			materials.push("China");
 		}
 		
 		$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/search/material/" + JSON.stringify(materials)).then(function(response){

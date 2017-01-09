@@ -29,8 +29,6 @@ public class TestData {
 	private List<Supplier> suppliers;
 	private List<SupplierOrderLine> supplierOrderLines;
 	
-	
-
 
 	@PostConstruct
 	private void setupData() {
@@ -57,8 +55,6 @@ public class TestData {
 		Address address7 = new Address(7, 888, "Some Street", "Sometown", "SMPC ODE");
 		Address address8 = new Address(8, 777, "Luke Street", "Teamthree", "TM3 LKE");
 
-		// Product product1 = new Product(1, "Gnome1", 10, 1, null, null, null,
-		// null);
 		
 		Stock stock1 = new Stock(1, 100, 120, 50, false);
 		Stock stock2 = new Stock(2, 120, 140, 70, false);
@@ -69,29 +65,29 @@ public class TestData {
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
 		
+		Stock porousStock  = new Stock(1, 100, 120, 50, true);
+		Stock porousStock1  = new Stock(1, 100, 120, 50, true);
+		Stock porousStock2  = new Stock(1, 100, 120, 50, true);
+		Stock porousStock3  = new Stock(1, 100, 120, 50, true);
+		Stock porousStock4 = new Stock(1, 100, 120, 50, true);
+		Stock porousStock5  = new Stock(1, 100, 120, 50, true);
+		Stock porousStock6  = new Stock(1, 100, 120, 50, true);
 		
+			
 		
 		List<String> paths = new ArrayList<>();
 		paths.add("/resources/image.png");
 		paths.add("/resources/image2.png");
 
 		
-		
-		
 		Product product1 = new Product(1, "Tyrion Gnomister","The popular character from the hit TV Show Game of Gnomes", 55.00, stock1, stock2, 120, 80, 4, paths, "Pot", false);
 		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 30.00, stock3, stock4, 120, 80, 4, paths, "Leather", false);
-		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 27.00, stock5, stock6, 120, 80, 4, paths, "Pot",false);
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "China", false);
+		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 27.00, stock5, stock6, 120, 80, 4, paths, "Pot",true);
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "China", true);
 		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 15.00, stock1, stock2, 120, 80, 4, paths, "China", false);
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 15.00, stock3, stock4, 120, 80, 4, paths, "China", false);
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 15.00, stock3, stock4, 120, 80, 4, paths, "China", true);
 		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 15.00, stock5, stock6, 120, 80, 4, paths, "Leather", false);
 		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "Pot", false);
-
-
-
-	
-
-
 
 	
 		SupplierOrderLine sol = new SupplierOrderLine(1, product1);
@@ -101,7 +97,6 @@ public class TestData {
 		orderlines.add(sol);
 		orderlines.add(sol2);
 		orderlines.add(sol3);
-		
 		
 		
 
@@ -239,7 +234,7 @@ public class TestData {
 
 	}
 
-	public List<Supplier> getSuppliers() {
+	public List<Supplier> getSuppliers() {  
 		return this.suppliers;
 	}
 
