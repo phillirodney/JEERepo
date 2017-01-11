@@ -167,14 +167,11 @@
 							</li>
 							<br>
 
-							<li><label>Porousware:</label>
-							<div class="checkbox">
-								<label><input type="checkbox" value="" />Yes</label>
+							<li ng-controller="porousController"><label>Porousware:</label>
+							<div class="checkbox" >
+								<label><input type="checkbox"  ng-model="porous"  />Yes</label>
 							</div>
-							<div class="checkbox">
-								<label><input type="checkbox" value="" />No</label>
-							</div> 
-							<button class="btn btn-success"  >submit</button>
+							<button class="btn btn-success" ng-click="porousfunc()" >submit</button>
 
 						</li>
 							<br>

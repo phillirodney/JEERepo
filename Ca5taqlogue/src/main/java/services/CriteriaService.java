@@ -44,7 +44,28 @@ public List<Product> findbyCriteria (boolean porousware) {
 return pList;
 	
 	
+}
+
+public List<Product> findByPorous() {
 	
-}}
+	List<Product> pList = new ArrayList<>();
+	
+
+	for(Product p: pManager.returnAll()){
+		if(p.getPorousStock().getPresent() > 0) {
+			pList.add(p);
+		}
+	}
+	
+	
+	return pList;
+	
+	
+}
+
+
+
+
+}
 
 

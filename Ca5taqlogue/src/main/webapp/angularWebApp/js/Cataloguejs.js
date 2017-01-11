@@ -97,3 +97,17 @@ app.controller('materialController', function($scope, $http, productService) {
 	}
 	
 });
+
+app.controller('porousController', function($scope, $http, productService) {
+	$scope.porousfunc = function() {
+		if(scope.porous) {
+			$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/search/porous/true").then(function(response) {
+				productService.stuff.content = response.data;
+			})
+		}else {
+			$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/search/porous/true").then(function(response) {
+				productService.stuff.content = response.data;
+			})
+		}
+	}
+});

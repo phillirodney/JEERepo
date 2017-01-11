@@ -65,13 +65,13 @@ public class TestData {
 		Stock stock7 = new Stock(7, 177, 197, 98, false);
 		Stock stock8 = new Stock(8, 189, 209, 100, false);
 		
-		Stock porousStock  = new Stock(1, 100, 120, 50, true);
-		Stock porousStock1  = new Stock(1, 100, 120, 50, true);
-		Stock porousStock2  = new Stock(1, 100, 120, 50, true);
-		Stock porousStock3  = new Stock(1, 100, 120, 50, true);
-		Stock porousStock4 = new Stock(1, 100, 120, 50, true);
-		Stock porousStock5  = new Stock(1, 100, 120, 50, true);
-		Stock porousStock6  = new Stock(1, 100, 120, 50, true);
+		Stock porousStock  = new Stock(1, 0, 120, 50, true);
+		Stock porousStock1  = new Stock(1, 0, 120, 50, true);
+		Stock porousStock2  = new Stock(1, 0, 120, 50, true);
+		Stock porousStock3  = new Stock(1, 0, 120, 50, true);
+		Stock porousStock4 = new Stock(1, 0, 120, 50, true);
+		Stock porousStock5  = new Stock(1, 0, 120, 50, true);
+		Stock porousStock6  = new Stock(1, 0, 120, 50, true);
 		
 			
 		
@@ -80,14 +80,14 @@ public class TestData {
 		paths.add("/resources/image2.png");
 
 		
-		Product product1 = new Product(1, "Tyrion Gnomister","The popular character from the hit TV Show Game of Gnomes", 55.00, stock1, stock2, 120, 80, 4, paths, "Pot", false);
-		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 30.00, stock3, stock4, 120, 80, 4, paths, "Leather", false);
-		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 27.00, stock5, stock6, 120, 80, 4, paths, "Pot",true);
-		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "China", true);
-		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 15.00, stock1, stock2, 120, 80, 4, paths, "China", false);
-		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 15.00, stock3, stock4, 120, 80, 4, paths, "China", true);
-		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 15.00, stock5, stock6, 120, 80, 4, paths, "Leather", false);
-		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 15.00, stock7, stock8, 120, 80, 4, paths, "Pot", false);
+		Product product1 = new Product(1, "Tyrion Gnomister","The popular character from the hit TV Show Game of Gnomes", 55.00, stock1, porousStock, 120, 80, 4, paths, "Pot", false);
+		Product product2 = new Product(2, "Santa Gnome", "A festive Santa Gnome for your Christmas garden", 30.00, stock3, porousStock1, 120, 80, 4, paths, "Leather", false);
+		Product product3 = new Product(3, "Gimli Gnome", "A dwarven Gnome from the hit movie Lord of the Gnomes", 27.00, stock5, porousStock2, 120, 80, 4, paths, "Pot",true);
+		Product product4 = new Product(4, "Sleepy Gnome", "One of the Seven Gnomes", 15.00, stock7, porousStock3, 120, 80, 4, paths, "China", true);
+		Product product5 = new Product(5, "Dopey Gnome", "One of the Seven Gnomes", 15.00, stock1, porousStock4, 120, 80, 4, paths, "China", false);
+		Product product6 = new Product(6, "Sneezy Gnome", "One of the Seven Gnomes", 15.00, stock3, porousStock5, 120, 80, 4, paths, "China", true);
+		Product product7 = new Product(7, "Happy Gnome", "One of the Seven Gnomes", 15.00, stock5, porousStock6, 120, 80, 4, paths, "Leather", false);
+		Product product8 = new Product(8, "Doc Gnome", "One of the Seven Gnomes", 15.00, stock7, porousStock, 120, 80, 4, paths, "Pot", false);
 
 	
 		SupplierOrderLine sol = new SupplierOrderLine(1, product1);
