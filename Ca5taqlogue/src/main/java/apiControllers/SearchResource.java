@@ -91,10 +91,10 @@ public class SearchResource {
 	}
 	
 	@GET
-	@Path("/porous")
+	@Path("/isporous/{porous}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Product> findbyPorous(@PathParam("porous") String porous) {
-		if(porous.equals("true")){
+		if(porous.equals("trues")){
 			return cService.findByPorous();
 		}else{
 			return browse();

@@ -40,6 +40,9 @@ public class BasketResource {
 	@Inject
 	CustomerManager customerManager;
 	
+	@Inject
+	private LoginService loginService;
+	
 	@GET
 	@Path("/mybasket")
 	@Produces("text/plain")
@@ -54,6 +57,18 @@ public class BasketResource {
 		}
 		
 	}  
+	
+	
+	
+	
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Basket> select(@PathParam("id") int id){
+		
+		return loginService.findById(id).getBaskets();
+	}
+	
 	
 	
 	

@@ -1,3 +1,4 @@
+<!-- @author Marcus -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +7,7 @@
 	Page</title>
 <link rel="shortcut icon" href="http://www.cssreset.com/favicon.png" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -14,10 +16,14 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel=stylesheet type="text/css" href=../css/navbar.css>
+<link rel=stylesheet type="text/css" href="../css/navbar.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/shoppingbasket.css" />
 <link href="simple-sidebar.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+ <link rel="stylesheet" href="jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
 
 <style>
 .nav-sidebar {
@@ -30,45 +36,27 @@
 }
 </style>
 
-<script src="Session.js"></script>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-$("#submitLogin").click(function(){
-	
-	console.log("button prezzed");
-
-	var emailtext = $("input[name=\"email\"]").val();
-	var passwordtext = $("input[name= \"password\"]").val();
-	
-	$.post("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/query/",
-			{
-				email: emailtext,
-				password: passwordtext
-			},
-			
-			function(data, status) {
-				if(data == "Success") {
-					document.cookie = emailtext;
-					alert(document.cookie);
-				} else{
-					alert(data);
-				}
-			});
-		});
-	
-	});
 
 
 
-	
+<script>
+
+
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope, $http){
+	$http.get('http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/basket/1').then(function(response) {
+		$scope.content = response.data;
+	})
+})
+
+
 </script>
 
 
 </head>
 
-<body>
+<body ng-app="myApp">
 
 	<div id="wrapper">
 
@@ -79,7 +67,8 @@ $("#submitLogin").click(function(){
 				<div class="col-sm-1"></div>
 
 				<div class="col-sm-2">
-					<a href="Gnomepage2.html"> <img src="../img/NB Gardens logo.png" width=100px>
+					<a href="Gnomepage2.html"> <img src="../img/NB Gardens logo.png"
+						width=100px>
 					</a>
 				</div>
 
@@ -96,7 +85,7 @@ $("#submitLogin").click(function(){
 
 
 				<div class="col-sm-2" style="padding: 20px">
-					<a href="#"> <img src="img/basket.png" width=50px"><span
+					<a href="#"> <img src="../img/basket.png" width=50px"><span
 						style="padding: 10px;">0</span>
 					</a>
 				</div>
@@ -125,7 +114,7 @@ $("#submitLogin").click(function(){
 							<li><a href="AboutUs2.html">About Us</a></li>
 							<li><a href="SignUp2.html"><span
 									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li class="active"><a href="Login2.html"><span
+							<li><a href="Login2.html"><span
 									class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
 
@@ -135,49 +124,73 @@ $("#submitLogin").click(function(){
 
 				</div>
 			</nav>
-
-
+			
 		</div>
 		<!-- #header -->
-
+	
 		<div id="content">
+		
+<div class="container-fluid" ng-controller="myCtrl">
+<div  ng-repeat="x in content"> 
+		<div class="jumbotron shadow" style="padding-top: 1%;">
+			<div class="row" style="margin-top: 5%;">
 
-			<div class="container-fluid" style="color: gray;">
-				<div class="jumbotron" id="material">
-					<br>
-					<h2>Login</h2>
-					<br>
-				
-						<div class="text">
-							Please login in to your NB Gardens account. If you don't have an
-							account, you can create one
-						</div>
-						<br> <br>
-						<div class="form-group">
-							<label for="usr">Email:</label> <input type="text"
-								class="form-control" name="email" id="usr">
-						</div>
-						<div class="form-group">
-							<label for="pwd">Password:</label> <input type="text"
-								class="form-control" name="password" id="pwd">
-						</div>
-						<div class="form-group">
-							<a href="">Forgotten Password? </a>
-						</div>
-						<div class="form-group">
-							<button type="button" id="submitLogin">Login</button>
-						</div>
-				</div>
-			</div>
+		<div class="col-sm-2">
+			<img src="../img/garden_gnome.png" width="100px" height="100px" />
 		</div>
-		<!-- #content -->
+		<div class="col-sm-4">
 
-		<div id="footer"></div>
-		<!-- #footer -->
+			<h2>{{x.product.name}}</h2>
+
+			{{x.product.description}}
+
+			</div>
+
+		<div class="col-sm-2">
+
+
+			<h2 class="parse">Price: £{{x.product.price}}</h2>
+
+		</div>
+
+
+
+		<div class="col-sm-1" style="margin-top: 2%;">
+
+			<input class="input-text qty text thisclasse" style="width:100%;">
+			</input>
+			
+			<input type="hidden" name="hiddenValue" value="Norway"></input>
+			
+			
+		
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-success" value="Update"  style="margin-top:30%;">Update</button>
+		</div>
+
+
+		</div>
+
 
 	</div>
-	<!-- #wrapper -->
 
+</div>
+
+</div>
+		
+		
+		
+		</div>
+		
+			<!-- #content -->
+
+
+			<div id="footer"></div>
+			<!-- #footer -->
+
+		</div>
+		<!-- #wrapper -->
 </body>
 
 </html>

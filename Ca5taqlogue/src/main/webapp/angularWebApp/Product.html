@@ -30,19 +30,8 @@
 .shadow {
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-</style>
 
-
-
-
-</head>
-
-<body ng-app="myApp">
-
-<span id="productId"></span>
-
-	<style>
-		.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
 			background-color:#eeeeee;
 			border: 0px;
 		}
@@ -58,29 +47,84 @@
 		.nav-tabs>li>a{
 			border-radius:0px;
 		}
-	</style>
+</style>
+
+
+
+
+</head>
+
+<body ng-app="myApp">
+
 	
-		<div class="container-fluid" id="middle-banner">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
+	<div id="wrapper">
+
+		<div id="header">
+
+			<div class="row" style="padding: 0px">
+
+				<div class="col-sm-1"></div>
+
+				<div class="col-sm-2">
+					<a href="Gnomepage2.html"> <img src="../img/NB Gardens logo.png" width=100px>
+					</a>
+				</div>
+
+				<div class="col-sm-7" style="padding: 20px">
+					
+						<div class="form-group" style="width: 80%">
+							<input style="width: 100%" type="text" class="form-control"
+								placeholder="Search">
+						</div>
+						<div >
+						</div>
+				</div>
+
+
+
+				<div class="col-sm-2" style="padding: 20px">
+					<a href="#"> <img src="../img/basket.png" width="50px"><span
+						style="padding: 10px;">0</span>
+					</a>
+				</div>
+
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
 
-				<ul class="nav navbar-nav">
-					<li><a href="#">3 for 2 Gnomes*</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Login2.html">The Gnome Shop</a></li>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#myNavbar">
+							<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="Gnomepage2.html">NB Gardens</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
 
-				</ul>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="Products2.html">Gnomes</a></li>
+							<li class="#"><a href="#">Garden</a></li>
+							<li><a href="#">Offers</a></li>
+							<li><a href="#">Season</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="AboutUs2.html">About Us</a></li>
+							<li><a href="SignUp2.html"><span
+									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							<li><a href="Login2.html"><span
+									class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+						</ul>
+					</div>
+
+
+				</div>
+			</nav>
 			</div>
-
-		</div>
-
+		
+		<div id="content">
+	
 
 		<div class="row" style="margin-top:40px;">
 		
@@ -90,7 +134,7 @@
 			
 			<div class="jumbotron shadow" style="padding-top:1%;">
 			
-				<h4 style="text-align:center;" id="name"></h4>
+				<h4 style="text-align:center;" id="name" ng-controller="myCtrl">{{name}}</h4>
 				
 				<img src="../img/garden_gnome.png" style="margin:0 auto; display:block; width:40%"/>
 				
@@ -102,7 +146,7 @@
 		
 			<div class="jumbotron shadow" style="padding-top:4%; margin-bottom:3%;">
 			
-					<span style="position:relative;left:12%;">Price: £324</span>
+					<span style="position:relative;left:12%;" ng-controller="myCtrl">Price: £{{price}}</span>
 					
 					<hr style="width:80%;"/>
 					
@@ -116,7 +160,7 @@
 							<p style="float:left;">Quantity</p>
 						
 							
-								<button value="Add to Basket" class="btn btn-success" id="basket"></button>
+								<button value="Add to Basket" class="btn btn-success" id="basket" ng-controller="basketCtrl" ng-click="basket()">Add to Basket</button>
 									
 								<p id="add"></p>
 						
@@ -166,21 +210,11 @@
 				
 					<h3>Product Description</h3>
 					<p ng-controller="myCtrl">
-						{{product}}
+						{{name}}
 					</p>
 					
 					
-					<p>Nullam rhoncus non arcu nec aliquam. Aliquam at porttitor
-						nisi. Suspendisse sagittis mattis augue sed pulvinar. Praesent
-						interdum porttitor dictum. Fusce est erat, maximus sit amet
-						consectetur in, mollis eu ex. Interdum et malesuada fames ac ante
-						ipsum primis in faucibus. Proin hendrerit molestie libero vitae
-						tincidunt. Suspendisse dapibus nulla quis tincidunt tempor. Donec
-						accumsan posuere ligula eu facilisis. Vestibulum aliquet augue vel
-						arcu convallis, non hendrerit diam tincidunt. Maecenas ultricies
-						consequat metus. Cras vel felis tincidunt, pharetra tellus sit
-						amet, bibendum diam. Nullam nulla ligula, mollis non mi quis,
-						malesuada egestas dolor. Vivamus in placerat risus. .</p>
+					<p ng-controller="myCtrl">{{description}}</p>
 				</div>
 				
 				<div id="menu1" class="tab-pane fade" style="padding:2%;;background-color:#eeeeee">
@@ -309,17 +343,39 @@
 				</div>
 			</div>
 		</div>
+		
+		<div id="footer">
+		
+		</div>
+		
+		
+		</div>
+		
+		</div>
 
 		<script type="text/javascript">
 			
 				var app = angular.module('myApp', []);
 				app.controller('myCtrl', function($scope, $location, $http) {
-					
-					$scope.product = $location.search().productId;
-					$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/products/" + $location.search().productId)
+
+					$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/products/" + $location.search().productId).then(function(response){
+						$scope.price = response.data.price;
+						$scope.name = response.data.name;
+						$scope.description = response.data.description;
+					})
 					
 
 				});
+				
+				app.controller('basketCtrl', function($scope, $location, $http){
+					
+					$scope.basket = function(){
+					
+					$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/basket/mybasket", { params: {id:  $location.search().productId, email: "jasonbourne@gmail.com"}  }).then(function(response){
+						console.log(response.data);
+					})
+					}
+				})
 				
 		</script>
 

@@ -54,7 +54,7 @@ public class Product implements Serializable {
 		this.images = imagepath;
 		
 		this.stock = stock;
-		this.stock = porousStock;
+		this.porousStock = porousStock;
 		
 		this.height = height;
 		this.length = length;

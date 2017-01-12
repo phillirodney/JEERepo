@@ -67,9 +67,9 @@ public class TestData {
 		
 		Stock porousStock  = new Stock(1, 0, 120, 50, true);
 		Stock porousStock1  = new Stock(1, 0, 120, 50, true);
-		Stock porousStock2  = new Stock(1, 0, 120, 50, true);
-		Stock porousStock3  = new Stock(1, 0, 120, 50, true);
-		Stock porousStock4 = new Stock(1, 0, 120, 50, true);
+		Stock porousStock2  = new Stock(1, 10, 120, 50, true);
+		Stock porousStock3  = new Stock(1, 10, 120, 50, true);
+		Stock porousStock4 = new Stock(1, 100, 120, 50, true);
 		Stock porousStock5  = new Stock(1, 0, 120, 50, true);
 		Stock porousStock6  = new Stock(1, 0, 120, 50, true);
 		
