@@ -76,7 +76,7 @@ public class Customer {
 	@OneToMany(mappedBy = "customer")
 	private Payment payment;
 
-	private List<CustomerOrder> orders;
+	private List<CustomerOrder> orders = new ArrayList<>();
 
 	public Customer() {
 

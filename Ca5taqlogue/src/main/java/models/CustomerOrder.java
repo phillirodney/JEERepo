@@ -123,4 +123,15 @@ public class CustomerOrder {
 	public void setOrderLines(List<OrderLine> orderLines){
 		this.orderLines = orderLines;
 	}
+	
+	public int getTotalPrice(){
+		int totalPrice = 0;
+		if(orderLines == null){
+			return 0;
+		}
+		for(OrderLine o : getOrderLines()){
+			totalPrice += o.getProduct().getPrice();
+		}
+		return totalPrice;
+	}
 }

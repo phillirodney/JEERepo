@@ -367,11 +367,13 @@ enjoy-css {
 							<h:column>
 								<f:facet name="header">Quantity</f:facet>
 								#{basket.quantity}
+							
+						
 							</h:column>
 
 							<h:column>
 								<f:facet name="header">Price</f:facet>
-								#{basket.product.price}
+								£#{basket.product.price}
 							</h:column>
 
 							<h:column>
@@ -399,14 +401,17 @@ enjoy-css {
 					<div>
 						<table>
 							<tr>
-								<td>Items:</td>
+								<td>Items: #{user.customer.baskets.size()}</td>
+				
+								
+								
 							</tr>
 							<tr>
-								<td>Delivery:</td>
+								<td>Delivery: £0.00</td>
 							</tr>
 
 							<tr>
-								<td>Total:</td>
+								<td>Total: £#{user.basketPrice()}</td>
 							</tr>
 
 							<tr>

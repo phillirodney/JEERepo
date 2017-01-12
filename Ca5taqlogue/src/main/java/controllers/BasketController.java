@@ -69,6 +69,10 @@ public class BasketController {
 
 	}
 	
+	public int getItems() {
+		return basket_list.size();
+	}
+	
 
 	
 	public void updateQuantity(Basket basket){
