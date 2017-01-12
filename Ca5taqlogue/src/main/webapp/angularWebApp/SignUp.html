@@ -119,69 +119,75 @@
 		</div>
 		<!-- #header -->
 
-		<div id="content">
+		<div id="content" ng-app="myApp">
 
-			<div class="container-fluid" style="color: gray;" ng-controller="loginController">
+			<div class="container-fluid" style="padding-top:6%" ng-controller="signUpController">
+		
 				<div class="jumbotron shadow" id="material">
-					<br>
-					<h2>Login</h2>
-					<br>
+					<img src="img/garden_gnome.png" width="60px" style="float: right;"/>
+					<br></br> 
+					<h2>Sign Up</h2>
 				
-						<div class="text">
-							Please login in to your NB Gardens account. If you don't have an
-							account, you can create one
-						</div>
-						<br> <br>
 						<div class="form-group">
-							<label for="usr">Email:</label> <input type="text" ng-model="email"
-								class="form-control" name="email" id="usr"/>
+							<label for="usr">First Name:</label> 
+								
+								<input type="text" class="form-control" placeholder="First Name" ng-model="fname"></input>
 						</div>
 						<div class="form-group">
-							<label for="pwd">Password:</label> <input type="text" ng-model="password" 
-								class="form-control" name="password" id="pwd"/>
+							<label for="usr">Last Name:</label> 
+								<input type="text" class="form-control" placeholder="Last Name" ng-model="lname"></input>
+								
+								
 						</div>
 						<div class="form-group">
-							<a href="">Forgotten Password? </a>
+							<label for="pwd">Password:</label> 
+								
+								<input type="text" class="form-control" placeholder="Password" ng-model="password"></input>
+							
 						</div>
 						<div class="form-group">
-							<button type="button" id="submitLogin" ng-click="func()" class="btn btn-success">Login</button>
-							<div  class="alert alert-danger" style="margin-top:3%" id="fail">
- 								 <strong>Incorrect Login details</strong>
-							</div>
+							<label for="email">Email:</label>  
+								
+							<input type="Text" class="form-control" placeholder="Email" ng-model="email"></input>					
 						</div>
+						<Button class="btn btn-success" ng-click="signup()">Submit</Button>
+						
 				</div>
 			</div>
-		</div>
 		<!-- #content -->
 
 		<div id="footer"></div>
 		<!-- #footer -->
 
 	</div>
+	</div>
 	<!-- #wrapper -->
 	
 	<script>
 	
-		var app = angular.module('myApp', []);
+	var app = angular.module('myApp', []);
+	
+	app.controller('signUpController', function($scope, $http){
 		
-		app.controller('loginController', function($scope, $http){
-			$scope.func = function(){
-				$http.get('http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/query', {params: {email: $scope.email, password: $scope.password}}).then(function(response){
-					if(response.data == "Success") {
-						window.location.replace("file:///C:/Users/Administrator/workspace/JEERepo/Ca5taqlogue/src/main/webapp/angularWebApp/Catalogue.html");
-						
-					} else{
-						console.log(response.data)
-						$('#fail').css("visibility","visible")
-					}
-						
-				})
-			}
-		});
+		$scope.signup = function() {
+		$http.get("http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/query", {params: {fname: $scope.fname, lname: $scope.lname, pass: $scope.password, email: $scope.email}}).then(function(response)){
+		console.log(response.data)	
+		}
+		}
+	})
+		
+	
 
 
-</script>
+	</script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+

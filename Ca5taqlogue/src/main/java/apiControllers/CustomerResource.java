@@ -21,6 +21,7 @@ import models.Product;
 import models.ProductManager;
 
 import services.LoginService;
+import services.RegistrationService;
 
 
 @Path("/login")
@@ -28,6 +29,9 @@ public class CustomerResource {
 	
 	@Inject
 	private LoginService loginService;
+	
+	@Inject
+	private RegistrationService rService;
 	
 	
 	@GET
@@ -40,12 +44,29 @@ public class CustomerResource {
 	
 	
 	@Path("/query")
-	@POST
+	@GET
 	@Produces("text/plain")
 	public String login(@QueryParam("email") String e, @QueryParam("password") String p ) {
+		if(loginService.validLogin(e, p)){
+			return "Success";
+		}else {
+			return "Fail";
+		}
 		
-		//loginService.loginUser(e);
-		return "Success" ;
+		
+		 
+	}
+	
+	@Path("SignUp")
+	@GET
+	@Produces("text/plain")
+	public String SignUp(@QueryParam("fname") String fname, @QueryParam("lname") String lname, @QueryParam("password") String password, @QueryParam("email") String email) {
+		Customer customer = rService.registerUser(fname, lname, email, password);
+		if(customer == null) {
+			return "Success";
+		}else {
+			return "Fail";
+		}
 	}
 	
 	
