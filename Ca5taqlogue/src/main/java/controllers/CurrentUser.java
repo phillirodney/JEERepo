@@ -48,7 +48,7 @@ public class CurrentUser implements Serializable {
 	public int basketPrice() {
 		int price = 0;
 		for (Basket b : customer.getBaskets()) {
-			price += b.getProduct().getPrice();
+			price += (b.getProduct().getPrice())*b.getQuantity();
 		}
 		return price;
 	}

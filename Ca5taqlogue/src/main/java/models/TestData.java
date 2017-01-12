@@ -160,8 +160,16 @@ public class TestData {
 		orders.add(corder4);
 		
 		OrderLine ol = new OrderLine(1, product1, 2);
+		OrderLine o2 = new OrderLine(1, product2, 2);
+		OrderLine o3 = new OrderLine(1, product3, 2);
+		OrderLine o4 = new OrderLine(1, product4, 2);
+		OrderLine o5 = new OrderLine(1, product5, 2);
 		
 		corder.getOrderLines().add(ol);
+		corder.getOrderLines().add(o2);
+		corder.getOrderLines().add(o3);
+		corder.getOrderLines().add(o4);
+		corder.getOrderLines().add(o5);
 
 		customer1.setPayment(payment1);
 		customer1.setOrders(orders);

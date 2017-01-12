@@ -48,7 +48,7 @@
 									<h:commandButton value="Update" class="btn btn-outline-primary"
 										action="#{Basket.updateQuantity(basket)}"
 										style="margin-top:10%;" />
-										
+
 									<span class="popuptext" id="myPopup">Quantity Updated!</span>
 								</div>
 
@@ -61,7 +61,20 @@
 
 					</div>
 
+
+
 				</ui:repeat>
+				<div class="jumbotron shadow" style="padding: 0%; padding-left:5%">
+					<div class="row" style="margin-top: 1%;">
+						<div class="col-sm-4">
+
+							<h2>Total Price: £#{user.basketPrice()}</h2>
+
+
+						</div>
+					</div>
+
+				</div>
 			</h:form>
 
 

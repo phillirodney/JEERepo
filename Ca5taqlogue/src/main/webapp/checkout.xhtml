@@ -394,7 +394,7 @@ enjoy-css {
 				<div class="row">
 					<div class="col-sm-12"></div>
 
-					<div class="enjoy-css">
+					<div>
 						<h2>Order Summary</h2>
 					</div>
 
@@ -402,9 +402,9 @@ enjoy-css {
 						<table>
 							<tr>
 								<td>Items: #{user.customer.baskets.size()}</td>
-				
-								
-								
+
+
+
 							</tr>
 							<tr>
 								<td>Delivery: £0.00</td>
@@ -415,23 +415,16 @@ enjoy-css {
 							</tr>
 
 							<tr>
-								<td><div class="enjoy-css">
-										<h:button type="button" class="btn btn-outline-primary"
-											value="CHECKOUT " outcome="ConfirmCheckout">
-										</h:button>
 
-										<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-									</div></td>
-									
-									
 							</tr>
 						</table>
-						
-									<h:form>
-									
-										<h:commandButton action="#{checkout.makeOrder}" value="Check this Out" />
-										
-									</h:form>
+
+						<h:form>
+
+							<h:commandButton action="#{checkout.makeOrder}"
+								value="Check this Out" />
+
+						</h:form>
 					</div>
 
 				</div>

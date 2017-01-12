@@ -131,6 +131,7 @@ public class CustomerOrder {
 		}
 		for(OrderLine o : getOrderLines()){
 			totalPrice += o.getProduct().getPrice();
+			//totalPrice = (totalPrice   price = (price*basket.getQuantity());
 		}
 		return totalPrice;
 	}
