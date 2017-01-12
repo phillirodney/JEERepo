@@ -10,14 +10,16 @@
 
 
 
-	<ui:define name="maincontent">
+<ui:define name="maincontent">
 
-		<div class="container-fluid " style="padding-top: 30px">
-			<div class="row">
-				<div class="col-sm-3 sidebar die">
-					<ul class="nav nav-sidebar" style="padding: 8%">
-
-						<li>Material <h:form style="margin-bottom:10%;">
+<div class="container-fluid " style="padding-top: 30px">
+<div class="row">
+<div class="col-sm-3 sidebar die">
+<ul class="nav nav-sidebar" style="padding: 8%">
+			
+		<li>Material 
+						
+						<h:form style="margin-bottom:10%;">
 
 								<h:selectOneRadio value="#{Criteria.material}"
 									layout="pageDirection">
@@ -26,14 +28,15 @@
 									<f:selectItem itemValue="China" itemLabel="China" />
 								</h:selectOneRadio>
 
-								<h:commandButton action="#{Criteria.findby}" value="Find" /></li>
-				</div>
-			</div>
-			</h:form>
+								<h:commandButton action="#{Criteria.findby}" value="Find" />
+								
+							</h:form>
+			</li>
+		
+		
 
 
-
-			<br />
+		<br></br>
 
 			<li>
 
@@ -135,8 +138,8 @@
 				</div>
 			</div>
 		</div>
-		</div>
-		</div>
+	</div>
+	</div>
 
 	</ui:define>
 </ui:composition>
