@@ -58,7 +58,7 @@
 				<div class="col-sm-1"></div>
 
 				<div class="col-sm-2">
-					<a href="Gnomepage2.html"> <img src="../img/NB Gardens logo.png" width=100px>
+					<a href="Catalogue.html"> <img src="../img/NB Gardens logo.png" width=100px>
 					</a>
 				</div>
 
@@ -75,8 +75,8 @@
 
 
 				<div class="col-sm-2" style="padding: 20px">
-					<a href="#"> <img src="img/basket.png" width=50px"><span
-						style="padding: 10px;">0</span>
+					<a href="Basket.html"> <img src="../img/basket.png" width=50px><span
+						style="padding: 10px;"></span>
 					</a>
 				</div>
 
@@ -95,17 +95,19 @@
 					<div class="collapse navbar-collapse" id="myNavbar">
 
 						<ul class="nav navbar-nav">
-							<li><a href="Products2.html">Gnomes</a></li>
-							<li class="#"><a href="#">Garden</a></li>
-							<li><a href="#">Offers</a></li>
-							<li><a href="#">Season</a></li>
+							<li><a href="Catalogue.html">Gnomes</a></li>
+							<li class="Catalogue.html"><a href="#">Garden</a></li>
+							<li><a href="Catalogue.html">Offers</a></li>
+							<li><a href="Catalogue.html">Season</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="AboutUs2.html">About Us</a></li>
-							<li><a href="SignUp2.html"><span
+							<li><a href="#">About Us</a></li>
+							<li><a href="SignUp.html"><span
 									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-							<li class="active"><a href="Login2.html"><span
+							<li class="active"><a href="Login.html"><span
 									class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							<li><a href="login.html"><span
+									class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
 						</ul>
@@ -137,7 +139,7 @@
 								class="form-control" name="email" id="usr"/>
 						</div>
 						<div class="form-group">
-							<label for="pwd">Password:</label> <input type="text" ng-model="password" 
+							<label for="pwd">Password:</label> <input type="password" ng-model="password" 
 								class="form-control" name="password" id="pwd"/>
 						</div>
 						<div class="form-group">
@@ -167,8 +169,9 @@
 		app.controller('loginController', function($scope, $http){
 			$scope.func = function(){
 				$http.get('http://localhost:8080/nbgardens-catalogue-0.0.1-SNAPSHOT/api/login/query', {params: {email: $scope.email, password: $scope.password}}).then(function(response){
-					if(response.data == "Success") {
+					if(response.data != "Fail") {
 						window.location.replace("file:///C:/Users/Administrator/workspace/JEERepo/Ca5taqlogue/src/main/webapp/angularWebApp/Catalogue.html");
+						document.cookie = response.data;
 						
 					} else{
 						console.log(response.data)
