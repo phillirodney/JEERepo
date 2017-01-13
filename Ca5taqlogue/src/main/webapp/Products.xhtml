@@ -119,11 +119,8 @@
 								class="img-thumbnail shadow" width="200" height="200" />
 
 							<h:form>
-								<h4>
-									<h:commandLink action="#{products.select(product.id)}"
-										value="#{product.name}" />
-								</h4>
-							</h:form>
+								
+							
 
 							<h4>
 								<h:commandLink action="#{products.select(product.productId)}"
@@ -133,6 +130,8 @@
 							<p>
 								<h:outputText value="#{product.description}" />
 							</p>
+							
+							</h:form>
 						</div>
 					</ui:repeat>
 				</div>
