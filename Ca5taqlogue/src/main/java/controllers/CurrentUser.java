@@ -52,4 +52,9 @@ public class CurrentUser implements Serializable {
 		}
 		return price;
 	}
+	
+	public String logout(){
+		customer = null;
+		return "login.xhtml";
+	}
 }

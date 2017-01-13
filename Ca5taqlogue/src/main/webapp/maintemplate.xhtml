@@ -200,12 +200,20 @@ to {
 						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><h:outputLink
 									rendered="#{!user.loggedIn}" value="Login.xhtml">
-									<span class="glyphicon glyphicon-user"></span>Login</h:outputLink></li>
+									<span class="glyphicon glyphicon-user"></span>Login</h:outputLink>
+									</li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><h:outputLink rendered="#{user.loggedIn}"
-									value="Login.xhtml">
-									<span class="glyphicon glyphicon-user"></span> Logout</h:outputLink></li>
+							<!-- <li class="active"><h:outputLink rendered="#{user.loggedIn}" >
+									<span class="glyphicon glyphicon-user"></span> Logout</h:outputLink>
+							</li> -->
+							<li >
+							<h:form rendered="#{user.loggedIn}">
+							<span class="glyphicon glyphicon-user" style="top:15px"></span>
+								<h:commandButton  action="#{login.logout}" value="Sign Out" style="background:none; border:none; margin:0; padding:0; top:15px; position:relative;"/>
+								
+							</h:form>
+							</li>
 						</ul>
 					</div>
 
